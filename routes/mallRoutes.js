@@ -15,6 +15,6 @@ router.get("/self",selfController.self);
 router.get("/index",indexController.myindex);
 
 //租赁
-router.get("/lease",leaseController.lease);
+router.get("/lease",leaseController.mylease);
 
 module.exports=router;//公开router
