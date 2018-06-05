@@ -1,0 +1,13 @@
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+.selfSet {
+    border: 1px solid #f00;
+}
+.selfSet li {
+    padding: 1.5em 0;
+}
