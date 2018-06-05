@@ -1,0 +1,67 @@
+ul {
+    list-style: none;
+}
+a,a:hover,a:active {
+    text-decoration: none;
+}
+a {
+    color: #333;
+}
+a:hover,a:active {
+    color: #7B7446;
+}
+.selfSet,.selfContain {
+    border: 1px solid #efefef;
+}
+.selfSet ul {
+    padding: 0;
+    margin: 2em 0;
+}
+.selfSet li:nth-of-type(1)>h4 {
+    margin-top: 0;
+}
+.selfSet h4 {
+    font-weight: 600;
+    margin: 1.2em 0 0 0;
+}
+.col-lg-2,.col-lg-4 {
+    padding: 0;
+    margin: 0;
+}
+.selfSet li {
+    padding: .4em 0;
+    padding-left: 60px;
+}
+.current {
+    border-left: 2px solid #7B7446;
+}
+.current a {
+    color: #7B7446;
+}
+
+
+
+.selfContain {
+    margin: 0;
+    padding: 40px 20px;
+}
+.selfContain ul {
+    padding-left: 20px;
+}
+.selfContain li {
+    padding: .2em 0;
+}
+.userInfo {
+    border-right: 1px dashed #eee;
+}
+.userHeader {
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    cursor: pointer;
+    background: rgb(246,245,243);
+    margin-top: 2em;
+}
+#username {
+    font-size: 2em;
+}
