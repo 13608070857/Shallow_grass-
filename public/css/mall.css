@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.classify{
+    border-top: 1px solid #F0F0F0;
+    border-bottom: 1px solid #F0F0F0;
+    margin-top: 30px;
+}
+.classify div{
+    line-height: 60px;
+    font-size: 15px;
+}
+.classify div>span{
+    color: #929292;
+}
+ul{
+    list-style: none;
+}
+ul>li{
+    float: left;
+    margin-left: 30px;
+}
+ul>li:nth-child(1){
+    color: #7B7446;
+}
+ul>li:hover{
+    color: #7B7446;
+    cursor: pointer;
+}
+.test{
+    border: 1px solid red;
+}
