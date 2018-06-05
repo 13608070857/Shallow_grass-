@@ -3,7 +3,7 @@
 const express=require("express");//加载express资源
 const logger=require("morgan");  //日志模块  npm install morgan --save
 const favicon=require("serve-favicon");  //小图标  npm install serve-favicon --save
-const route=require("./routes/fileRoutes");  //自定义模块引入
+const route=require("./routes/mallRoutes");  //自定义模块引入
 const session=require("express-session");
 const cookieParser=require("cookie-parser");
 const bodyParser=require("body-parser"); //post模块
