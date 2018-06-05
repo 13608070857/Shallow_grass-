@@ -8,8 +8,8 @@ const router=express.Router();//获取路由对象
 router.get("/mall",controller.mymall);
 
 //个人中心
-router.get("/self",controller.self);
+router.get("/self",selfController.self);
 
 //首页
-router.get("/index",indexcontroller.myindex);
+router.get("/index",indexController.myindex);
 module.exports=router;//公开router
