@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+@media screen and (max-width:1000px){
+    .stay-list{}
+}
 .item img{
     width: 100%;
 }
@@ -18,9 +21,6 @@
     border-radius: 5px;
     font-size: 14px;
     margin-left: 16px;
-}
-.padding-top20{
-    padding-top: 20px;
 }
 .jianjie{
     width: 100%;
@@ -73,4 +73,7 @@
 .headDiv{
     height: 102px;
     width: 100%;
+}
+h1,h2,h3,h4,h5,h6{
+    margin-top: 0;
 }
