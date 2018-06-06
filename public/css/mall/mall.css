@@ -43,7 +43,7 @@ ul>li:hover{
     padding: 0 5px 0 5px;
 }
 .priceSpan{
-    color: #7B7446;
+    color: #FF2560;
     font-size: 18px;
     font-weight: bold;
 }
@@ -57,7 +57,6 @@ ul>li:hover{
 }
 .introduce{
     text-align: left;
-    color: #435B15;
 }
 .introLine{
     display: -webkit-box;
@@ -71,6 +70,7 @@ ul>li:hover{
 .add_shop_cart{
     height: 40px;
     line-height: 40px;
+    color: #7B7446;
     cursor: pointer;
 }
 /*测试*/
