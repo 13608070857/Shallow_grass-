@@ -98,3 +98,15 @@
 .advantageImgU4{
     background-image: url("../../img/lease/jian_10.gif");
 }
+.combination{
+    margin-top: 80px;
+    line-height: 40px;
+    font-size: 34px;
+    color: #2f2f39;
+    text-align: center;
+}
+.combinationSome{
+    font-size: 15px;
+    color: #93939e;
+    text-align: center;
+}
