@@ -3,6 +3,7 @@ footer{
     height: 380px;
     background-color: rgb(51,51,51);
     padding:15px 0 0 0;
+    overflow-x: hidden;
 }
 .white{
     color: white;
@@ -16,7 +17,7 @@ footer{
 .col-md-8,.col-md-5,.col-md-4,.col-md-3,.col-md-2,.col-md-1{
     padding: 0;
 }
-select{
+.select{
     margin-top:40px;
 }
 .img{
