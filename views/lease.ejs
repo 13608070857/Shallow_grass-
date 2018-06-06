@@ -17,6 +17,9 @@
     <![endif]-->
 </head>
 <body>
+<!--引入头部母版-->
+<%-include('mateheader.ejs')%>
+<div class="headDiv"></div>
 <!--banner图-->
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -42,11 +45,31 @@
 <div class="webIndex">
     <div class="stay-list clearFloat">
         <div class="stay-list-left">
-            <span class="search-sign"></span>
+            <span class="search-sign">企</span>
             <h3 class="search-title">肉肉租赁</h3>
             <form>
                 <div class="sea-div">
-                    <label class="search-lab">所在地</label><input type="text" placeholder="写字楼或办公园区名称" class="hotel-name" id="disHotel"/>
+                    <label class="search-lab">区域</label>
+                    <select class="bigAddres">
+                        <option value="北京">北京</option>
+                        <option value="上海">上海</option>
+                        <option value="成都" selected="selected">成都</option>
+                        <option value="广州">广州</option>
+                        <option value="深圳">深圳</option>
+                        <option value="重庆">重庆</option>
+                    </select>
+                    <select class="someAddres">
+                        <option value="锦江区">锦江区</option>
+                        <option value="青阳区">青阳区</option>
+                        <option value="金牛区">金牛区</option>
+                        <option value="武侯区">武侯区</option>
+                        <option value="成华区">成华区</option>
+                        <option value="高新区">高新区</option>
+                        <option value="天府新区">天府新区</option>
+                    </select>
+                </div>
+                <div class="sea-div">
+                    <label class="search-lab">详细地址</label><input type="text" id="addres">
                 </div>
                 <div class="sea-div">
                     <label class="search-lab">租赁日期</label><input type="text" readonly  id="startDate"/>
@@ -59,6 +82,35 @@
         </div>
     </div>
 </div>
+<div class="jianjie"></div>
+<div class="partition">
+    <div class="partitionDiv">
+        <p class="partitionDivText">短期租赁</p>
+        <div class="partitionDivImg"></div>
+        <p class="partitionDivText2">省心省力/方便</p>
+        <div class="partitionDivDiv">我要租赁</div>
+    </div>
+    <div class="partitionDiv">
+        <p class="partitionDivText">短期租赁</p>
+        <div class="partitionDivImg"></div>
+        <p class="partitionDivText2">省心省力/方便</p>
+        <div class="partitionDivDiv">我要租赁</div>
+    </div>
+    <div class="partitionDiv">
+        <p class="partitionDivText">短期租赁</p>
+        <div class="partitionDivImg"></div>
+        <p class="partitionDivText2">省心省力/方便</p>
+        <div class="partitionDivDiv">我要租赁</div>
+    </div>
+    <div class="partitionDiv">
+        <p class="partitionDivText">短期租赁</p>
+        <div class="partitionDivImg"></div>
+        <p class="partitionDivText2">省心省力/方便</p>
+        <div class="partitionDivDiv">我要租赁</div>
+    </div>
+</div>
+<!--引入尾部母版-->
+<%-include('matefooter.ejs')%>
 <script type="text/javascript" src="js/lease/jquery.js"></script>
 <script type="text/javascript" src="js/lease/jquery.ui.js"></script>
 <script type="text/javascript" src="js/lease/moment.min.js"></script>
@@ -67,5 +119,6 @@
 
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>
+
 </body>
 </html>
