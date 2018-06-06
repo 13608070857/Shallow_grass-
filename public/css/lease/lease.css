@@ -5,3 +5,72 @@
 .item img{
     width: 100%;
 }
+.bigAddres{
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 28px;
+}
+.someAddres{
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 16px;
+}
+.padding-top20{
+    padding-top: 20px;
+}
+.jianjie{
+    width: 100%;
+    height: 100px;
+    background-image: url(../../img/lease/jian.jpg);
+    background-size: 100% 100%;
+}
+.partition{
+    background: #f2f3f5;
+    height: 500px;
+    width: 100%;
+    padding-left: 110px;
+    padding-top: 80px;
+}
+.partitionDiv{
+    background: white;
+    height: 360px;
+    width: 300px;
+    margin-left: 20px;
+    float: left;
+}
+.partitionDivText{
+    font-size: 24px;
+    margin-left: 34%;
+    line-height: 80px;
+}
+.partitionDivText2{
+    font-size: 14px;
+    margin-left: 34%;
+    line-height: 40px;
+    color: #b4b4b4;
+}
+.partitionDivImg{
+    width: 150px;
+    height: 150px;
+    background-image: url("../../img/lease/duan.png");
+    background-size: 100% 100%;
+    margin-left: 25%;
+}
+.partitionDivDiv{
+    width: 150px;
+    background: #fafbfc;
+    border: 1px solid #e4e6e9;
+    height: 38px;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 38px;
+    margin: 15px auto;
+}
+.headDiv{
+    height: 102px;
+    width: 100%;
+}
