@@ -24,7 +24,7 @@ a:hover,a:active {
     font-weight: 600;
     margin: 1.2em 0 0 0;
 }
-.col-lg-2,.col-lg-4 {
+.col-lg-2,.col-lg-4,.col-lg-8 {
     padding: 0;
     margin: 0;
 }
@@ -41,7 +41,7 @@ a:hover,a:active {
 
 
 
-.selfContain {
+.selfContain,.backlog {
     margin: 0;
     padding: 40px 20px;
 }
@@ -52,7 +52,7 @@ a:hover,a:active {
     padding: .2em 0;
 }
 .userInfo {
-    border-right: 1px dashed #eee;
+    border-right: 1px solid #eee;
 }
 .userHeader {
     border-radius: 50%;
@@ -64,4 +64,39 @@ a:hover,a:active {
 }
 #username {
     font-size: 2em;
+}
+.line {
+    border: 1px solid #f00;
+}
+.selfOther li {
+    margin-top: 1.5em;
+}
+.selfOther a {
+    color: #7B7446;
+}
+.blTitle {
+    background: rgb(246,245,243);
+    padding: 15px 0;
+}
+.product {
+    border: 1px solid rgb(246,245,243);
+    text-align: center;
+    border-top: none;
+}
+.product img {
+    width: 150px;
+}
+.product div {
+    line-height: 150px;
+}
+.wait {
+    color: #f00;
+}
+.pay {
+    background: #7B7446;
+    color: #fff;
+}
+.pay:hover {
+    background: #7b785b;
+    color: #fff;
 }
