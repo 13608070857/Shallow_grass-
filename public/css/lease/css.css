@@ -1463,7 +1463,7 @@ td[class ^= ticketCards-inner]{
     color: #ffffff;
     padding: 0px;
     margin: 0px;
-    background: url("../../img/lease/ui_header_bg.png") left top repeat-x;
+    background: #7B7446;
 }
 .ui-datepicker-title,.ui-datepicker-title > span{
     height: 31px;
@@ -1504,7 +1504,7 @@ td[class ^= ticketCards-inner]{
     border: none;
 }
 a.ui-state-default:hover,.ui-datepicker-current-day .ui-state-active {
-    background: #3996ff;
+    background: #7B7446;
     color: #ffffff;
 }
 ui-state-hover .ui-icon,.ui-datepicker-next-hover,
@@ -1548,7 +1548,7 @@ ui-state-hover .ui-icon,.ui-datepicker-prev-hover{
 }
 .stay-list-left{
     width: 454px;
-    height: 350px;
+    height: 380px;
     padding: 16px 23px 43px 23px;
 }
 .repast-list-left{
@@ -1563,6 +1563,10 @@ ui-state-hover .ui-icon,.ui-datepicker-prev-hover{
     position: absolute;
     top: -1px;
     right: -1px;
+    font-size: 24px;
+    color: white;
+    padding-top: 2px;
+    padding-left: 27px;
 }
 .stay-list-left .search-title{
     font-size: 18px;
@@ -1572,7 +1576,7 @@ ui-state-hover .ui-icon,.ui-datepicker-prev-hover{
 .stay-list-left  .sea-div{
     height: 35px;
     line-height: 35px;
-    margin-top: 33px;
+    margin-top: 18px;
     position: relative;
 }
 .stay-list-left .search-lab{
@@ -1585,7 +1589,7 @@ ui-state-hover .ui-icon,.ui-datepicker-prev-hover{
     width: 259px;
     height: 33px;
     line-height: 33px;
-    color: #ff5400;
+    color: #7B7446;
     font-family: arial;
     border: 1px solid #dcdcdc;
     border-radius: 5px;
@@ -1610,7 +1614,7 @@ ui-state-hover .ui-icon,.ui-datepicker-prev-hover{
     font-family: "Microsoft YaHei";
     display: block;
     float: left;
-    margin: 36px 72px 0px 72px;
+    margin: 26px 72px 0px 72px;
     background: url("../../img/lease/more_bg.png") 0px -256px;
     cursor: pointer;
 }
