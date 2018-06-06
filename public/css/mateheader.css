@@ -1,0 +1,13 @@
+#ul li{
+    list-style-type:none;
+    display: inline-block;
+    margin-left: 0;
+}
+.index{
+    line-height: 100px;
+}
+#container-fluid{
+    color:  #7B7446;
+    border-bottom: 2px solid rgb(230,230,231);
+}
+

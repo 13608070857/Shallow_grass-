@@ -1,0 +1,41 @@
+footer{
+    width: 100%;
+    height: 380px;
+    background-color: rgb(51,51,51);
+    padding:15px 0 0 0;
+}
+.white{
+    color: white;
+}
+.border{
+    padding: 10px 0 10px 0;
+}
+.border_rgiht{
+    border-right: 1px solid;
+}
+.col-md-8,.col-md-5,.col-md-4,.col-md-3,.col-md-2,.col-md-1{
+    padding: 0;
+}
+select{
+    margin-top:40px;
+}
+.img{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    margin: 0 auto;
+}
+footer p{
+    text-align: center;
+    font-size: 12px;
+    color: rgb(154,154,154);
+    margin: 5px 0 0 0;
+}
+footer b{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(154,154,154);
+    margin: 15px 0 0 0;
+}
