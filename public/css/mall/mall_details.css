@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+.mycontent{
+    margin-top: 110px;
+    margin-bottom: 50px;
+}
 /*图片详情*/
 .imgdeta{
     height: 500px;
