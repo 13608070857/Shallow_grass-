@@ -630,7 +630,7 @@ td[class ^= ticketCards-inner]{
 }
 /*************************首页************************/
 .webIndex{
-    width:1200px ;
+    width:600px ;
     margin: 0 auto;
     position: absolute;
     top: 10%;
