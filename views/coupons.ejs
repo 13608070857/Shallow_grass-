@@ -1,0 +1,19 @@
+<div class="orderGSelf">
+    <div class="row search">
+        <div class="col-lg-4">
+            <input type="text" placeholder="请输入优惠码"/>
+            <button class="btn save">匀兑</button>
+        </div>
+        <div class="col-lg-3 text-center cusInfo">
+            <a href="#">如何使用优惠卷&gt;&gt;&gt;</a>
+        </div>
+    </div>
+    <div class="row esTitle">
+        <div class="col-lg-2 currentList" id="">可使用</div>
+        <div class="col-lg-2" id="">已使用</div>
+        <div class="col-lg-2" id="">已失效</div>
+    </div>
+    <div class="row esCont">
+        <%-include('usable.ejs')%>
+    </div>
+</div>
