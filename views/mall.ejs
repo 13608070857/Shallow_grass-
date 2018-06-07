@@ -7,14 +7,15 @@
     <title>浅草商城</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/mall.css">
+    <link rel="stylesheet" href="css/mall/mall.css">
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 <body>
-<div class="container">
+<%-include('mateheader.ejs')%>
+<div class="container mycontent">
     <!--分类-->
     <div class="row">
         <div class="col-xs-12 classify">
@@ -50,8 +51,27 @@
         <div class="col-lg-12 text-center">
             <div class="col-sm-3 col-md-3 mallList">
                 <div class="row">
+                    <a href="/mall_details">
+                        <div class="col-lg-11 listborder">
+                            <img src="img/mall/TB2C_list_01.jpg" class="introborder img-responsive">
+                            <div class="introborder">
+                                <div class="priceDiv">
+                                    <span class="pull-left priceSpan">¥9.90</span>
+                                    <span class="pull-right paySpan">300人付款</span>
+                                </div>
+                                <div class="introduceDiv">
+                                    <p class="introduce introLine">多肉植物种植新手套餐肉肉植物多肉组合盆栽绿植花卉送花盆送土</p>
+                                </div>
+                                <div class="add_shop_cart">加入购物车</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-3 col-md-3 mallList">
+                <div class="row">
                     <div class="col-lg-11 listborder">
-                        <img src="img/TB2C.48u9tYBeNjSspaXXaOOFXa_2710528801-0-item_pic.jpg_430x430q90.jpg" class="introborder img-responsive">
+                        <img src="img/mall/TB2C_list_01.jpg" class="introborder img-responsive">
                         <div class="introborder">
                             <div class="priceDiv">
                                 <span class="pull-left priceSpan">¥9.90</span>
@@ -68,7 +88,7 @@
             <div class="col-sm-3 col-md-3 mallList">
                 <div class="row">
                     <div class="col-lg-11 listborder">
-                        <img src="img/TB2C.48u9tYBeNjSspaXXaOOFXa_2710528801-0-item_pic.jpg_430x430q90.jpg" class="introborder img-responsive">
+                        <img src="img/mall/TB2C_list_01.jpg" class="introborder img-responsive">
                         <div class="introborder">
                             <div class="priceDiv">
                                 <span class="pull-left priceSpan">¥9.90</span>
@@ -85,7 +105,7 @@
             <div class="col-sm-3 col-md-3 mallList">
                 <div class="row">
                     <div class="col-lg-11 listborder">
-                        <img src="img/TB2C.48u9tYBeNjSspaXXaOOFXa_2710528801-0-item_pic.jpg_430x430q90.jpg" class="introborder img-responsive">
+                        <img src="img/mall/TB2C_list_01.jpg" class="introborder img-responsive">
                         <div class="introborder">
                             <div class="priceDiv">
                                 <span class="pull-left priceSpan">¥9.90</span>
@@ -102,24 +122,7 @@
             <div class="col-sm-3 col-md-3 mallList">
                 <div class="row">
                     <div class="col-lg-11 listborder">
-                        <img src="img/TB2C.48u9tYBeNjSspaXXaOOFXa_2710528801-0-item_pic.jpg_430x430q90.jpg" class="introborder img-responsive">
-                        <div class="introborder">
-                            <div class="priceDiv">
-                                <span class="pull-left priceSpan">¥9.90</span>
-                                <span class="pull-right paySpan">300人付款</span>
-                            </div>
-                            <div class="introduceDiv">
-                                <p class="introduce introLine">多肉植物种植新手套餐肉肉植物多肉组合盆栽绿植花卉送花盆送土</p>
-                            </div>
-                            <div class="add_shop_cart">加入购物车</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 col-md-3 mallList">
-                <div class="row">
-                    <div class="col-lg-11 listborder">
-                        <img src="img/TB2C.48u9tYBeNjSspaXXaOOFXa_2710528801-0-item_pic.jpg_430x430q90.jpg" class="introborder img-responsive">
+                        <img src="img/mall/TB2C_list_01.jpg" class="introborder img-responsive">
                         <div class="introborder">
                             <div class="priceDiv">
                                 <span class="pull-left priceSpan">¥9.90</span>
@@ -136,8 +139,9 @@
         </div>
     </div>
 </div>
+<%-include('matefooter.ejs')%>
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>
-<script src="js/mall.js"></script>
+<script src="js/mall/mall.js"></script>
 </body>
 </html>

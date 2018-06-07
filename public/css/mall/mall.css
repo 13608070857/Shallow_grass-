@@ -2,6 +2,16 @@
     margin: 0;
     padding: 0;
 }
+a{
+    color: #333333;
+}
+a:hover{
+    color: #7B7446;
+}
+.mycontent{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
 /*商品分类*/
 .classify{
     border-top: 1px solid #F0F0F0;
@@ -35,7 +45,8 @@ ul>li:hover{
     margin-top: 30px;
 }
 .listborder>img{
-    width: 230px;
+    width: 258.75px;
+    height: 258.75px;
 }
 .priceDiv{
     height: 40px;
@@ -43,7 +54,7 @@ ul>li:hover{
     padding: 0 5px 0 5px;
 }
 .priceSpan{
-    color: #7B7446;
+    color: #FF2560;
     font-size: 18px;
     font-weight: bold;
 }
@@ -57,7 +68,6 @@ ul>li:hover{
 }
 .introduce{
     text-align: left;
-    color: #435B15;
 }
 .introLine{
     display: -webkit-box;
@@ -67,10 +77,12 @@ ul>li:hover{
 }
 .introborder{
     border: 1px solid #F0F0F0;
+    width: 258.75px;
 }
 .add_shop_cart{
     height: 40px;
     line-height: 40px;
+    color: #7B7446;
     cursor: pointer;
 }
 /*测试*/
