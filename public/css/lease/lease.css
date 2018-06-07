@@ -38,7 +38,7 @@
     transition: all .3s linear;
 }
 .partitionDiv:hover{
-    box-shadow: 5px 5px 3px #888888;
+    box-shadow: 4px 4px 2px rgba(136, 136, 136, 0.73);
     margin-top: -10px;
     margin-left: -2px;
 }
@@ -125,50 +125,4 @@
 }
 .bgWhite{
     background: white;
-}
-.timeLimit{
-    width: 100%;
-    height: 240px;
-    background: #c2e4fa;
-    position: relative;
-}
-.timeLimitTriangle{
-    width: 0;
-    height: 0;
-    float: left;
-    border-top: 36px solid #C2E4FA;
-    border-left: 34px solid transparent;
-    border-right: 34px solid transparent;
-    position: absolute;
-    bottom: -36px;
-    left: 50%;
-    margin-left: -36px;
-}
-.timeLimitExhibition{
-    height: 320px;
-    width: 100%;
-    background-image: url("../../img/one/012.jpg");
-    background-position-x:center;
-    background-position-y:center;
-    background-size: 100% 100%;
-    margin-top: 3px;
-    margin-bottom: 140px;
-    position: relative;
-    z-index: -1;
-    transition: all .3s linear;
-}
-.timeLimitExhibitionTriangle{
-    width: 0;
-    height: 0;
-    float: left;
-    border-top: 37px solid white;
-    border-left: 36px solid transparent;
-    border-right: 36px solid transparent;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -39px;
-}
-.timeLimitHover:hover .timeLimitExhibition{
-    background-size: 110% 110%;
 }
