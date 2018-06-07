@@ -1541,10 +1541,10 @@ ui-state-hover .ui-icon,.ui-datepicker-prev-hover{
     margin: 100px 0 30px 0;
 }
 .stay-list-left,.repast-list-left{
-    border: 1px solid #e5e5e5;
     border-radius: 5px;
-    background: #fdfdfd;
     position: relative;
+    background-image: url("../../img/lease/frame.png");
+    background-size: 100% 100%;
 }
 .stay-list-left{
     width: 454px;
@@ -1555,23 +1555,13 @@ ui-state-hover .ui-icon,.ui-datepicker-prev-hover{
     width: 480px;
     height: 365px;
 }
-.search-sign{
-    width: 53px;
-    height: 53px;
-    border-radius: 5px;
-    background: url("../../img/lease/more_bg.png") -217px -142px no-repeat;
-    position: absolute;
-    top: -1px;
-    right: -1px;
-    font-size: 24px;
-    color: white;
-    padding-top: 2px;
-    padding-left: 27px;
-}
 .stay-list-left .search-title{
+    text-align: center;
+    margin-top: 15px;
     font-size: 18px;
     font-family: 'Microsoft YaHei';
     color: #555555;
+    line-height: 30px;
 }
 .stay-list-left  .sea-div{
     height: 35px;
