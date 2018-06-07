@@ -19,6 +19,8 @@ footer{
 }
 .select{
     margin-top:30px;
+    border: #7B7446 1px solid;
+    border-radius: 5px;
 }
 .img{
     width: 50px;
