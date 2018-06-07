@@ -10,6 +10,7 @@
         padding: 16px 23px 43px 23px;
     }
 }
+
 .item img{
     width: 100%;
 }
@@ -19,6 +20,8 @@
     border-radius: 5px;
     font-size: 14px;
     margin-left: 28px;
+    background: #fbf9f4;
+    outline:none;
 }
 .someAddres{
     width: 120px;
@@ -26,19 +29,21 @@
     border-radius: 5px;
     font-size: 14px;
     margin-left: 16px;
+    background: #fbf9f4;
+    outline:none;
 }
 .partition{
-    background: #f2f3f5;
+    background-image: url("../../img/lease/main_004.jpg");
     height: 620px;
     padding-top: 80px;
 }
 .partitionDiv{
-    background: white;
+    background: rgba(211, 211, 211, 0.76);
     height: 360px;
     transition: all .3s linear;
 }
 .partitionDiv:hover{
-    box-shadow: 5px 5px 3px #888888;
+    box-shadow: 4px 4px 2px rgba(136, 136, 136, 0.73);
     margin-top: -10px;
     margin-left: -2px;
 }
@@ -123,52 +128,104 @@
     text-align: center;
     margin-bottom: 40px;
 }
-.bgWhite{
-    background: white;
+.bgfbf9f4{
+    background: #fbf9f4;
 }
-.timeLimit{
+.exhibition{
     width: 100%;
-    height: 240px;
-    background: #c2e4fa;
-    position: relative;
-}
-.timeLimitTriangle{
-    width: 0;
-    height: 0;
-    float: left;
-    border-top: 36px solid #C2E4FA;
-    border-left: 34px solid transparent;
-    border-right: 34px solid transparent;
-    position: absolute;
-    bottom: -36px;
-    left: 50%;
-    margin-left: -36px;
-}
-.timeLimitExhibition{
-    height: 320px;
-    width: 100%;
-    background-image: url("../../img/one/012.jpg");
-    background-position-x:center;
-    background-position-y:center;
+    height: 600px;
+    background-image: url("../../img/lease/download.jpg");
     background-size: 100% 100%;
-    margin-top: 3px;
-    margin-bottom: 140px;
+    padding-top: 60px;
     position: relative;
-    z-index: -1;
-    transition: all .3s linear;
 }
-.timeLimitExhibitionTriangle{
+#lrMargin0{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+.exhibitionOneBox{
+    width: 586px;
+    height: 138px;
+    position: absolute;
+    top: 110px;
+    left: 111px;
+    overflow: hidden;
+}
+.exhibitionOneBox img{
+    height: 132px;
+    transition: all .2s linear;
+}
+.exhibitionOneBox img:hover{
+    margin-top: -20px;
+}
+.jiantouL{
     width: 0;
     height: 0;
     float: left;
-    border-top: 37px solid white;
-    border-left: 36px solid transparent;
-    border-right: 36px solid transparent;
+    border-top: 28px solid transparent;
+    border-right: 48px solid #466f20;
+    border-bottom: 28px solid transparent;
     position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -39px;
+    top: 130px;
+    left: 50px;
 }
-.timeLimitHover:hover .timeLimitExhibition{
-    background-size: 110% 110%;
+.jiantouR{
+    width: 0;
+    height: 0;
+    float: left;
+    border-top: 28px solid transparent;
+    border-left: 48px solid #466f20;
+    border-bottom: 28px solid transparent;
+    position: absolute;
+    top: 130px;
+    left: 710px;
+}
+#exhibitionOneBoxImg{
+    width: 1800px;
+    transition: all 1.1s linear;
+}
+@media screen and (max-width:1368px) {
+    .zuoTu {
+        width: 1339px;
+    }
+    .exhibitionOneBox {
+        width: 516px;
+        height: 138px;
+        top: 100px;
+        left: 100px;
+    }
+    .exhibitionOneBox img{
+        height: 120px;
+    }
+    .jiantouR {
+        left: 630px;
+    }
+    .jiantouL {
+        left: 40px;
+    }
+}
+@media screen and (max-width:1300px) {
+    .zuoTu {
+        width: 1000px;
+        margin-left: 80px;
+    }
+    .exhibitionOneBox {
+        width: 384px;
+        height: 90px;
+        top: 90px;
+        left: 155px;
+    }
+    .jiantouR {
+        left: 548px;
+        top: 100px;
+    }
+    .jiantouL {
+        left: 100px;
+        top: 100px;
+    }
+    .exhibitionOneBox img{
+        height: 90px;
+    }
 }

@@ -1,0 +1,20 @@
+<div class="orderGSelf">
+    <div class="row search">
+        <input type="text" placeholder="请输入商品名称和订单号"/>
+        <button class="btn save">搜索</button>
+    </div>
+    <div class="row esTitle">
+        <div class="col-lg-2 currentList" id="allOreder">全部订单</div>
+        <div class="col-lg-2" id="">待付款</div>
+        <div class="col-lg-2" id="">待发货</div>
+        <div class="col-lg-2" id="">已发货</div>
+        <div class="col-lg-2" id="">已评价</div>
+    </div>
+    <div class="row esCont">
+        <%-include('allOrder.ejs')%>
+    </div>
+
+    <div class="row text-right">
+        <button class="btn save">删除</button>
+    </div>
+</div>
