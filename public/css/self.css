@@ -30,7 +30,7 @@ a:hover,a:active {
     font-weight: 600;
     margin: 1.2em 0 0 0;
 }
-.col-lg-2,.col-lg-4,.col-lg-8 {
+.col-lg-2,.col-lg-4,.col-lg-7,.col-lg-8 {
     padding: 0;
     margin: 0;
 }
@@ -106,7 +106,7 @@ a:hover,a:active {
     background: #7b785b;
     color: #fff;
 }
-.editSelf,.orderGSelf {
+.editSelf {
     border: 1px solid #eee;
     padding: 0 15px;
 }
@@ -279,14 +279,20 @@ a:hover,a:active {
     color: #7B7446;
 }
 
+.orderGSelf {
+    padding: 0 20px;
+}
+.orderGSelf .blTitle {
+    padding-left: 10px;
+}
 .search input {
     border: 1px solid #7B7446;
     width: 240px;
     padding: 8px 5px;
-    margin: 10px 0 20px 0;
+    margin-bottom: 20px;
 }
 .search input:focus {
-    outline-color: #7B7446;
+    outline: none;
 }
 .search .save {
     padding: 8px 20px;
@@ -294,4 +300,10 @@ a:hover,a:active {
     border-radius: 0;
     position: relative;
     top: -1px;
+}
+.decrise {
+    overflow: hidden;
+}
+.cusInfo {
+    line-height: 40px;
 }
