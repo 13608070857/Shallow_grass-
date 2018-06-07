@@ -1,0 +1,172 @@
+.mycontent{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.addressMsg{
+    font-size: 16px;
+    color: #7b7446;
+    line-height: 60px;
+}
+.myadd{
+    margin-left: 4.33333333%;
+}
+.add_cart_btn{
+    background-color: #7B7446;
+    color: #FFFFFF;
+}
+.addList{
+    overflow: hidden;
+}
+.addList>ul{
+    list-style: none;
+    height: 120px;
+    padding-left: 0;
+}
+.addList>ul>li{
+    float: left;
+    width: 240px;
+    height: 120px;
+    cursor: pointer;
+}
+.active{
+    background: url("/img/buy/borderX.png");
+    background-repeat: no-repeat;
+}
+.unactive{
+    background: url("/img/buy/borderW.png");
+    background-repeat: no-repeat;
+}
+.addList>ul>li:not(:last-child){
+    margin-right: 20px;
+}
+.addLine{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.addLine2{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.mall_msg{
+    text-align: left;
+    padding-left: 10px;
+}
+.addTitle{
+    line-height: 35px;
+    border-bottom: 1px solid #F0F0F0;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #5D5D5D;
+}
+.addDetall{
+    width: 220px;
+    margin-top: 5px;
+    margin-left: 10px;
+    padding-right: 5px;
+    color: #5D5D5D;
+}
+.defaultAdd{
+    transform: translateY(-95px) translateX(180px);
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(161, 160, 161, 0.62);
+    color: #FFFFFF;
+    padding: 2px;
+    border-radius: 4px;
+}
+.addAlter{
+    margin-left: 10px;
+    display: none;
+}
+.addList>ul>li:hover .addAlter{
+    display: block;
+}
+.addList>ul>li:hover{
+    background: url("/img/buy/borderX.png");
+    background-repeat: no-repeat;
+}
+.managerAdd{
+    height: 40px;
+    line-height: 36px;
+}
+.managerAdd>span{
+    color: #7b7446;
+    cursor: pointer;
+}
+.managerAdd>span:hover{
+    color: #333333;
+}
+table{
+    border-top: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+    border-left: 1px solid #E5E5E5;
+    border-right: 1px solid #E5E5E5;
+}
+thead{
+    background-color: #F4F4F4;
+}
+thead>tr>th{
+    text-align: center;
+    color: #7b7446;
+}
+tbody>tr{
+    height: 50px;
+    cursor: pointer;
+}
+tbody>tr>td:not(:nth-child(1)){
+    line-height: 50px;
+}
+tbody>tr>td>div:not(:nth-child(4)){
+    margin-top: 10px
+}
+.numValue{
+    width: 50px;
+    height: 30px;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+    outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+tbody>tr>td:nth-child(1)>input[type="checkbox"]{
+    margin-top: 20px;
+    margin-right: 20px;
+}
+input[type="number"]{
+    -moz-appearance:textfield;
+}
+.numRedu::before{
+    content: '-';
+}
+.numadd::before{
+    content: '+';
+}
+.numSpan{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #d3d3d3;
+    font-size: 20px;
+    cursor: pointer;
+}
+.delete_btn{
+    margin-left: 20px;
+    background-color: #F0F1F1;
+    color: #7b7446;
+}
+.refer_btn{
+    color: #FFFFFF;
+    background-color: #2D3814;
+}
+/*测试*/
+.test{
+    border: 1px solid red;
+}
