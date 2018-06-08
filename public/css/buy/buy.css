@@ -166,6 +166,34 @@ input[type="number"]{
     color: #FFFFFF;
     background-color: #2D3814;
 }
+.btn_del{
+    background-color: #7b7446;
+    color: #FFFFFF;
+}
+.btn_del:hover{
+    background-color: #5d5835;
+    color: #FFFFFF;
+}
+.addRow{
+    height: 36px;
+    line-height: 36px;
+}
+.table_add{
+    border: none;
+}
+.table_add > thead > tr > th,
+.table_add > tbody > tr > th,
+.table_add > tfoot > tr > th,
+.table_add > thead > tr > td,
+.table_add > tbody > tr > td,
+.table_add > tfoot > tr > td {
+    padding: 0;
+    border-top: 0;
+    line-height: 30px;
+}
+.addText{
+    margin-top: 10px;
+}
 /*测试*/
 .test{
     border: 1px solid red;

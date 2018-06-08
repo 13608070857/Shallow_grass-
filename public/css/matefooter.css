@@ -18,9 +18,10 @@ footer{
     padding: 0;
 }
 .select{
-    margin-top:30px;
-    border: #7B7446 1px solid;
-    border-radius: 5px;
+    margin-top:25px;
+    border: none;
+    border-bottom: 1px solid #7B7446;
+    padding: 5px;
 }
 .img{
     display: block;
