@@ -2,10 +2,15 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/public/css/self.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/views/address.ejs" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/views/interest.ejs" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/views/passwdEdit.ejs" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/views/security.ejs" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/views/selfE.ejs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/js/self/editSelf.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/views/selfPublic/address.ejs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/views/selfPublic/allOrder.ejs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/views/selfPublic/collect.ejs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/views/selfPublic/coupons.ejs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/views/selfPublic/orderG.ejs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/views/selfPublic/passwdEdit.ejs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/views/selfPublic/security.ejs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/views/selfPublic/selfE.ejs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/views/selfPublic/usable.ejs" charset="UTF-8" />
   </component>
 </project>

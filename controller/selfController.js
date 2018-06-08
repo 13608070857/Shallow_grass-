@@ -1,9 +1,11 @@
 const mysql=require("mysql");
 const dbpool=require("../config/dbpoolConfig");
 const usermodel=require("../dao/userDao");
-const controller={
+const ejs = require("ejs");
+
+const controller = {
     self(req,resp){
-        resp.render("self",{username:"111"});
+        resp.render("selfPublic/self",{username:"111"});
     }
 };
 

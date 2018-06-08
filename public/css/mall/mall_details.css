@@ -54,6 +54,9 @@
 .imgtop2{
     margin-top: 10px;
 }
+.imgtop3{
+    margin-top: 40px;
+}
 .detatitle{
     font-size: 16px;
     font-weight: bold;
@@ -68,14 +71,14 @@ p{
     color: #FF2560;
     font-weight: bold;
     font-size: 18px;
-    margin-left: 30px;
+    margin-left: 55px;
 }
 .freightSpan>span{
-    margin-left: 30px;
+    margin-left: 55px;
     color: #333333;
 }
 .speciSpan{
-    height: 50px;
+    height: 35px;
 }
 .speciSpan>span{
     float: left;
@@ -93,6 +96,48 @@ p{
     padding: 5px 20px 5px 20px;
     cursor: pointer;
 }
+.mall_num{
+    height: 50px;
+    line-height: 50px;
+}
+.mall_num>span{
+    color: #909090;
+}
+.mall_num input{
+    width: 60px;
+    height: 30px;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+    outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+/*Firefox*/
+input[type="number"]{
+    -moz-appearance:textfield;
+}
+.myinput{
+    margin-left: 60px;
+    margin-top: 10px;
+}
+.myinput span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #d3d3d3;
+    font-size: 20px;
+    cursor: pointer;
+}
+#numRedu::before{
+    content: '-';
+}
+#numadd::before{
+    content: '+';
+}
 .btn_div{
     margin-bottom: 20px;
 }
@@ -105,7 +150,70 @@ p{
     color: #FFFFFF;
     margin-left: 10px;
 }
-
+.recomborder{
+    border: 1px solid #CECECE;
+    background-color: #FAFAFA;
+}
+.recomDiv{
+    line-height: 50px;
+    color: #7b7446;
+    font-size: 16px;
+    padding-left: 20px;
+}
+.introborderDiv2>img{
+    width: 230px;
+    height: 230px;
+    transition: all 0.3s linear;
+}
+.introborderDiv2{
+    overflow: hidden;
+    width: 230px;
+    height: 230px;
+}
+.introborder2{
+    overflow: hidden;
+    width: 230px;
+    height: 70px;
+    background-color: #FFFFFF;
+}
+.introduceDiv2{
+    height: 20px;
+    line-height: 20px;
+    padding: 0 10px 30px 10px;
+}
+.introLine{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.priceDiv{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px 0 10px;
+}
+.priceSpan{
+    color: #FF2560;
+    font-size: 18px;
+    font-weight: bold;
+}
+.paySpan{
+    color: #929292;
+}
+.listborder{
+    margin: 0 0 0 10px;
+}
+.add_cart{
+    margin-bottom: -20px;
+    color: #FFFFFF;
+    font-weight: bold;
+    transition: all .3s linear;
+}
+@media (min-width: 992px){
+    .col-md-3 {
+        width: 23.7%;
+    }
+}
 /*测试*/
 .test{
     border: 1px solid red;
