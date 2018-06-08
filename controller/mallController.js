@@ -3,7 +3,7 @@ const dbpool=require("../config/dbpoolConfig");
 const usermodel=require("../dao/userDao");
 const controller={
     mymall(req,resp){
-        resp.render("mall",{username:"111"});
+        resp.render("mall/mall",{username:"111"});
     }
 };
 
