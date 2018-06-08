@@ -194,6 +194,8 @@ input[type="number"]{
 .addText{
     margin-top: 10px;
 }
+<<<<<<< HEAD
+=======
 .sumMoney{
     line-height: 34px;
 }
@@ -237,6 +239,7 @@ textarea{
 .payactive{
     border: 2px solid #7b7446;
 }
+>>>>>>> 68918da254842559fe1e9ea064eac57aa4ddd177
 /*测试*/
 .test{
     border: 1px solid red;
