@@ -222,6 +222,15 @@ textarea{
     margin-right: 10px;
     cursor: pointer;
 }
+.psList ul{
+    list-style: none;
+}
+.psList ul>li{
+    float: left;
+    padding: 5px 20px 5px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
 .payunactive{
     border: 2px solid #F0F0F0;
 }

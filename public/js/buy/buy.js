@@ -56,3 +56,8 @@ $(".payList ul>li").click(function () {
     $(".payList ul>li").attr("class","payunactive");
     $(this).attr("class","payactive");
 });
+//配送方式
+$(".psList ul>li").click(function () {
+    $(".psList ul>li").attr("class","payunactive");
+    $(this).attr("class","payactive");
+});
