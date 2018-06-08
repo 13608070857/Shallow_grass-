@@ -51,3 +51,8 @@ $(".add_cart_btn").click(function () {
 $(".refer_btn").click(function () {
     $(".refer_btn").css("color","#FFFFFF");
 });
+//支付方式
+$(".payList ul>li").click(function () {
+    $(".payList ul>li").attr("class","payunactive");
+    $(this).attr("class","payactive");
+});
