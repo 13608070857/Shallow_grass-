@@ -307,3 +307,86 @@ a:hover,a:active {
 .cusInfo {
     line-height: 40px;
 }
+.cusList {
+    padding: 0 20px;
+}
+.cusP {
+    width: 95%;
+    margin: 0 auto;
+}
+.cusPTop,.cusB {
+    padding-left: 3px;
+    position: relative;
+}
+.cusPCont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    color: #fff;
+    padding-top: 20px;
+}
+.cusN {
+    font-size: 20px;
+}
+.cusNum {
+    font-size: 32px;
+}
+.use {
+    background: #fff;
+    color: #DE786B;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+.use:hover {
+    color: #DE786B;
+}
+.cusB {
+    overflow: hidden;
+    cursor: pointer;
+}
+.cusBCont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    padding: 0 10px;
+}
+.cusText {
+    padding-top: 5px;
+    width: 90%;
+    line-height: 25px;
+    display: inline-block;
+    color: #DE786B;
+}
+.saleT {
+    font-size: 18px;
+    color: #7B7446;
+    border-bottom: 1px solid #eee;
+}
+.saleC {
+    margin-top: 10px;
+}
+.saleS {
+    padding: 20px 20px 0 20px;
+}
+.search.saleS input {
+    padding: 5px;
+}
+.search.saleS .save {
+    padding: 5px 10px;
+}
+select {
+    width: 60%;
+    padding: 5px;
+    color: #7B7446;
+    border: none;
+    border-bottom: 1px solid #7B7446;
+}
+select:focus {
+    outline: none;
+}
+.colorRed {
+    color: #f00;
+}

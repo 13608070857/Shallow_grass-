@@ -2,8 +2,9 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/public/css/self.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/public/js/self/editSelf.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/js/self/self.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/views/selfPublic/address.ejs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/views/selfPublic/afterSale.ejs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/views/selfPublic/allOrder.ejs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/views/selfPublic/collect.ejs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/views/selfPublic/coupons.ejs" charset="UTF-8" />
@@ -12,5 +13,6 @@
     <file url="file://$PROJECT_DIR$/views/selfPublic/security.ejs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/views/selfPublic/selfE.ejs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/views/selfPublic/usable.ejs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/views/selfPublic/view.ejs" charset="UTF-8" />
   </component>
 </project>
