@@ -130,15 +130,55 @@
             </table>
         </div>
     </div>
-    <!--提交订单-->
+    <!--全选删除-->
     <div class="row">
-        <div class="col-xs-11 myadd">
-            <div class="pull-left">
+        <div class="col-xs-3 myadd">
+            <div>
                 <input type="checkbox" class="check_all">全选
                 <button type="button" class="btn delete_btn"  data-toggle="modal" data-target="#myModal">删除</button>
             </div>
+        </div>
+        <div class="col-xs-8 sumMoney">
             <div class="pull-right">
-                <a href="/confirm_order">
+                <span class="mallNum">2</span>&nbsp;件商品，应付总额：
+                <span class="mallMoney">¥<span>329.00</span></span>
+            </div>
+        </div>
+    </div>
+    <!--支付方式-->
+    <div class="row">
+        <div class="col-xs-11 myadd">
+            <div class="addressMsg">支付方式</div>
+            <div class="payList">
+                <ul>
+                    <li class="payactive">货到付款</li>
+                    <li class="payunactive">支付宝支付</li>
+                    <li class="payunactive">微信支付</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--配送方式-->
+    <div class="row">
+        <div class="col-xs-11 myadd">
+            <div class="addressMsg">配送方式</div>
+            <div class="payList">
+                <ul>
+                    <li class="payactive">浅草快递</li>
+                    <li class="payunactive">圆通快递</li>
+                    <li class="payunactive">天天快递</li>
+                    <li class="payunactive">韵达快递</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--优惠方式-->
+
+    <!--提交订单-->
+    <div class="row sub_order">
+        <div class="col-xs-11 myadd">
+            <div class="pull-right">
+                <a href="/pay">
                     <button type="button" class="btn refer_btn">提交订单</button>
                 </a>
             </div>

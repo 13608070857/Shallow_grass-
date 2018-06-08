@@ -194,6 +194,40 @@ input[type="number"]{
 .addText{
     margin-top: 10px;
 }
+.sumMoney{
+    line-height: 34px;
+}
+.mallNum{
+    font-size: 16px;
+    font-weight: bold;
+    color: #FF005D;
+}
+.mallMoney{
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF005D;
+}
+textarea{
+    resize:none;
+}
+.sub_order{
+    margin-top: 10px;
+}
+.payList ul{
+    list-style: none;
+}
+.payList ul>li{
+    float: left;
+    padding: 5px 20px 5px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.payunactive{
+    border: 2px solid #F0F0F0;
+}
+.payactive{
+    border: 2px solid #7b7446;
+}
 /*测试*/
 .test{
     border: 1px solid red;
