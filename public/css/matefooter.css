@@ -14,7 +14,7 @@ footer{
 .border_rgiht{
     border-right: 1px solid;
 }
-.col-md-8,.col-md-5,.col-md-4,.col-md-3,.col-md-2,.col-md-1{
+.col-md-12,.col-md-11,.col-md-10,.col-md-9,.col-md-8,.col-md-7,.col-md-6,.col-md-5,.col-md-4,.col-md-3,.col-md-2,.col-md-1{
     padding: 0;
 }
 .select{
@@ -23,9 +23,17 @@ footer{
     border-radius: 5px;
 }
 .img{
+    display: block;
     width: 50px;
     height: 50px;
     background-color: red;
+    margin: 0 auto;
+}
+footer img{
+    display: block;
+    /*width: 50px;*/
+    /*height: 50px;*/
+    /*background-color: red;*/
     margin: 0 auto;
 }
 footer p{
