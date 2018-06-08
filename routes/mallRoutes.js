@@ -15,13 +15,10 @@ router.get("/mall_details",function (req,resp) {
 //商品购买
 router.get("/buy",function (req,resp) {
     resp.render("mall/buy",{username:"测试"});
-<<<<<<< HEAD
 });
 //确认订单
 router.get("/confirm_order",function (req,resp) {
     resp.render("mall/confirm_order",{username:"测试"});
-=======
->>>>>>> 68918da254842559fe1e9ea064eac57aa4ddd177
 });
 //支付
 router.get("/pay",function (req,resp) {
