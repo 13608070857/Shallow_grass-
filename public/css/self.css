@@ -95,6 +95,12 @@ a:hover,a:active {
 .product div {
     line-height: 150px;
 }
+#op {
+    margin-top: 40px;
+}
+#op div {
+    line-height: 40px;
+}
 .wait {
     color: #f00;
 }
@@ -285,6 +291,14 @@ a:hover,a:active {
 .orderGSelf .blTitle {
     padding-left: 10px;
 }
+.confProduct {
+    background: #7b7446;
+    color: #fff;
+}
+.confProduct:hover {
+    color: #fff;
+    background: #7b785b;
+}
 .search input {
     border: 1px solid #7B7446;
     width: 240px;
@@ -389,4 +403,29 @@ select:focus {
 }
 .colorRed {
     color: #f00;
+}
+.viewEdit {
+    border: 1px solid #eee;
+    padding: 0 15px;
+    padding-bottom: 20px;
+}
+.viewTitle {
+    font-size: 18px;
+    color: #7b7446;
+    padding: 10px 0;
+    background-color: rgb(246,245,243);
+}
+.viewList {
+    padding: 20px 0;
+}
+.viewLT {
+    border-bottom: 1px solid #eee;
+    margin: 10px 0;
+}
+.viewLT span {
+    border-bottom: 1px solid #fff;
+    position: relative;
+    bottom: -4px;
+    font-size: 24px;
+    color: #7b7446;
 }
