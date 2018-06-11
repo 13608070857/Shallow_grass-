@@ -9,19 +9,23 @@ function myImg(obj) {
 }
 //商品规格
 $("#speciSpan ul>li").on("click",function () {
-    $("#speciSpan ul>li").css("border","1px solid #d3d3d3");
-    $(this).css("border","1px solid #7B7446");
+    $("#speciSpan ul>li").css("border","2px solid #d3d3d3");
+    $(this).css("border","2px solid #7B7446");
 });
 //商品推荐
 $(".listborder").mouseover(function () {
-    $(this).children(".introborderDiv2").children("img").css("transform","scale(1.2)");
-    $(this).children(".introborder2").children(".add_cart").css("transform","translateY(-180px)");
-    $(".introborder2").css("overflow","visible");
+    $(this).children("a").children(".introborderDiv2").children("img").css("transform","scale(1.2)");
+    $(this).children(".add_cart").css({
+        "transform":"translateY(-180px)",
+        "opacity":"1"
+    });
 });
 $(".listborder").mouseout(function () {
-    $(this).children(".introborderDiv2").children("img").css("transform","scale(1)");
-    $(this).children(".introborder2").children(".add_cart").css("transform","translateY(0px)");
-    $(".introborder2").css("overflow","hidden");
+    $(this).children("a").children(".introborderDiv2").children("img").css("transform","scale(1)");
+    $(this).children(".add_cart").css({
+        "transform":"translateY(0px)",
+        "opacity":"0"
+    });
 });
 //数量加减
 $("#numRedu").click(function () {
