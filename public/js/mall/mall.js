@@ -9,12 +9,19 @@ $("#hot>li").on("click",function () {
     $(this).attr("class","active");
 });
 $(".listborder").mouseover(function () {
-    $(this).children(".introborderDiv").children("img").css("transform","scale(1.2)");
-    $(this).children(".introborder").children(".add_shop_cart").css("transform","translateY(-180px)");
-    $(".introborder").css("overflow","visible");
+    console.log($(this).children(".add_shop_cart"));
+    $(this).children("a").children(".introborderDiv").children("img").css("transform","scale(1.2)");
+    $(this).children(".add_shop_cart").css({
+        "overflow":"visible",
+        "opacity":"1",
+        "transform":"translateY(-180px)"
+    });
 });
 $(".listborder").mouseout(function () {
-    $(this).children(".introborderDiv").children("img").css("transform","scale(1)");
-    $(this).children(".introborder").children(".add_shop_cart").css("transform","translateY(0px)");
-    $(".introborder").css("overflow","hidden");
+    $(this).children("a").children(".introborderDiv").children("img").css("transform","scale(1)");
+    $(this).children(".add_shop_cart").css({
+        "overflow":"hidden",
+        "opacity":"0",
+        "transform":"translateY(0px)"
+    });
 });
