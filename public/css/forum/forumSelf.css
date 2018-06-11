@@ -3,6 +3,7 @@
     padding: 0;
 }
 .selfBg{
-    height: 400px;
-    background-image: url("../../img/forum/Self/headBg.jpg");
+    margin-top: 70px;
+    height: 360px;
+    background: url("../../img/forum/Self/headBg.jpg") center no-repeat;
 }

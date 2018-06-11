@@ -50,6 +50,8 @@ router.get("/leasemall",function (req,resp) {
 router.get("/forumIndex",forumController.forumIndex);
 //论坛帖子
 router.get("/forumMain",forumController.forumMain);
+//论坛个人中心
+router.get("/forumSelf",forumController.forumSelf);
 
 
 module.exports=router;//公开router
