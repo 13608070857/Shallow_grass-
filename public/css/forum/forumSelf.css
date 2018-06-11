@@ -1,0 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.selfBg{
+    height: 400px;
+    background-image: url("../../img/forum/Self/headBg.jpg");
+}
