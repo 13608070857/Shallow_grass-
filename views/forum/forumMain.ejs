@@ -14,9 +14,59 @@
     <![endif]-->
 </head>
 <body>
-<div class="container" style="border:1px solid #f00">4</div>
+<header>
+    <%-include('../mateheader.ejs')%>
+</header>
+<div class="fmContent">
+    <div class="row fmNav">
+        <div class="col-lg-6">
+            <ul class="crumbs">
+                <li>
+                    <a href="#">论坛首页</a>
+                </li>
+                <li>&gt;</li>
+                <li>
+                    <a href="#">多肉养殖</a>
+                </li>
+                <li>&gt;</li>
+                <li>正文</li>
+            </ul>
+        </div>
+        <div class="col-lg-6">
+            <div class="col-lg-7"></div>
+            <div class="col-lg-3">
+                <a href="#" role="button" class="btn borderBtn">本版块精华列表</a>
+            </div>
+            <div class="col-lg-2">
+                <a href="#" role="button" class="btn postBtn">发帖</a>
+            </div>
+        </div>
+    </div>
+    <div class="fmTitle">多肉的基础养殖方法</div>
+    <div class="fmPage row">
+        <div class="col-lg-6 fmView">
+            <span>查看222</span>
+            <span>回复33</span>
+        </div>
+        <div class="col-lg-6 fmPaging text-right">
+            <a href="#">首页</a>
+            <a href="#" class="currentA">1</a>
+            <a href="#">尾页</a>
+            <span>共1页</span>
+            <span>到第</span>
+            <input type="text"/>
+            <span>页</span>
+            <a href="#" role="button" class="btn">确认</a>
+        </div>
+    </div>
+    <div class="fmInvi">
+
+    </div>
+</div>
 
 
+
+<%-include('../matefooter.ejs')%>
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>
