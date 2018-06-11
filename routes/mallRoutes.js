@@ -41,5 +41,7 @@ router.get("/leasemall",function (req,resp) {
 
 //论坛
 router.get("/forumIndex",forumController.forumIndex);
+//论坛帖子
+router.get("/forumMain",forumController.forumMain);
 
 module.exports=router;//公开router
