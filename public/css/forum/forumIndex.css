@@ -1,0 +1,50 @@
+.banner {
+    height: 635px;
+    width: 100%;
+    background: url(../../img/forum/lun1.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.row {
+    margin: 0;
+}
+.fiContent {
+    margin: 40px 0;
+}
+.fiTitle {
+    font-size: 24px;
+    margin: 40px 0;
+    position: relative;
+}
+.fiTitle:after {
+    content: "";
+    border-bottom: 2px solid #7b7446;
+    width: 20px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -10px;
+}
+.fiCImg {
+    height: 240px;
+    overflow: hidden;
+}
+.fiCImg img {
+    width: 100%;
+}
+.fiDesc {
+    padding: 10px 0;
+    box-shadow: 0 0 5px #ccc;
+    line-height: 40px;
+}
+.fiDesc a {
+    color: #333;
+}
+.fiDesc a:hover {
+    text-decoration: none;
+    color: #7b7446;
+}
+.headerImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

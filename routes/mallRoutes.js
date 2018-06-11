@@ -31,7 +31,7 @@ router.get("/shop_cart",function (req,resp) {
 });
 
 //个人中心
-router.get("/forum",selfController.self);
+router.get("/self",selfController.self);
 
 //首页
 router.get("/index",indexController.myindex);
