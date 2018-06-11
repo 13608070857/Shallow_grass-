@@ -60,6 +60,9 @@ a:hover,a:active {
 .userInfo {
     border-right: 1px solid #eee;
 }
+.userHeader {
+
+}
 .userHeader,.userHead {
     border-radius: 50%;
     height: 120px;
