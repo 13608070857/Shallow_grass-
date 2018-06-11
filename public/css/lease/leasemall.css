@@ -218,3 +218,10 @@ input[type="number"]{
 .test{
     border: 1px solid red;
 }
+.setIntroduce{
+    font-size: 18px;
+    background-size: 100%;
+    line-height: 35px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
