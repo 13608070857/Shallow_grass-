@@ -7,25 +7,16 @@ function myImg(obj) {
     var num = obj.id.charAt(3);
     $("#imgdeta").css("background-image"," url('../img/mall/TB2C_"+num+".jpg')")
 }
-//商品规格
-$("#speciSpan ul>li").on("click",function () {
-    $("#speciSpan ul>li").css("border","2px solid #d3d3d3");
-    $(this).css("border","2px solid #7B7446");
-});
 //商品推荐
 $(".listborder").mouseover(function () {
-    $(this).children("a").children(".introborderDiv2").children("img").css("transform","scale(1.2)");
-    $(this).children(".add_cart").css({
-        "transform":"translateY(-180px)",
-        "opacity":"1"
-    });
+    $(this).children(".introborderDiv2").children("img").css("transform","scale(1.2)");
+    $(this).children(".introborder2").children(".add_cart").css("transform","translateY(-180px)");
+    $(".introborder2").css("overflow","visible");
 });
 $(".listborder").mouseout(function () {
-    $(this).children("a").children(".introborderDiv2").children("img").css("transform","scale(1)");
-    $(this).children(".add_cart").css({
-        "transform":"translateY(0px)",
-        "opacity":"0"
-    });
+    $(this).children(".introborderDiv2").children("img").css("transform","scale(1)");
+    $(this).children(".introborder2").children(".add_cart").css("transform","translateY(0px)");
+    $(".introborder2").css("overflow","hidden");
 });
 //数量加减
 $("#numRedu").click(function () {

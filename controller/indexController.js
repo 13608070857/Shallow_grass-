@@ -1,4 +1,4 @@
-const indexroller={
+const indexroller = {
     myindex(req,resp){
         resp.render("index",{username:""});
     },

@@ -14,7 +14,7 @@
     <![endif]-->
 </head>
 <body>
-<%-include('mateheader.ejs')%>
+<%-include('../mateheader.ejs')%>
 <div class="container mycontent">
     <!--分类-->
     <div class="row">
@@ -51,8 +51,8 @@
         <div class="col-lg-12 text-center">
             <div class="col-sm-3 col-md-3 mallList">
                 <div class="row">
-                    <a href="/mall_details">
-                        <div class="col-lg-11 listborder">
+                    <div class="col-lg-11 listborder">
+                        <a href="/mall_details">
                             <div class="introborderDiv">
                                 <img src="img/mall/TB2C_list_01.jpg" class="introborder img-responsive">
                             </div>
@@ -64,17 +64,19 @@
                                 <div class="introduceDiv">
                                     <p class="introduce introLine">多肉植物种植新手套餐肉肉植物多肉组合盆栽绿植花卉送花盆送土</p>
                                 </div>
-                                <div class="add_shop_cart">加入购物车</div>
                             </div>
+                        </a>
+                        <div class="add_shop_cart">
+                            <a href="/shop_cart">购物车(图标)</a>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
 
             <div class="col-sm-3 col-md-3 mallList">
                 <div class="row">
-                    <a href="/mall_details">
-                        <div class="col-lg-11 listborder">
+                    <div class="col-lg-11 listborder">
+                        <a href="/mall_details">
                             <div class="introborderDiv">
                                 <img src="img/mall/TB2C_list_01.jpg" class="introborder img-responsive">
                             </div>
@@ -86,16 +88,18 @@
                                 <div class="introduceDiv">
                                     <p class="introduce introLine">多肉植物种植新手套餐肉肉植物多肉组合盆栽绿植花卉送花盆送土</p>
                                 </div>
-                                <div class="add_shop_cart">加入购物车</div>
                             </div>
+                        </a>
+                        <div class="add_shop_cart">
+                            <a href="/shop_cart">购物车(图标)</a>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<%-include('matefooter.ejs')%>
+<%-include('../matefooter.ejs')%>
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/mall/mall.js"></script>

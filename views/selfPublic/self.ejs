@@ -8,6 +8,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="css/self.css"/>
+    <link rel="stylesheet" href="css/modelCss.css"/>
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -40,14 +41,14 @@
                     <li id="collect">
                         <a href="#">我的收藏</a>
                     </li>
+                    <li id="view">
+                        <a href="#">我的足迹</a>
+                    </li>
                     <li>
                         <h4>交易管理</h4>
                     </li>
                     <li id="orderG">
                         <a href="#">订单管理</a>
-                    </li>
-                    <li id="redP">
-                        <a href="#">我的红包</a>
                     </li>
                     <li id="coupons">
                         <a href="#">优惠卷</a>
@@ -58,16 +59,13 @@
                     <li id="afterSale">
                         <a href="#">售后记录</a>
                     </li>
-                    <li id="priceP">
-                        <a href="#">价格保护</a>
-                    </li>
                     <li id="help">
                         <a href="#">帮助中心</a>
                     </li>
                 </ul>
             </aside>
             <div class="col-lg-10" id="selfContEdit">
-                <%-include('coupons.ejs')%>
+                <%-include('editSelf.ejs')%>
             </div>
         </div>
     </div>
@@ -78,6 +76,9 @@
 
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>
-<script src="js/self/editSelf.js"></script>
+<script src="js/self.js"></script>
+<script src="js/buy/distpicker.data.js"></script>
+<script src="js/buy/distpicker.js"></script>
+<script src="js/buy/main.js"></script>
 </body>
 </html>

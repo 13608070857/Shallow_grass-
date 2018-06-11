@@ -166,6 +166,77 @@ input[type="number"]{
     color: #FFFFFF;
     background-color: #2D3814;
 }
+.btn_del{
+    background-color: #7b7446;
+    color: #FFFFFF;
+}
+.btn_del:hover{
+    background-color: #5d5835;
+    color: #FFFFFF;
+}
+.addRow{
+    height: 36px;
+    line-height: 36px;
+}
+.table_add{
+    border: none;
+}
+.table_add > thead > tr > th,
+.table_add > tbody > tr > th,
+.table_add > tfoot > tr > th,
+.table_add > thead > tr > td,
+.table_add > tbody > tr > td,
+.table_add > tfoot > tr > td {
+    padding: 0;
+    border-top: 0;
+    line-height: 30px;
+}
+.addText{
+    margin-top: 10px;
+}
+.sumMoney{
+    line-height: 34px;
+}
+.mallNum{
+    font-size: 16px;
+    font-weight: bold;
+    color: #FF005D;
+}
+.mallMoney{
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF005D;
+}
+textarea{
+    resize:none;
+}
+.sub_order{
+    margin-top: 10px;
+}
+.payList ul{
+    list-style: none;
+}
+.payList ul>li{
+    float: left;
+    padding: 5px 20px 5px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.psList ul{
+    list-style: none;
+}
+.psList ul>li{
+    float: left;
+    padding: 5px 20px 5px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.payunactive{
+    border: 2px solid #F0F0F0;
+}
+.payactive{
+    border: 2px solid #7b7446;
+}
 /*测试*/
 .test{
     border: 1px solid red;

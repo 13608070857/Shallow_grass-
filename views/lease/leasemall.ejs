@@ -7,14 +7,14 @@
     <title>商品详情</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/mall/mall_details.css" rel="stylesheet">
+    <link href="css/lease/leasemall.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 <body>
-<%-include('mateheader.ejs')%>
+<%-include('../mateheader.ejs')%>
 <div class="container mycontent">
     <!--图片展示-->
     <div class="row">
@@ -29,20 +29,11 @@
     <!--商品介绍-->
     <div class="row imgtop">
         <div class="col-xs-11 imgbottom">
-            <h4 class="detatitle">多肉组合盆栽绿植花卉送花盆送土</h4>
-            <p class="priceSpan">价格<span>¥9.90</span></p>
+            <h4 class="detatitle">A类租赁套餐</h4>
+            <p class="priceSpan">价格<span>¥618</span></p>
             <p class="freightSpan">运费
-                <span>快递：0.00</span>
+                <span>快递：40.00</span>
             </p>
-            <div class="speciSpan" id="speciSpan">
-                <span>商品规格</span>
-                <ul>
-                    <li>小</li>
-                    <li>中</li>
-                    <li>大</li>
-                    <li>特大</li>
-                </ul>
-            </div>
             <div class="mall_num">
                 <span class="pull-left">数量</span>
                 <div class="pull-left myinput">
@@ -174,9 +165,9 @@
         </div>
     </div>
 </div>
-<%-include('matefooter.ejs')%>
+<%-include('../matefooter.ejs')%>
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>
-<script src="js/mall/mall_details.js"></script>
+<script src="js/lease/leasemall.js"></script>
 </body>
 </html>

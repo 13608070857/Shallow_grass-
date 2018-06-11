@@ -3,6 +3,7 @@ const controller=require("../controller/mallController");
 const indexController = require("../controller/indexController");
 const selfController = require("../controller/selfController");
 const leaseController = require("../controller/leaseController");
+const forumController = require("../controller/forumController");
 const router=express.Router();//获取路由对象
 
 //商城
@@ -10,19 +11,19 @@ router.get("/mall",controller.mymall);
 
 //商品详情
 router.get("/mall_details",function (req,resp) {
-    resp.render("mall_details",{username:"测试"});
+    resp.render("mall/mall_details",{username:"测试"});
 });
 //商品购买
 router.get("/buy",function (req,resp) {
-    resp.render("buy",{username:"测试"});
+    resp.render("mall/buy",{username:"测试"});
 });
 //支付
 router.get("/pay",function (req,resp) {
-    resp.render("pay",{username:"测试"});
+    resp.render("mall/pay",{username:"测试"});
 });
 //购物车
 router.get("/shop_cart",function (req,resp) {
-    resp.render("shop_cart",{username:"测试"});
+    resp.render("mall/shop_cart",{username:"测试"});
 });
 
 //个人中心
@@ -40,6 +41,15 @@ router.get("/activity",indexController.myactivity);
 router.get("/Retrievepassword",indexController.myRetrievepassword);
 //租赁
 router.get("/lease",leaseController.mylease);
+//租赁商品详情
+router.get("/leasemall",function (req,resp) {
+    resp.render("lease/leasemall",{username:"111"});
+});
+
+//论坛
+router.get("/forumIndex",forumController.forumIndex);
+//论坛帖子
+router.get("/forumMain",forumController.forumMain);
 
 
 module.exports=router;//公开router

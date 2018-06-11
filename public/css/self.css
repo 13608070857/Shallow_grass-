@@ -95,6 +95,12 @@ a:hover,a:active {
 .product div {
     line-height: 150px;
 }
+#op {
+    margin-top: 40px;
+}
+#op div {
+    line-height: 40px;
+}
 .wait {
     color: #f00;
 }
@@ -285,6 +291,14 @@ a:hover,a:active {
 .orderGSelf .blTitle {
     padding-left: 10px;
 }
+.confProduct {
+    background: #7b7446;
+    color: #fff;
+}
+.confProduct:hover {
+    color: #fff;
+    background: #7b785b;
+}
 .search input {
     border: 1px solid #7B7446;
     width: 240px;
@@ -306,4 +320,112 @@ a:hover,a:active {
 }
 .cusInfo {
     line-height: 40px;
+}
+.cusList {
+    padding: 0 20px;
+}
+.cusP {
+    width: 95%;
+    margin: 0 auto;
+}
+.cusPTop,.cusB {
+    padding-left: 3px;
+    position: relative;
+}
+.cusPCont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    color: #fff;
+    padding-top: 20px;
+}
+.cusN {
+    font-size: 20px;
+}
+.cusNum {
+    font-size: 32px;
+}
+.use {
+    background: #fff;
+    color: #DE786B;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+.use:hover {
+    color: #DE786B;
+}
+.cusB {
+    overflow: hidden;
+    cursor: pointer;
+}
+.cusBCont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    padding: 0 10px;
+}
+.cusText {
+    padding-top: 5px;
+    width: 90%;
+    line-height: 25px;
+    display: inline-block;
+    color: #DE786B;
+}
+.saleT {
+    font-size: 18px;
+    color: #7B7446;
+    border-bottom: 1px solid #eee;
+}
+.saleC {
+    margin-top: 10px;
+}
+.saleS {
+    padding: 20px 20px 0 20px;
+}
+.search.saleS input {
+    padding: 5px;
+}
+.search.saleS .save {
+    padding: 5px 10px;
+}
+select {
+    width: 60%;
+    padding: 5px;
+    color: #7B7446;
+    border: none;
+    border-bottom: 1px solid #7B7446;
+}
+select:focus {
+    outline: none;
+}
+.colorRed {
+    color: #f00;
+}
+.viewEdit {
+    border: 1px solid #eee;
+    padding: 0 15px;
+    padding-bottom: 20px;
+}
+.viewTitle {
+    font-size: 18px;
+    color: #7b7446;
+    padding: 10px 0;
+    background-color: rgb(246,245,243);
+}
+.viewList {
+    padding: 20px 0;
+}
+.viewLT {
+    border-bottom: 1px solid #eee;
+    margin: 10px 0;
+}
+.viewLT span {
+    border-bottom: 1px solid #fff;
+    position: relative;
+    bottom: -4px;
+    font-size: 24px;
+    color: #7b7446;
 }
