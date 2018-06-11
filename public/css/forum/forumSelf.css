@@ -2,8 +2,51 @@
     margin: 0;
     padding: 0;
 }
+.row{
+    margin-right: 0;
+    margin-left: 0;
+}
+.navHidden{
+    width: 100%;
+    height: 92px;
+}
 .selfBg{
-    margin-top: 70px;
     height: 360px;
     background: url("../../img/forum/Self/headBg.jpg") center no-repeat;
+}
+.selfNav div{
+    padding-top: 20px;
+    height: 90px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.selfNav div p{
+    margin-top: 15px;
+    font-size: 18px;
+}
+.selfBgBlack{
+    margin-top: 259px;
+    height: 103px;
+    background-image: url("../../img/forum/Self/headHeiBg.png");
+}
+.touxiang{
+    margin: -45px auto;
+    width: 115px;
+    height: 115px;
+    background: #F6F6F6;
+    border-radius: 50%;
+}
+.touxiangT{
+    margin: -45px auto;
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    background-image: url("../../img/forum/Self/head180.png");
+    background-size: 100% 100%;
+}
+.touxiangDw{
+    height: 55px;
+}
+.juzhong{
+    text-align: center;
 }
