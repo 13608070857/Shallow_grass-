@@ -30,8 +30,16 @@ router.get("/self",selfController.self);
 
 //首页
 router.get("/index",indexController.myindex);
-
+//登陆
+router.get("/login",indexController.mylogin);
+//注册
+router.get("/register",indexController.myregister);
+//活动
+router.get("/activity",indexController.myactivity);
+//找回密码
+router.get("/Retrievepassword",indexController.myRetrievepassword);
 //租赁
 router.get("/lease",leaseController.mylease);
+
 
 module.exports=router;//公开router
