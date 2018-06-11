@@ -1,0 +1,85 @@
+header {
+    height: 92px;
+}
+.line {
+    border: 1px solid #f00;
+}
+li {
+    list-style: none;
+}
+.fmNav {
+    margin-bottom: 20px;
+}
+.crumbs {
+    padding: 0;
+}
+.crumbs li {
+    float: left;
+    margin-left: 10px;
+}
+.crumbs a {
+    color: #7b7446;
+}
+.crumbs a:hover {
+    text-decoration: none;
+    color: #7b7446;
+}
+.fmContent {
+    padding: 40px 50px;
+}
+.fmTitle {
+    font-size: 22px;
+}
+.borderBtn {
+    border-color: #c0b97f;
+    padding: 5px 20px;
+    border-radius: 3px;
+    color: #7b7446;
+}
+.borderBtn:hover {
+    color: #7b7446;
+    border-color: #7b7446;
+}
+.postBtn {
+    background: #8a8351;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 3px;
+}
+.postBtn:hover {
+    background: #7b7446;
+    color: #fff;
+}
+.fmPage {
+    margin: 10px 0;
+}
+.fmView {
+    margin: 0;
+    padding: 0;
+}
+.fmView span {
+    padding-right: 10px;
+    color: #999;
+}
+.fmPaging a {
+    color: #333;
+}
+.fmPaging .currentA {
+    color: #7b7446;
+}
+.fmPaging a:hover {
+    color: #7b7446;
+    text-decoration: none;
+}
+.fmPaging a,.fmPaging span {
+    padding-left: 10px;
+}
+.fmPaging input {
+    width: 30px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+}
+.fmPaging input:focus {
+    outline-color: #7b7446;
+    text-align: center;
+}
