@@ -256,6 +256,7 @@
     font-size: 12px;
     margin: 20px auto;
     background: rgba(250, 251, 252, 0.61);
+    color: #ff0000;
 }
 .butDiv:hover{
     background: #7B7446;

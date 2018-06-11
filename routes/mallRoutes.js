@@ -38,6 +38,10 @@ router.get("/index",indexController.myindex);
 
 //租赁
 router.get("/lease",leaseController.mylease);
+//租赁商品详情
+router.get("/leasemall",function (req,resp) {
+    resp.render("lease/leasemall",{username:"111"});
+});
 
 //论坛
 router.get("/forumIndex",forumController.forumIndex);
