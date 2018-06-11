@@ -258,6 +258,9 @@ a:hover,a:active {
 }
 
 
+.pswEdit {
+    display: none;
+}
 .pswEdit .row {
     margin: 20px 0;
 }
