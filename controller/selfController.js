@@ -5,7 +5,7 @@ const ejs = require("ejs");
 
 const controller = {
     self(req,resp){
-        resp.render("selfPublic/self",{username:"111"});
+        resp.render("selfPublic/forum",{username:"111"});
     }
 };
 
