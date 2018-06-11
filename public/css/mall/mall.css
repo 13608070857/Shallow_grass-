@@ -44,7 +44,10 @@ ul>li:hover{
 .mallList{
     margin-top: 30px;
 }
-.listborder>.introborderDiv>img{
+.listborder>a{
+    text-decoration: none;
+}
+.listborder>a>.introborderDiv>img{
     width: 258.75px;
     height: 258.75px;
     transition: all 0.3s linear;
@@ -92,10 +95,19 @@ ul>li:hover{
     height: 91px;
 }
 .add_shop_cart{
-    color: #ffffff;
+    overflow: hidden;
+    opacity: 0;
+    color: #FFFFFF;
+    font-size: 20px;
     font-weight: bold;
+    height: 0;
     margin-bottom: -20px;
     transition: all 0.5s linear;
+    cursor: pointer;
+}
+.add_shop_cart>a{
+    text-decoration: none;
+    color: #FFFFFF;
 }
 /*测试*/
 .test{

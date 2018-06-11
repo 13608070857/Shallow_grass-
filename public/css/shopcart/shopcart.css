@@ -2,3 +2,45 @@
     margin-top: 100px;
     margin-bottom: 50px;
 }
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+}
+.nullShop{
+    display: table;
+    height: 400px;
+    padding-left: 0;
+    padding-right: 0;
+}
+.nullShop2{
+    padding-left: 0;
+    padding-right: 0;
+}
+.shopCell{
+    display: table-cell;
+    vertical-align: middle;
+}
+.shopImg>span{
+    font-size: 16px;
+    font-weight: bold;
+}
+.go_like>a{
+    font-size: 16px;
+    color: #7b785b;
+    text-decoration: none;
+    line-height: 60px;
+}
+.unshop{
+    border: 1px solid #cccccc;
+}
+.myLshop{
+    margin-left: 8.33333333%;
+}
+.account{
+    margin-top: 20px;
+}
+.refer_btn>a{
+    color: #FFFFFF;
+    text-decoration: none;
+}

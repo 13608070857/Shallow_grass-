@@ -8,6 +8,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/buy/buy.css" rel="stylesheet">
+    <link href="css/model.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -83,20 +84,21 @@
                 <tr>
                     <th>商品信息</th>
                     <th>商品属性</th>
+                    <th>优惠方式</th>
                     <th>单价</th>
                     <th width="130px">数量</th>
                     <th>小计</th>
-                    <th>实付</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td width="230px">
-                        <input type="checkbox" class="pull-left">
+                        <!--<input type="checkbox" class="pull-left">-->
                         <img src="img/mall/TB2C_1.jpg" width="50px" height="50px" class="pull-left">
                         <span class="addLine2 mall_msg">多肉组合盆栽绿植花卉送花盆送土</span>
                     </td>
                     <td>商品规格：大</td>
+                    <td>买二送一</td>
                     <td class="unit_price">¥<span>129.00</span></td>
                     <td>
                         <div>
@@ -106,15 +108,16 @@
                         </div>
                     </td>
                     <td class="subtotal">¥<span>129.00</span></td>
-                    <td class="money">¥<span>129.00</span></td>
+                    <!--<td class="money">¥<span>129.00</span></td>-->
                 </tr>
                 <tr>
                     <td width="210px">
-                        <input type="checkbox" class="pull-left">
+                        <!--<input type="checkbox" class="pull-left">-->
                         <img src="img/mall/TB2C_1.jpg" width="50px" height="50px" class="pull-left">
                         <span class="addLine2 mall_msg">多肉组合盆栽绿植花卉送花盆送土</span>
                     </td>
                     <td>商品规格：大</td>
+                    <td>满100减100</td>
                     <td class="unit_price">¥<span>129.00</span></td>
                     <td>
                         <div>
@@ -124,25 +127,10 @@
                         </div>
                     </td>
                     <td class="subtotal">¥<span>129.00</span></td>
-                    <td class="money">¥<span>129.00</span></td>
+                    <!--<td class="money">¥<span>129.00</span></td>-->
                 </tr>
                 </tbody>
             </table>
-        </div>
-    </div>
-    <!--全选删除-->
-    <div class="row">
-        <div class="col-xs-3 myadd">
-            <div>
-                <input type="checkbox" class="check_all">全选
-                <button type="button" class="btn delete_btn"  data-toggle="modal" data-target="#myModal">删除</button>
-            </div>
-        </div>
-        <div class="col-xs-8 sumMoney">
-            <div class="pull-right">
-                <span class="mallNum">2</span>&nbsp;件商品，应付总额：
-                <span class="mallMoney">¥<span>329.00</span></span>
-            </div>
         </div>
     </div>
     <!--支付方式-->
@@ -172,12 +160,12 @@
             </div>
         </div>
     </div>
-    <!--优惠方式-->
-
     <!--提交订单-->
     <div class="row sub_order">
         <div class="col-xs-11 myadd">
             <div class="pull-right">
+                <span class="mallNum">2</span>&nbsp;件商品，应付总额：
+                <span class="mallMoney">¥<span>258.00</span></span>
                 <a href="/pay">
                     <button type="button" class="btn refer_btn">提交订单</button>
                 </a>

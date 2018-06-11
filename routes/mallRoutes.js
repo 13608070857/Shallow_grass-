@@ -17,10 +17,6 @@ router.get("/mall_details",function (req,resp) {
 router.get("/buy",function (req,resp) {
     resp.render("mall/buy",{username:"测试"});
 });
-//确认订单
-router.get("/confirm_order",function (req,resp) {
-    resp.render("mall/confirm_order",{username:"测试"});
-});
 //支付
 router.get("/pay",function (req,resp) {
     resp.render("mall/pay",{username:"测试"});
