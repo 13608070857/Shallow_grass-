@@ -41,6 +41,8 @@ router.get("/activity",indexController.myactivity);
 router.get("/Retrievepassword",indexController.myRetrievepassword);
 //租赁
 router.get("/lease",leaseController.mylease);
+//规则
+router.get("/rule",indexController.myrule);
 //租赁商品详情
 router.get("/leasemall",function (req,resp) {
     resp.render("lease/leasemall",{username:"111"});

@@ -13,6 +13,9 @@ const indexroller = {
     },
     myRetrievepassword(req,resp){
         resp.render("Retrievepassword",{username:""});
+    },
+    myrule(req,resp){
+        resp.render("rule",{username:""});
     }
 };
 module.exports=indexroller;
