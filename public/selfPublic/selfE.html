@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人中心</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/self.css"/>
+    <link rel="stylesheet" href="../css/modelCss.css"/>
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<section>
+    <div class="container self">
+        <div class="row">
+            <aside class="col-lg-2 selfSet">
+                <ul>
+                    <li>
+                        <h4>账号管理</h4>
+                    </li>
+                    <li id="selfC">
+                        <a href="self.html">个人中心</a>
+                    </li>
+                    <li class="current" id="info">
+                        <a href="selfE.html">账号信息</a>
+                    </li>
+                    <li id="address">
+                        <a href="address.html">地址管理</a>
+                    </li>
+                    <li id="security">
+                        <a href="security.html">安全中心</a>
+                    </li>
+                    <li id="collect">
+                        <a href="collect.html">我的收藏</a>
+                    </li>
+                    <li id="view">
+                        <a href="view.html">我的足迹</a>
+                    </li>
+                    <li>
+                        <h4>交易管理</h4>
+                    </li>
+                    <li id="orderG">
+                        <a href="orderG.html">订单管理</a>
+                    </li>
+                    <li id="coupons">
+                        <a href="coupons.html">优惠卷</a>
+                    </li>
+                    <li>
+                        <h4>服务中心</h4>
+                    </li>
+                    <li id="afterSale">
+                        <a href="afterSale.html">售后记录</a>
+                    </li>
+                    <li id="help">
+                        <a href="help.html">帮助中心</a>
+                    </li>
+                </ul>
+            </aside>
+            <div class="col-lg-10" id="selfContEdit">
+                <form class="row selfE">
+                    <div class="col-lg-2">
+                        <ul>
+                            <li>用户头像</li>
+                            <li>用户ID</li>
+                            <li>账&nbsp;&nbsp;&nbsp;&nbsp;号</li>
+                            <li>昵&nbsp;&nbsp;&nbsp;&nbsp;称</li>
+                            <li>性&nbsp;&nbsp;&nbsp;&nbsp;别</li>
+                            <li>手机号码</li>
+                            <li>出生日期</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-10">
+                        <ul>
+                            <li id="header">
+                                <div class="userHead"></div>
+                            </li>
+                            <li>124961842</li>
+                            <li>18562000000</li>
+                            <li><input type="text" id="tel" value="18562000000"/></li>
+                            <li>
+                                <input type="radio" name="sex"/>男
+                                <input type="radio" name="sex"/>女
+                            </li>
+                            <li>
+                                <span>185xxxxxx00</span>
+                                <a href="#" class="updataTel">更换号码</a>
+                            </li>
+                            <li>s</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-12 esOther">
+                        <button class="btn save">保存</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/self.js"></script>
+<script src="../js/buy/distpicker.data.js"></script>
+<script src="../js/buy/distpicker.js"></script>
+<script src="../js/buy/main.js"></script>
+
+</body>
+</html>

@@ -32,6 +32,7 @@ li {
 }
 .fmContent {
     padding: 40px 50px;
+    position: relative;
 }
 .fmTitle {
     font-size: 22px;
@@ -95,9 +96,12 @@ li {
 .fmInvi a {
     padding: 5px 10px;
 }
-.bqBtn,.bqBtn:hover {
+.bqBtn,.bqBtn:hover,.bqBtn:focus {
     background: #d6cf93;
     color: #fff;
+}
+.bqBtn:focus,.tzBtn:focus {
+    outline: none;
 }
 .bqBtn:hover,.tzBtn:hover {
     text-decoration: none;
@@ -107,16 +111,18 @@ li {
     color: #7b7446;
     margin-right: 5px;
 }
-.tzBtn:hover {
+.tzBtn:hover,.tzBtn:focus {
     color: #7b7446;
     border-color: #7b7446;
+    text-decoration: none;
 }
 .fmContain {
     margin-top: 20px;
 }
 .fmCList {
     overflow: hidden;
-    box-shadow: 0 3px 5px #eee;
+    box-shadow: 0 0 5px #eee;
+    margin-bottom: 20px;
 }
 .fmCList>div {
     padding: 0;
@@ -127,9 +133,25 @@ li {
 .fmCList a:hover {
     text-decoration: none;
 }
+.repS {
+    margin: 20px 0;
+}
+.repSC {
+    padding-top: 25px;
+}
+.repS .userImg {
+    width: 60px;
+    height: 60px;
+}
+.repD {
+    margin-top: 20px;
+    display: none;
+}
+.repD .repDiv textarea {
+    height: 100px;
+}
 .userBaseInfo {
     background: rgb(242,251,251);
-    height: 100%;
 }
 .userImg {
     display: block;
@@ -191,4 +213,59 @@ time {
 .cz span:last-child {
     padding-right: 0;
     border: none;
+}
+.fmContain .fmPaging a {
+    display: inline-block;
+    padding: 5px 20px;
+    border: 1px solid #d6cf93;
+    margin-left: 5px;
+}
+.fmContain .fmPaging a:hover {
+    border-color: #7b7446;
+}
+.fmContain .fmPaging input {
+    width: 60px;
+    height: 30px;
+}
+.repTZ {
+    margin-top: 20px;
+    padding: 20px 0;
+    box-shadow: 0 0 5px #eee;
+}
+.otherUserImg {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #7b7446;
+    margin: 0 auto;
+}
+.repTZ a {
+    color: #7b7446;
+    font-size: 18px;
+}
+.repTZ a:hover {
+    color: #7b7446;
+    text-decoration: none;
+}
+.repDiv {
+    margin-bottom: 20px;
+}
+.repDiv textarea {
+    width: 100%;
+    height: 200px;
+    border-color: #d6cf93;
+    padding: 10px;
+}
+.repDiv textarea:focus {
+    outline-color: #7b7446;
+}
+.repBtn {
+    display: inline-block;
+    padding: 5px 20px;
+    background: #d6cf93;
+    color: #fff;
+    cursor: pointer;
+}
+.repBtn:hover {
+    background: #7b7446;
 }

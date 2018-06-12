@@ -9,6 +9,9 @@ p{
     text-indent: 4em;
     line-height: 12px;
 }
+.selfSet a:focus {
+    text-decoration: none;
+}
 #selfContEdit div{
     display: none;
 }
