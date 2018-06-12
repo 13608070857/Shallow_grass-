@@ -32,6 +32,8 @@ router.get("/commentsDetails",function (req,resp) {
 
 //个人中心
 router.get("/self",selfController.self);
+//帮助中心
+router.get("/help",selfController.help);
 
 //首页
 router.get("/index",indexController.myindex);

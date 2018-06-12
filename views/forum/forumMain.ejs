@@ -59,7 +59,7 @@
             <a href="#" role="button" class="btn">确认</a>
         </div>
     </div>
-    <div class="fmInvi">
+    <div class="fmInvi row">
         <div class="col-lg-6">
             <a href="#" class="bqBtn">培育</a>
         </div>
@@ -69,10 +69,79 @@
             <a href="#" class="tzBtn">只看楼主</a>
         </div>
     </div>
+    <div class="fmContain">
+        <div class="fmCList row">
+            <div class="col-lg-2 userBaseInfo text-center">
+                <a href="#" class="userImg"></a>
+                <a href="#" class="center-block">浅草ss</a>
+                <button class="btn hyBtn">中级会员</button>
+                <div class="other">
+                    <button class="btn bqBtn">关注</button>
+                    <button class="btn tzBtn">聊天</button>
+                </div>
+            </div>
+            <div class="col-lg-10 tzContain">
+                <div class="lc row">
+                    <div class="col-lg-6 lcNum">
+                        <span>1</span>楼
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <time>2018-06-01 22:11:02</time>
+                    </div>
+                </div>
+                <div class="textContain">
+                    <div class="lcText">如果是比较弱小的幼苗，那么它所需要的水分会多一些，可以频繁少量浇水，保持土壤有一点湿度。并且尽量把它们放在更加温暖的地方，一个较为稳定的环境里生长。而成年大颗的多肉植物抵抗力会强很多，浇水一定要少，特别强壮的甚至一个月一滴水不浇也没问题。浇水时将土浇透，土壤的湿度可以向土中插入牙签检测或者通过盆的重量感受。</div>
+                    <div class="other">
+                        <img src="img/forum/1.jpg" alt=""/>
+                    </div>
+                    <div class="cz text-right">
+                        <span class="jb">举报</span>
+                        <span class="rep">回复</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fmCList row">
+            <div class="col-lg-2 userBaseInfo text-center">
+                <a href="#" class="userImg"></a>
+                <a href="#" class="center-block">浅草ss</a>
+                <button class="btn hyBtn">中级会员</button>
+                <div class="other">
+                    <button class="btn bqBtn">关注</button>
+                    <button class="btn tzBtn">聊天</button>
+                </div>
+            </div>
+            <div class="col-lg-10 tzContain">
+                <div class="lc row">
+                    <div class="col-lg-6 lcNum">
+                        <span>1</span>楼
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <time>2018-06-01 22:11:02</time>
+                    </div>
+                </div>
+                <div class="textContain">
+                    <div class="lcText">如果是比较弱小的幼苗，那么它所需要的水分会多一些，可以频繁少量浇水，保持土壤有一点湿度。并且尽量把它们放在更加温暖的地方，一个较为稳定的环境里生长。而成年大颗的多肉植物抵抗力会强很多，浇水一定要少，特别强壮的甚至一个月一滴水不浇也没问题。浇水时将土浇透，土壤的湿度可以向土中插入牙签检测或者通过盆的重量感受。</div>
+                    <div class="other">
+                        <img src="img/forum/1.jpg" alt=""/>
+                    </div>
+                    <div class="cz text-right">
+                        <span class="jb">举报</span>
+                        <span class="rep">回复</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <%-include('../matefooter.ejs')%>
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>
+<script>
+    for(var i=0;i<$(".userBaseInfo").length;i++) {
+        $($(".userBaseInfo")[i]).css("height",$($(".userBaseInfo")[i]).parent().height());
+    }
+</script>
 </body>
 </html>
