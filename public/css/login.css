@@ -48,8 +48,10 @@ form button{
     color: white;
 }
 form>a{
+    float: left;
+    margin-left: 10%;
     display: block;
-    width: 80%;
-    text-align: right;
+    width: 40%;
+    text-align: left;
     margin-top:5%;
 }

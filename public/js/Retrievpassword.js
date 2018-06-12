@@ -5,7 +5,7 @@ $("#onVerification").click(function () {
     ff(1,2,2)
 });
 $("#onpassword").click(function () {
-    ff(2,3,3)
+    ff(2,3,3);
 })
 function ff(a,b,c) {
     $(".security1").eq(a).css({
