@@ -38,3 +38,23 @@ $("#numRedu").click(function () {
 $("#numadd").click(function () {
     $("#numValue").val(Number($("#numValue").val())+1);
 });
+//商品介绍/商品评论
+$(".mall_btn>div").click(function () {
+    $(".mall_btn>div").attr("class","col-xs-2 intrUnactive");
+    $(this).attr("class","col-xs-2 intrActive");
+});
+//商品介绍
+$("#imgDec").click(function () {
+    $("#mallL").css("display","block");
+    $("#mallR").css("display","none");
+});
+//商品评论
+$("#comments").click(function () {
+    $("#mallL").css("display","none");
+    $("#mallR").css("display","block");
+});
+//全部评论
+$(".comList>ul>li").click(function () {
+    $(".comList>ul>li").attr("class","comUnactive");
+    $(this).attr("class","comActive");
+});

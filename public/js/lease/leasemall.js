@@ -7,6 +7,11 @@ function myImg(obj) {
     var num = obj.id.charAt(3);
     $("#imgdeta").css("background-image"," url('../img/mall/TB2C_"+num+".jpg')")
 }
+//商品规格
+$("#speciSpan ul>li").on("click",function () {
+    $("#speciSpan ul>li").css("border","2px solid #d3d3d3");
+    $(this).css("border","2px solid #7B7446");
+});
 //商品推荐
 $(".listborder").mouseover(function () {
     $(this).children(".introborderDiv2").children("img").css("transform","scale(1.2)");

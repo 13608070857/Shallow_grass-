@@ -17,7 +17,7 @@
 <%-include('../mateheader.ejs')%>
 <div class="container mycontent">
     <!--图片展示-->
-    <div class="row">
+    <div class="row mydecL">
         <div class="col-xs-10 imgdeta" id="imgdeta"></div>
         <div class="col-xs-2 img4Div" id="img4Div">
             <div class="active" id="img1" onmouseover="myImg(this)"></div>
@@ -27,8 +27,8 @@
         </div>
     </div>
     <!--商品介绍-->
-    <div class="row imgtop">
-        <div class="col-xs-11 imgbottom">
+    <div class="row imgtop mydecL">
+        <div class="col-xs-11">
             <h4 class="detatitle">多肉组合盆栽绿植花卉送花盆送土</h4>
             <p class="priceSpan">价格<span>¥9.90</span></p>
             <p class="freightSpan">运费
@@ -59,43 +59,20 @@
                     <a href="/shop_cart">加入购物车</a>
                 </button>
             </div>
-        </div>
-    </div>
-    <!--图文详情-->
-    <!--萌系多肉-->
-    <div class="row imgtop2">
-        <div class="col-xs-11">
-            <div class="row">
-                <div class="col-xs-10 col-xs-offset-1">
-                    <img src="img/mall/TB2zlWztk9WBuNjSspeXXaz5VXa_2710528801.jpg" class="img-responsive">
-                </div>
+            <!--商品介绍 / 商品评论-->
+            <div class="row mall_btn">
+                <div class="col-xs-2 intrActive" id="imgDec">商品介绍</div>
+                <div class="col-xs-2 intrUnactive" id="comments">商品评论</div>
             </div>
         </div>
     </div>
-    <!--植物得差异性-->
-    <div class="row imgtop2">
-        <div class="col-xs-11">
-            <div class="row">
-                <div class="col-xs-10 col-xs-offset-1">
-                    <img src="img/mall/TB2TpGFpER1BeNjy0FmXXb0wVXa_2710528801.jpg" class="img-responsive">
-                    <img src="img/mall/TB2TpGFpER1BeNjy0FmXXb0wVXa_27105281.jpg" class="img-responsive">
-                </div>
-            </div>
-        </div>
+    <!--商品介绍-->
+    <div class="decDiv mydecL" id="mallL">
+        <%include graphic_details%>
     </div>
-    <!--植物得差异性-->
-    <div class="row imgtop2">
-        <div class="col-xs-11">
-            <div class="row">
-                <div class="col-xs-10 col-xs-offset-1">
-                    <img src="img/mall/TB2W_ycpx1YBuNjy1zcXXbNcXXa_271051.jpg" class="img-responsive">
-                    <img src="img/mall/TB2W_ycpx1YBuNjy1zcXXbNcXXa_271052880111.jpg" class="img-responsive">
-                    <img src="img/mall/TB2W_ycpx1YBuNjy1zcXXbNcXXa_27105288011.jpg" class="img-responsive imgtop2">
-                    <img src="img/mall/TB24_Gcpx1YBuNjy1zcXXbNcXXa_271052880.jpg" class="img-responsive imgtop2">
-                    <img src="img/mall/TB2UhBwprSYBuNjSspiXXXNzpXa_271052881.jpg" class="img-responsive imgtop2">
-                </div>
-            </div>
-        </div>
+    <!--商品评价-->
+    <div class="decDiv mydecL" id="mallR">
+        <%include comments%>
     </div>
     <!--商品推荐-->
     <div class="row imgtop3">
