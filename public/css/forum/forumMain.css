@@ -1,6 +1,9 @@
 header {
     height: 92px;
 }
+iframe {
+    display: block;
+}
 .btn {
     background: #fff;
 }

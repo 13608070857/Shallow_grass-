@@ -4,6 +4,9 @@ header {
 ul {
     list-style: none;
 }
+iframe {
+    display: block;
+}
 a,a:hover,a:active {
     text-decoration: none;
 }
