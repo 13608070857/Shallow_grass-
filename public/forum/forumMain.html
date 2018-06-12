@@ -15,7 +15,6 @@
 </head>
 <body>
 <header>
-    <%-include('../mateheader.ejs')%>
 </header>
 <div class="fmContent">
     <div class="row fmNav">
@@ -72,7 +71,7 @@
     <div class="fmContain">
         <div class="fmCList row">
             <div class="col-lg-2 userBaseInfo text-center">
-                <a href="#" class="userImg"></a>
+                <a href="forumSelf.html" class="userImg"></a>
                 <a href="#" class="center-block">浅草ss</a>
                 <button class="btn hyBtn">中级会员</button>
                 <div class="other">
@@ -92,7 +91,7 @@
                 <div class="textContain">
                     <div class="lcText">如果是比较弱小的幼苗，那么它所需要的水分会多一些，可以频繁少量浇水，保持土壤有一点湿度。并且尽量把它们放在更加温暖的地方，一个较为稳定的环境里生长。而成年大颗的多肉植物抵抗力会强很多，浇水一定要少，特别强壮的甚至一个月一滴水不浇也没问题。浇水时将土浇透，土壤的湿度可以向土中插入牙签检测或者通过盆的重量感受。</div>
                     <div class="other">
-                        <img src="img/forum/1.jpg" alt=""/>
+                        <img src="../img/forum/1.jpg" alt=""/>
                     </div>
                     <div class="cz text-right">
                         <span class="jb">举报</span>
@@ -131,7 +130,7 @@
                 <div class="textContain">
                     <div class="lcText">如果是比较弱小的幼苗，那么它所需要的水分会多一些，可以频繁少量浇水，保持土壤有一点湿度。并且尽量把它们放在更加温暖的地方，一个较为稳定的环境里生长。而成年大颗的多肉植物抵抗力会强很多，浇水一定要少，特别强壮的甚至一个月一滴水不浇也没问题。浇水时将土浇透，土壤的湿度可以向土中插入牙签检测或者通过盆的重量感受。</div>
                     <div class="other">
-                        <img src="img/forum/1.jpg" alt=""/>
+                        <img src="../img/forum/1.jpg" alt=""/>
                     </div>
                     <div class="cz text-right">
                         <span class="jb">举报</span>
@@ -165,16 +164,10 @@
             </div>
         </div>
     </div>
-    <!--<div class="chatPop">-->
-        <!--<div class="chatTitle">-->
-            <!-- -->
-        <!--</div>-->
-    <!--</div>-->
 </div>
 
-<%-include('../matefooter.ejs')%>
-<script src="js/jquery-3.3.1.js"></script>
-<script src="js/bootstrap.js"></script>
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../js/bootstrap.js"></script>
 <script>
     for(var i=0;i<$(".userBaseInfo").length;i++) {
         $($(".userBaseInfo")[i]).css("height",$($(".userBaseInfo")[i]).next().height());

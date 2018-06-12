@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人中心</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/self.css"/>
+    <link rel="stylesheet" href="../css/modelCss.css"/>
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<section>
+    <div class="container self">
+        <div class="row">
+            <aside class="col-lg-2 selfSet">
+                <ul>
+                    <li>
+                        <h4>账号管理</h4>
+                    </li>
+                    <li class="current" id="selfC">
+                        <a href="self.html">个人中心</a>
+                    </li>
+                    <li id="info">
+                        <a href="selfE.html">账号信息</a>
+                    </li>
+                    <li id="address">
+                        <a href="address.html">地址管理</a>
+                    </li>
+                    <li id="security">
+                        <a href="security.html">安全中心</a>
+                    </li>
+                    <li id="collect">
+                        <a href="collect.html">我的收藏</a>
+                    </li>
+                    <li id="view">
+                        <a href="view.html">我的足迹</a>
+                    </li>
+                    <li>
+                        <h4>交易管理</h4>
+                    </li>
+                    <li id="orderG">
+                        <a href="orderG.html">订单管理</a>
+                    </li>
+                    <li id="coupons">
+                        <a href="coupons.html">优惠卷</a>
+                    </li>
+                    <li>
+                        <h4>服务中心</h4>
+                    </li>
+                    <li id="afterSale">
+                        <a href="afterSale.html">售后记录</a>
+                    </li>
+                    <li id="help">
+                        <a href="help.html">帮助中心</a>
+                    </li>
+                </ul>
+            </aside>
+            <div class="col-lg-10" id="selfContEdit">
+                <div class="editSelf">
+                    <div class="row esTitle">
+                        <div class="col-lg-2 currentList" id="esC">基本资料</div>
+                        <div class="col-lg-2" id="pswE">密码修改</div>
+                    </div>
+                    <div class="row esCont">
+                        <div class="row selfContain">
+                            <div class="col-lg-4 userInfo">
+                                <div class="col-lg-4 userHeader"></div>
+                                <div class="col-lg-7">
+                                    <ul>
+                                        <li id="username">xxx</li>
+                                        <li id="selfTel">18200000000</li>
+                                        <li id="modify">
+                                            <a href="#">编辑个人资料</a>
+                                        </li>
+                                        <li id="addressE">
+                                            <a href="#">地址管理</a>
+                                        </li>
+                                        <li id="goods">
+                                            <a href="#">订单管理</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-lg-offset-1 selfOther">
+                                <div class="col-lg-6">
+                                    <ul>
+                                        <li class="row">
+                                            <span class="col-lg-4">我的红包</span>
+                                            <a href="#" class="col-lg-8">￥0.00</a>
+                                        </li>
+                                        <li class="row">
+                                            <span class="col-lg-4">可兑返利</span>
+                                            <a href="#" class="col-lg-8">￥0.00</a>
+                                        </li>
+                                        <li class="row">
+                                            <span class="col-lg-4">我的积分</span>
+                                            <a href="#" class="col-lg-8">0</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6">
+                                    <ul>
+                                        <li class="row">
+                                            <span class="col-lg-4">优惠卷</span>
+                                            <a href="#" class="col-lg-8">0张</a>
+                                        </li>
+                                        <li class="row">
+                                            <span class="col-lg-4">礼品卡</span>
+                                            <a href="#" class="col-lg-8">￥0.00</a>
+                                        </li>
+                                        <li class="row">
+                                            <span class="col-lg-4">待领礼包</span>
+                                            <a href="#" class="col-lg-8">0个</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backlog">
+                            <div class="row blTitle">
+                                <div class="col-lg-6">未完成订单</div>
+                                <div class="col-lg-6 text-right">
+                                    <a href="#">查看全部订单</a>
+                                </div>
+                            </div>
+                            <div class="row product">
+                                <div class="col-lg-2">
+                                    <a href="#">订单号：xxxxxxx</a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="col-lg-7" >
+                                        <img src="img/one/001.jpg" alt=""/>
+                                    </div>
+                                    <span class="col-lg-3">支付宝支付</span>
+                                    <span class="col-lg-2 wait">未付款</span>
+                                </div>
+                                <div class="col-lg-2">￥100.00</div>
+                                <div class="col-lg-2">
+                                    <a href="#" role="button" class="btn pay">
+                                        付款
+                                        <span id="countDown">20:00</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pswEdit">
+                        <div class="row">
+                            <div class="col-lg-2 text-center">旧密码</div>
+                            <div class="col-lg-10">
+                                <input class="pswInput" type="text"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 text-center">新密码</div>
+                            <div class="col-lg-10">
+                                <input class="pswInput" type="text"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 text-center">确认密码</div>
+                            <div class="col-lg-10">
+                                <input class="pswInput" type="text"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2"></div>
+                            <div class="col-lg-10">
+                                <button class="save btn">确认</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/self.js"></script>
+<script src="../js/buy/distpicker.data.js"></script>
+<script src="../js/buy/distpicker.js"></script>
+<script src="../js/buy/main.js"></script>
+
+<script>
+    $("#pswE").click(function() {
+        $(".pswEdit").css("display","block");
+        $(".selfContain").css("display","none");
+        $(".backlog").css("display","none");
+    });
+    $("#esC").click(function() {
+        $(".pswEdit").css("display","none");
+        $(".selfContain").css("display","block");
+        $(".backlog").css("display","block");
+    });
+</script>
+</body>
+</html>
