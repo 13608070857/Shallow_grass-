@@ -25,6 +25,10 @@ router.get("/pay",function (req,resp) {
 router.get("/shop_cart",function (req,resp) {
     resp.render("mall/shop_cart",{username:"测试"});
 });
+//评论详情
+router.get("/commentsDetails",function (req,resp) {
+    resp.render("mall/commentsDetails",{username:"测试"});
+});
 
 //个人中心
 router.get("/self",selfController.self);
