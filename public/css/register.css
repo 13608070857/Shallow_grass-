@@ -47,12 +47,7 @@ form>button{
     border-radius: 5px;
     color: white;
 }
-form a{
-    display: block;
-    width: 80%;
-    text-align: right;
-    margin-top:5%;
-}
+
 .dx{
     width: 80%;
 }
