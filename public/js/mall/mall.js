@@ -14,7 +14,7 @@ $(".listborder").mouseover(function () {
     $(this).children(".add_shop_cart").css({
         "overflow":"visible",
         "opacity":"1",
-        "transform":"translateY(-180px)"
+        "transform":"translateY(-220px)"
     });
 });
 $(".listborder").mouseout(function () {

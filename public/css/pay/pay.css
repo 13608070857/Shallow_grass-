@@ -1,3 +1,9 @@
+body{
+    background: #EDEEEF;
+}
+section{
+    margin-bottom: 120px;
+}
 .mycontent{
     margin-top: 100px;
     margin-bottom: 50px;
@@ -8,4 +14,58 @@
 }
 .paySuccess{
     font-size: 20px;
+}
+.navbar-default{
+    background-color: #FFFFFF;
+}
+.zfbDiv{
+    height: 100px;
+    line-height: 100px;
+    margin-bottom: 20px;
+}
+.zfbDiv>img{
+    width: 80px;
+    height: 80px;
+}
+.zfbPay{
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF7021;
+}
+.zfbPayList{
+    height: 400px;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 20px 40px 20px 0;
+    display: table;
+}
+.payDiv{
+    display: table-cell;
+    vertical-align: middle;
+}
+.payDiv>img{
+    width: 200px;
+    height: 200px;
+}
+.payDiv>div{
+    font-size: 16px;
+    line-height: 60px;
+}
+.SuccessPayDiv{
+    display: table-cell;
+    vertical-align: middle;
+}
+.SuccessPayDiv>img{
+    width: 50px;
+    height: 50px;
+}
+.SuccessPayDiv>span{
+    margin-left: 20px;
+    font-size: 16px;
+}
+#pay{
+    display: block;
+}
+#successPay{
+    display: none;
 }
