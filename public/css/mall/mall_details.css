@@ -329,9 +329,18 @@ input[type="number"]{
     width: 60px;
     text-align: center;
 }
+.reply>span>a{
+    color: #333333;
+    text-decoration: none;
+}
 .comImg>img{
     width: 60px;
     height: 60px;
+}
+.comImg2>img{
+    width: 420px;
+    height: 420px;
+    margin-bottom: 10px;
 }
 .five_star{
     color: #FF0051;
@@ -341,6 +350,69 @@ input[type="number"]{
 }
 #mallR{
     display: none;
+}
+.comDecL{
+    border: 1px solid #EEEEEE;
+}
+.mallmsgTitle{
+    background-color: #f6f6f6;
+    line-height: 35px;
+    font-size: 16px;
+    padding-left: 15px;
+}
+.mypadding{
+    padding-left: 0;
+    padding-right: 0;
+}
+.mypadding2{
+    width: 70%;
+    margin-right: 15px;
+}
+.mallmsgImg>img{
+    width: 120px;
+    height: 120px;
+    margin: 20px 0 20px 0;
+}
+.mallIntr{
+    padding: 0 20px 0 20px;
+    color: #7b785b;
+}
+.mallIntr2>span:nth-child(2){
+    color: #FF004B;
+    font-weight: bold;
+}
+.mall_msg{
+    padding: 0 20px 0 20px;
+    line-height: 30px;
+}
+.btn_shop{
+    margin: 20px 0 20px 0;
+}
+textarea{
+    resize:none;
+}
+.btn_hf{
+    margin: 20px 0 20px 0;
+    width: 100%;
+    overflow: hidden;
+}
+.btn_hf>div>button{
+    color: #FFFFFF;
+}
+.comInList>ul{
+    list-style: none;
+}
+.comInList>ul>li{
+    overflow: hidden;
+}
+.comInList>ul>li:not(:last-child){
+    border-bottom: 1px solid #EEEEEE;
+}
+.hfName>span:nth-child(1){
+    color: #0078D7;
+}
+.hfTime>span:nth-child(1){
+    color: #909090;
 }
 /*测试*/
 .test{
