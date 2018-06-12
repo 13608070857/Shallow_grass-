@@ -1,8 +1,14 @@
 header {
     height: 92px;
 }
+.btn {
+    background: #fff;
+}
 .line {
     border: 1px solid #f00;
+}
+.row {
+    margin: 0;
 }
 li {
     list-style: none;
@@ -82,4 +88,107 @@ li {
 .fmPaging input:focus {
     outline-color: #7b7446;
     text-align: center;
+}
+.col-lg-6 {
+    padding: 0;
+}
+.fmInvi a {
+    padding: 5px 10px;
+}
+.bqBtn,.bqBtn:hover {
+    background: #d6cf93;
+    color: #fff;
+}
+.bqBtn:hover,.tzBtn:hover {
+    text-decoration: none;
+}
+.tzBtn {
+    border: 1px solid #d6cf93;
+    color: #7b7446;
+    margin-right: 5px;
+}
+.tzBtn:hover {
+    color: #7b7446;
+    border-color: #7b7446;
+}
+.fmContain {
+    margin-top: 20px;
+}
+.fmCList {
+    overflow: hidden;
+    box-shadow: 0 3px 5px #eee;
+}
+.fmCList>div {
+    padding: 0;
+}
+.fmCList a,.fmCList a:hover {
+    color: #7b7446;
+}
+.fmCList a:hover {
+    text-decoration: none;
+}
+.userBaseInfo {
+    background: rgb(242,251,251);
+    height: 100%;
+}
+.userImg {
+    display: block;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 1px solid #7b7446;
+    margin: 10px auto;
+}
+.hyBtn {
+    padding: 5px 15px;
+    color: #fff;
+    background: #d6cf93;
+    margin: 10px 0;
+    border-radius: 0;
+}
+.hyBtn:hover {
+    color: #fff;
+}
+.other {
+    padding: 20px 0;
+}
+.fmContain .bqBtn,.fmContain .tzBtn {
+    padding: 3px 20px;
+    margin-left: 5px;
+    border-radius: 0;
+}
+.lc,.textContain {
+    padding: 10px 40px;
+}
+.lc {
+    line-height: 40px;
+}
+.lcNum {
+    color: #7b7446;
+}
+.lcNum span {
+    font-size: 24px;
+}
+time {
+    color: #999;
+}
+.lcText {
+    color: #333;
+    font-size: 16px;
+    line-height: 30px;
+    border-top: 1px dashed #eee;
+    padding: 20px 0;
+}
+.other img {
+    width: 100%;
+}
+.cz span {
+    color: #7b7446;
+    padding: 0 20px;
+    border-right: 1px solid #ccc;
+    cursor: pointer;
+}
+.cz span:last-child {
+    padding-right: 0;
+    border: none;
 }

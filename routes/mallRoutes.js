@@ -25,9 +25,15 @@ router.get("/pay",function (req,resp) {
 router.get("/shop_cart",function (req,resp) {
     resp.render("mall/shop_cart",{username:"测试"});
 });
+//评论详情
+router.get("/commentsDetails",function (req,resp) {
+    resp.render("mall/commentsDetails",{username:"测试"});
+});
 
 //个人中心
 router.get("/self",selfController.self);
+//帮助中心
+router.get("/help",selfController.help);
 
 //首页
 router.get("/index",indexController.myindex);
@@ -41,6 +47,8 @@ router.get("/activity",indexController.myactivity);
 router.get("/Retrievepassword",indexController.myRetrievepassword);
 //租赁
 router.get("/lease",leaseController.mylease);
+//规则
+router.get("/rule",indexController.myrule);
 //租赁商品详情
 router.get("/leasemall",function (req,resp) {
     resp.render("lease/leasemall",{username:"111"});

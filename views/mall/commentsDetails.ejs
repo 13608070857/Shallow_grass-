@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>评论详情</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/mall/mall_details.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<%-include('../mateheader.ejs')%>
+<section>
+    <div class="container mycontent">
+        <div class="col-xs-9 comDecL mypadding2">
+            <div class="col-xs-3 text-center comPort">
+                <div class="comPortList comPort2">
+                    <img src="img/mall/peisong.jpg">
+                    <div>未知</div>
+                </div>
+            </div>
+            <div class="col-xs-9 comPort">
+                <div class="comPortList comText">
+                    <div class="five_star">这是五角星</div>
+                    <div>刚到装好，养花等于养心</div>
+                    <div>
+                        <span class="spec">套餐A（含盆含土，不含铺面石，尺寸内容见详情）</span>
+                        <span class="spec">2017-11-17 12:57</span>
+                    </div>
+                    <div class="comImg2">
+                        <img src="img/mall/comImg.jpg">
+                        <img src="img/mall/comImg.jpg">
+                        <img src="img/mall/comImg.jpg">
+                        <img src="img/mall/comImg.jpg">
+                        <img src="img/mall/comImg.jpg">
+                    </div>
+                    <div class="comInput">
+                        <textarea class="form-control" placeholder="回复" rows="3" cols="55"></textarea>
+                        <div class="btn_hf">
+                            <div class="pull-right">
+                                <span>你还可以输入200字</span>
+                                <button type="button" class="btn add_cart_btn">回复</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comInList">
+                        <ul>
+                            <li>
+                                <div class="col-xs-12 hfName">
+                                    <span class="pull-left">秀丽当何 : </span>
+                                    <span class="introLine pull-left">很好！非常好！相当棒！</span>
+                                </div>
+                                <div class="col-xs-12 hfTime">
+                                    <span class="pull-left">2017-10-28 19:01</span>
+                                    <span class="pull-right">回复</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-xs-12 hfName">
+                                    <span class="pull-left">我可是很可爱的 : </span>
+                                    <span class="introLine pull-left">很好！非常好！相当棒！</span>
+                                </div>
+                                <div class="col-xs-12 hfTime">
+                                    <span class="pull-left">2017-10-28 19:01</span>
+                                    <span class="pull-right">回复</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 comDecL mypadding">
+            <div class="mallmsgTitle">商品信息</div>
+            <div class="mallmsgImg text-center">
+                <img src="img/mall/comImg.jpg">
+            </div>
+            <div class="mallIntr">
+                <span>商品名称：</span>
+                <span>
+                    萌肉居 真便宜多肉 一毛多肉 多肉植物 24款新品区办公室室内萌 植物盆栽组合 玉露肉肉植物 盆栽 红锥莲单株
+                </span>
+            </div>
+            <div class="mallIntr2 mall_msg">
+                <span>商城价：</span>
+                <span>￥0.50</span>
+            </div>
+            <div class="fiveStar mall_msg">
+                <span>评价得分：</span>
+                <span>五角星（5分）</span>
+            </div>
+            <div class="comNum mall_msg">
+                <span>评论数：</span>
+                <span>12万+条</span>
+            </div>
+            <div class="btn_shop text-center">
+                <button type="button" class="btn add_cart_btn">
+                    <a href="/shop_cart">加入购物车</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<%-include('../matefooter.ejs')%>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
