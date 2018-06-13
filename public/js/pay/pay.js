@@ -1,4 +1,7 @@
 setTimeout(function () {
     $("#pay").css("display","none");
     $("#successPay").css("display","block");
-},3000);
+    setTimeout(function () {
+        location.href="../index/index.html";
+    },3000);
+},6000);

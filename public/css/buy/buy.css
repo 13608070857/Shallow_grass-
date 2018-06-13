@@ -1,5 +1,8 @@
+iframe{
+    display: block;
+}
 .mycontent{
-    margin-top: 100px;
+    /*margin-top: 100px;*/
     margin-bottom: 50px;
 }
 .addressMsg{
@@ -96,6 +99,10 @@
 .managerAdd>span{
     color: #7b7446;
     cursor: pointer;
+}
+.managerAdd2>a{
+    color: #7b7446;
+    text-decoration: none;
 }
 .managerAdd>span:hover{
     color: #333333;

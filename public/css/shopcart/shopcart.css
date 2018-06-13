@@ -1,6 +1,9 @@
 .mycontent{
-    margin-top: 100px;
+    /*margin-top: 100px;*/
     margin-bottom: 50px;
+}
+iframe{
+    display: block;
 }
 .table {
     width: 100%;

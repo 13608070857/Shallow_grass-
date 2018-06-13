@@ -5,6 +5,9 @@
 body{
     background-color: #f6f5f1;
 }
+iframe{
+    display: block;
+}
 .left{
     margin-left: 180px;
 }

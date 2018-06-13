@@ -2,8 +2,11 @@
     margin: 0;
     padding: 0;
 }
+iframe{
+    display: block;
+}
 .mycontent{
-    margin-top: 110px;
+    /*margin-top: 110px;*/
     margin-bottom: 50px;
 }
 /*图片详情*/

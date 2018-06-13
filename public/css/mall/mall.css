@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+iframe{
+    display: block;
+}
 a{
     color: #333333;
 }
@@ -9,7 +12,7 @@ a:hover{
     color: #7B7446;
 }
 .mycontent{
-    margin-top: 100px;
+    /*margin-top: 100px;*/
     margin-bottom: 50px;
 }
 /*商品分类*/
