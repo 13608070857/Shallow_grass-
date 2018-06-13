@@ -33,13 +33,13 @@ header{
 .ertical{
     position: absolute;
     top: 100px;
-    left: 12%;
+    left: 6%;
     font-family: "微软雅黑";
     font-size: 24px;
     height: 420px;
     writing-mode: vertical-rl;/*从左向右 从右向左是 writing-mode: vertical-rl;*/
     letter-spacing:12px;
-    line-height: 38px;
+    line-height: 65px;
     z-index: 1;
 }
 .catching{
@@ -53,6 +53,7 @@ header{
     background-size: 100% 100%;
 }
 .combinationTow{
+    z-index: 1;
     margin-top: 100px;
     float: right;
     position: relative;
@@ -128,7 +129,7 @@ header{
     background: #f4e3cc;
 }
 .exhibition2{
-    z-index: -1;
+    z-index: 0;
     position: absolute;
     top: 460px;
     width: 100%;
