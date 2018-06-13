@@ -1,5 +1,7 @@
 var bz1=document.getElementById("bz1");
+console.log(bz1)
 var b1=document.getElementsByClassName("b1");
+console.log(b1)
 bz1.onmouseover=function(){
     bz1.style.color="white";
     bz1.style.backgroundColor="green";
