@@ -16,3 +16,32 @@ $(document).ready(function() {
         }
     }
 });
+//滚轮事件
+document.onscroll = abc;
+function abc() {
+    var i = document.documentElement.scrollTop;
+    var a =document.getElementsByClassName("details");
+    var b =document.getElementsByClassName("details2");
+    if (i>80){
+        a[0].style.top="6%";
+        a[0].style.opacity="1";
+    }else {
+        a[0].style.top="66%";
+        a[0].style.opacity="0.2";
+    }
+    if (i>1000){
+        b[0].style.top="6%";
+        b[0].style.opacity="1";
+    }else {
+        b[0].style.top="66%";
+        b[0].style.opacity="0.2";
+    }
+    if (i>1980){
+        a[1].style.top="6%";
+        a[1].style.opacity="1";
+    }else {
+        a[1].style.top="66%";
+        a[1].style.opacity="0.2";
+    }
+    console.log(i)
+}
