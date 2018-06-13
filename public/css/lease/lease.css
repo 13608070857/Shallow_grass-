@@ -114,6 +114,7 @@ header{
     text-align: center;
     line-height: 38px;
     margin: 15px auto;
+    transition: all .1s linear;
 }
 .partitionDivDiv:hover{
     background: #7b7446;
@@ -139,17 +140,33 @@ header{
     margin: 150px auto;
 }
 .exhibitionBox{
+    transition: all .2s linear;
     float: left;
     margin-left: 40px;
 }
+.exhibitionBoxImg{
+    width: 235px;
+    height: 235px;
+    overflow: hidden;
+}
 .exhibitionBox img{
+    transition: all .3s linear;
     width: 235px;
     height: 235px;
 }
+.exhibitionBox:hover{
+    box-shadow:0px 0px 20px 0px #CCC;
+}
+.exhibitionBox:hover img{
+    transform: scale(1.2);
+}
 .exhibitionBox p{
+    text-align: center;
     line-height: 40px;
 }
 .posrel{
+    margin-bottom: 40px;
+    height: 1000px;
     position: relative;
 }
 .exhibition2 p{
