@@ -3,12 +3,6 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/public/css/self.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/public/js/self.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/public/selfPublic/afterSale.ejs" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/public/selfPublic/allOrder.ejs" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/public/selfPublic/coupons.ejs" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/public/selfPublic/orderG.ejs" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/public/selfPublic/usable.ejs" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/public/selfPublic/view.ejs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/views/selfPublic/address.ejs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/views/selfPublic/afterSale.ejs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/views/selfPublic/allOrder.ejs" charset="UTF-8" />

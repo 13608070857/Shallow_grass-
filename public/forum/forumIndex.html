@@ -14,13 +14,15 @@
     <![endif]-->
 </head>
 <body>
-<iframe src="../mateheader.html" frameborder="0" width="100%" height="96px"></iframe>
-<div class="banner"></div>
+<iframe class="headerI" src="../mateheader.html" frameborder="0" width="100%" height="92px"></iframe>
+<div class="banner">
+    <i class="iconfont sb">&#xe634;</i>
+</div>
 <section class="content">
     <div class="fiTitle text-center">论坛精选</div>
     <div class="fiContent row">
         <div class="col-lg-4 fiList">
-            <a href="forumMain" class="fiCImg">
+            <a href="forumMain.html" class="fiCImg">
                 <img src="../img/forum/1.jpg" alt=""/>
             </a>
             <div class="fiDesc row">
@@ -28,9 +30,9 @@
                     <img src="../img/forum/headerImg1.jpg" class="headerImg" alt=""/>
                     <a href="#">xxx</a>
                 </div>
-                <div class="col-lg-6 text-right">
-                    <span>3019</span>
-                    <span>20</span>
+                <div class="col-lg-6 text-right otherInfo">
+                    <span><i class="iconfont">&#xe66b;</i>3019</span>
+                    <span><i class="iconfont">&#xe61a;</i>20</span>
                 </div>
             </div>
         </div>
@@ -43,9 +45,9 @@
                     <img src="../img/forum/headerImg1.jpg" class="headerImg" alt=""/>
                     <a href="#">xxx</a>
                 </div>
-                <div class="col-lg-6 text-right">
-                    <span>3019</span>
-                    <span>20</span>
+                <div class="col-lg-6 text-right otherInfo">
+                    <span><i class="iconfont">&#xe66b;</i>3019</span>
+                    <span><i class="iconfont">&#xe61a;</i>20</span>
                 </div>
             </div>
         </div>
@@ -58,9 +60,9 @@
                     <img src="../img/forum/headerImg1.jpg" class="headerImg" alt=""/>
                     <a href="#">xxx</a>
                 </div>
-                <div class="col-lg-6 text-right">
-                    <span>3019</span>
-                    <span>20</span>
+                <div class="col-lg-6 text-right otherInfo">
+                    <span><i class="iconfont">&#xe66b;</i>3019</span>
+                    <span><i class="iconfont">&#xe61a;</i>20</span>
                 </div>
             </div>
         </div>
@@ -71,25 +73,25 @@
     <div class="fiTitle text-center">主题论坛</div>
     <div class="remContent row">
         <div class="col-lg-3 rcList">
-            <a href="forumMain" class="rcListC">
+            <a href="forumMain.html" class="rcListC">
                 <img src="../img/forum/1.jpg" alt=""/>
                 <a href="#" class="rcListT">多肉养殖</a>
             </a>
         </div>
         <div class="col-lg-3 rcList">
-            <a href="forumMain" class="rcListC">
+            <a href="forumMain.html" class="rcListC">
                 <img src="../img/forum/1.jpg" alt=""/>
                 <a href="#" class="rcListT">多肉养殖</a>
             </a>
         </div>
         <div class="col-lg-3 rcList">
-            <a href="forumMain" class="rcListC">
+            <a href="forumMain.html" class="rcListC">
                 <img src="../img/forum/1.jpg" alt=""/>
                 <a href="#" class="rcListT">多肉养殖</a>
             </a>
         </div>
         <div class="col-lg-3 rcList">
-            <a href="forumMain" class="rcListC">
+            <a href="forumMain.html" class="rcListC">
                 <img src="../img/forum/1.jpg" alt=""/>
                 <a href="#" class="rcListT">多肉养殖</a>
             </a>
@@ -125,5 +127,21 @@
 <iframe src="../matefooter.html" frameborder="0" width="100%" height="400px"></iframe>
 <script src="../js/jquery-3.3.1.js"></script>
 <script src="../js/bootstrap.js"></script>
+<script>
+    var i = 1;
+    setInterval(function() {
+        if(i<3) {
+            i++;
+        }else {
+            i=1;
+        }
+        $(".banner").css({
+            "background": "url(../img/forum/lun"+ i +".jpg) no-repeat",
+            "background-size": "100% 100%"
+        });
+    },5000)
+
+
+</script>
 </body>
 </html>
