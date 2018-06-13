@@ -89,38 +89,33 @@
                                 </div>
                             </div>
                             <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 selfOther">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                    <ul>
-                                        <li class="row">
-                                            <span class="col-lg-4 col-md-4 col-sm-4 col-xs-4">我的红包</span>
-                                            <a href="redP.html" class="col-lg-8 col-md-8 col-sm-8 col-xs-8">￥0.00</a>
-                                        </li>
-                                        <li class="row">
-                                            <span class="col-lg-4 col-md-4 col-sm-4 col-xs-4">可兑返利</span>
-                                            <a href="#" class="col-lg-8 col-md-8 col-sm-8 col-xs-8">￥0.00</a>
-                                        </li>
-                                        <li class="row">
-                                            <span class="col-lg-4 col-md-4 col-sm-4 col-xs-4">我的积分</span>
-                                            <a href="#" class="col-lg-8 col-md-8 col-sm-8 col-xs-8">0</a>
-                                        </li>
-                                    </ul>
+                                <div class="row baseInfoOther">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
+                                        <div class="iconImg">
+                                            <img src="../img/ac_balance.png" alt=""/>
+                                        </div>
+                                        <a href="orderG.html">您的订单: 1笔订单 </a>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
+                                        <div class="iconImg">
+                                            <img src="../img/ac_coupon.png" alt=""/>
+                                        </div>
+                                        <a href="coupons.html">优惠券: 0张可用</a>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
+                                        <div class="iconImg">
+                                            <img src="../img/ac_card.png" alt=""/>
+                                        </div>
+                                        <a href="afterSale.html">售后记录: 1条信息</a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                    <ul>
-                                        <li class="row">
-                                            <span class="col-lg-4 col-md-4 col-sm-4 col-xs-4">优惠卷</span>
-                                            <a href="coupons.html" class="col-lg-8 col-md-8 col-sm-8 col-xs-8">0张</a>
-                                        </li>
-                                        <li class="row">
-                                            <span class="col-lg-4 col-md-4 col-sm-4 col-xs-4">礼品卡</span>
-                                            <a href="#" class="col-lg-8 col-md-8 col-sm-8 col-xs-8">￥0.00</a>
-                                        </li>
-                                        <li class="row">
-                                            <span class="col-lg-4 col-md-4 col-sm-4 col-xs-4">待领礼包</span>
-                                            <a href="#" class="col-lg-8 col-md-8 col-sm-8 col-xs-8">0个</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-center hyCenter">
+                            <h3>会员中心</h3>
+                            <p>您当前的身份为:<span>注册会员</span></p>
+                            <div>
+                                <img src="../img/new_membership.png" alt=""/>
                             </div>
                         </div>
                     </div>
@@ -169,12 +164,12 @@
     $("#pswE").click(function() {
         $(".pswEdit").css("display","block");
         $(".selfContain").css("display","none");
-        $(".backlog").css("display","none");
+        $(".hyCenter").css("display","none");
     });
     $("#esC").click(function() {
         $(".pswEdit").css("display","none");
         $(".selfContain").css("display","block");
-        $(".backlog").css("display","block");
+        $(".hyCenter").css("display","block");
     });
 </script>
 </body>
