@@ -1,0 +1,26 @@
+footer{
+    width: 100%;
+    background: rgb(247,247,247);
+    overflow: hidden;
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
+.font{
+    width: 17%;
+    float: left;
+    margin-left:8%;
+}
+.font h4{
+    color: rgb(0,0,47);
+    font-weight: 200;
+}
+.font p{
+    width:70%;
+    color: rgb(187,187,187);
+    font-size: 12px;
+}
+.font img{
+    float: left;
+    margin-top:5px;
+    width: 18%;
+}

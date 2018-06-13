@@ -3,6 +3,7 @@
 }
 iframe{
     display: block;
+    border: none;
 }
 section{
     width: 80%;
@@ -243,8 +244,20 @@ section>img{
     line-height:20px;
     font-size: 12px;
 }
-
-
+.D{
+    width: 25%;
+    float: left;
+    border-bottom: 30px solid white;
+}
+.D img{
+    float: left;
+}
+.D h4{
+    font-size: 18px;
+}
+.D p{
+    font-size: 12px;
+}
 
 
 
