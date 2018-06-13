@@ -143,6 +143,17 @@ input[type="number"]{
 .hot_sale>div:nth-child(1){
     line-height: 40px;
 }
+@media (min-width: 768px){
+    .col-sm-12 {
+        width: 94%;
+    }
+}
+@media (min-width: 992px){
+    .col-md-6 {
+        width: 48%;
+    }
+}
+
 /*测试*/
 .test{
     border: 1px solid red;
