@@ -50,16 +50,16 @@ ul>li:hover{
 .listborder>a{
     text-decoration: none;
 }
-.listborder>a>.introborderDiv>img{
+.introborderDiv>img{
     width: 258.75px;
     height: 258.75px;
     transition: all 0.3s linear;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 .introborderDiv{
     overflow: hidden;
-    width: 258.75px;
-    height: 258.75px;
+    /*width: 258.75px;*/
+    /*height: 258.75px;*/
 }
 .priceDiv{
     height: 40px;
@@ -95,7 +95,7 @@ ul>li:hover{
     border-left: 1px solid #F0F0F0;
     border-right: 1px solid #F0F0F0;
     box-shadow: 0 2px 2px #eee;
-    width: 258.75px;
+    /*width: 258.75px;*/
     height: 91px;
 }
 .add_shop_cart{

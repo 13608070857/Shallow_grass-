@@ -170,16 +170,16 @@ input[type="number"]{
     width: 230px;
     height: 230px;
     transition: all 0.3s linear;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 .introborderDiv2{
     overflow: hidden;
-    width: 230px;
-    height: 230px;
+    /*width: 230px;*/
+    /*height: 230px;*/
 }
 .introborder2{
     overflow: hidden;
-    width: 230px;
+    /*width: 230px;*/
     height: 70px;
     background-color: #FFFFFF;
 }
@@ -343,11 +343,13 @@ input[type="number"]{
 .reply>span{
     display: inline-block;
     width: 60px;
+    font-size: 16px;
     text-align: center;
 }
 .reply>span>a{
     color: #333333;
     text-decoration: none;
+    font-size: 16px;
 }
 .comImg>img{
     width: 60px;
