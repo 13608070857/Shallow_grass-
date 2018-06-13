@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot');
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/iconfont.woff') format('woff'),
+    url('../fonts/iconfont.ttf') format('truetype'),
+    url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
 header {
     height: 112px;
 }
@@ -57,14 +72,17 @@ a:hover,a:active {
 .selfContain ul {
     padding-left: 20px;
 }
-.selfContain>.userInfo li,.selfContain>.selfOther li {
+.selfContain>.selfOther li {
     line-height: 40px;
 }
 .userInfo {
     border-right: 1px solid #eee;
 }
-.userHeader {
-
+.selfContain>.userInfo li {
+    line-height: 35px;
+}
+.userInfo i {
+    font-size: 24px;
 }
 .userHeader,.userHead {
     border-radius: 50%;
@@ -213,17 +231,23 @@ a:hover,a:active {
     z-index: 99;
 }
 .del {
-    background: rgba(0,0,0,.2);
+    background: rgba(0,0,0,.4);
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 30px;
-    height: 30px;
+    top: 50%;
+    left: 50%;
+    margin-left: -30px;
+    margin-top: -30px;
+    width: 60px;
+    height: 60px;
     color: #fff;
-    line-height: 30px;
+    line-height: 60px;
     text-align: center;
     display: none;
     cursor: pointer;
+    border-radius: 50%;
+}
+.del i {
+    font-size: 32px;
 }
 .interPT {
     margin: 10px 0;
