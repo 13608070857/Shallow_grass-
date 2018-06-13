@@ -142,7 +142,7 @@
     padding-top: 60px;
     position: relative;
 }
-#lrMargin0{
+.lrMargin0{
     padding-left: 0;
     padding-right: 0;
     margin-left: 0;
@@ -222,7 +222,7 @@
     top: 130px;
     left: 1405px;
 }
-#exhibitionOneBoxImg{
+.exhibitionOneBoxImg{
     width: 1800px;
     transition: all 1.1s linear;
 }
