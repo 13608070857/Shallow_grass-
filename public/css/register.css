@@ -79,3 +79,10 @@ form>button{
     float: left;
     margin-top: 0;
 }
+a{
+    color: #7B7446;
+}
+a:hover{
+    color: #7B7446;
+    text-decoration: none;
+}

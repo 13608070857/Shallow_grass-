@@ -9,6 +9,10 @@ iframe{
     /*margin-top: 110px;*/
     margin-bottom: 50px;
 }
+.mycontent2{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
 /*图片详情*/
 .imgdeta{
     height: 500px;
@@ -68,7 +72,7 @@ p{
     color: #909090;
 }
 .priceSpan>span{
-    color: #FF2560;
+    color: #7B7446;
     font-weight: bold;
     font-size: 18px;
     margin-left: 55px;
@@ -170,22 +174,33 @@ input[type="number"]{
     width: 230px;
     height: 230px;
     transition: all 0.3s linear;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 .introborderDiv2{
     overflow: hidden;
-    width: 230px;
-    height: 230px;
+    /*width: 230px;*/
+    /*height: 230px;*/
 }
 .introborder2{
     overflow: hidden;
-    width: 230px;
-    height: 70px;
+    /*width: 230px;*/
+    height: 95px;
     background-color: #FFFFFF;
+    text-align: center;
+}
+.mallNew{
+    margin-bottom: 10px;
+}
+.mallNew>span{
+    color: #7b785b;
+    border: 1px solid #7b785b;
+    border-radius: 25px;
+    padding: 5px 10px 5px 10px;
+    font-size: 0.1em;
 }
 .introduceDiv2{
-    height: 20px;
-    line-height: 20px;
+    height: 30px;
+    line-height: 30px;
     padding: 0 10px 30px 10px;
 }
 .introLine{
@@ -200,7 +215,7 @@ input[type="number"]{
     padding: 0 10px 0 10px;
 }
 .priceSpan{
-    color: #FF2560;
+    color: #7B7446;
     font-size: 18px;
     font-weight: bold;
 }
@@ -343,11 +358,13 @@ input[type="number"]{
 .reply>span{
     display: inline-block;
     width: 60px;
+    font-size: 16px;
     text-align: center;
 }
 .reply>span>a{
     color: #333333;
     text-decoration: none;
+    font-size: 16px;
 }
 .comImg>img{
     width: 60px;
