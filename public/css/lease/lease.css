@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    color: #333333;
+}
+a:hover{
+    text-decoration:none;
+}
+header{
+    margin-top: 100px;
+}
+.banner{
+    margin-top: 100px;
+    float: right;
+    width: 80%;
+    height: 448px;
+    position: relative;
+}
+.banner li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+    width: 100%;
+    display: none;
+}
+.banner li img{
+    width: 100%;
+    height: 448px;
+}
+.ertical{
+    position: absolute;
+    top: 100px;
+    left: 12%;
+    font-family: "微软雅黑";
+    font-size: 24px;
+    height: 420px;
+    writing-mode: vertical-rl;/*从左向右 从右向左是 writing-mode: vertical-rl;*/
+    letter-spacing:12px;
+    line-height: 38px;
+    z-index: 1;
+}
+.catching{
+    color: red;
+}
+.combinationOne{
+    position: relative;
+    width: 75%;
+    height: 450px;
+    background-image: url("../../img/lease/T1.jpg");
+    background-size: 100% 100%;
+}
+.details{
+    position: absolute;
+    top: 6%;
+    left: 78%;
+    background: #FFFFFF;
+    width: 440px;
+    height: 400px;
+}
+.listText{
+    margin: 0 auto;
+    width: 85%;
+    border: none;
+    background: transparent;
+}
+.detailsTitle{
+    font-family: "微软雅黑";
+    margin-top: 40px;
+    text-align: center;
+    font-size: 24px;
+}
+.detailsSubtitle{
+    margin: 0 auto;
+    width: 150px;
+    text-align: center;
+    height: 40px;
+    border-bottom: 2px solid #333333;
+}
+.detailsimg{
+    width: 96px;
+    margin: 10px auto;
+}
+.detailsIntroduce{
+    margin: 0 auto;
+    width: 80%;
+    font-weight: bold;
+}
+.partitionDivDiv{
+    width: 150px;
+    background: #fafbfc;
+    border: 1px solid #e4e6e9;
+    height: 38px;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 38px;
+    margin: 15px auto;
+}
+.partitionDivDiv:hover{
+    background: #7b7446;
+    cursor:pointer;
+    color: #FFFFFF;
+}
+.exhibition{
+    margin-top: -100px;
+    width: 100%;
+    height: 460px;
+    background: #f4e3cc;
+}
