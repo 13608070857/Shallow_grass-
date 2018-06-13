@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc2f0211-3241-426b-a525-4b8c9320f305" name="Default" comment="">
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/mall/mall.html" />
+=======
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/mall/mall.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/mall/mall.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> 2107485fd7099232a5adc200ce1d7c9c65e0ae42
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,12 +30,28 @@
     <favorites_list name="Shallow_grass-" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf />
+=======
+    <leaf>
+      <file leaf-file-name="mall.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/mall/mall.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+>>>>>>> 2107485fd7099232a5adc200ce1d7c9c65e0ae42
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -39,6 +62,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/public/mall/mall.html" />
+        <option value="$PROJECT_DIR$/public/css/mall/mall.css" />
+        <option value="$PROJECT_DIR$/public/js/mall/mall.js" />
       </list>
     </option>
   </component>
@@ -81,6 +106,7 @@
     <panes>
       <pane id="ProjectPane">
         <subPane>
+<<<<<<< HEAD
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Shallow_grass-" />
@@ -119,6 +145,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+=======
+          <expand>
+            <path>
+              <item name="Shallow_grass-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shallow_grass-" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Shallow_grass-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shallow_grass-" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Shallow_grass-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shallow_grass-" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Shallow_grass-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shallow_grass-" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Shallow_grass-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shallow_grass-" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Shallow_grass-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shallow_grass-" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Shallow_grass-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shallow_grass-" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Shallow_grass-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shallow_grass-" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+>>>>>>> 2107485fd7099232a5adc200ce1d7c9c65e0ae42
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -129,6 +207,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="" />
@@ -192,16 +271,20 @@
       <created>1528878594858</created>
       <option name="number" value="Default" />
       <updated>1528878594858</updated>
-      <workItem from="1528878602525" duration="272000" />
+      <workItem from="1528878602525" duration="527000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="272000" />
+    <option name="totallyTimeSpent" value="527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+<<<<<<< HEAD
     <editor active="false" />
+=======
+    <editor active="true" />
+>>>>>>> 2107485fd7099232a5adc200ce1d7c9c65e0ae42
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -233,8 +316,21 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/css/mall/mall.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/mall/mall.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/mall/mall.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -246,6 +342,10 @@
         <state vertical-scroll-proportion="0.33333334">
           <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
           <folding />
+=======
+        <state relative-caret-position="240">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+>>>>>>> 2107485fd7099232a5adc200ce1d7c9c65e0ae42
         </state>
       </provider>
     </entry>
