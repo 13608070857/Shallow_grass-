@@ -2,12 +2,31 @@
  padding: 0;
   margin: 0;
 }
+/*.container>.page-header{*/
+    /*color: #7B7446;*/
+/*}*/
+.container>.row>.page-header {
+
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #7B7446;
+}
+.container>.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #7B7446;
+}
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
 .container-fluid{
     width: 100%;
 }
 .activity{
     height: 395px;
-    border: 1px solid hotpink;
+    /*border: 1px solid hotpink;*/
     overflow: hidden;
     background-color: #f7f7f7;
 }
@@ -33,7 +52,7 @@ margin-left:110%;
 
 #diyrow>h3{
     margin-top: 10%;
-    color: #1b6d85;
+    color: #7B7446;
     opacity: 0;
 }
 .activityText>span{
@@ -54,7 +73,7 @@ margin-left:110%;
 
 }
 .border:hover{
-    border: 1px solid #e5e5e5;
+    border: 1px solid #7B7446;
 transition: all .8s linear;
 
 }
@@ -114,8 +133,9 @@ p{
 }
 /*                         活动*/
 /*     a标签*/
-h3>.a{
+.r h4>a{
     text-decoration:none;
+    color: #7B7446;
 }
 
 
@@ -125,8 +145,9 @@ h3>.a{
 
 #hd>h3{
     margin-top:10%;
-    color: #1b6d85;
+
     opacity: 0;
+    color: #7B7446;
 }
 
 .e{
@@ -147,7 +168,7 @@ h3>.a{
 }
 .r{
 width: 65%;
-    border: 1px solid red;
+    /*border: 1px solid #999999;*/
     margin-left: 32%;
     margin-top: 5%;
 
@@ -189,6 +210,7 @@ line-height: 20px;
 /*养护*/
 #yh>h3{
     margin-top: 10%;
+    color: #7B7446;
     /*opacity: 0;*/
 }
 span{
@@ -203,8 +225,16 @@ span{
 h4{
     color: red;
 }
+a:hover{
+    text-decoration: none;
+}
 
-
+.row>.col-lg-8>h4{
+    color:#7B7446; ;
+}
+iframe{
+    display: block;
+}
 
 
 
