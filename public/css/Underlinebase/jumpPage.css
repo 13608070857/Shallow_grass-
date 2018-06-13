@@ -7,9 +7,11 @@ p{
     color: #999999;
 
 }
+.form{
+    margin-left: -1%;
+}
 .row{
-    /*margin-left: 2%;*/
-    margin-top: 1%;
+    margin-top: 2%;
 }
 input{
     height:30px;
@@ -40,3 +42,6 @@ width: 49%;
 background-color:black;
 
 }
+/*.col-lg-7{*/
+    /*margin-left: ;*/
+/*}*/
