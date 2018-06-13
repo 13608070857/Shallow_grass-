@@ -18,6 +18,7 @@
     list-style-type:none;
     display: inline-block;
     margin-left: 0;
+    font-size: 13px;
 }
 .index{
     line-height: 80px;
@@ -35,10 +36,15 @@
     border: none;
     border-bottom: 1px solid #7B7446;
     padding: 5px;
+    background: white;
+    filter:chroma(color=#000000);
+    outline:none;
 }
+
 a{
     color:  #7B7446;
 }
 a:hover{
     color:  #7B7446;
+    text-decoration: none;
 }

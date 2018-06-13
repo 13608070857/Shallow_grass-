@@ -54,4 +54,9 @@ form>a{
     width: 40%;
     text-align: left;
     margin-top:5%;
+    color: #7B7446;
+}
+form>a:hover{
+    color: #7B7446;
+    text-decoration: none;
 }
