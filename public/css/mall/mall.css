@@ -65,30 +65,38 @@ ul>li:hover{
     /*height: 258.75px;*/
 }
 .priceDiv{
-    height: 40px;
-    line-height: 40px;
+    height: 30px;
+    line-height: 30px;
     padding: 0 5px 0 5px;
 }
 .priceSpan{
-    color: #FF2560;
+    color: #7B7446;
     font-size: 18px;
     font-weight: bold;
+    text-align: center;
 }
-.paySpan{
-    color: #929292;
+.mallNew{
+    margin-bottom: 10px;
+}
+.mallNew>span{
+    color: #7b785b;
+    border: 1px solid #7b785b;
+    border-radius: 25px;
+    padding: 5px 10px 5px 10px;
+    font-size: 0.1em;
 }
 .introduceDiv{
     height: 40px;
-    line-height: 20px;
-    padding: 0 5px 0 5px;
-    margin-bottom: 10px;
+    line-height: 40px;
+    padding: 0 15px 0 15px;
+    /*margin-bottom: 10px;*/
 }
 .introduce{
     text-align: left;
 }
 .introLine{
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -99,7 +107,7 @@ ul>li:hover{
     border-right: 1px solid #F0F0F0;
     box-shadow: 0 2px 2px #eee;
     /*width: 258.75px;*/
-    height: 91px;
+    height: 105px;
 }
 .add_shop_cart{
     overflow: hidden;

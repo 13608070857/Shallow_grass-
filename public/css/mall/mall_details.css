@@ -72,7 +72,7 @@ p{
     color: #909090;
 }
 .priceSpan>span{
-    color: #FF2560;
+    color: #7B7446;
     font-weight: bold;
     font-size: 18px;
     margin-left: 55px;
@@ -184,12 +184,23 @@ input[type="number"]{
 .introborder2{
     overflow: hidden;
     /*width: 230px;*/
-    height: 70px;
+    height: 95px;
     background-color: #FFFFFF;
+    text-align: center;
+}
+.mallNew{
+    margin-bottom: 10px;
+}
+.mallNew>span{
+    color: #7b785b;
+    border: 1px solid #7b785b;
+    border-radius: 25px;
+    padding: 5px 10px 5px 10px;
+    font-size: 0.1em;
 }
 .introduceDiv2{
-    height: 20px;
-    line-height: 20px;
+    height: 30px;
+    line-height: 30px;
     padding: 0 10px 30px 10px;
 }
 .introLine{
@@ -204,7 +215,7 @@ input[type="number"]{
     padding: 0 10px 0 10px;
 }
 .priceSpan{
-    color: #FF2560;
+    color: #7B7446;
     font-size: 18px;
     font-weight: bold;
 }
