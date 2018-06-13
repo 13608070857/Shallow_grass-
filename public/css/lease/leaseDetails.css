@@ -19,9 +19,15 @@
     margin: 0 auto;
 }
 .productText{
+    transition: all 1s linear;
+    opacity:0.2;
+    margin-top: 150px;
     float: left;
 }
 .productText2{
+    opacity:0.2;
+    transition: all 1s linear;
+    margin-top: 150px;
     float: right;
     width: 600px;
 }
