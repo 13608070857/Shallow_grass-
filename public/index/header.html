@@ -10,16 +10,34 @@
         <div class="header1" >
             <p>在线时间 08:30~21:30</p>
             <p style="margin-left: 5%">欢迎访问花语在线商城！</p>
-            <a><i class="iconfont">&#xe603;</i></a>
-            <a><i class="iconfont">&#xe603;</i></a>
-            <a><i class="iconfont">&#xe603;</i></a>
+            <a href="login.html" target="_blank"><i class="iconfont">&#xe6d5;</i></a>
+            <a href="#"><i class="iconfont">&#xe6d5;</i></a>
+            <a href="#"><i class="iconfont">&#xe61b;</i></a>
+            <a href="#"><i class="iconfont">&#xe603;</i></a>
+            <input type="text">
         </div>
         <img src="../img/index/logo.png" alt="">
         <nav>
             <ul>
-                <li><a href="#">首页</a></li><li><a href="#">林家辉</a></li><li><a href="#">颜春林</a></li><li><a href="#">粟雪梅</a></li><li><a href="#">彭鑫杭</a></li><li><a href="#">杜佳慧</a></li>
+                <li><a href="index.html">首页</a></li><li><a href="#">林家辉</a></li><li><a href="#">颜春林</a></li><li><a href="#">粟雪梅</a></li><li><a href="#">彭鑫杭</a></li><li><a href="#">杜佳慧</a></li>
             </ul>
         </nav>
     </header>
 </body>
+<script src="../js/jquery-3.3.1.js"></script>
+<script>
+    // $(".header1 a").eq(3).click(function () {
+    //     $("input").css({"display":"block"})
+    // })
+    var A=1;
+    $(".header1 a").eq(3).click(function () {
+        if(A==1){
+            $("input").css({"display":"block"});
+            A=2
+        }else if(A==2){
+            $("input").css({"display":"none"});
+            A=1
+        }
+    })
+</script>
 </html>
