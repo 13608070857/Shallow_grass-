@@ -9,6 +9,9 @@ h4 {
 p{
     line-height: 25px;
 }
+.selfSet a {
+    cursor: pointer;
+}
 .selfSet a:focus {
     text-decoration: none;
 }
