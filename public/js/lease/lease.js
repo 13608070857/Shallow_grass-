@@ -22,7 +22,7 @@ function abc() {
     var i = document.documentElement.scrollTop;
     var a =document.getElementsByClassName("details");
     var b =document.getElementsByClassName("details2");
-    if (i>80){
+    if (i>100){
         a[0].style.top="6%";
         a[0].style.opacity="1";
     }else {
