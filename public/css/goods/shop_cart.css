@@ -1,6 +1,9 @@
 .mycontent{
     margin-top: 30px;
 }
+iframe{
+    display: block;
+}
 .shopNew{
     color: #009A4E;
     border: 1px solid #009A4E;
@@ -157,6 +160,9 @@ a:hover{
 }
 .myShopTable{
     border-right: 1px solid #E0DEDB;
+}
+.myBottom{
+    margin-bottom: 100px;
 }
 /*测试*/
 .test{

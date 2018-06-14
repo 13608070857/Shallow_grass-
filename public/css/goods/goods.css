@@ -1,6 +1,9 @@
 .mycontent{
     margin-top: 20px;
 }
+iframe{
+    display: block;
+}
 a:hover{
     text-decoration: none;
 }
