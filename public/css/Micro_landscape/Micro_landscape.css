@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.right{
+    left: -15px;
+}
+.left{
+    left: 20px;
+    top: 50px;
+}
+.zs{
+    background-color: #a6a6a6;
+    color: #f4f4f4;
+    text-align: center;
+}
+.button{
+    left: 50px;
+    top: 50px;
+}
+.dy{
+    width: 100%;
+    height: 425px;
+}
+.overflow{
+    overflow: hidden;
+}
+.wz{
+    margin-left: 10px;
+    /*margin-right: 100px;*/
+}
+.bz{
+    width: 100%;
+    height: 285px;
+}
+.bz1{
+    margin-left: 10px;
+}
+.bz2{
+    margin-left: 10px;
+}
+.bz3{
+    margin-left: 10px;
+}
+.bz4{
+    margin-left: 10px;
+}
+.bz5{
+    margin-left: 10px;
+}
+.bz6{
+    margin-left: 10px;
+}
+.bz7{
+    margin-left: 10px;
+}
+.bz8{
+    margin-left: 10px;
+}
