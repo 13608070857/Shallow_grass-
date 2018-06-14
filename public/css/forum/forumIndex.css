@@ -1,0 +1,266 @@
+@font-face {
+	font-family: 'iconfont';
+	src: url('../../fonts/iconfont.eot');
+	src: url('../../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+	url('../../fonts/iconfont.woff') format('woff'),
+	url('../../fonts/iconfont.ttf') format('truetype'),
+	url('../../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+	font-family:"iconfont" !important;
+	font-size:16px;font-style:normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+}
+body {
+	background: rgb(242,251,251);
+}
+.line {
+	border: 1px solid #f00;
+}
+.container {
+	width: 70%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.row {
+	margin: 0;
+}
+ul {
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+.noPadding {
+	padding: 0;
+}
+.bannerImg {
+	animation: myRotate 2s linear;
+}
+.bannerLink {
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+	display: block;
+}
+.bannerLink img {
+	width: 100%;
+	position: relative;
+	top: -70px;
+	transition: all 2s linear;
+}
+a,a:hover,a:focus {
+	color: #7b7446;
+	text-decoration: none;
+}
+@keyframes myRotate {
+	from {
+		transform: rotateX(-90deg);
+	}
+	to {
+		transform: rotateX(0deg);
+	}
+}
+.bannerImg a {
+	display: block;
+}
+.bannerDes {
+	width: 100%;
+	background: rgba(255,255,255,.6);
+	padding: 30px 20px;
+	position: absolute;
+	top: 100px;
+	opacity: 0;
+	transition: all 1s linear;
+}
+.bannerImg:hover .bannerDes {
+	opacity: 1;
+}
+.posted {
+	height: 300px;
+	padding: 60px 30px;
+	background: #7b7446;
+}
+.posted i {
+	font-size: 20px;
+	margin-right: 3px;
+}
+.posted p {
+	color: #ccc;
+}
+.posted span {
+	color: #ccc;
+	font-size: 22px;
+	margin-right: 5px;
+}
+.postedBtn {
+	border: 1px solid #ddd698;
+	width: 100%;
+	padding: 10px 0;
+	border-radius: 3px;
+	color: #cccccc;
+}
+.postedBtn:hover {
+	color: #fff;
+	border-color: #a39c61;
+}
+
+.postContent {
+	margin-top: 60px;
+}
+.postCont {
+	padding: 15px 0;
+	position: relative;
+	border-right: 2px solid #7b7446;
+}
+.postCont:after {
+	content: "";
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: #fff;
+	border: 2px solid #7b7446;
+	right: -7px;
+	top: 40px;
+}
+.psC {
+	width: 93%;
+	border-radius: 5px;
+	background: #fff;
+	box-shadow: 0 0 10px #7b7446;
+	color: #7b7446;
+	position: relative;
+}
+.psC:after {
+	content: "";
+	position: absolute;
+	right: -30px;
+	top: 20px;
+	border-top: 10px solid #a39c61;
+	border-bottom: 10px solid transparent;
+	border-right: 15px solid transparent;
+	border-left: 15px solid #a39c61;
+}
+.psText {
+	padding: 0 30px;
+}
+.moveLeft {
+	transition: all .8s linear;
+}
+.moveLeft:hover {
+	margin-left: 20px;
+	color: #b2ab76;
+}
+.postLink {
+	height: 120px;
+	width: 100%;
+	overflow: hidden;
+	display: inline-block;
+}
+.postLink img {
+	height: 100%;
+}
+.postText {
+	padding-left: 20px;
+}
+h4 {
+	padding: 10px 0;
+}
+.postBottom {
+	font-size: 12px;
+	background: #7b7446;
+	color: #eee;
+	padding: 5px 0;
+	border-radius: 0 0 5px 5px;
+}
+.postBottom span {
+	margin-right: 5px;
+}
+.postBottom i {
+	margin-right: 2px;
+}
+
+
+.hot {
+	border-radius: 5px;
+	background: #7b7446;
+	color: #fff;
+	padding: 10px;
+	line-height: 30px;
+	margin-top: 30px;
+}
+.hot a {
+	color: #fff;
+}
+.hot a:hover {
+	color: #cccccc;
+}
+.search input {
+	width: 100%;
+	background: #eee;
+	border:none;
+	padding: 0 20px;
+	border-radius: 30px;
+}
+.search input:focus {
+	outline: none;
+}
+.hotTitle {
+	font-size: 16px;
+}
+.mc {
+	display: inline-block;
+	width: 30px;
+}
+.fontW {
+	font-size: 24px;
+}
+.first {
+	color: #f00;
+}
+.tw {
+	margin-top: 10px;
+}
+.imgLink {
+	display: inline-block;
+	height: 60px;
+	width: 100px;
+	vertical-align: middle;
+}
+.imgLink img {
+	width: 100%;
+}
+.hotClick {
+	line-height: 25px;
+}
+.hotClick a {
+	font-size: 12px;
+}
+.hotClick .mc {
+	width: 80px;
+	font-size: 12px;
+}
+.hotClick .mc a {
+	color: #a39c61;
+}
+
+
+
+#top {
+	height: 60px;
+	width: 60px;
+	line-height: 60px;
+	text-align: center;
+	border-radius: 3px;
+	background: #7b7446;
+	color: #fff;
+	position: fixed;
+	bottom: 20px;
+	right: 10px;
+	cursor: pointer;
+}
+
+

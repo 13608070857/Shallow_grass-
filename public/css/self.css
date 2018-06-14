@@ -65,7 +65,7 @@ a:hover,a:active {
 
 
 
-.selfContain,.backlog,.editSelf {
+.selfContain,.backlog,.editSelf,.orderX {
     margin: 0;
     padding: 40px 20px;
 }
@@ -124,9 +124,39 @@ a:hover,a:active {
 .selfOther a {
     color: #7B7446;
 }
-.blTitle {
+.orderX {
+    display: none;
+}
+.backlog,.orderX {
+    padding: 20px;
+}
+.blTitle,.orderXT {
     background: rgb(246,245,243);
     padding: 15px 0;
+}
+.orderXC {
+    color: #999;
+    padding: 10px 20px;
+    border: 1px solid #eee;
+}
+.orderXT {
+    font-size: 18px;
+}
+.orderXCont>div {
+    padding: 15px 0;
+}
+.orderXCont span,.sText {
+    color: #7B7446;
+}
+.viewDes {
+    cursor: pointer;
+}
+.rText {
+    color: #e40000;
+    font-size: 20px;
+}
+.cul {
+    border-bottom: 1px dashed #eee;
 }
 .product {
     border: 1px solid rgb(246,245,243);
@@ -135,6 +165,7 @@ a:hover,a:active {
 }
 .product img {
     width: 150px;
+    cursor: pointer;
 }
 .product div {
     line-height: 150px;
