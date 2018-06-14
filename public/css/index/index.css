@@ -1,0 +1,340 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('../../fonts/iconfont.eot');
+    src: url('../../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/iconfont.woff') format('woff'),
+    url('../../fonts/iconfont.ttf') format('truetype'),
+    url('../../fonts/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:18px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+*{
+    margin: 0 auto;
+}
+.item{
+    position: relative;
+}
+.item p{
+    font-weight: 100;
+    letter-spacing: 20px;
+    width: 100%;
+    font-size:50px;
+    position: absolute;
+    top: 180px;
+    left: 0;
+    text-align: center;
+    /*margin-top: -500px;*/
+    color: white;
+}
+.slide i{
+    display: block;
+    margin-top:200px;
+}
+iframe{
+    display: block;
+    border: none;
+}
+section{
+    width: 80%;
+}
+section>img{
+    width: 49%;
+    display: block;
+    float: left;
+    padding: 10px;
+    box-shadow: 0 0 0 2px #dadada;
+}
+.content{
+    width: 80%;
+    /*overflow: hidden;*/
+    border-top: 30px solid white;
+}
+.themes{
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+.themes h3{
+    float: left;
+    font-weight:300;
+}
+.themes i{
+    float: left;
+    margin-left: 5px;
+    line-height: 80px;
+    color: rgb(186,186,186);
+    font-style: normal;
+}
+.themes a{
+    display: block;
+    float: right;
+    margin-top: 20px;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid rgb(125,125,125);
+    color: rgb(125,125,125);
+    text-decoration: none;
+}
+.themes span{
+    width: 180px;
+    height: 2px;
+    display: block;
+    float: left;
+    margin-left:-179px;
+    margin-top: 57px;
+    background: rgb(153,153,153);
+}
+.New{
+    width: 100%;
+    overflow: hidden;
+    border-top: 20px solid white;
+}
+.N{
+    margin-top: 8px;
+    width: 23%;
+    float: left;
+    margin-left: 2%;
+    border: white 1px solid;
+    transition: all linear 0.3s;
+}
+.N a{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+.N a img{
+    width: 100%;
+    transition: all linear 0.3s;
+}
+.N a img:hover{
+    transform: scale(1.1);
+}
+.N h5{
+    color: rgb(153,153,179);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.N p{
+    text-align: center;
+    color: rgb(102,102,102);
+    margin-top: 10px;
+    border-top: 1px solid white;
+    line-height: 50px;
+    margin-bottom: 0;
+    transition: all linear 0.3s;
+}
+.N:hover{
+    transform: translateY(-8px);
+    border: #c4c4c4 1px solid;
+    box-shadow: 2px 2px 2px #c4c4c4;
+}
+.N:hover p{
+    border-top: #eaeaea 1px solid;
+}
+.N:hover h5{
+    color: rgb(102,102,102);
+}
+.sales{
+    width: 100%;
+    overflow: hidden;
+    border-top: 20px solid white;
+}
+.S{
+    width: 49%;
+    float: left;
+}
+.S img{
+    width: 100%;
+}
+.time{
+    width: 100%;
+    height: 100px;
+    background: rgb(247,247,247);
+    border: #e2e2e2 1px solid;
+}
+.time p{
+    font-size:24px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 100px;
+}
+.time p span{
+    font-size: 60px;
+    font-weight: 300;
+}
+.container{
+    width: 100%;
+    border-top: 100px solid white;
+    padding: 0;
+}
+.container>img{
+    width: 50%;
+}
+.container_right{
+    width:50%;
+    float: right;
+}
+.container_right img{
+    display: block;
+    margin-top: 30px;
+}
+.container_right p{
+    display: block;
+    width:60%;
+    margin: 20px auto;
+    line-height:30px;
+    color: rgb(125,125,125);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+.home{
+    width: 100%;
+    border-top: 20px solid white;
+}
+.home a{
+    color: white;
+}
+.H{
+    width: 25%;
+    border-bottom: 10px solid white;
+    box-shadow: 0 2px white;
+    float: left;
+    transition: all linear.2s;
+}
+.H img{
+    width: 100%;
+}
+.H span{
+    display: block;
+    margin-top: 40px;
+    width: 20px;
+    height: 2px;
+    background: rgba(204,204,204,1);
+    transition: all linear.2s;
+}
+.H p{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 12px;
+    color: rgb(125,125,125);
+}
+.H h3{
+    text-align: center;
+    margin-top: 25px;
+    border-bottom: 80px solid white;
+    color: black;
+}
+.H1{
+    border: 1px solid white;
+    transition: all linear.2s;
+}
+.H:hover .H1{
+    transform: scale(.95);
+    border: 1px solid #e4e4e4;
+}
+.H:hover{
+    box-shadow: 0 2px #c4c4c4;
+}
+.H:hover span{
+    background: rgba(204,204,204,0);
+}
+.Notice{
+    width: 100%;
+}
+.Notice>img{
+    float: right;
+    width: 35%;
+}
+.Notice a{
+    width: 65%;
+    display: block;
+    float: left;
+    overflow: hidden;
+}
+.Nt{
+    width: 100%;
+    float: left;
+}
+.Nt img{
+    width: 38%;
+    float: left;
+}
+.Nt h4{
+    width:50%;
+    float: left;
+    color: black;
+    margin-left: 15px;
+    display: block;
+    margin-top: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.Nt i{
+    width:50%;
+    float: left;
+    display: block;
+    margin-left: 15px;
+    font-style: normal;
+    color: rgb(197,197,197);
+}
+.Nt p{
+    width:55%;
+    float: left;
+    display: block;
+    color: black;
+    margin-left: 15px;
+    margin-top: 20px;
+    line-height:20px;
+    font-size: 12px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+.D{
+    width: 25%;
+    float: left;
+    border-bottom: 30px solid white;
+}
+.D img{
+    float: left;
+}
+.D h4{
+    font-size: 18px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.D p{
+    font-size: 12px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+

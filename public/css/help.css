@@ -1,0 +1,28 @@
+h3 {
+    color: #7b7446;
+}
+h4 {
+    line-height: 20px;
+    color: #7b7446;
+    margin: 20px 0;
+}
+p{
+    line-height: 25px;
+}
+.selfSet a {
+    cursor: pointer;
+}
+.selfSet a:focus {
+    text-decoration: none;
+}
+#selfContEdit>div {
+    margin-left: 20px;
+    border: 1px solid #EEEEEE;
+    padding: 0 20px;
+}
+#selfContEdit div{
+    display: none;
+}
+#selfContEdit div:nth-child(1){
+    display: block;
+}

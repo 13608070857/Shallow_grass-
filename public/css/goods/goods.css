@@ -1,0 +1,62 @@
+.mycontent{
+    margin-top: 20px;
+}
+iframe{
+    display: block;
+}
+a:hover{
+    text-decoration: none;
+}
+.goodsTitle{
+    font-family: raleway;
+}
+.goodsTitle>h4{
+    color: #666666;
+    line-height: 80px;
+}
+.goodsTitle>p{
+    color: #808080;
+    font-size: 13px;
+    line-height: 25px;
+}
+.goodsL {
+    margin-left: 13.44444446%;
+}
+.allGoods{
+    margin-bottom: 100px;
+}
+.goodsList{
+    margin-bottom: 100px;
+}
+.goodsNmae{
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(73, 73, 73);
+    font-family: 微软雅黑;
+}
+.goodsDiv{
+    margin-bottom: 30px;
+    transition: all 0.3s linear;
+}
+.goodsDiv:hover .goodsNmae{
+    color: #757144;
+}
+.goodsPrice{
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(170, 170, 170);
+    font-family: 黑体;
+}
+.goodsImg{
+    overflow: hidden;
+}
+.goodsImg>img{
+    transition: all 0.3s linear;
+}
+.goodsTextDiv{
+    transition: all 0.3s linear;
+}
+/*测试*/
+.test{
+    border: 1px solid red;
+}

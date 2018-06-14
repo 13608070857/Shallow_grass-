@@ -1,0 +1,119 @@
+.mycontent{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+#address{
+    margin-bottom: 15px;
+}
+.note{
+    color: #6E6E6E;
+    font-size: 16px;
+}
+.orderPay{
+    margin-left: 18px;
+    border-top: 3px solid #DBD7DB;
+    border-bottom: 3px solid #DBD7DB;
+    line-height: 200px;
+}
+.myinW{
+    width: 350px;
+}
+.orderPay>input[type="text"]{
+    margin-top: 40px;
+}
+.orderPay>button{
+    margin-bottom: 40px;
+}
+.clearBorder{
+    border-radius: 0;
+}
+.inputW{
+    width: 280px;
+}
+h2{
+    font-weight: bold;
+    font-size: 22px;
+    margin-left: 15px;
+}
+h5{
+    font-weight: bold;
+    font-size: 15px;
+}
+h4{
+    font-size: 14px;
+}
+.borderR{
+    overflow: hidden;
+    border: 3px solid #6E6E6E;
+    padding: 0 20px 20px 20px;
+}
+.goodsOrder{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 3px solid #D9D9D9;
+    margin: 0 20px 0 20px;
+    padding: 0 20px 0 20px;
+}
+.goodsOrder2{
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid #D9D9D9;
+    margin: 0 20px 0 20px;
+    padding: 0 20px 0 20px;
+}
+.bordersm{
+    border-bottom: 1px solid #D9D9D9;
+}
+.borderLast{
+    border: none;
+}
+.moneyRadio{
+    height: 100px;
+    margin: 0 20px 0 20px;
+}
+.moneyRadio2{
+    overflow: hidden;
+    margin: 0 20px 0 20px;
+}
+.moneyRadio>div{
+    line-height: 40px;
+    color: #454545;
+    font-size: 15px;
+}
+.moneyRadio>p{
+    font-size: 15px;
+    color: #777777;
+}
+.zfbDiv{
+    height: 40px;
+    line-height: 40px;
+}
+.zfbDiv>img{
+    margin-top: 12px;
+    margin-left: 10px;
+}
+.moneyRadio2>p{
+    font-size: 15px;
+    color: #777777;
+}
+.zfbDiv>div{
+    color: #454545;
+    font-size: 15px;
+}
+.order_btn{
+    height: 42px;
+    margin: 0 20px 0 20px;
+    border-radius: 0;
+    background-color: #6C6C66;
+    color: #FFFFFF;
+    padding: 10px 40px 10px 40px;
+    outline: none;
+}
+.order_btn:hover{
+    background-color: #000000;
+    color: #FFFFFF;
+}
+/*订单*/
+.test{
+    border: 1px solid red;
+}

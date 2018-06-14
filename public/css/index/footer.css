@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('../../fonts/iconfont.eot');
+    src: url('../../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/iconfont.woff') format('woff'),
+    url('../../fonts/iconfont.ttf') format('truetype'),
+    url('../../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:18px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+body{
+    margin: 0px;
+}
+footer{
+    width: 100%;
+    background: rgb(247,247,247);
+    overflow: hidden;
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
+.font{
+    width: 17%;
+    float: left;
+    margin-left:8%;
+}
+.font h4{
+    color: rgb(0,0,47);
+    font-weight: 200;
+}
+.font p{
+    width:70%;
+    color: rgb(187,187,187);
+    font-size: 12px;
+}
+.font img{
+    float: left;
+    margin-top:5px;
+    margin-left: 5px;
+    width: 18%;
+}
+.font p i{
+    color: #343434;
+    margin-left: 4%;
+}

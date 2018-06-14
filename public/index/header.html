@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/index/header.css">
+</head>
+<body>
+    <header>
+        <div class="header1" >
+            <p>在线时间 08:30~21:30</p>
+            <p style="margin-left: 5%">欢迎访问浅草在线商城！</p>
+            <a href="login.html" target="_parent"><i class="iconfont">&#xe6d5;</i></a>
+            <a href="../selfPublic/self.html" target="_parent"><i class="iconfont">&#xe6d5;</i></a>
+            <a href="../goods/shop_cart.html" target="_parent"><i class="iconfont">&#xe61b;</i></a>
+            <a href="#"><i class="iconfont">&#xe603;</i></a>
+            <input type="text" placeholder="搜索绿植">
+        </div>
+        <img src="../img/index/logo.png" alt="">
+        <nav>
+            <ul>
+                <li><a href="index.html" target="_parent">首页</a></li><li><a href="../lease/lease.html" target="_parent">植物租赁</a></li><li><a href="../goods/goods.html" target="_parent">所有商品</a></li><li><a href="../forum/forumIndex.html" target="_parent">论坛</a></li><li><a href="#">彭鑫杭</a></li><li><a href="#">杜佳慧</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+<script src="../js/jquery-3.3.1.js"></script>
+<script>
+    // $(".header1 a").eq(3).click(function () {
+    //     $("input").css({"display":"block"})
+    // })
+    var A=1;
+    $(".header1 a").eq(3).click(function () {
+        if(A==1){
+            $("input").css({"display":"block"});
+            A=2
+        }else if(A==2){
+            $("input").css({"display":"none"});
+            A=1
+        }
+    })
+</script>
+</html>

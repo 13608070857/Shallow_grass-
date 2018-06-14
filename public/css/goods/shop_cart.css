@@ -1,0 +1,170 @@
+.mycontent{
+    margin-top: 30px;
+}
+iframe{
+    display: block;
+}
+.shopNew{
+    color: #009A4E;
+    border: 1px solid #009A4E;
+    line-height: 45px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.nullDiv{
+    margin-top: 50px;
+    color: #888888;
+    font-size: 15px;
+}
+a{
+    color: #333333;
+}
+a:hover{
+    text-decoration: none;
+    color: #333333;
+}
+.backDiv{
+    border: 1px solid #76756F;
+    color: #76757F;
+    border-radius: 0;
+    background-color: #FFFFFF;
+    font-size: 15px;
+}
+.backbtn{
+    margin-top: 30px;
+}
+.nullShopCart{
+    height: 400px;
+}
+.delSpan{
+    color: #E0DEDB;
+    cursor: pointer;
+    font-size: 20px;
+}
+.delSpan:hover{
+    color: #567E92;
+}
+.shopImg{
+    width: 100px;
+    height: 100px;
+}
+.table > thead > tr{
+    color: #333333;
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 3px solid #E0DEDB;
+}
+.table > thead > tr >th{
+    padding-bottom: 18px;
+}
+.table > tbody > tr > td{
+    line-height: 100px;
+}
+.table > tbody > tr > td:nth-child(2){
+    color: #76756F;
+    font-size: 16px;
+}
+.table > tbody > tr > td:nth-child(3){
+    padding: 35px 0 0 0;
+}
+.table > tbody > tr > td:nth-child(4){
+    color: #76756F;
+    font-size: 16px;
+    font-weight: bold;
+}
+.table > tbody > tr:not(:last-child){
+    border-bottom: 1px dashed #E0DEDB;
+}
+.myinput2{
+    overflow: hidden;
+    margin-top: 15px;
+    margin-left: 0;
+}
+.myinput2>input{
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #d3d3d3;
+}
+.myinput2 span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #d3d3d3;
+    font-size: 20px;
+    cursor: pointer;
+}
+.myinput2>input[type="number"]{
+    width: 30px;
+}
+.numRedu::before{
+    content: '-';
+}
+.numadd::before{
+    content: '+';
+}
+.shopX{
+    height: 40px;
+    line-height: 40px;
+    color: #76756F;
+}
+.shopX2{
+    border-bottom: 1px solid #E0DEDB;
+}
+.shopX3{
+    border-bottom: 3px solid #E0DEDB;
+}
+.mon_btn{
+    border-radius: 0;
+    background-color: #76756F;
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 20px 0 20px 0;
+    padding: 10px 0 10px 0;
+}
+.mon_btn:hover{
+    background-color: #333333;
+    color: #FFFFFF;
+}
+.shopSum{
+    color: #333333;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 46px;
+    border-bottom: 3px solid #E0DEDB;
+}
+.YhSpan{
+    font-size: 16px;
+    font-weight: bold;
+}
+.YhSpan2{
+    font-size: 14px;
+    font-weight: bold;
+}
+.myDIn{
+    margin: 12px 0 12px 0;
+    height: 40px;
+    padding-left: 10px;
+}
+.yhj_btn{
+    border-radius: 0;
+    border: 1px solid #76756F;
+    background-color: rgba(255, 255, 255, 0);
+    color: #76756F;
+    font-size: 15px;
+}
+.yhj_btn:hover{
+    border: 1px solid #000;
+    color: #000;
+}
+.myShopTable{
+    border-right: 1px solid #E0DEDB;
+}
+.myBottom{
+    margin-bottom: 100px;
+}
+/*测试*/
+.test{
+    border: 1px solid red;
+}
