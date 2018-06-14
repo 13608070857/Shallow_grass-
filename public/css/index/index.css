@@ -6,6 +6,7 @@
     url('../../fonts/iconfont.ttf') format('truetype'),
     url('../../fonts/iconfont.svg#iconfont') format('svg');
 }
+
 .iconfont{
     font-family:"iconfont" !important;
     font-size:18px;font-style:normal;
@@ -15,6 +16,21 @@
 }
 *{
     margin: 0 auto;
+}
+.item{
+    position: relative;
+}
+.item p{
+    font-weight: 100;
+    letter-spacing: 20px;
+    width: 100%;
+    font-size:50px;
+    position: absolute;
+    top: 180px;
+    left: 0;
+    text-align: center;
+    /*margin-top: -500px;*/
+    color: white;
 }
 .slide i{
     display: block;
@@ -239,11 +255,16 @@ section>img{
 }
 .Notice>img{
     float: right;
-
     width: 35%;
 }
-.Nt{
+.Notice a{
     width: 65%;
+    display: block;
+    float: left;
+    overflow: hidden;
+}
+.Nt{
+    width: 100%;
     float: left;
 }
 .Nt img{
@@ -253,6 +274,7 @@ section>img{
 .Nt h4{
     width:50%;
     float: left;
+    color: black;
     margin-left: 15px;
     display: block;
     margin-top: 20px;
@@ -273,6 +295,7 @@ section>img{
     width:55%;
     float: left;
     display: block;
+    color: black;
     margin-left: 15px;
     margin-top: 20px;
     line-height:20px;
