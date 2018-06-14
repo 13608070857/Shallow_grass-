@@ -22,21 +22,21 @@ function abc() {
     var i = document.documentElement.scrollTop;
     var a =document.getElementsByClassName("details");
     var b =document.getElementsByClassName("details2");
-    if (i>100){
+    if (i>400){
         a[0].style.top="6%";
         a[0].style.opacity="1";
     }else {
         a[0].style.top="66%";
         a[0].style.opacity="0.2";
     }
-    if (i>1000){
+    if (i>1300){
         b[0].style.top="6%";
         b[0].style.opacity="1";
     }else {
         b[0].style.top="66%";
         b[0].style.opacity="0.2";
     }
-    if (i>1980){
+    if (i>2300){
         a[1].style.top="6%";
         a[1].style.opacity="1";
     }else {
