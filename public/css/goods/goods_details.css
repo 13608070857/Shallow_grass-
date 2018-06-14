@@ -15,6 +15,7 @@
 .goodsDecImg2{
     width: 100px;
     padding: 20px;
+    float: left;
 }
 .goodsDecImg2>img{
     width: 60px;
