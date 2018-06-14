@@ -43,5 +43,4 @@ function abc() {
         a[1].style.top="66%";
         a[1].style.opacity="0.2";
     }
-    console.log(i)
 }
