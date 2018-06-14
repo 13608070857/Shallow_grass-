@@ -159,6 +159,10 @@ section>img{
     margin: 20px auto;
     line-height:30px;
     color: rgb(125,125,125);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 .home{
     width: 100%;
@@ -212,12 +216,15 @@ section>img{
 }
 .Notice>img{
     float: right;
+
+    width: 35%;
 }
 .Nt{
     width: 65%;
     float: left;
 }
 .Nt img{
+    width: 38%;
     float: left;
 }
 .Nt h4{
@@ -226,6 +233,10 @@ section>img{
     margin-left: 10px;
     display: block;
     margin-top: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
 }
 .Nt i{
     width:50%;
@@ -236,13 +247,17 @@ section>img{
     color: rgb(197,197,197);
 }
 .Nt p{
-    width:60%;
+    width:55%;
     float: left;
     display: block;
     margin-left: 10px;
     margin-top: 20px;
     line-height:20px;
     font-size: 12px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 .D{
     width: 25%;
@@ -254,9 +269,17 @@ section>img{
 }
 .D h4{
     font-size: 18px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
 }
 .D p{
     font-size: 12px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
 }
 
 
