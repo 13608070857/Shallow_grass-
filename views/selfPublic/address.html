@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人中心</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/self.css"/>
+    <link rel="stylesheet" href="../css/modelCss.css"/>
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<iframe src="../index/header.html" frameborder="0" width="100%" height="220px"></iframe>
+<section>
+    <div class="container self">
+        <div class="row">
+            <aside class="col-lg-2 col-md-2 col-sm-2 col-xs-2 selfSet">
+                <ul>
+                    <li>
+                        <h4>账号管理</h4>
+                    </li>
+                    <li id="selfC">
+                        <a href="self.ejs">个人中心</a>
+                    </li>
+                    <li id="info">
+                        <a href="selfE.html">账号信息</a>
+                    </li>
+                    <li class="current" id="address">
+                        <a href="address.html">地址管理</a>
+                    </li>
+                    <li id="security">
+                        <a href="security.html">安全中心</a>
+                    </li>
+                    <li id="collect">
+                        <a href="collect.html">我的收藏</a>
+                    </li>
+                    <li id="view">
+                        <a href="view.html">我的足迹</a>
+                    </li>
+                    <li>
+                        <h4>交易管理</h4>
+                    </li>
+                    <li id="orderG">
+                        <a href="orderG.html">订单管理</a>
+                    </li>
+                    <li id="coupons">
+                        <a href="coupons.html">优惠卷</a>
+                    </li>
+                    <li>
+                        <h4>服务中心</h4>
+                    </li>
+                    <li id="afterSale">
+                        <a href="afterSale.html">售后记录</a>
+                    </li>
+                    <li id="help">
+                        <a href="help.html">帮助中心</a>
+                    </li>
+                </ul>
+            </aside>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" id="selfContEdit">
+                <div class="addressEdit">
+                    <div class="addressT">
+                        <div class="col-lg-10  col-md-10 col-sm-10 col-xs-10">已保存收货地址(地址最多10条，还能保存9条)</div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-right">
+                            <a role="button" class="btn" data-toggle="modal" data-target="#myModal2">+新建地址</a>
+                        </div>
+                    </div>
+                    <div class="addressCont">
+                        <div class="addressCT row">
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">收货人</div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">地址</div>
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">联系方式</div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">操作</div>
+                        </div>
+                        <div class="addressC">
+                            <div class="addressCList row">
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">大小姐</div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">辽宁省丹东市振安区建设</div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">186****5628</div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
+                                    <a href="#">编辑</a>
+                                    <a href="#">删除</a>
+                                    <a href="#" role="button" class="btn">默认地址</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">新增收货信息</h4>
+                            </div>
+                            <form class="form-inline">
+                                <div class="modal-body">
+                                    <table class="table table_add">
+                                        <tr>
+                                            <td><label class="addText">所在地区</label></td>
+                                            <td>
+                                                <div data-toggle="distpicker">
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="province12">Province</label>
+                                                        <select class="form-control" id="province12"></select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="city12">City</label>
+                                                        <select class="form-control" id="city12"></select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="district12">District</label>
+                                                        <select class="form-control" id="district12"></select>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><label class="addText">详细地址</label></td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="deta_address2">详细地址</label>
+                                                    <textarea class="form-control" placeholder="建议你如实填写详细收货地址，例如街道名称，门牌号码，楼层和房间号等信息" id="deta_address2" rows="3" cols="64"></textarea>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><label class="addText">收货人姓名</label></td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="consignee_name2">收货人姓名</label>
+                                                    <input type="text" class="form-control" id="consignee_name2" placeholder="长度不超过25个字符">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><label class="addText">手机号</label></td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="phone2">手机号</label>
+                                                    <input type="text" class="form-control" id="phone2" placeholder="请填写您的手机号" maxlength="11">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <input type="checkbox">设为默认地址
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    <button type="button" class="btn btn_del">添加</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<iframe src="../index/footer.html" frameborder="0" width="100%" height="370px"></iframe>
+
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/self.js"></script>
+<script src="../js/buy/distpicker.data.js"></script>
+<script src="../js/buy/distpicker.js"></script>
+<script src="../js/buy/main.js"></script>
+
+</body>
+</html>

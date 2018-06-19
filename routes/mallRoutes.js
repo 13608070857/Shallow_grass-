@@ -1,5 +1,6 @@
 const express=require("express");
 const goodscontroller=require("../controller/goodsController");
+const selfController = require("../controller/selfController");
 const router=express.Router();//获取路由对象
 //商品
 router.get("/goods",goodscontroller.goodsList);
@@ -11,4 +12,8 @@ router.get("/order",goodscontroller.Order);
 router.get("/pay",goodscontroller.Pay);
 //购物车
 router.get("/shop_cart",goodscontroller.shopCart);
+
+//个人中心
+router.get("/self",selfController.self);
+
 module.exports=router;//公开router
