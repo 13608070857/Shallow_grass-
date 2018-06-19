@@ -1,6 +1,7 @@
 const express=require("express");
 const goodscontroller=require("../controller/goodsController");
 const selfController = require("../controller/selfController");
+const indexController = require("../controller/indexController");
 const router=express.Router();//获取路由对象
 //商品
 router.get("/goods",goodscontroller.goodsList);
@@ -24,5 +25,10 @@ router.get("/orderG",selfController.orderG);
 router.get("/coupons",selfController.coupons);
 router.get("/afterSale",selfController.afterSale);
 router.get("/help",selfController.help);
-
+//index
+router.get("/index",indexController.index);
+router.get("/login",indexController.login);
+router.get("/register",indexController.register);
+router.get("/Retrievepassword",indexController.Retrievepassword);
+router.get("/rule",indexController.rule);
 module.exports=router;//公开router
