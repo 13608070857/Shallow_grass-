@@ -15,9 +15,9 @@
     <![endif]-->
 </head>
 <body>
-<!--<iframe src="../index/header.ejs" width="100%" height="220px" frameborder="0"></iframe>-->
+<%include ../index/header.ejs%>
 <section>
-    <div class="container mycontent">
+    <div class="container mycontent3">
         <div class="row">
             <div class="col-xs-7 orderDiv">
                 <h2>账单地址</h2>
@@ -56,19 +56,10 @@
                 </div>
                 <div class="col-xs-12">
                     <div class="form-group">
-                        <label for="address">
-                            <h5>地址 *</h5>
+                        <label for="zip_code">
+                            <h5>邮政编码 *</h5>
                         </label>
-                        <input type="text" class="form-control clearBorder" id="address" placeholder="编辑地址">
-                        <input type="text" class="form-control clearBorder" placeholder="楼层、房间号（可选）">
-                    </div>
-                </div>
-                <div class="col-xs-12">
-                    <div class="form-group">
-                        <label for="city">
-                            <h5>镇/市 *</h5>
-                        </label>
-                        <input type="text" class="form-control clearBorder" id="city" placeholder="镇/市">
+                        <input type="text" class="form-control clearBorder" id="zip_code" placeholder="邮政编码">
                     </div>
                 </div>
                 <div class="col-xs-12">
@@ -77,17 +68,31 @@
                             <h5>省 *</h5>
                         </label>
                         <select class="form-control clearBorder inputW" id="province">
-                            <option>选择一个选项…</option>
+                            <option>----省----</option>
                             <option>China/中国</option>
                             <option>Yunnan/云南</option>
                             <option>BeiJing/北京</option>
                         </select>
                     </div>
                     <div class="form-group pull-right">
-                        <label for="zip_code">
-                            <h5>邮政编码 *</h5>
+                        <label for="city">
+                            <h5>镇/市 *</h5>
                         </label>
-                        <input type="text" id="zip_code" class="form-control clearBorder inputW" placeholder="邮政编码">
+                        <select class="form-control clearBorder inputW" id="city">
+                            <option>----镇/市----</option>
+                            <option>China/中国</option>
+                            <option>Yunnan/云南</option>
+                            <option>BeiJing/北京</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="address">
+                            <h5>地址 *</h5>
+                        </label>
+                        <input type="text" class="form-control clearBorder" id="address" placeholder="编辑地址">
+                        <input type="text" class="form-control clearBorder" placeholder="楼层、房间号（可选）">
                     </div>
                 </div>
                 <div class="col-xs-12">
@@ -102,17 +107,6 @@
                             <h5>电话 *</h5>
                         </label>
                         <input type="text" id="phone" class="form-control clearBorder inputW">
-                    </div>
-                </div>
-                <div class="col-xs-12">
-                    <div class="note">请输入以下信息在本站注册帐号,如果您已有帐号,可以在网站的顶部登录.</div>
-                </div>
-                <div class="col-xs-12">
-                    <div class="form-group">
-                        <label for="userPsw">
-                            <h5>账户密码 *</h5>
-                        </label>
-                        <input type="text" id="userPsw" class="form-control clearBorder" placeholder="密码">
                     </div>
                 </div>
                 <div class="col-xs-12">
@@ -184,7 +178,7 @@
         </div>
     </div>
 </section>
-<!--<iframe src="index/footer.ejs" width="100%" height="370px" frameborder="0"></iframe>-->
+<%include ../index/footer.ejs%>
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>
