@@ -7,7 +7,7 @@ const indexController = require("../controller/indexController");
 const forumController = require("../controller/forumController");
 
 
-const leaseController = require("../controller/forumController");
+const leaseController = require("../controller/leaseController");
 
 const router=express.Router();//获取路由对象
 //商品
