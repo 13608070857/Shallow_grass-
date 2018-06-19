@@ -15,5 +15,14 @@ router.get("/shop_cart",goodscontroller.shopCart);
 
 //个人中心
 router.get("/self",selfController.self);
+router.get("/selfE",selfController.selfE);
+router.get("/address",selfController.address);
+router.get("/security",selfController.security);
+router.get("/collect",selfController.collect);
+router.get("/view",selfController.view);
+router.get("/orderG",selfController.orderG);
+router.get("/coupons",selfController.coupons);
+router.get("/afterSale",selfController.afterSale);
+router.get("/help",selfController.help);
 
 module.exports=router;//公开router
