@@ -16,7 +16,8 @@ router.get("/goods",goodscontroller.goodsList);
 router.get("/goods_details",goodscontroller.goodsDetails);
 //租赁
 router.get("/lease",leaseController.leaseList);
-
+//租赁详情
+router.get("/lease_details",leaseController.lease_details);
 //订单
 router.get("/order",goodscontroller.Order);
 //支付

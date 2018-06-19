@@ -25,3 +25,16 @@ $("body").click(function () {
         "width":"0"
     });
 });
+//商品详情/用户评论
+$(".userComments>a").click(function () {
+    $(".userComments>a").attr("class","commUnactive");
+    $(this).attr("class","commActive");
+});
+$(".commActive").click(function () {
+    $(".detailsList").css("display","block");
+    $(".commentsList").css("display","none");
+});
+$(".commUnactive").click(function () {
+    $(".detailsList").css("display","none");
+    $(".commentsList").css("display","block");
+});
