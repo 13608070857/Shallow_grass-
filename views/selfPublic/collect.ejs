@@ -15,8 +15,8 @@
     <![endif]-->
 </head>
 <body>
-<iframe src="index/header.html" frameborder="0" width="100%" height="220px"></iframe>
-<section>
+<%-include('../index/header.ejs')%>
+<section style="margin-top: 220px;">
     <div class="container self">
         <div class="row">
             <aside class="col-lg-2 col-md-2 col-sm-2 col-xs-2 selfSet">
@@ -210,7 +210,7 @@
         </div>
     </div>
 </section>
-<iframe src="index/footer.html" frameborder="0" width="100%" height="370px"></iframe>
+<%-include('../index/footer.ejs')%>
 
 
 <script src="js/jquery-3.3.1.js"></script>
