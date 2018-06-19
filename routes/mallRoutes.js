@@ -2,11 +2,15 @@ const express=require("express");
 const goodscontroller=require("../controller/goodsController");
 const selfController = require("../controller/selfController");
 const forumController = require("../controller/forumController");
+const leaseController = require("../controller/forumController");
 const router=express.Router();//获取路由对象
 //商品
 router.get("/goods",goodscontroller.goodsList);
 //商品详情
 router.get("/goods_details",goodscontroller.goodsDetails);
+//租赁
+router.get("/lease",leaseController,)
+
 //订单
 router.get("/order",goodscontroller.Order);
 //支付
