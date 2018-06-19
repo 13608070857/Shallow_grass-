@@ -1,7 +1,11 @@
 const express=require("express");
 const goodscontroller=require("../controller/goodsController");
 const selfController = require("../controller/selfController");
+<<<<<<< HEAD
 const indexController = require("../controller/indexController");
+=======
+const forumController = require("../controller/forumController");
+>>>>>>> ac39ef6ff1bb1e371022416260cddaf40544a6f2
 const router=express.Router();//获取路由对象
 //商品
 router.get("/goods",goodscontroller.goodsList);
@@ -25,10 +29,19 @@ router.get("/orderG",selfController.orderG);
 router.get("/coupons",selfController.coupons);
 router.get("/afterSale",selfController.afterSale);
 router.get("/help",selfController.help);
+<<<<<<< HEAD
 //index
 router.get("/index",indexController.index);
 router.get("/login",indexController.login);
 router.get("/register",indexController.register);
 router.get("/Retrievepassword",indexController.Retrievepassword);
 router.get("/rule",indexController.rule);
+=======
+
+//论坛
+router.get("/forumIndex",forumController.forumIndex);
+router.get("/forumMain",forumController.forumMain);
+router.get("/forumSelf",forumController.forumSelf);
+
+>>>>>>> ac39ef6ff1bb1e371022416260cddaf40544a6f2
 module.exports=router;//公开router
