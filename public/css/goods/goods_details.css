@@ -109,11 +109,19 @@ input[type="number"]{
     text-decoration: none;
     color: #333333;
     line-height: 60px;
+    width: 100px;
+    padding-left: 20px;
+}
+.commActive{
     border-top: 4px solid #000000;
+}
+.commUnactive{
+    border-top: none;
 }
 .commentsList{
     margin-top: 20px;
     border-bottom: 1px solid #EEEEEE;
+    display: none;
 }
 .commentsList>p{
     color: #666666;
@@ -248,6 +256,11 @@ input[type="number"]{
 .btn_mysum:hover{
     background-color: #000000;
     color: #FFFFFF;
+}
+.detailsList{
+    margin-top: 20px;
+    border-bottom: 1px solid #EEEEEE;
+    display: block;
 }
 /*测试*/
 .test{
