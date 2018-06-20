@@ -108,6 +108,9 @@ a,a:hover,a:focus {
 .postContent {
 	margin-top: 60px;
 }
+.postContent i {
+	font-size: 12px;
+}
 .postCont {
 	padding: 15px 0;
 	position: relative;
@@ -131,6 +134,7 @@ a,a:hover,a:focus {
 	box-shadow: 0 0 10px #7b7446;
 	color: #7b7446;
 	position: relative;
+	margin: 0;
 }
 .psC:after {
 	content: "";

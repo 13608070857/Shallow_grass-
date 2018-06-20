@@ -31,6 +31,9 @@ iframe {
 li {
     list-style: none;
 }
+.fmContent i {
+    font-size: 14px;
+}
 .fmNav {
     margin-bottom: 20px;
 }
