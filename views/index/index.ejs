@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="../css/index/index.css">
 </head>
 <body>
+<%-include('header.ejs')%>
 <!--轮播图-->
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<div style="margin-top: 170px" id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -207,8 +208,8 @@
         <p>每日整点可领取限量优惠劵</p>
     </div>
 </div>
+<%-include('footer.ejs')%>
 </body>
-
 <script src="../js/jquery-3.3.1.js"></script>
 <script src="../js/bootstrap.js"></script>
 <script>
