@@ -8,9 +8,6 @@ a{
 a:hover{
     text-decoration:none;
 }
-header{
-    margin-top: 20px;
-}
 .banner{
     margin-top: 100px;
     float: right;
@@ -20,7 +17,7 @@ header{
 }
 .banner li{
     position: absolute;
-    top: 0;
+    top: 190px;
     left: 0;
     list-style: none;
     width: 100%;
