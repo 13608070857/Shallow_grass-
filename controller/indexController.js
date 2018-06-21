@@ -3,19 +3,45 @@ const dbpool = require("../config/dbpoolConfig");
 const usermodel = require("../dao/goodsDao");
 const indexController ={
     index(req,resp){
-        resp.render("index/index",{username:"²âÊÔ"});
+        resp.render("index/index",{user:req.session.user});
     },
     login(req,resp){
-        resp.render("index/login",{username:"²âÊÔ"});
+        resp.render("index/login",{username:"æµ‹è¯•"});
     },
     register(req,resp){
-        resp.render("index/register",{username:"²âÊÔ"});
+        resp.render("index/register",{username:"æµ‹è¯•"});
     },
     Retrievepassword(req,resp){
-        resp.render("index/Retrievepassword",{username:"²âÊÔ"});
+        resp.render("index/Retrievepassword",{username:"æµ‹è¯•"});
     },
     rule(req,resp){
-        resp.render("index/rule",{username:"²âÊÔ"});
+        resp.render("index/rule",{username:"æµ‹è¯•"});
+    },
+    logindo(req,resp){
+        let username=req.body.username;
+        let pwd=req.body.pwd;
+        console.log(username)
+        console.log(pwd)
+        console.log(req.session)
+        dbpool.connect("select * from uesrs where name=? and passowrd=?",
+                [username,pwd],
+            (error,data)=> {
+                if(data!=undefined) {
+                    if(data.length>0) {
+                        req.session.user=username;
+                        resp.redirect("/index");
+                        console.log(req.session.user)
+                    }else {
+                        console.log("2");
+                        resp.send("ç™»é™†é”™è¯¯");
+                    }
+                }else {
+                    console.log("3");
+                    resp.send("æ•°æ®åº“æŠ¥é”™" + error.message);
+                }
+            }
+        );
     }
+
 }
 module.exports = indexController;

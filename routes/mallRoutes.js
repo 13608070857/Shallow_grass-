@@ -43,6 +43,7 @@ router.get("/login",indexController.login);
 router.get("/register",indexController.register);
 router.get("/Retrievepassword",indexController.Retrievepassword);
 router.get("/rule",indexController.rule);
+router.post("/login.do",indexController.logindo);
 
 
 //论坛
