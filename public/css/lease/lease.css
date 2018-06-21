@@ -252,3 +252,53 @@ a:hover{
 .freeButton:hover{
     background: rgba(123, 116, 70, 0.77);
 }
+.detailsText{
+    height: 120px;
+    width: 100%;
+}
+.detailsTextF{
+    margin-right: 20px;
+    margin-left: 40px;
+    line-height: 25px;
+    width: 35%;
+    float: left;
+}
+.detailsTextF div{
+    float: right;
+}
+@media screen and (max-width: 1520px) {
+    .details {
+        left: 75%;
+    }
+}
+@media screen and (max-width: 1420px) {
+    .details {
+        left: 73%;
+    }
+}
+@media screen and (max-width: 1320px) {
+    .details {
+        left: 68%;
+    }
+}
+@media screen and (max-width: 1220px) {
+    .details {
+        left: 64%;
+    }
+}
+@media screen and (max-width: 1120px) {
+    .details {
+        left: 60%;
+    }
+}
+@media screen and (max-width: 1020px) {
+    .details {
+        left: 55%;
+    }
+}
+@media screen and (max-width: 920px) {
+    .details {
+        left: 50%;
+    }
+}
+

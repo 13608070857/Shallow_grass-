@@ -31,9 +31,11 @@
                 <div class="detailsSubtitle"><%=leaseTitle[0].Subtitle%></div>
                 <div class="detailsimg"><img src="../img/lease/sakura.svg"></div>
                 <p class="detailsIntroduce">这个组合的详情</p>
-                <%for (var i=0;i<leasePortfolio.length;i++) {%>
-                <div><%=leasePortfolio[i].goods_type%>-<%=leasePortfolio[i].goodsName%> <%=leasePortfolio[i].goods_num%></div>
-                <%}%>
+                <div class="detailsText">
+                    <%for (var i=0;i<leasePortfolio.length;i++) {%>
+                    <div class="detailsTextF"><%=leasePortfolio[i].goods_type%>-<%=leasePortfolio[i].goodsName%><div>×<%=leasePortfolio[i].goods_num%></div></div>
+                    <%}%>
+                </div>
                 <a href="lease_details"><div class="partitionDivDiv">我要租赁</div></a>
             </div>
         </div>
@@ -70,15 +72,15 @@
     <div class="posrel">
         <div class="combinationTow">
             <div class="details2">
-                <p class="detailsTitle">耀眼的群这个组合 · 很别致</p>
-                <div class="detailsSubtitle">作为主题闪耀的植物</div>
+                <p class="detailsTitle"><%=leaseTitle[1].Maintitle%></p>
+                <div class="detailsSubtitle"><%=leaseTitle[1].Subtitle%></div>
                 <div class="detailsimg"><img src="../img/lease/sakura.svg"></div>
                 <p class="detailsIntroduce">这个组合的详情</p>
-                <pre class="listText">小盆-马库斯    ×20            小盆-红爪    ×10
-小盆-艳日辉    ×20            小盆-蓝鸟    ×10
-大盆-小人祭    ×10            大盆-白杜丹  ×5
-大盆-单雪      ×10            大盆-火祭    ×5
-超大盆-蓝石莲   ×5</pre>
+                <div class="detailsText">
+                    <%for (var i=0;i<leasePortfolio2.length;i++) {%>
+                    <div class="detailsTextF"><%=leasePortfolio2[i].goods_type%>-<%=leasePortfolio2[i].goodsName%><div>×<%=leasePortfolio2[i].goods_num%></div></div>
+                    <%}%>
+                </div>
                 <a href="lease_details"><div class="partitionDivDiv">我要租赁</div></a>
             </div>
         </div>
@@ -115,15 +117,15 @@
     <div>
         <div class="combinationOne">
             <div class="details">
-                <p class="detailsTitle">秀色可餐这个组合 · 很有趣</p>
-                <div class="detailsSubtitle">this month's special</div>
+                <p class="detailsTitle"><%=leaseTitle[2].Maintitle%></p>
+                <div class="detailsSubtitle"><%=leaseTitle[2].Subtitle%></div>
                 <div class="detailsimg"><img src="../img/lease/sakura.svg"></div>
                 <p class="detailsIntroduce">这个组合的详情</p>
-                <pre class="listText">小盆-马库斯    ×20            小盆-红爪    ×10
-小盆-艳日辉    ×20            小盆-蓝鸟    ×10
-大盆-小人祭    ×10            大盆-白杜丹  ×5
-大盆-单雪      ×10            大盆-火祭    ×5
-超大盆-蓝石莲   ×5</pre>
+                <div class="detailsText">
+                    <%for (var i=0;i<leasePortfolio3.length;i++) {%>
+                    <div class="detailsTextF"><%=leasePortfolio3[i].goods_type%>-<%=leasePortfolio3[i].goodsName%><div>×<%=leasePortfolio3[i].goods_num%></div></div>
+                    <%}%>
+                </div>
                 <a href="lease_details"><div class="partitionDivDiv">我要租赁</div></a>
             </div>
         </div>

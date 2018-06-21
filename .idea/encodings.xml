@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+<<<<<<< HEAD
     <file url="file://$PROJECT_DIR$/controller/leaseController.js" charset="UTF-8" />
+=======
+<<<<<<< HEAD
+    <file url="file://$PROJECT_DIR$/controller/leaseController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dao/leaseDao.js" charset="UTF-8" />
+=======
+>>>>>>> 80340478552a660eb5809cc6eefc3faff3560478
     <file url="PROJECT" charset="GBK" />
+>>>>>>> 556e0436240403faf16b0a4112952f55ae735a67
   </component>
 </project>
