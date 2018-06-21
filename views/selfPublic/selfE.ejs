@@ -67,28 +67,36 @@
                     <div class="col-lg-2">
                         <ul>
                             <li>用户头像</li>
-                            <li>用户ID</li>
                             <li>账&nbsp;&nbsp;&nbsp;&nbsp;号</li>
-                            <li>昵&nbsp;&nbsp;&nbsp;&nbsp;称</li>
                             <li>性&nbsp;&nbsp;&nbsp;&nbsp;别</li>
                             <li>手机号码</li>
+                            <li>电子邮箱</li>
                         </ul>
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                         <ul>
                             <li id="header">
-                                <div class="userHead"></div>
+                                <div class="userHead">
+                                    <img src="<%=selfEData[0].userPhone%>" alt=""/>
+                                </div>
                             </li>
-                            <li>124961842</li>
-                            <li>18562000000</li>
-                            <li><input type="text" id="tel" value="18562000000"/></li>
+                            <li><input type="text" id="tel" value="<%=selfEData[0].name%>"/></li>
                             <li>
-                                <input type="radio" name="sex"/>男
+                                <%if(selfEData[0].sex == "男") {%>
+                                <input type="radio" checked name="sex"/>男
                                 <input type="radio" name="sex"/>女
+                                <%}else {%>
+                                <input type="radio" name="sex"/>男
+                                <input type="radio" checked name="sex"/>女
+                                <%}%>
                             </li>
                             <li>
                                 <span>185xxxxxx00</span>
                                 <a href="#" class="updataTel">更换号码</a>
+                            </li>
+                            <li>
+                                <span>185xxxxxx00</span>
+                                <a href="#" class="updataTel">更换邮箱</a>
                             </li>
                         </ul>
                     </div>

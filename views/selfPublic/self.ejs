@@ -71,11 +71,14 @@
                     <div class="row esCont">
                         <div class="row selfContain">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 userInfo">
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 userHeader"></div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 userHeader">
+                                    <img src="<%=selfData[0].userPhone%>" alt=""/>
+
+                                </div>
                                 <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
                                     <ul>
-                                        <li id="username">xxx</li>
-                                        <li id="selfTel">18200000000</li>
+                                        <li id="username"><%=selfData[0].name%></li>
+                                        <li id="selfTel"><%=selfData[0].tel%></li>
                                         <li id="modify">
                                             <a href="/selfE"><i class="iconfont">&#xe646;</i>编辑个人资料</a>
                                         </li>
@@ -158,6 +161,7 @@
 <script src="js/buy/distpicker.data.js"></script>
 <script src="js/buy/distpicker.js"></script>
 <script src="js/buy/main.js"></script>
+<script src="js/selfAjax.js"></script>
 
 <script>
     $("#pswE").click(function() {

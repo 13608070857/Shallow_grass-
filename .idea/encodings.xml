@@ -2,8 +2,14 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/controller/goodsController.js" charset="UTF-8" />
+<<<<<<< HEAD
     <file url="file://$PROJECT_DIR$/controller/indexController.js" charset="UTF-8" />
+=======
+    <file url="file://$PROJECT_DIR$/controller/selfController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dao/selfDao.js" charset="UTF-8" />
+>>>>>>> 539fac5c9fb29744a80397217c794ef1d0155e23
     <file url="file://$PROJECT_DIR$/public/index/index.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/js/selfAjax.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/views/index/index.ejs" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>
