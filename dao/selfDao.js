@@ -29,6 +29,17 @@ const selfModel = {
     },
 
     //获取订单信息
-    //getOrder
+    getOrder(params) {
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM address AS a INNER JOIN users AS u ON a.u_id=u.u_id WHERE u.name= ?",
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
 }
 module.exports = selfModel;
