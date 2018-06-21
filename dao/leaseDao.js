@@ -24,6 +24,30 @@ const leaseModel={
                     }
                 })
         })
+    },
+    leasePortfolio2(){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM lease_portfolio LEFT JOIN goods ON lease_portfolio.goods_ID=goods.goods_ID WHERE leaseID=2",
+                [],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+    leasePortfolio3(){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM lease_portfolio LEFT JOIN goods ON lease_portfolio.goods_ID=goods.goods_ID WHERE leaseID=3",
+                [],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
     }
 };
 module.exports=leaseModel;

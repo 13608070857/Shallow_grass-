@@ -257,9 +257,10 @@ a:hover{
     width: 100%;
 }
 .detailsTextF{
+    margin-right: 20px;
     margin-left: 40px;
     line-height: 25px;
-    width: 40%;
+    width: 35%;
     float: left;
 }
 .detailsTextF div{
