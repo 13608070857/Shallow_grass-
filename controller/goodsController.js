@@ -2,29 +2,30 @@ const mysql=require("mysql");
 const dbpool=require("../config/dbpoolConfig");
 const goodsmodel=require("../dao/goodsDao");
 const controller={
-    //ÉÌÆ·
+    //å•†å“
     goodsList(req,resp){
         goodsmodel.getAllgoods()
             .then(function (data) {
                 resp.render("goods/goods",{mygoods:data});
             });
-        // resp.render("goods/goods",{username:"²âÊÔ"});
     },
-    //ÉÌÆ·ÏêÇé
+    //å•†å“è¯¦æƒ…
     goodsDetails(req,resp){
-        resp.render("goods/goods_details",{username:"²âÊÔ"});
+        console.log("å¼€å§‹");
+        console.log();
+        resp.render("goods/goods_details",{username:"æµ‹è¯•"});
     },
-    //¶©µ¥
+    //è®¢å•
     Order(req,resp){
-        resp.render("goods/order",{username:"²âÊÔ"});
+        resp.render("goods/order",{username:"æµ‹è¯•"});
     },
-    //Ö§¸¶
+    //æ”¯ä»˜
     Pay(req,resp){
-        resp.render("goods/pay",{username:"²âÊÔ"});
+        resp.render("goods/pay",{username:"æµ‹è¯•"});
     },
-    //¹ºÎï³µ
+    //è´­ç‰©è½¦
     shopCart(req,resp){
-        resp.render("goods/shop_cart",{username:"²âÊÔ"});
+        resp.render("goods/shop_cart",{username:"æµ‹è¯•"});
     }
 };
 module.exports=controller;
