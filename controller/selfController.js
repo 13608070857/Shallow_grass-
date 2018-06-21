@@ -1,37 +1,63 @@
 const mysql = require("mysql");
-const dbpool = require("../config/dbpoolConfig");
-const usermodel = require("../dao/goodsDao");
+const selfModel = require("../dao/selfDao");
 const selfController = {
-    //¸öÈËÖĞĞÄ
+    //ä¸ªäººä¸­å¿ƒ
     self(req,resp){
-        resp.render("selfPublic/self",{username:"²âÊÔ"});
+        selfModel.getUserInfo("æ—å®¶è¾‰")
+            .then(function(data) {
+                console.log(data);
+                resp.render("selfPublic/self",{selfData:data});
+            });
     },
+
+
+    //ç¼–è¾‘ä¸ªäººä¸­å¿ƒ
     selfE(req,resp) {
-        resp.render("selfPublic/selfE",{username:"²âÊÔ"});
+        selfModel.getUserInfo("æ—å®¶è¾‰")
+            .then(function(data) {
+                console.log(data);
+                resp.render("selfPublic/selfE",{selfEData:data});
+            });
     },
+
+    //åœ°å€
     address(req,resp) {
-        resp.render("selfPublic/address",{username:"²âÊÔ"});
+        resp.render("selfPublic/address",{username:"æµ‹è¯•"});
     },
+
+    //å®‰å…¨ä¸­å¿ƒ
     security(req,resp){
-        resp.render("selfPublic/security",{username:"²âÊÔ"});
+        resp.render("selfPublic/security",{username:"æµ‹è¯•"});
     },
+
+    //æ”¶è—
     collect(req,resp) {
-        resp.render("selfPublic/collect",{username:"²âÊÔ"});
+        resp.render("selfPublic/collect",{username:"æµ‹è¯•"});
     },
+
+    //è¶³è¿¹
     view(req,resp) {
-        resp.render("selfPublic/view",{username:"²âÊÔ"});
+        resp.render("selfPublic/view",{username:"æµ‹è¯•"});
     },
+
+    //è®¢å•ä¿¡æ¯
     orderG(req,resp){
-        resp.render("selfPublic/orderG",{username:"²âÊÔ"});
+        resp.render("selfPublic/orderG",{username:"æµ‹è¯•"});
     },
+
+    //ä¼˜æƒ åˆ¸
     coupons(req,resp) {
-        resp.render("selfPublic/coupons",{username:"²âÊÔ"});
+        resp.render("selfPublic/coupons",{username:"æµ‹è¯•"});
     },
+
+    //å”®å
     afterSale(req,resp) {
-        resp.render("selfPublic/afterSale",{username:"²âÊÔ"});
+        resp.render("selfPublic/afterSale",{username:"æµ‹è¯•"});
     },
+
+    //å¸®åŠ©ä¸­å¿ƒ
     help(req,resp) {
-        resp.render("selfPublic/help",{username:"²âÊÔ"});
+        resp.render("selfPublic/help",{username:"æµ‹è¯•"});
     }
 };
 
