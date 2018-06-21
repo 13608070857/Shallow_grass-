@@ -78,16 +78,18 @@
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">操作</div>
                         </div>
                         <div class="addressC">
+                            <%for(var i=0;i<addressData.length;i++) {%>
                             <div class="addressCList row">
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">大小姐</div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">辽宁省丹东市振安区建设</div>
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">186****5628</div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><%=addressData[i].consignee%></div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center"><%=addressData[i].ship_address%></div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><%=addressData[i].phone%></div>
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
                                     <a href="#">编辑</a>
                                     <a href="#">删除</a>
                                     <a href="#" role="button" class="btn">默认地址</a>
                                 </div>
                             </div>
+                            <%}%>
                         </div>
                     </div>
                 </div>

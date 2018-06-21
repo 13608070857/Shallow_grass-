@@ -230,7 +230,7 @@ a:hover,a:active {
     outline: 1px solid #7B7446;
 }
 .esOther {
-    margin: 20px 0;
+    margin: 0 0 20px 0;
 }
 .save {
     padding: 10px 40px;
@@ -242,6 +242,17 @@ a:hover,a:active {
 }
 #header {
     line-height: 0;
+}
+#user_show {
+    width: 165px;
+    height: 80px;
+    padding: 0;
+    margin: 0;
+    line-height: 25px;
+    border-color: #eee;
+}
+#user_show:focus {
+    outline-color: #7B7446;
 }
 .updataTel {
     color: #7B7446;

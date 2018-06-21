@@ -3,10 +3,9 @@ const selfModel = require("../dao/selfDao");
 const selfController = {
     //个人中心
     self(req,resp){
-        var username = req.session.user
+        var username = req.session.user;
         selfModel.getUserInfo(username)
             .then(function(data) {
-                console.log(data);
                 resp.render("selfPublic/self",{selfData:data});
             });
     },
@@ -14,22 +13,29 @@ const selfController = {
 
     //编辑个人中心
     selfE(req,resp) {
-        var username = req.session.user
+        var username = req.session.user;
         selfModel.getUserInfo(username)
             .then(function(data) {
-                console.log(data);
                 resp.render("selfPublic/selfE",{selfEData:data});
             });
     },
 
     //地址
     address(req,resp) {
-        resp.render("selfPublic/address",{username:"测试"});
+        var username = req.session.user;
+        selfModel.getUserAddress(username)
+            .then(function(data) {
+                resp.render("selfPublic/address",{addressData:data});
+            });
     },
 
     //安全中心
     security(req,resp){
-        resp.render("selfPublic/security",{username:"测试"});
+        var username = req.session.user;
+        selfModel.getUserInfo(username)
+            .then(function(data) {
+                resp.render("selfPublic/security",{securityData:data});
+            });
     },
 
     //收藏
