@@ -26,9 +26,6 @@
 </body>
 <script src="../js/jquery-3.3.1.js"></script>
 <script>
-    // $(".header1 a").eq(3).click(function () {
-    //     $("input").css({"display":"block"})
-    // })
     var A=1;
     $(".header1 a").eq(3).click(function () {
         if(A==1){
@@ -38,6 +35,23 @@
             $("input").css({"display":"none"});
             A=1
         }
+    })
+    $(function(){
+        $(".header1 a").eq(1).css({"display":"none"});
+        $.ajax({
+            type:"get",
+            url:"/yonghu.do",
+            data:{
+            },
+            success:function (data) {
+                console.log(data);
+                console.log(data.user)
+                if(data.user!=undefined){
+                    $(".header1 a").eq(1).css({"display":"block"});
+                    $(".header1 a").eq(0).css({"display":"none"});
+                }
+            }
+        })
     })
 </script>
 </html>
