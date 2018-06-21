@@ -6,16 +6,16 @@ const indexController ={
         resp.render("index/index",{user:req.session.user});
     },
     login(req,resp){
-        resp.render("index/login",{username:"测试"});
+        resp.render("index/login",{username:"娴嬭瘯"});
     },
     register(req,resp){
-        resp.render("index/register",{username:"测试"});
+        resp.render("index/register",{username:"娴嬭瘯"});
     },
     Retrievepassword(req,resp){
-        resp.render("index/Retrievepassword",{username:"测试"});
+        resp.render("index/Retrievepassword",{username:"娴嬭瘯"});
     },
     rule(req,resp){
-        resp.render("index/rule",{username:"测试"});
+        resp.render("index/rule",{username:"娴嬭瘯"});
     },
     logindo(req,resp){
         let username=req.body.username;
@@ -32,10 +32,10 @@ const indexController ={
                         resp.redirect("/index");
                         console.log(req.session.user)
                     }else {
-                        resp.send("登陆错误");
+                        resp.send("鐧婚檰閿欒");
                     }
                 }else {
-                    resp.send("数据库报错" + error.message);
+                    resp.send("鏁版嵁搴撴姤閿�" + error.message);
                 }
             }
         );
