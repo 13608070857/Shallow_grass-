@@ -17,13 +17,16 @@ const indexController ={
     rule(req,resp){
         resp.render("index/rule",{username:"测试"});
     },
+    yonghu(req,resp){
+        resp.send({user:req.session.user});
+    },
     logindo(req,resp){
         let username=req.body.username;
         let pwd=req.body.pwd;
         console.log(username)
         console.log(pwd)
         console.log(req.session)
-        dbpool.connect("select * from uesrs where name=? and passowrd=?",
+        dbpool.connect("select * from users where name=? and password=?",
                 [username,pwd],
             (error,data)=> {
                 if(data!=undefined) {
