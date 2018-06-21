@@ -2,7 +2,7 @@ const mysql=require("mysql");
 const dbpool=require("../config/dbpoolConfig");
 const leasemodel=require("../dao/leaseDao");
 const controller={
-    //×âÁŞ
+    //ç§Ÿèµ
     leaseList(req,resp){
         leasemodel.leaseTitle()
             .then(function (data) {
@@ -17,9 +17,9 @@ const controller={
 
 
     },
-    //×âÁŞ
+    //ç§Ÿèµ
     lease_details(req,resp){
-        resp.render("lease/lease_details",{username:"²âÊÔ"});
+        resp.render("lease/lease_details",{username:"æµ‹è¯•"});
     }
 };
 module.exports=controller;

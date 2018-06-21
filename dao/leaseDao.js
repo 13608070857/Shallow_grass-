@@ -1,6 +1,6 @@
 const dbpool=require("../config/dbpoolConfig");
 const leaseModel={
-    //Ö÷±êÌâ
+    //ä¸»æ ‡é¢˜
     leaseTitle(){
         return new Promise((resolve,reject)=>{
             dbpool.connect("SELECT * FROM lease",
