@@ -13,9 +13,9 @@ const leaseModel={
                 })
         })
     },
-    lease_portfolio(){
+    leasePortfolio(){
         return new Promise((resolve,reject)=>{
-            dbpool.connect("SELECT * FROM lease_portfolio WHERE leaseID=1",
+            dbpool.connect("SELECT * FROM lease_portfolio LEFT JOIN goods ON lease_portfolio.goods_ID=goods.goods_ID WHERE leaseID=1",
                 [],(err,data)=>{
                     if (!err){
                         resolve(data);
