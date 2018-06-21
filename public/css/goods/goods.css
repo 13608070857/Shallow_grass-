@@ -51,8 +51,8 @@ a:hover{
     overflow: hidden;
 }
 .goodsImg>img{
-    width: 250px;
-    height: 250px;
+    /*width: 250px;*/
+    /*height: 250px;*/
     transition: all 0.3s linear;
 }
 .goodsTextDiv{
