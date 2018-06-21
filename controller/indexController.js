@@ -32,11 +32,9 @@ const indexController ={
                         resp.redirect("/index");
                         console.log(req.session.user)
                     }else {
-                        console.log("2");
                         resp.send("登陆错误");
                     }
                 }else {
-                    console.log("3");
                     resp.send("数据库报错" + error.message);
                 }
             }

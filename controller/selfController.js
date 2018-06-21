@@ -3,7 +3,8 @@ const selfModel = require("../dao/selfDao");
 const selfController = {
     //个人中心
     self(req,resp){
-        selfModel.getUserInfo("林家辉")
+        var username = req.session.user
+        selfModel.getUserInfo(username)
             .then(function(data) {
                 console.log(data);
                 resp.render("selfPublic/self",{selfData:data});
@@ -13,7 +14,8 @@ const selfController = {
 
     //编辑个人中心
     selfE(req,resp) {
-        selfModel.getUserInfo("林家辉")
+        var username = req.session.user
+        selfModel.getUserInfo(username)
             .then(function(data) {
                 console.log(data);
                 resp.render("selfPublic/selfE",{selfEData:data});
