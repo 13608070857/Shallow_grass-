@@ -2,7 +2,7 @@ const mysql=require("mysql");
 const dbpool=require("../config/dbpoolConfig");
 const leasemodel=require("../dao/leaseDao");
 const controller={
-    //◊‚¡ﬁ
+    //ÁßüËµÅ
     leaseList(req,resp){
         leasemodel.leaseTitle()
             .then(function (data) {
@@ -10,16 +10,25 @@ const controller={
                 leasemodel.leasePortfolio()
                     .then(function (data) {
                         let leaseData=data;
+                        leasemodel.leasePortfolio2()
+                            .then(function (data) {
+                                let leaseData2=data;
+                                leasemodel.leasePortfolio2()
+                                    .then(function (data) {
+                                        let leaseData3=data;
+                                        resp.render("lease/lease",{leaseTitle:titledata,leasePortfolio:leaseData,leasePortfolio2:leaseData2,leasePortfolio3:leaseData3});
+                                    })
 
-                        resp.render("lease/lease",{leasePortfolio:leaseData,leaseTitle:titledata});
+                            })
+
                     });
             });
 
 
     },
-    //◊‚¡ﬁ
+    //ÁßüËµÅ
     lease_details(req,resp){
-        resp.render("lease/lease_details",{username:"≤‚ ‘"});
+        resp.render("lease/lease_details",{username:"ÊµãËØï"});
     }
 };
 module.exports=controller;

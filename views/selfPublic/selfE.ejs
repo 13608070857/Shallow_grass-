@@ -71,13 +71,14 @@
                             <li>性&nbsp;&nbsp;&nbsp;&nbsp;别</li>
                             <li>手机号码</li>
                             <li>电子邮箱</li>
+                            <li>个性签名</li>
                         </ul>
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                         <ul>
                             <li id="header">
                                 <div class="userHead">
-                                    <img src="<%=selfEData[0].userPhone%>" alt=""/>
+                                    <img src="<%=selfEData[0].userImg%>" alt=""/>
                                 </div>
                             </li>
                             <li><input type="text" id="tel" value="<%=selfEData[0].name%>"/></li>
@@ -90,13 +91,10 @@
                                 <input type="radio" checked name="sex"/>女
                                 <%}%>
                             </li>
+                            <li><input type="text" id="tel" value="<%=selfEData[0].tel%>"/></li>
+                            <li><input type="text" id="tel" value="<%=selfEData[0].email%>"/></li>
                             <li>
-                                <span>185xxxxxx00</span>
-                                <a href="#" class="updataTel">更换号码</a>
-                            </li>
-                            <li>
-                                <span>185xxxxxx00</span>
-                                <a href="#" class="updataTel">更换邮箱</a>
+                                <textarea name="" id="user_show"><%=selfEData[0].User_show%></textarea>
                             </li>
                         </ul>
                     </div>

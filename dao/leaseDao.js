@@ -1,6 +1,6 @@
 const dbpool=require("../config/dbpoolConfig");
 const leaseModel={
-    //Ö÷±êÌâ
+    //ä¸»æ ‡é¢˜
     leaseTitle(){
         return new Promise((resolve,reject)=>{
             dbpool.connect("SELECT * FROM lease",
@@ -16,6 +16,30 @@ const leaseModel={
     leasePortfolio(){
         return new Promise((resolve,reject)=>{
             dbpool.connect("SELECT * FROM lease_portfolio LEFT JOIN goods ON lease_portfolio.goods_ID=goods.goods_ID WHERE leaseID=1",
+                [],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+    leasePortfolio2(){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM lease_portfolio LEFT JOIN goods ON lease_portfolio.goods_ID=goods.goods_ID WHERE leaseID=2",
+                [],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+    leasePortfolio3(){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM lease_portfolio LEFT JOIN goods ON lease_portfolio.goods_ID=goods.goods_ID WHERE leaseID=3",
                 [],(err,data)=>{
                     if (!err){
                         resolve(data);
