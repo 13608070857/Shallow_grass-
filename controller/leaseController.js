@@ -1,10 +1,17 @@
 const mysql=require("mysql");
 const dbpool=require("../config/dbpoolConfig");
-const usermodel=require("../dao/userDao");
+const leasemodel=require("../dao/leaseDao");
 const controller={
     //×âÁŞ
     leaseList(req,resp){
-        resp.render("lease/lease",{username:"²âÊÔ"});
+        leasemodel.leaseTitle()
+            .then(function (data) {
+                resp.render("lease/lease",{leaseTitle:data});
+            });
+        leasemodel.lease_portfolio()
+            .then(function (data) {
+                resp.render("lease/lease",{lease_portfolio:data});
+            });
     },
     //×âÁŞ
     lease_details(req,resp){

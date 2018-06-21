@@ -6,7 +6,7 @@ const dbpool={
       port:"3306",
       user:"root",
       password:"root",
-      database:"kinder"
+      database:"asakusa"
   },
   create(){
       this.pool=mysql.createPool(this.config)

@@ -1,6 +1,6 @@
 const mysql = require("mysql");
 const dbpool = require("../config/dbpoolConfig");
-const usermodel = require("../dao/userDao");
+const usermodel = require("../dao/goodsDao");
 const forumController = {
     //个人中心
     forumIndex(req,resp){

@@ -1,10 +1,14 @@
 const mysql=require("mysql");
 const dbpool=require("../config/dbpoolConfig");
-const usermodel=require("../dao/userDao");
+const goodsmodel=require("../dao/goodsDao");
 const controller={
     //商品
     goodsList(req,resp){
-        resp.render("goods/goods",{username:"测试"});
+        goodsmodel.getAllgoods()
+            .then(function (data) {
+                resp.render("goods/goods",{mygoods:data});
+            });
+        // resp.render("goods/goods",{username:"测试"});
     },
     //商品详情
     goodsDetails(req,resp){
@@ -23,5 +27,4 @@ const controller={
         resp.render("goods/shop_cart",{username:"测试"});
     }
 };
-
 module.exports=controller;

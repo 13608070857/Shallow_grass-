@@ -1,6 +1,6 @@
 const mysql = require("mysql");
 const dbpool = require("../config/dbpoolConfig");
-const usermodel = require("../dao/userDao");
+const usermodel = require("../dao/goodsDao");
 const indexController ={
     index(req,resp){
         resp.render("index/index",{username:"≤‚ ‘"});
