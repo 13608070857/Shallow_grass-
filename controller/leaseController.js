@@ -6,12 +6,16 @@ const controller={
     leaseList(req,resp){
         leasemodel.leaseTitle()
             .then(function (data) {
-                resp.render("lease/lease",{leaseTitle:data});
+                let titledata=data;
+                leasemodel.leasePortfolio()
+                    .then(function (data) {
+                        let leaseData=data;
+
+                        resp.render("lease/lease",{leasePortfolio:leaseData,leaseTitle:titledata});
+                    });
             });
-        leasemodel.lease_portfolio()
-            .then(function (data) {
-                resp.render("lease/lease",{lease_portfolio:data});
-            });
+
+
     },
     //×âÁÞ
     lease_details(req,resp){
