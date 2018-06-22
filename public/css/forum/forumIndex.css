@@ -226,6 +226,14 @@ h4 {
 .tw {
 	margin-top: 10px;
 }
+.overTitle {
+	width: 150px;
+	display:inline-block;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	vertical-align: middle;
+}
 .imgLink {
 	display: inline-block;
 	height: 60px;
