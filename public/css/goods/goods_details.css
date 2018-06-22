@@ -119,7 +119,7 @@ input[type="number"]{
 }
 .commentsList{
     margin-top: 20px;
-    border-bottom: 1px solid #EEEEEE;
+    /*border-bottom: 1px solid #EEEEEE;*/
     display: none;
 }
 .commentsList>p{
@@ -260,6 +260,106 @@ input[type="number"]{
     margin-top: 20px;
     border-bottom: 1px solid #EEEEEE;
     display: block;
+}
+.detaTitle{
+    font-family: '微软雅黑';
+    font-size: 25px;
+    font-weight: normal;
+    font-style: normal;
+    color: #666666;
+    text-align: center;
+    line-height: 45px;
+    margin: 30px 0 30px 0;
+}
+.detaTitle>span{
+    display: block;
+    border-bottom: 1px dashed #d0d0d0;
+    width: 120px;
+}
+.detaL{
+    height: 350px;
+    display: table;
+}
+.detaL>div{
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: #666666;
+}
+.detaL>img{
+    height: 350px;
+}
+.comList{
+    height: 40px;
+}
+.comUl{
+    list-style: none;
+}
+.comUl>li{
+    float: left;
+    width: 70px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+.comUlactive{
+    font-weight: bold;
+}
+.comUlUnactive{
+    font-weight: normal;
+}
+.allCom{
+    display: block;
+}
+.goodCom{
+    display: none;
+}
+.medCom{
+    display: none;
+}
+.badCom{
+    display: none;
+}
+.comAll{
+    list-style: none;
+}
+.comAll>li{
+    float: left;
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+}
+.comAll>li:not(:last-child){
+    border-bottom: 1px solid #EEEEEE;
+}
+.comAll>li>img{
+    width: 70px;
+    height: 70px;
+    border: 1px solid #ebebeb;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.comText{
+    margin-left: 20px;
+    line-height: 30px;
+}
+.comText>span{
+    color: rgb(134,117,117);
+}
+.comText>div{
+    color: #666666;
+}
+.comText>p{
+    color: #c8c8c8;
+}
+.unCom{
+    margin-left: 45px;
+    color: #bbbbbb;
 }
 /*测试*/
 .test{

@@ -64,7 +64,9 @@ a:hover,a:active {
 }
 
 
-
+#selfContEdit {
+    margin-bottom: 30px;
+}
 .selfContain,.backlog,.editSelf,.orderX {
     margin: 0;
     padding: 40px 20px;

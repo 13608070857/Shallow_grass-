@@ -28,7 +28,16 @@ const controller={
     },
     //租赁
     lease_details(req,resp){
-        resp.render("lease/lease_details",{username:"测试"});
+        let id=req.query.id;
+        leasemodel.lease_details([id])
+            .then(function (data) {
+                let detailsData=data;
+                leasemodel.lease_details2([id])
+                    .then(function (data) {
+                        let detailsData2=data;
+                        resp.render("lease/lease_details",{lease_details:detailsData,lease_details2:detailsData2})
+                    })
+            });
     }
 };
 module.exports=controller;

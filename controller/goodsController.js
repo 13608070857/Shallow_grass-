@@ -13,7 +13,6 @@ const controller={
     goodsDetails(req,resp){
         let id=req.query.id;
         let cateid=req.query.cateid;
-        console.log(cateid);
         goodsmodel.getGoodsDetail([id])
             .then(function (data) {
                 let detailgoods=data;
@@ -26,7 +25,23 @@ const controller={
                                 goodsmodel.getScore(id)
                                     .then(function (data) {
                                         let goodsScore=data;
-                                        resp.render("goods/goods_details",{goodsdetails:detailgoods,goodshot:hotgoods,goodscate:cateidgoods,goodsScore:goodsScore});
+                                        goodsmodel.getComments([id])
+                                            .then(function (data) {
+                                                let goodsComments=data;
+                                                goodsmodel.getgood([id])
+                                                    .then(function (data) {
+                                                       let goodcom=data;
+                                                        goodsmodel.getmed([id])
+                                                            .then(function (data) {
+                                                                let goodmed=data;
+                                                                goodsmodel.getbad([id])
+                                                                    .then(function (data) {
+                                                                        let goodbad=data;
+                                                                        resp.render("goods/goods_details",{goodsdetails:detailgoods,goodshot:hotgoods,goodscate:cateidgoods,goodsScore:goodsScore,goodsComments:goodsComments,goodcom:goodcom,goodmed:goodmed,goodbad:goodbad});
+                                                                    });
+                                                            });
+                                                    });
+                                            });
                                     });
                             });
                     });

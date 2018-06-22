@@ -1,2 +1,94 @@
-<p>目前还未有评论</p>
-<p>只有买过此商品的客户登录后才能发表评论</p>
+<%if (goodsComments.length=="") {%>
+<div class="unCom">
+    <p>目前还未有评论</p>
+    <p>只有买过此商品的客户登录后才能发表评论</p>
+</div>
+<%} else {%>
+<div class="col-xs-12">
+    <div class="comList">
+        <ul class="comUl">
+            <li class="comUlactive" id="allCom">全部评论</li>
+            <li class="comUlUnactive" id="goodCom">好评</li>
+            <li class="comUlUnactive" id="medCom">中评</li>
+            <li class="comUlUnactive" id="badCom">差评</li>
+        </ul>
+    </div>
+    <div class="allCom">
+        <ul class="comAll">
+            <%for (var i=0;i<goodsComments.length;i++) {%>
+            <li>
+                <img src="<%=goodsComments[i].userImg%>" class="img-responsive pull-left">
+                <div class="comText pull-left">
+                    <span><%=goodsComments[i].name%>：</span>
+                    <div><%=goodsComments[i].com_Content%></div>
+                    <p><%=goodsComments[i].comTime%></p>
+                </div>
+            </li>
+            <%}%>
+        </ul>
+    </div>
+    <div class="goodCom">
+        <%if (goodcom.length=="") {%>
+        <div class="unCom">
+            <p>目前还未有好评</p>
+            <p>只有买过此商品的客户登录后才能发表评论</p>
+        </div>
+        <%} else {%>
+        <ul class="comAll">
+            <%for (var i=0;i<goodcom.length;i++) {%>
+            <li>
+                <img src="<%=goodcom[i].userImg%>" class="img-responsive pull-left">
+                <div class="comText pull-left">
+                    <span><%=goodcom[i].name%>：</span>
+                    <div><%=goodcom[i].com_Content%></div>
+                    <p><%=goodcom[i].comTime%></p>
+                </div>
+            </li>
+            <%}%>
+        </ul>
+        <%}%>
+    </div>
+    <div class="medCom">
+        <%if (goodmed.length=="") {%>
+        <div class="unCom">
+            <p>目前还未有中评</p>
+            <p>只有买过此商品的客户登录后才能发表评论</p>
+        </div>
+        <%} else {%>
+        <ul class="comAll">
+            <%for (var i=0;i<goodmed.length;i++) {%>
+            <li>
+                <img src="<%=goodmed[i].userImg%>" class="img-responsive pull-left">
+                <div class="comText pull-left">
+                    <span><%=goodmed[i].name%>：</span>
+                    <div><%=goodmed[i].com_Content%></div>
+                    <p><%=goodmed[i].comTime%></p>
+                </div>
+            </li>
+            <%}%>
+        </ul>
+        <%}%>
+    </div>
+    <div class="badCom">
+        <%if (goodbad.length=="") {%>
+        <div class="unCom">
+            <p>目前还未有差评</p>
+            <p>只有买过此商品的客户登录后才能发表评论</p>
+        </div>
+        <%} else {%>
+        <ul class="comAll">
+            <%for (var i=0;i<goodbad.length;i++) {%>
+            <li>
+                <img src="<%=goodbad[i].userImg%>" class="img-responsive pull-left">
+                <div class="comText pull-left">
+                    <span><%=goodbad[i].name%>：</span>
+                    <div><%=goodbad[i].com_Content%></div>
+                    <p><%=goodbad[i].comTime%></p>
+                </div>
+            </li>
+            <%}%>
+        </ul>
+        <%}%>
+    </div>
+</div>
+<%}%>

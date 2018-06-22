@@ -8,6 +8,7 @@ const session=require("express-session");
 const cookieParser=require("cookie-parser");
 const bodyParser=require("body-parser"); //post模块
 const path=require("path"); //处理路径模块
+
 //执行
 const app=express();  //执行express全局函数，返回express
 //使用

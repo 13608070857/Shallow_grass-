@@ -38,3 +38,32 @@ $(".commUnactive").click(function () {
     $(".detailsList").css("display","none");
     $(".commentsList").css("display","block");
 });
+//用户评论
+$(".comUl>li").click(function () {
+    $(".comUl>li").attr("class","comUlUnactive");
+    $(this).attr("class","comUlactive");
+});
+$("#allCom").click(function () {
+    $(".allCom").css("display","block");
+    $(".goodCom").css("display","none");
+    $(".medCom").css("display","none");
+    $(".badCom").css("display","none");
+});
+$("#goodCom").click(function () {
+    $(".allCom").css("display","none");
+    $(".goodCom").css("display","block");
+    $(".medCom").css("display","none");
+    $(".badCom").css("display","none");
+});
+$("#medCom").click(function () {
+    $(".allCom").css("display","none");
+    $(".goodCom").css("display","none");
+    $(".medCom").css("display","block");
+    $(".badCom").css("display","none");
+});
+$("#badCom").click(function () {
+    $(".allCom").css("display","none");
+    $(".goodCom").css("display","none");
+    $(".medCom").css("display","none");
+    $(".badCom").css("display","block");
+});

@@ -78,49 +78,50 @@
                     <div class="row esCont">
                         <div class="orderX">
                             <div class="row orderXT">
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">订单号：35842043</div>
-                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">下单时间：2018-06-06 08:46:56</div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">订单号：<%=orderData[0].orderNo%></div>
+                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">下单时间：<%=orderData[0].createTime%></div>
                             </div>
                             <div class="orderXC row">
                                 <div class="row">
                                     <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 orderXCont">
                                         <div>
-                                            收件人：<span>ssf</span>
+                                            收件人：<span><%=orderData[0].consignee%></span>
                                         </div>
                                         <div>
-                                            联系方式：<span>186****5628</span>
+                                            联系方式：<span><%=orderData[0].phone%></span>
                                         </div>
                                         <div>
-                                            收货地址：<span>北京市北京市朝阳区建设路xx号</span>
+                                            收货地址：<span><%=orderData[0].ship_address%></span>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 orderXCont">
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">商品合计：</div>
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 sText">¥129.00</div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 sText">¥<%=orderData[0].total%></div>
                                         </div>
                                         <div>
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">运费：</div>
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 sText">¥0.00</div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 sText">¥<%=orderData[0].yhPrice%></div>
                                         </div>
                                         <div class="cul">
                                         </div>
                                         <div>
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">应付：</div>
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 rText">¥129.00</div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 rText">¥<%=orderData[0].total+orderData[0].yhPrice%></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <%for(var i=0;i<orderData.length;i++) {%>
                         <div class="backlog">
                             <div class="row blTitle">
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                     <input type="checkbox"/>
-                                    下单时间：<span>2018-06-06 08:46:56</span>
+                                    下单时间：<span><%=orderData[i].createTime%></span>
                                 </div>
                                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                                    订单号：<span>35842043</span>
+                                    订单号：<span><%=orderData[i].orderNo%></span>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
                                     <a href="#">查看全部订单</a>
@@ -129,12 +130,20 @@
                             <div class="row product">
                                 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left" >
-                                        <img class="viewDes" src="img/forum/1.jpg" alt=""/>
+                                        <img class="viewDes" src="<%=orderData[i].goodsImg%>" alt=""/>
                                     </div>
-                                    <span class="col-lg-6 col-md-6 col-sm-6 col-xs-6 decrise">红宝石多肉，美丽..</span>
+                                    <span class="col-lg-6 col-md-6 col-sm-6 col-xs-6 decrise"><%=orderData[0].goods_desc%></span>
                                 </div>
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">已购</div>
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">￥100.00</div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                    <%if(orderData[i].orderStatus == 1) {%>
+                                        待发货
+                                    <%}else if(orderData[i].orderStatus == 2) {%>
+                                        待收货
+                                    <%}else if(orderData[i].orderStatus == 3){%>
+                                        确定收货
+                                    <%}%>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">￥<%=orderData[i].o_price%></div>
                                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center" id="op">
                                     <div>
                                         <a href="#" role="button" class="btn confProduct">确认收货</a>
@@ -145,6 +154,7 @@
                                 </div>
                             </div>
                         </div>
+                        <%}%>
                     </div>
 
                     <div class="row text-right">
