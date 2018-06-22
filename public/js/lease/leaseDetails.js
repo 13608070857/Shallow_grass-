@@ -43,5 +43,32 @@ function abc() {
         b[2].style.marginTop="150px";
         b[2].style.opacity="0.2";
     }
-    console.log(i)
+    if (i>4050){
+        a[3].style.marginTop="0";
+        a[3].style.opacity="1";
+    }else {
+        a[3].style.marginTop="150px";
+        a[3].style.opacity="0.2";
+    }
+    if (i>4650){
+        b[3].style.marginTop="0";
+        b[3].style.opacity="1";
+    }else {
+        b[3].style.marginTop="150px";
+        b[3].style.opacity="0.2";
+    }
+    if (i>5250){
+        a[4].style.marginTop="0";
+        a[4].style.opacity="1";
+    }else {
+        a[4].style.marginTop="150px";
+        a[4].style.opacity="0.2";
+    }
+    if (i>5850){
+        b[4].style.marginTop="0";
+        b[4].style.opacity="1";
+    }else {
+        b[4].style.marginTop="150px";
+        b[4].style.opacity="0.2";
+    }
 }
