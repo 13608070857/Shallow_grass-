@@ -1,5 +1,21 @@
 <!--<p>这是商品详情</p>-->
-<div class="row">
-    <div class="col-xs-6">1</div>
-    <div class="col-xs-6">2</div>
+<div class="row text-center">
+    <%for (var i=0;i<goodsdetails.length;i++) {%>
+    <div class="col-xs-12 detaTitle"><%=goodsdetails[i].descTitle%><span></span></div>
+   <%if(goodsdetails[i].detailId%2!=0){%>
+    <div class="col-xs-6 detaL">
+        <div><%=goodsdetails[i].descText%></div>
+    </div>
+    <div class="col-xs-6 detaL">
+        <img src="<%=goodsdetails[i].goodsImg%>" class="img-responsive">
+    </div>
+    <%} else {%>
+    <div class="col-xs-6 detaL">
+        <img src="<%=goodsdetails[i].goodsImg%>" class="img-responsive">
+    </div>
+    <div class="col-xs-6 detaL">
+        <div><%=goodsdetails[i].descText%></div>
+    </div>
+    <%}%>
+    <%}%>
 </div>

@@ -64,6 +64,58 @@ const goodsModel={
                 }
                 })
         })
+    },
+    //商品评论
+    getComments(params){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM goods g,user_comments uc,users u WHERE g.goods_ID=uc.goods_ID AND uc.u_id=u.u_id AND g.goods_ID=? AND g.inventory>='0' AND g.goods_ID IN (uc.goods_ID)",
+                [params],(err,data)=>{
+                if (!err){
+                    resolve(data);
+                } else {
+                    reject(data);
+                }
+                })
+        })
+    },
+    //好评
+    getgood(params){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM goods g,user_comments uc,users u WHERE g.goods_ID=uc.goods_ID AND uc.u_id=u.u_id AND g.goods_ID=? AND g.inventory>='0' AND g.goods_ID IN (uc.goods_ID) AND uc.comType='1'",
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+    //中评
+    getmed(params){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM goods g,user_comments uc,users u WHERE g.goods_ID=uc.goods_ID AND uc.u_id=u.u_id AND g.goods_ID=? AND g.inventory>='0' AND g.goods_ID IN (uc.goods_ID) AND uc.comType='2'",
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+    //差评
+    getbad(params){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM goods g,user_comments uc,users u WHERE g.goods_ID=uc.goods_ID AND uc.u_id=u.u_id AND g.goods_ID=? AND g.inventory>='0' AND g.goods_ID IN (uc.goods_ID) AND uc.comType='3'",
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
     }
 };
 module.exports=goodsModel;
