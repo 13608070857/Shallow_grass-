@@ -1,16 +1,20 @@
 const mysql = require("mysql");
 const dbpool = require("../config/dbpoolConfig");
-const usermodel = require("../dao/goodsDao");
+const forumModel = require("../dao/forumDao");
 const forumController = {
-    //¸öÈËÖĞĞÄ
+    //è®ºå›é¦–é¡µ
     forumIndex(req,resp){
-        resp.render("forum/forumIndex",{username:"²âÊÔ"});
+        forumModel.getForumInfo()
+            .then(function(data) {
+                console.log(data);
+                resp.render("forum/forumIndex",{forumIndexData:data});
+            });
     },
     forumMain(req,resp) {
-        resp.render("forum/forumMain",{username:"²âÊÔ"});
+        resp.render("forum/forumMain",{username:"æµ‹è¯•"});
     },
     forumSelf(req,resp) {
-        resp.render("forum/forumSelf",{username:"²âÊÔ"});
+        resp.render("forum/forumSelf",{username:"æµ‹è¯•"});
     }
 };
 
