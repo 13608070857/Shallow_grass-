@@ -10,8 +10,7 @@
         <div class="header1" >
             <p>在线时间 08:30~21:30</p>
             <p style="margin-left: 5%">欢迎访问浅草在线商城！</p>
-            <a href="/login" target="_parent"><i class="iconfont">&#xe6d5;</i></a>
-            <a href="/self" target="_parent"><i class="iconfont">&#xe6d5;</i></a>
+            <!--<div class="A"></div>-->
             <a href="/shop_cart" target="_parent"><i class="iconfont">&#xe61b;</i></a>
             <a href="#"><i class="iconfont">&#xe603;</i></a>
             <input type="text" placeholder="搜索绿植">
@@ -27,7 +26,7 @@
 <script src="../js/jquery-3.3.1.js"></script>
 <script>
     var A=1;
-    $(".header1 a").eq(3).click(function () {
+    $(".header1 a").eq($(".header1 a").length-1).click(function () {
         if(A==1){
             $("input").css({"display":"block"});
             A=2
@@ -37,7 +36,6 @@
         }
     })
     $(function(){
-        $(".header1 a").eq(1).css({"display":"none"});
         $.ajax({
             type:"get",
             url:"/yonghu.do",
@@ -45,13 +43,45 @@
             },
             success:function (data) {
                 console.log(data);
-                console.log(data.user)
                 if(data.user!=undefined){
-                    $(".header1 a").eq(1).css({"display":"block"});
-                    $(".header1 a").eq(0).css({"display":"none"});
+                    // $('.header1').find('p').eq(2).after()
+                    // $(".header1 p").eq($(".header1 p").length-1).html("")
+                    html="<a href='/self' target='_parent'>" +
+                    "<i class='iconfont'>&#xe6d5;</i> " +
+                    "<div class='yonghu'> " +
+                    "<a href='/self'>个人中心</a> " +
+                    "<a href='/collect'>我的收藏</a> " +
+                    "<a href='/view'>我的足迹</a> " +
+                    "<a href='/coupons'>优惠卷</a> " +
+                    "<a onclick='jiangchao()'>退出登录</a> " +
+                    "</div> " +
+                    "</a>"
+                    $('.header1').find('p').eq(1).after(html)
+                    // $(".A").html(html)
+
+                }else {
+                    html="<p style='float: right'>" +
+                    "<a href='/login' target='_parent'>登录</a>" +
+                    " / " +
+                    "<a href='/register' target='_parent'>注册</a>" +
+                    "</p>"
+                    $('.header1').find('p').eq(1).after(html)
+                    // $(".A").html(html)
                 }
             }
         })
     })
+    function jiangchao() {
+        $.ajax({
+            type:"get",
+            url:"/login2.do",
+            data:{
+            },
+            success:function (data) {
+                console.log(data)
+                location.href="/index";
+            }
+    })
+    }
 </script>
 </html>

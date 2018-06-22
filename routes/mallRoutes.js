@@ -45,6 +45,7 @@ router.get("/Retrievepassword",indexController.Retrievepassword);
 router.get("/rule",indexController.rule);
 router.post("/login.do",indexController.logindo);
 router.get("/yonghu.do",indexController.yonghu);
+router.get("/login2.do",indexController.login2);
 
 
 //论坛

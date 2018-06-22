@@ -16,7 +16,7 @@
 *{
     margin: 0 auto;
 }
-.header1 a{
+.header1>a{
     font-weight: 600;
     line-height: 45px;
     text-decoration: none;
@@ -24,6 +24,41 @@
     font-size: 18px;
     float: right;
     margin-right: 30px;
+    display:block;
+    position: relative;
+}
+.A{
+    width: 60px;
+    height: 20px;
+    float: right;
+}
+.yonghu{
+    display:none;
+    position: absolute;
+    top: 40px;
+    right:5.5%;
+    margin-left: 60px;
+    width: 120px;
+    height: 130px;
+}
+.yonghu a{
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+    color: rgb(134,117,117);
+}
+.header1>a:hover +.yonghu{
+    display: block;
+}
+.yonghu:hover{
+    display: block;
+}
+.header1 p a{
+    text-decoration: none;
+    color: rgb(134,117,117);
 }
 .header1 input{
     float: right;

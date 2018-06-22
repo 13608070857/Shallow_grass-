@@ -20,6 +20,11 @@ const indexController ={
     yonghu(req,resp){
         resp.send({user:req.session.user});
     },
+    login2(req,resp){
+        req.session.destroy();
+        resp.render("index/index");
+        console.log("1")
+    },
     logindo(req,resp){
         let username=req.body.username;
         let pwd=req.body.pwd;
