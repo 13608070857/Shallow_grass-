@@ -11,9 +11,26 @@ const controller={
     },
     //商品详情
     goodsDetails(req,resp){
-        console.log("开始");
-        console.log();
-        resp.render("goods/goods_details",{username:"测试"});
+        let id=req.query.id;
+        let cateid=req.query.cateid;
+        console.log(cateid);
+        goodsmodel.getGoodsDetail([id])
+            .then(function (data) {
+                let detailgoods=data;
+                goodsmodel.getHotgoods()
+                    .then(function (data) {
+                        let hotgoods=data;
+                        goodsmodel.getRelevant([cateid])
+                            .then(function (data) {
+                               let cateidgoods=data;
+                                goodsmodel.getScore(id)
+                                    .then(function (data) {
+                                        let goodsScore=data;
+                                        resp.render("goods/goods_details",{goodsdetails:detailgoods,goodshot:hotgoods,goodscate:cateidgoods,goodsScore:goodsScore});
+                                    });
+                            });
+                    });
+            });
     },
     //订单
     Order(req,resp){

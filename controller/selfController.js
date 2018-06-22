@@ -50,7 +50,11 @@ const selfController = {
 
     //订单信息
     orderG(req,resp){
-        resp.render("selfPublic/orderG",{username:"测试"});
+        var username = req.session.user;
+        selfModel.getUserInfo(username)
+            .then(function(data) {
+                resp.render("selfPublic/orderG",{securityData:data});
+            });
     },
 
     //优惠券

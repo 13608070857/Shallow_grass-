@@ -26,8 +26,8 @@ $("body").click(function () {
     });
 });
 //商品详情/用户评论
-$(".userComments>a").click(function () {
-    $(".userComments>a").attr("class","commUnactive");
+$(".userComments>span").click(function () {
+    $(".userComments>span").attr("class","commUnactive");
     $(this).attr("class","commActive");
 });
 $(".commActive").click(function () {

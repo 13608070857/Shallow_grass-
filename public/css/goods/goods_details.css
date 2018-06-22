@@ -103,17 +103,13 @@ input[type="number"]{
     border-top: 1px solid #EEEEEE;
     border-bottom: 3px solid #EEEEEE;
 }
-.userComments>a>span{
+.userComments>span{
     display: inline-block;
-    width: 150px;
-}
-.userComments>a{
-    display: inline-block;
-    text-decoration: none;
-    color: #333333;
     line-height: 60px;
-    width: 100px;
-    padding-left: 20px;
+    width: 80px;
+    color: #333333;
+    text-align: center;
+    cursor: pointer;
 }
 .commActive{
     border-top: 4px solid #000000;
