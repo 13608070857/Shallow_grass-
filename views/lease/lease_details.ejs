@@ -88,25 +88,25 @@
                         <p><%=lease_details2[i+2].descText%></p>
                         <p><%=lease_details2[i+3].descText%></p>
                         <%}else {%>
-                        <p><%=lease_details2[i*5].descText%></p>
-                        <p><%=lease_details2[i*6].descText%></p>
-                        <p><%=lease_details2[i*7].descText%></p>
+                        <p><%=lease_details2[i*2].descText%></p>
+                        <p><%=lease_details2[i*3].descText%></p>
+                        <p><%=lease_details2[i*4].descText%></p>
                         <%}%>
                     </div>
                     <div class="productImg">
-                        <img src="../img/lease/T1-1.jpg">
+                        <img src="<%=lease_details[i].goodsImg%>">
                     </div>
                 </div>
             <%}else {%>
                 <div class="productOne">
                     <div class="productText2">
                         <p class="productTitle2"><%=lease_details2[i*4].descText%></p>
-                        <p><%=lease_details2[i*5].descText%></p>
-                        <p><%=lease_details2[i*6].descText%></p>
-                        <p><%=lease_details2[i*7].descText%></p>
+                        <p><%=lease_details2[i*2].descText%></p>
+                        <p><%=lease_details2[i*3].descText%></p>
+                        <p><%=lease_details2[i*4].descText%></p>
                     </div>
                     <div class="productImg2">
-                        <img src="../img/lease/T1-2.jpg">
+                        <img src="<%=lease_details[i].goodsImg%>">
                     </div>
                 </div>
             <%}%>

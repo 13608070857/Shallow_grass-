@@ -32,7 +32,7 @@ const controller={
         leasemodel.lease_details([id])
             .then(function (data) {
                 let detailsData=data;
-                leasemodel.lease_details2()
+                leasemodel.lease_details2([id])
                     .then(function (data) {
                         let detailsData2=data;
                         resp.render("lease/lease_details",{lease_details:detailsData,lease_details2:detailsData2})

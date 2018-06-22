@@ -61,10 +61,10 @@ const leaseModel={
                 })
         })
     },
-    lease_details2(){
+    lease_details2(params){
         return new Promise((resolve,reject)=> {
-            dbpool.connect("SELECT * FROM lease_details a,lease_portfolio b,goods c,goods_details d WHERE a.ID=b.leaseID AND b.goods_ID=c.goods_ID AND c.goods_ID=d.goods_ID",
-                [],(err,data)=>{
+            dbpool.connect("SELECT * FROM lease_details a,lease_portfolio b,goods c,goods_details d WHERE a.ID=b.leaseID AND b.goods_ID=c.goods_ID AND c.goods_ID=d.goods_ID AND id=?",
+                [params],(err,data)=>{
                     if (!err){
                         resolve(data);
                     } else {
