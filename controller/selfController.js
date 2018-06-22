@@ -51,15 +51,20 @@ const selfController = {
     //订单信息
     orderG(req,resp){
         var username = req.session.user;
-        selfModel.getUserInfo(username)
+        selfModel.getOrder(username)
             .then(function(data) {
-                resp.render("selfPublic/orderG",{securityData:data});
+                resp.render("selfPublic/orderG",{orderData:data});
             });
     },
 
     //优惠券
     coupons(req,resp) {
-        resp.render("selfPublic/coupons",{username:"测试"});
+        var username = req.session.user;
+        selfModel.getCouponsInfo(username)
+            .then(function(data) {
+                console.log(data);
+                resp.render("selfPublic/coupons",{couponsData:data});
+            });
     },
 
     //售后
