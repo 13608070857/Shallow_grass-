@@ -13,6 +13,10 @@ const controller={
     goodsDetails(req,resp){
         let id=req.query.id;
         let cateid=req.query.cateid;
+        let uid=req.session.user;
+        // let goodsnum=req.query.goodsnum;
+        // let goodsprice=req.query.goodsprice;
+        // let totalprice=req.query.totalprice;
         goodsmodel.getGoodsDetail([id])
             .then(function (data) {
                 let detailgoods=data;
@@ -37,7 +41,21 @@ const controller={
                                                                 goodsmodel.getbad([id])
                                                                     .then(function (data) {
                                                                         let goodbad=data;
-                                                                        resp.render("goods/goods_details",{goodsdetails:detailgoods,goodshot:hotgoods,goodscate:cateidgoods,goodsScore:goodsScore,goodsComments:goodsComments,goodcom:goodcom,goodmed:goodmed,goodbad:goodbad});
+                                                                        goodsmodel.getcart([uid])
+                                                                            .then(function (data) {
+                                                                                let myuser=data;
+                                                                                resp.render("goods/goods_details",{goodsdetails:detailgoods,goodshot:hotgoods,goodscate:cateidgoods,goodsScore:goodsScore,goodsComments:goodsComments,goodcom:goodcom,goodmed:goodmed,goodbad:goodbad,myuser:myuser,myuid:uid});
+                                                                                // goodsmodel.addcart(["1","1","1","1","1"])
+                                                                                //     .then(function (data) {
+                                                                                //         let addshopcart=data;
+                                                                                //         resp.render("goods/goods_details",{goodsdetails:detailgoods,goodshot:hotgoods,goodscate:cateidgoods,goodsScore:goodsScore,goodsComments:goodsComments,goodcom:goodcom,goodmed:goodmed,goodbad:goodbad,myuser:myuser,myuid:uid});
+                                                                                //     });
+                                                                                // goodsmodel.queryuser([uid])
+                                                                                //     .then(function (data) {
+                                                                                //         let users=data[0].u_id;
+                                                                                //
+                                                                                //     });
+                                                                            });
                                                                     });
                                                             });
                                                     });
@@ -57,7 +75,13 @@ const controller={
     },
     //购物车
     shopCart(req,resp){
-        resp.render("goods/shop_cart",{username:"测试"});
+        let userid=req.session.user;
+        goodsmodel.getcart([userid])
+            .then(function (data) {
+                let shopCart=data;
+                console.log(shopCart)
+                resp.render("goods/shop_cart",{shopCart:shopCart});
+            });
     }
 };
 module.exports=controller;

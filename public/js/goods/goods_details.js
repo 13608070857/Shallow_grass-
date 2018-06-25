@@ -67,3 +67,19 @@ $("#badCom").click(function () {
     $(".medCom").css("display","none");
     $(".badCom").css("display","block");
 });
+$("#nullshop").click(function () {
+    alert("你还未登录哦！")
+});
+$.ajax({
+    type:"get",
+    url:"/goods_details.do",
+    data:{
+        goodsnum:$("#numValue").val(),
+        goodsprice:$("#goodsPrice").html(),
+        totalprice:Number($("#numValue").val()*$("#goodsPrice").html())
+    },
+    dataType:"json",
+    success:function (data) {
+
+    }
+});

@@ -116,6 +116,45 @@ const goodsModel={
                     }
                 })
         })
+    },
+    //购物车
+    getcart(params){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM shop_cart sc,users u,goods g WHERE sc.u_id=u.u_id AND sc.goods_ID=g.goods_ID and u.name=?",
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+    //查询当前用户
+    queryuser(params){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM users u WHERE u.name=?",
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else{
+                        reject(data);
+                    }
+                })
+        })
+    },
+    //加入购物车
+    addcart(params){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("INSERT INTO shop_cart VALUE(NULL,?,?,?,?,?)",
+                [params],(err,data)=>{
+                if (!err){
+                    resolve(data);
+                } else{
+                    reject(data);
+                }
+                })
+        })
     }
 };
 module.exports=goodsModel;

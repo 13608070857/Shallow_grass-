@@ -24,6 +24,8 @@ router.get("/order",goodscontroller.Order);
 router.get("/pay",goodscontroller.Pay);
 //购物车
 router.get("/shop_cart",goodscontroller.shopCart);
+//加入购物车
+router.get("/addcart",goodscontroller.addshopCart);
 
 //个人中心
 router.get("/self",selfController.self);

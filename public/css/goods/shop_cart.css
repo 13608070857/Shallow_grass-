@@ -65,7 +65,8 @@ a:hover{
     font-size: 16px;
 }
 .table > tbody > tr > td:nth-child(3){
-    padding: 35px 0 0 0;
+    /*padding: 35px 0 0 0;*/
+    color: #76756F;
 }
 .table > tbody > tr > td:nth-child(4){
     color: #76756F;
