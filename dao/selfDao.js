@@ -55,5 +55,19 @@ const selfModel = {
                 })
         })
     },
+
+    //获取售后信息
+    getsaleAfterInfo(params) {
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM users u,goodsorder o,goods g,address a,saleafter sf WHERE u.o_ID = o.o_ID AND o.goods_ID = g.goods_ID AND o.addressId = a.addressId AND sf.o_ID=o.o_ID AND u.name=?",
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
 }
 module.exports = selfModel;

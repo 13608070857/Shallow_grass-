@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>浅草</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="css/forum/forumIndex.css">
     <!--[if lt IE 9]>
@@ -20,8 +20,8 @@
 		<section class="banner row">
 			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 bannerImg noPadding">
 				<a href="/forumMain" class="row bannerLink">
-					<img src="<%=forumIndexData[0].postImg%>" alt="">
-					<a href="/forumMain" class="bannerDes">"<%=forumIndexData[0].postDes%></a>
+					<img src="<%=forumRemInfoData[0].postImg%>" alt="">
+					<a href="/forumMain" class="bannerDes">"<%=forumRemInfoData[0].postDes%></a>
 				</a>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
@@ -33,161 +33,50 @@
 				</div>
 			</div>
 		</section>
-
 		<section class="postContent">
 			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 noPadding">
-				<ul>
+				<ul id="postContAll">
+					<%for(var i=0;i<fy;i++) {%>
 					<li class="postCont">
 						<div class="psC">
 							<div class="psText">
 								<h4>
-									<a class="moveLeft" href="/forumMain">多肉养殖的小秘诀</a>
+									<a class="moveLeft postTitle" href="/forumMain"><%=forumIndexData[i].postTitle%></a>
 								</h4>
 								<div class="row">
 									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 noPadding">
 										<a href="/forumMain" class="postLink">
-											<img src="img/forum/1.jpg" alt="">
+											<img class="postImg" src="<%=forumIndexData[i].postImg%>" alt="">
 										</a>
 									</div>
 									<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 noPadding postText">
-										<a href="/forumMain">
-											多肉养殖应注意浇水的时期和浇水的方法，不宜过多，也不宜久旱不浇水，年幼的多肉要多浇水，但也不要太多次浇水，一天保证一两次就足够了。
-										</a>
+										<a href="/forumMain" class="postContent"><%=forumIndexData[i].postContent%></a>
 									</div>
-								</div>	
+								</div>
 							</div>
 							<div class="row postBottom">
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-									<span><i class="iconfont">&#xe64c;</i>2018-06-13</span>
+									<span><i class="iconfont">&#xe64c;</i><span class="postTime"><%=forumIndexData[i].postTime%></span></span>
 								</div>
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
-									<span><i class="iconfont">&#xe61a;</i>34</span>
-									<span><i class="iconfont">&#xe63b;</i>10</span>
+									<span><i class="iconfont">&#xe61a;</i>10</span>
+									<span><i class="iconfont">&#xe63b;</i><span class="postLike"><%=forumIndexData[i].postLike%></span></span>
 								</div>
 							</div>
 						</div>
 					</li>
-					<li class="postCont">
-						<div class="psC">
-							<div class="psText">
-								<h4>
-									<a class="moveLeft" href="/forumMain">多肉养殖的小秘诀</a>
-								</h4>
-								<div class="row">
-									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 noPadding">
-										<a href="/forumMain" class="postLink">
-											<img src="img/forum/1.jpg" alt="">
-										</a>
-									</div>
-									<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 noPadding postText">
-										<a href="/forumMain">
-											多肉养殖应注意浇水的时期和浇水的方法，不宜过多，也不宜久旱不浇水，年幼的多肉要多浇水，但也不要太多次浇水，一天保证一两次就足够了。
-										</a>
-									</div>
-								</div>	
-							</div>
-							<div class="row postBottom">
-								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-									<span><i class="iconfont">&#xe64c;</i>2018-06-13</span>
-								</div>
-								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
-									<span><i class="iconfont">&#xe61a;</i>34</span>
-									<span><i class="iconfont">&#xe63b;</i>10</span>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="postCont">
-						<div class="psC">
-							<div class="psText">
-								<h4>
-									<a class="moveLeft" href="/forumMain">多肉养殖的小秘诀</a>
-								</h4>
-								<div class="row">
-									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 noPadding">
-										<a href="/forumMain" class="postLink">
-											<img src="img/forum/1.jpg" alt="">
-										</a>
-									</div>
-									<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 noPadding postText">
-										<a href="/forumMain">
-											多肉养殖应注意浇水的时期和浇水的方法，不宜过多，也不宜久旱不浇水，年幼的多肉要多浇水，但也不要太多次浇水，一天保证一两次就足够了。
-										</a>
-									</div>
-								</div>	
-							</div>
-							<div class="row postBottom">
-								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-									<span><i class="iconfont">&#xe64c;</i>2018-06-13</span>
-								</div>
-								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
-									<span><i class="iconfont">&#xe61a;</i>34</span>
-									<span><i class="iconfont">&#xe63b;</i>10</span>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="postCont">
-						<div class="psC">
-							<div class="psText">
-								<h4>
-									<a class="moveLeft" href="/forumMain">多肉养殖的小秘诀</a>
-								</h4>
-								<div class="row">
-									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 noPadding">
-										<a href="/forumMain" class="postLink">
-											<img src="img/forum/1.jpg" alt="">
-										</a>
-									</div>
-									<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 noPadding postText">
-										<a href="/forumMain">
-											多肉养殖应注意浇水的时期和浇水的方法，不宜过多，也不宜久旱不浇水，年幼的多肉要多浇水，但也不要太多次浇水，一天保证一两次就足够了。
-										</a>
-									</div>
-								</div>	
-							</div>
-							<div class="row postBottom">
-								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-									<span><i class="iconfont">&#xe64c;</i>2018-06-13</span>
-								</div>
-								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
-									<span><i class="iconfont">&#xe61a;</i>34</span>
-									<span><i class="iconfont">&#xe63b;</i>10</span>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="postCont">
-						<div class="psC">
-							<div class="psText">
-								<h4>
-									<a class="moveLeft" href="/forumMain">多肉养殖的小秘诀</a>
-								</h4>
-								<div class="row">
-									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 noPadding">
-										<a href="/forumMain" class="postLink">
-											<img src="img/forum/1.jpg" alt="">
-										</a>
-									</div>
-									<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 noPadding postText">
-										<a href="/forumMain">
-											多肉养殖应注意浇水的时期和浇水的方法，不宜过多，也不宜久旱不浇水，年幼的多肉要多浇水，但也不要太多次浇水，一天保证一两次就足够了。
-										</a>
-									</div>
-								</div>	
-							</div>
-							<div class="row postBottom">
-								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-									<span><i class="iconfont">&#xe64c;</i>2018-06-13</span>
-								</div>
-								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
-									<span><i class="iconfont">&#xe61a;</i>34</span>
-									<span><i class="iconfont">&#xe63b;</i>10</span>
-								</div>
-							</div>
-						</div>
-					</li>
+					<%}%>
 				</ul>
+				<div class="fmPaging">
+					<a role="button" onclick="prevPage()">上一页</a>
+					<a href="#" class="currentA" id="currentPage">1</a>
+					<a role="button" onclick="nextPage()">下一页</a>
+					<span>共<span id="totalPage"><%=fyNum%></span>页</span>
+					<span>到第</span>
+					<input type="text"/>
+					<span>页</span>
+					<a href="#" role="button" class="btn">确认</a>
+				</div>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 				<div class="hot search">
@@ -198,39 +87,39 @@
 					<ul>
 						<li>
 							<span class="mc">0<span class="fontW first">1</span></span>
-							<a href="/forumMain" class="moveLeft"><%=forumIndexData[0].postTitle%></a>
+							<a href="/forumMain" class="moveLeft"><%=forumRemInfoData[0].postTitle%></a>
 						</li>
 						<li>
 							<span class="mc">0<span class="fontW">2</span></span>
-							<a href="/forumMain" class="moveLeft"><%=forumIndexData[1].postTitle%></a>
+							<a href="/forumMain" class="moveLeft"><%=forumRemInfoData[1].postTitle%></a>
 						</li>
 						<li>
 							<span class="mc">0<span class="fontW">3</span></span>
-							<a href="/forumMain" class="moveLeft"><%=forumIndexData[2].postTitle%></a>
+							<a href="/forumMain" class="moveLeft"><%=forumRemInfoData[2].postTitle%></a>
 						</li>
 						<li>
 							<span class="mc">04</span>
-							<a href="/forumMain" class="moveLeft"><%=forumIndexData[3].postTitle%></a>
+							<a href="/forumMain" class="moveLeft"><%=forumRemInfoData[3].postTitle%></a>
 						</li>
 						<li>
 							<span class="mc">05</span>
-							<a href="/forumMain" class="moveLeft"><%=forumIndexData[4].postTitle%></a>
+							<a href="/forumMain" class="moveLeft"><%=forumRemInfoData[4].postTitle%></a>
 						</li>
 						<li>
 							<span class="mc">06</span>
-							<a href="/forumMain" class="moveLeft"><%=forumIndexData[5].postTitle%></a>
+							<a href="/forumMain" class="moveLeft"><%=forumRemInfoData[5].postTitle%></a>
 						</li>
 						<li>
 							<span class="mc">07</span>
-							<a href="/forumMain" class="moveLeft"><%=forumIndexData[6].postTitle%></a>
+							<a href="/forumMain" class="moveLeft"><%=forumRemInfoData[6].postTitle%></a>
 						</li>
 						<li>
 							<span class="mc">08</span>
-							<a href="/forumMain" class="moveLeft"><%=forumIndexData[7].postTitle%></a>
+							<a href="/forumMain" class="moveLeft"><%=forumRemInfoData[7].postTitle%></a>
 						</li>
 						<li>
 							<span class="mc">09</span>
-							<a href="/forumMain" class="moveLeft"><%=forumIndexData[8].postTitle%></a>
+							<a href="/forumMain" class="moveLeft"><%=forumRemInfoData[8].postTitle%></a>
 						</li>
 					</ul>
 				</div>
@@ -240,9 +129,9 @@
 						<%for(var i=0;i<3;i++) {%>
 						<li class="tw">
 							<a href="/forumMain" class="imgLink">
-								<img src="<%=forumIndexData[i].postImg%>" alt="">
+								<img src="<%=forumRemInfoData[i].postImg%>" alt="">
 							</a>
-							<a class="overTitle" href="/forumMain"><%=forumIndexData[i].postTitle%></a>
+							<a class="overTitle" href="/forumMain"><%=forumRemInfoData[i].postTitle%></a>
 						</li>
 						<%}%>
 					</ul>
@@ -254,10 +143,10 @@
 						<li>
 							<span class="mc">
 								【
-								<a href="/forumMain"><%=forumIndexData[i].categoryName%></a>
+								<a href="/forumMain"><%=forumRemInfoData[i].categoryName%></a>
 								】
 							</span>
-							<a class="overTitle" href="/forumMain"><%=forumIndexData[i].postTitle%></a>
+							<a class="overTitle" href="/forumMain"><%=forumRemInfoData[i].postTitle%></a>
 						</li>
 						<%}%>
 					</ul>
@@ -272,12 +161,45 @@
 	<script src="js/jquery-3.3.1.js"></script>
     <script src="js/bootstrap.js"></script>
     <script>
-		$("#top").click(function() {
-			console.log($("html").scrollTop());
-			$("html").animate({
-				scrollTop:0
-			},1000);
+		var currentPage = 1;
+		$(function() {
+			$("#top").click(function() {
+				$("html").animate({
+					scrollTop:0
+				},1000);
+			});
+			fyAjax(currentPage);
 		});
-    </script>
+		//下一页
+		function nextPage() {
+			if(currentPage>=$("#totalPage").html()) {
+				currentPage = 1;
+			}else {
+				currentPage++;
+			}
+			fyAjax(currentPage);
+		}
+//		//上一页
+		function prevPage() {
+			if(currentPage<=0) {
+				currentPage = 1;
+			}else {
+				currentPage--;
+			}
+			fyAjax(currentPage);
+		}
+		function fyAjax(currentPage) {
+			$.ajax({
+				type:"get",
+				url:"/forumIndex",
+				data:{
+					currentPage:currentPage
+				},
+				success:function(data) {
+					$("#currentPage").html(currentPage);
+				}
+			});
+		}
+	</script>
 </body>
 </html>

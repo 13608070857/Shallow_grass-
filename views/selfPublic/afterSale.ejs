@@ -89,17 +89,19 @@
                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">操作</div>
                         </div>
                         <div class="addressC">
+                            <%for(var i=0;i<saleafterData.length;i++) {%>
                             <div class="addressCList row">
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">29399393</div>
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">43993933</div>
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">红宝石多肉</div>
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 colorRed text-center">已完成</div>
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">2018.06.01</div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><%=saleafterData[i].sf_sno%></div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><%=saleafterData[i].orderNo%></div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><%=saleafterData[i].goodsName%></div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 colorRed text-center"><%=saleafterData[i].sf_status%></div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><%=saleafterData[i].sf_time%></div>
                                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
                                     <a href="#">查看详情</a>
                                     <a href="#">删除</a>
                                 </div>
                             </div>
+                            <%}%>
                         </div>
 
                     </div>
