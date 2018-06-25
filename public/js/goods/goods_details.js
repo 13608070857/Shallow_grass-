@@ -19,6 +19,11 @@ $("#addShop").click(function (event) {
         "width":"340px"
     });
 });
+$("#addShop").on("mousedown",function () {
+    console.log("开始刷新！");
+    $("#myShopDiv").load(location.href + " #myShopDiv");
+
+});
 $("body").click(function () {
     $(".myShopDiv").css({
         "overflow":"hidden",
