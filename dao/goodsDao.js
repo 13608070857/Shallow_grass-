@@ -130,14 +130,14 @@ const goodsModel={
                 })
         })
     },
-    //查询当前用户
-    queryuser(params){
+    //购物车小计
+    totalcart(params){
         return new Promise((resolve,reject)=>{
-            dbpool.connect("SELECT * FROM users u WHERE u.name=?",
+            dbpool.connect("SELECT SUM(sc.total_of) as totalcart  FROM shop_cart sc WHERE sc.u_id=(SELECT u.u_id FROM users u WHERE u.name=?)",
                 [params],(err,data)=>{
                     if (!err){
                         resolve(data);
-                    } else{
+                    } else {
                         reject(data);
                     }
                 })

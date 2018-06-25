@@ -71,7 +71,7 @@ const controller={
     },
     //支付
     Pay(req,resp){
-        resp.render("goods/pay",{username:"测试"});
+        resp.render("goods/pay",{paysuccess:"支付成功"});
     },
     //购物车
     shopCart(req,resp){
@@ -79,28 +79,22 @@ const controller={
         goodsmodel.getcart([userid])
             .then(function (data) {
                 let shopCart=data;
-                console.log(shopCart)
-                resp.render("goods/shop_cart",{shopCart:shopCart});
+                goodsmodel.totalcart([userid])
+                    .then(function (data) {
+                        let totalcart=data;
+                        console.log(totalcart);
+                        resp.render("goods/shop_cart",{shopCart:shopCart,totalcart:totalcart});
+                    });
             });
     },
     //加入购物车
     addshopCart(req,resp){
         let uname=req.session.user;
-        dbpool.connect("INSERT INTO shop_cart VALUE(NULL,?,?,?,?,?)",
-            ["2",goodsArry[0].goodsid,goodsArry[0].goodsnum,goodsArry[0].goodsprice,goodsArry[0].totalprice],(err,data)=>{
-                resp.redirect("/shop_cart");
-            })
+        let sql="INSERT INTO shop_cart VALUE(NULL,(SELECT u.u_id FROM users u WHERE u.name='"+uname+"'),?,?,?,?)";
+        dbpool.connect(sql,
+            [goodsArry[0].goodsid,goodsArry[0].goodsnum,goodsArry[0].goodsprice,goodsArry[0].totalprice],(err,data)=>{
 
-        // goodsmodel.queryuser([uname])
-        //     .then(function (data) {
-        //         let usersid=data[0].u_id;
-        //         console.log(usersid);
-        //         goodsmodel.addcart(["1","1","1","9.9","9.9"])
-        //             .then(function (data) {
-        //                 // let addshopcart=data;
-        //                 // console.log(addshopcart)
-        //             });
-        //     });
+            })
     }
 };
 module.exports=controller;

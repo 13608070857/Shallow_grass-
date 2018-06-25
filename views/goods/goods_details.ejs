@@ -138,9 +138,9 @@
     </div>
 </section>
 <%include ../index/footer.ejs%>
-<div class="myShopDiv">
+<div class="myShopDiv" id="myShopDiv">
     <div class="myshopCart">购物车</div>
-    <div class="myScorll">
+    <div class="myScorll" id="myScorll">
         <ul>
             <%for (var i=0;i<myuser.length;i++) {%>
             <li>
@@ -157,7 +157,7 @@
         </ul>
     </div>
     <div class="text-center xjMoney">
-        <span>小计¥<span>94400</span></span>
+        <span>小计¥<span></span></span>
     </div>
     <a href="/shop_cart">
         <button type="button" class="btn btn-block btn_mycart">查看购物车</button>
