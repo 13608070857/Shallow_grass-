@@ -72,8 +72,8 @@
                         <div class="row selfContain">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 userInfo">
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 userHeader">
-                                    <img src="<%=selfData[0].userImg%>" alt=""/>
-                                    <input type="file" id="headerUp" title="请选择头像图片"/>
+                                    <a href="/selfE"><img src="<%=selfData[0].userImg%>" alt=""/></a>
+
                                 </div>
                                 <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
                                     <ul>
@@ -173,15 +173,6 @@
         $(".pswEdit").css("display","none");
         $(".selfContain").css("display","block");
         $(".hyCenter").css("display","block");
-    });
-    var imgUrl;
-    $("#headerUp").change(function() {
-        var imgFile = $("#headerUp")[0].files[0];
-        var reader = new FileReader();
-        reader.readAsDataURL(imgFile);
-        reader.onload = function() {
-            imgUrl = this.result
-        }
     });
 </script>
 </body>
