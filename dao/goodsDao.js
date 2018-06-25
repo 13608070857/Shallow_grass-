@@ -142,19 +142,6 @@ const goodsModel={
                     }
                 })
         })
-    },
-    //加入购物车
-    addcart(params){
-        return new Promise((resolve,reject)=>{
-            dbpool.connect("INSERT INTO shop_cart VALUE(NULL,?,?,?,?,?)",
-                [params],(err,data)=>{
-                if (!err){
-                    resolve(data);
-                } else{
-                    reject(data);
-                }
-                })
-        })
     }
 };
 module.exports=goodsModel;

@@ -14,6 +14,7 @@ const router=express.Router();//获取路由对象
 router.get("/goods",goodscontroller.goodsList);
 //商品详情
 router.get("/goods_details",goodscontroller.goodsDetails);
+router.get("/goods_details.do",goodscontroller.goodsDetails2);
 //租赁
 router.get("/lease",leaseController.leaseList);
 //租赁详情

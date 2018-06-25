@@ -1,6 +1,8 @@
 const mysql=require("mysql");
 const dbpool=require("../config/dbpoolConfig");
 const goodsmodel=require("../dao/goodsDao");
+var goodsArry=[];
+var goodsObj={};
 const controller={
     //商品
     goodsList(req,resp){
@@ -10,13 +12,21 @@ const controller={
             });
     },
     //商品详情
+    goodsDetails2(req,resp){
+        let goodsnum=req.query.goodsnum;
+        let goodsprice=req.query.goodsprice;
+        let totalprice=req.query.totalprice;
+        goodsObj.goodsnum=goodsnum;
+        goodsObj.goodsprice=goodsprice;
+        goodsObj.totalprice=totalprice;
+        goodsArry.push(goodsObj);
+    },
     goodsDetails(req,resp){
         let id=req.query.id;
+        goodsObj.goodsid=id;
+        goodsArry.push(goodsObj);
         let cateid=req.query.cateid;
         let uid=req.session.user;
-        // let goodsnum=req.query.goodsnum;
-        // let goodsprice=req.query.goodsprice;
-        // let totalprice=req.query.totalprice;
         goodsmodel.getGoodsDetail([id])
             .then(function (data) {
                 let detailgoods=data;
@@ -45,16 +55,6 @@ const controller={
                                                                             .then(function (data) {
                                                                                 let myuser=data;
                                                                                 resp.render("goods/goods_details",{goodsdetails:detailgoods,goodshot:hotgoods,goodscate:cateidgoods,goodsScore:goodsScore,goodsComments:goodsComments,goodcom:goodcom,goodmed:goodmed,goodbad:goodbad,myuser:myuser,myuid:uid});
-                                                                                // goodsmodel.addcart(["1","1","1","1","1"])
-                                                                                //     .then(function (data) {
-                                                                                //         let addshopcart=data;
-                                                                                //         resp.render("goods/goods_details",{goodsdetails:detailgoods,goodshot:hotgoods,goodscate:cateidgoods,goodsScore:goodsScore,goodsComments:goodsComments,goodcom:goodcom,goodmed:goodmed,goodbad:goodbad,myuser:myuser,myuid:uid});
-                                                                                //     });
-                                                                                // goodsmodel.queryuser([uid])
-                                                                                //     .then(function (data) {
-                                                                                //         let users=data[0].u_id;
-                                                                                //
-                                                                                //     });
                                                                             });
                                                                     });
                                                             });
@@ -82,6 +82,25 @@ const controller={
                 console.log(shopCart)
                 resp.render("goods/shop_cart",{shopCart:shopCart});
             });
+    },
+    //加入购物车
+    addshopCart(req,resp){
+        let uname=req.session.user;
+        dbpool.connect("INSERT INTO shop_cart VALUE(NULL,?,?,?,?,?)",
+            ["2",goodsArry[0].goodsid,goodsArry[0].goodsnum,goodsArry[0].goodsprice,goodsArry[0].totalprice],(err,data)=>{
+                resp.redirect("/shop_cart");
+            })
+
+        // goodsmodel.queryuser([uname])
+        //     .then(function (data) {
+        //         let usersid=data[0].u_id;
+        //         console.log(usersid);
+        //         goodsmodel.addcart(["1","1","1","9.9","9.9"])
+        //             .then(function (data) {
+        //                 // let addshopcart=data;
+        //                 // console.log(addshopcart)
+        //             });
+        //     });
     }
 };
 module.exports=controller;
