@@ -26,13 +26,10 @@ router.get("/pay",goodscontroller.Pay);
 //购物车
 router.get("/shop_cart",goodscontroller.shopCart);
 //加入购物车
-<<<<<<< HEAD
-//router.get("/addcart",goodscontroller.addshopCart);
-=======
+router.get("/addcart",goodscontroller.addshopCart);
 router.get("/addcart",goodscontroller.addshopCart);
 //移除购物车商品
 router.get("/delcartgoods",goodscontroller.delshopCart);
->>>>>>> 823193303cfce71dfbec06fd33ebc3da7d4e5390
 
 //个人中心
 router.get("/self",selfController.self);
@@ -45,6 +42,7 @@ router.get("/orderG",selfController.orderG);
 router.get("/coupons",selfController.coupons);
 router.get("/afterSale",selfController.afterSale);
 router.get("/help",selfController.help);
+router.get("/saveInfo",selfController.saveInfo);
 
 //index
 router.get("/index",indexController.index);

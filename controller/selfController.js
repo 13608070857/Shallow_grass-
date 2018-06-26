@@ -80,6 +80,11 @@ const selfController = {
     //帮助中心
     help(req,resp) {
         resp.render("selfPublic/help",{username:"测试"});
+    },
+
+    //文件保存
+    saveInfo(req,resp) {
+        console.log(req.query);
     }
 };
 
