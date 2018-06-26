@@ -95,6 +95,13 @@ const controller={
             [goodsArry[0].goodsid,goodsArry[0].goodsnum,goodsArry[0].goodsprice,goodsArry[0].totalprice],(err,data)=>{
 
             })
+    },
+    //移除购物车商品
+    delshopCart(req,resp){
+        // goodsmodel.delcartgoods()
+        //     .then(function (data) {
+        //
+        //     });
     }
 };
 module.exports=controller;

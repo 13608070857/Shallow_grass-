@@ -142,6 +142,19 @@ const goodsModel={
                     }
                 })
         })
+    },
+    //移除购物车商品
+    delcartgoods(params){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("delete from shop_cart where ID=?",
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
     }
 };
 module.exports=goodsModel;
