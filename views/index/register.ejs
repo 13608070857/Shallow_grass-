@@ -33,6 +33,28 @@
 <script src="../js/jquery-3.3.1.js"></script>
 <script src="../js/bootstrap.js"></script>
 <script>
+    // 手机号是否正确，有没有被注册过
+    $("#phone").blur(function () {
+        if($("#phone").val()==""){
+            $(".yzm").eq(0).html("")
+        }else {
+            if($("#phone").val().match(/^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/)){
+                $.ajax({
+                    url:"/phone.do",
+                    type:"get",
+                    data:{
+                        phone:$("#phone").val()
+                    },
+                    success:function (data) {
+                        $(".yzm").eq(0).html(data)
+                    }
+                })
+            }else {
+                $(".yzm").eq(0).html("号码不正确")
+            }
+        }
+    })
+    // 获取验证码
     function yzm() {
         $.ajax({
             url:"/duanxin.do",
@@ -45,7 +67,15 @@
             }
         })
     }
-
+    // 密码一不一致
+    $("#qrmm").blur(function () {
+        if($("#qrmm").val()!==$("#srmm").val()){
+            $(".mm").html("密码不一致")
+        }else {
+            $(".mm").html("")
+        }
+    })
+    // 注册(1.验证码是否正确2.保存到数据库)
     function zc() {
         if($(".checkbox1")[0].checked == true)(
             $.ajax({
@@ -70,35 +100,8 @@
         )
 
     }
-    $("#phone").blur(function () {
-        if($("#phone").val()==""){
-            $(".yzm").eq(0).html("")
-        }else {
-            if($("#phone").val().match(/^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/)){
-                $.ajax({
-                    url:"/phone.do",
-                    type:"get",
-                    data:{
-                        phone:$("#phone").val()
-                    },
-                    success:function (data) {
-                        $(".yzm").eq(0).html(data)
-                    }
-                })
-            }else {
-                $(".yzm").eq(0).html("号码不正确")
-            }
-        }
-    })
-    $("#qrmm").blur(function () {
-        console.log(2)
-        if($("#qrmm").val()!==$("#srmm").val()){
-            $(".mm").html("密码不一致")
-            console.log(1)
-        }else {
-            $(".mm").html("")
-        }
-    })
+
+
 </script>
 </body>
 </html>
