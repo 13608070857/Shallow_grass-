@@ -63,7 +63,70 @@ a:hover,a:active {
     color: #7B7446;
 }
 
-
+.headerPop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.3);
+    /*display: none;*/
+}
+.updataHeader {
+    height: 550px;
+    width: 400px;
+    background: #fff;
+    margin-top: 50px;
+}
+.updataHeader .btn {
+    border-radius: 0;
+    background: #7B7446;
+    color: #fff;
+    padding: 5px 10px;
+}
+.headerTitle {
+    padding: 5px 10px;
+    background: #7B7446;
+    color: #fff;
+}
+.headerContent {
+    padding: 10px;
+}
+.upFile {
+    position: relative;
+    cursor: pointer;
+}
+#headerUp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    opacity: 0;
+    cursor: pointer;
+}
+.headerImg {
+    width: 100%;
+    height: 380px;
+    margin: 15px 0;
+    box-shadow: 0 0 3px #7B7446;
+    overflow: hidden;
+    position: relative;
+}
+.headerImg img {
+    height: 100%;
+}
+.headerCut {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -120px;
+    margin-left: -120px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 2px solid #7B7446;
+    z-index: 999;
+}
 #selfContEdit {
     margin-bottom: 30px;
 }
@@ -97,18 +160,8 @@ a:hover,a:active {
     margin-top: 2em;
     box-shadow: 0 0 5px #ccc;
     overflow: hidden;
-    position: relative;
 }
-#headerUp {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
-    opacity: 0;
-    cursor: pointer;
-}
+
 .userHeader img,.userHead img {
     height: 100%;
     position: relative;
