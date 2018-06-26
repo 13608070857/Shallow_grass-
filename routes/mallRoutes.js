@@ -23,6 +23,7 @@ router.get("/lease_details",leaseController.lease_details);
 router.get("/order",goodscontroller.Order);
 //支付
 router.get("/pay",goodscontroller.Pay);
+router.get("/pay.do",goodscontroller.Pay2);
 //购物车
 router.get("/shop_cart",goodscontroller.shopCart);
 //加入购物车

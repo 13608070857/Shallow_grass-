@@ -18,40 +18,23 @@
 <%include ../index/header.ejs%>
 <section>
     <div class="container mycontent3">
-        <div class="row">
+        <div class="row myorderadd">
             <div class="col-xs-7 orderDiv">
                 <h2>账单地址</h2>
-                <div class="col-xs-12">
-                    <div class="form-group">
-                        <label for="region">
-                            <h5>国家/地区 *</h5>
-                        </label>
-                        <select class="form-control clearBorder" id="region">
-                            <option>中国</option>
-                            <option>中非共和国</option>
-                        </select>
-                    </div>
-                </div>
                 <div class="col-xs-12">
                     <div class="form-group pull-left">
                         <label for="surname">
                             <h5>姓 *</h5>
                         </label>
                         <input type="text" id="surname" class="form-control clearBorder inputW">
+                        <div id="surnamemsg"></div>
                     </div>
                     <div class="form-group pull-right">
                         <label for="name">
                             <h5>名 *</h5>
                         </label>
                         <input type="text" id="name" class="form-control clearBorder inputW">
-                    </div>
-                </div>
-                <div class="col-xs-12">
-                    <div class="form-group">
-                        <label for="company_name">
-                            <h5>公司名称</h5>
-                        </label>
-                        <input type="text" class="form-control clearBorder" id="company_name">
+                        <div id="namemsg"></div>
                     </div>
                 </div>
                 <div class="col-xs-12">
@@ -60,6 +43,7 @@
                             <h5>邮政编码 *</h5>
                         </label>
                         <input type="text" class="form-control clearBorder" id="zip_code" placeholder="邮政编码">
+                        <div id="zip_codemsg"></div>
                     </div>
                 </div>
                 <div class="col-xs-12">
@@ -91,8 +75,8 @@
                         <label for="address">
                             <h5>地址 *</h5>
                         </label>
-                        <input type="text" class="form-control clearBorder" id="address" placeholder="编辑地址">
-                        <input type="text" class="form-control clearBorder" placeholder="楼层、房间号（可选）">
+                        <input type="text" class="form-control clearBorder" id="address" placeholder="请输入详细地址">
+                        <div id="addressmsg"></div>
                     </div>
                 </div>
                 <div class="col-xs-12">
@@ -101,20 +85,14 @@
                             <h5>Email 地址 *</h5>
                         </label>
                         <input type="text" id="eamil" class="form-control clearBorder inputW">
+                        <div id="eamilmsg"></div>
                     </div>
                     <div class="form-group pull-right">
                         <label for="phone">
                             <h5>电话 *</h5>
                         </label>
                         <input type="text" id="phone" class="form-control clearBorder inputW">
-                    </div>
-                </div>
-                <div class="col-xs-12">
-                    <div class="form-group">
-                        <label for="orderNote">
-                            <h5>订单备注 *</h5>
-                        </label>
-                        <textarea class="form-control clearBorder" id="orderNote" placeholder="为您的订单添加备注，例如：送货特别注意事项" rows="6"></textarea>
+                        <div id="phonemsg"></div>
                     </div>
                 </div>
             </div>
@@ -125,18 +103,21 @@
                         <span class="pull-left"><h5>商品</h5></span>
                         <span class="pull-right"><h5>合计</h5></span>
                     </div>
+                    <%for (var i=0;i<shoporder.length;i++) {%>
                     <div class="goodsOrder2">
                         <span class="pull-left">
-                            <h4>植物花卉001	× 1</h4>
+                            <h4><%=shoporder[i].goodsName%>	× <%=shoporder[i].goodsNum%></h4>
                         </span>
                         <span class="pull-right">
-                            <h4><span>¥<span>5900</span></span></h4>
+                            <h4><span>¥<span><%=shoporder[i].total_of%></span></span></h4>
                         </span>
                     </div>
+                    <%}%>
+
                     <div class="bordersm goodsOrder">
                         <span class="pull-left"><h5>购物车小计</h5></span>
                         <span class="pull-right">
-                            <h4><span>¥<span>5900</span></span></h4>
+                            <h4><span>¥<span><%=totalorder[0].totalcart%></span></span></h4>
                         </span>
                     </div>
                     <div class="bordersm goodsOrder">
@@ -146,7 +127,7 @@
                     <div class="borderLast goodsOrder">
                         <span class="pull-left"><h5>订单总计</h5></span>
                         <span class="pull-right">
-                            <h4><span>¥<span>5900</span></span></h4>
+                            <h4><span>¥<span><%=totalorder[0].totalcart%></span></span></h4>
                         </span>
                     </div>
                     <div class="moneyRadio2 bordersm">
@@ -174,8 +155,9 @@
                         <p>直接付款到我们的银行账户。请使用订单号作为付款名目。我们会在资金到账后配送订单。</p>
                     </div>
                     <a href="/pay">
-                        <button type="button" class="btn order_btn">下单</button>
+                        <button type="button" class="btn order_btn" id="payorder" disabled="disabled">下单</button>
                     </a>
+                    <!--<button type="button" class="btn order_btn" id="payorder2">下单</button>-->
                 </div>
             </div>
         </div>
@@ -190,5 +172,6 @@
 <%include ../index/footer.ejs%>
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="js/goods/order.js"></script>
 </body>
 </html>

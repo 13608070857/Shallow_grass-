@@ -155,6 +155,19 @@ const goodsModel={
                     }
                 })
         })
+    },
+    //Ö§¸¶µØÖ·
+    getPay(params){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("INSERT INTO address VALUE(NULL,(SELECT u.u_id FROM users u WHERE u.name=?),?,?,?,?,?,?,?)",
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
     }
 };
 module.exports=goodsModel;
