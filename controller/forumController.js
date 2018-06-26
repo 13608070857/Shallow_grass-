@@ -47,7 +47,11 @@ const forumController = {
             })
     },
     forumSelf(req,resp) {
-        resp.render("forum/forumSelf",{username:"测试"});
+        let id=req.query.u_id;
+        forumModel.selfGrade([id])
+            .then(function (data) {
+                resp.render("forum/forumSelf",{selfGrade:data})
+            })
     }
 };
 

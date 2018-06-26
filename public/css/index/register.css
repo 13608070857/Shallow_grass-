@@ -11,38 +11,48 @@ html,body{
 }
 .register{
     float: left;
-    margin-left: 25%;
+    margin-left: 28.5%;
     margin-top: 5%;
-    padding:70px 70px;
+    padding:20px 70px;
     background:rgba(255,255,255,.85);
     border-radius: 5px;
-    width: 50%;
+    width:45%;
+}
+.ll,.mm,.yzm{
+    float: left;
+    margin-left: 10px;
+    font-size: 5px;
+    margin-top: 10%;
+    color: red;
 }
 .register h2{
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #7B7446;
     text-align: center;
 }
 .register form{
-    width: 80%;
+    width: 100%;
 }
 form>input{
+    float: left;
     display: block;
     padding-right: 0;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
+    margin-left:10%;
     height:40px;
     border: #dedede 1px solid;
     border-radius:5px;
 }
 form>button{
     display: block;
-    margin: 0 auto;
+    float: left;
     padding-right: 0;
-    width: 80%;
-    height: 50px;
-    margin-top:20%;
+    width: 70%;
+    height: 35px;
+    margin-top:5%;
+    margin-left: 10%;
     background:#7B7446;
     border: none;
     border-radius: 5px;
@@ -50,7 +60,10 @@ form>button{
 }
 
 .dx{
-    width: 80%;
+    width: 70%;
+    overflow: hidden;
+    float: left;
+    margin-left:10%;
 }
 .dx button{
     width: 40%;
@@ -72,7 +85,7 @@ form>button{
 }
 .dxuan{
     float:right;
-    margin-right: 10%;
+    margin-right: 20%;
     margin-top: 2%;
     font-size: 10px;
 }

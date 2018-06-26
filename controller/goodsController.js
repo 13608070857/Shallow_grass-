@@ -3,6 +3,7 @@ const dbpool=require("../config/dbpoolConfig");
 const goodsmodel=require("../dao/goodsDao");
 var goodsArry=[];
 var goodsObj={};
+var shopdelId=[];
 const controller={
     //商品
     goodsList(req,resp){
@@ -67,11 +68,23 @@ const controller={
     },
     //订单
     Order(req,resp){
-        resp.render("goods/order",{username:"测试"});
+        let useridd=req.session.user;
+        goodsmodel.getcart([useridd])
+            .then(function (data) {
+                let shoporder=data;
+                goodsmodel.totalcart([useridd])
+                    .then(function (data) {
+                        let totalorder=data;
+                        resp.render("goods/order",{shoporder:shoporder,totalorder:totalorder});
+                    });
+            });
     },
     //支付
     Pay(req,resp){
         resp.render("goods/pay",{paysuccess:"支付成功"});
+    },
+    Pay2(req,resp){
+        
     },
     //购物车
     shopCart(req,resp){
@@ -98,13 +111,17 @@ const controller={
     },
     //移除购物车商品
     delshopCart2(req,resp){
-        
+        let shopcartid=req.query.shopcartid;
+        shopdelId.splice(0,shopdelId.length);
+        shopdelId.push(shopcartid);
+        console.log(shopdelId[0]);
     },
     delshopCart(req,resp){
-        // goodsmodel.delcartgoods()
-        //     .then(function (data) {
-        //
-        //     });
+        goodsmodel.delcartgoods([shopdelId[0]])
+            .then(function (data) {
+                console.log(data);
+                resp.redirect("/shop_cart");
+            });
     }
 };
 module.exports=controller;

@@ -23,6 +23,7 @@ router.get("/lease_details",leaseController.lease_details);
 router.get("/order",goodscontroller.Order);
 //支付
 router.get("/pay",goodscontroller.Pay);
+router.get("/pay.do",goodscontroller.Pay2);
 //购物车
 router.get("/shop_cart",goodscontroller.shopCart);
 //加入购物车
@@ -53,6 +54,10 @@ router.get("/rule",indexController.rule);
 router.post("/login.do",indexController.logindo);
 router.get("/yonghu.do",indexController.yonghu);
 router.get("/login2.do",indexController.login2);
+router.get("/phone.do",indexController.phone);
+router.post("/duanxin.do",indexController.duanxin);
+router.post("/zc.do",indexController.zc);
+router.post("/jrsjk.do",indexController.jrsjk);
 
 
 //论坛

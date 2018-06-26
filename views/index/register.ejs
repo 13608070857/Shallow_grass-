@@ -13,16 +13,18 @@
     <div class="register">
         <h2>浅草注册</h2>
         <form>
-            <input type="text" placeholder=" 请输入您的手机号">
-            <input style="margin-top: 7%" type="password" placeholder=" 请输入密码">
-            <input style="margin-top: 7%" type="password" placeholder=" 请确认您的密码">
+            <input type="text" id="phone" placeholder=" 请输入您的手机号">
+            <div class="yzm" style="margin-top: 4.5%;"></div>
             <div class="dx">
-                <input type="text" placeholder=" 短信验证码">
-                <button>获取验证码</button>
-            </div>
-            <button><a href="login.ejs" style="color: white">注册</a></button>
+                <input id="code" type="text" placeholder=" 短信验证码">
+                <button type="button" onclick="yzm()">获取验证码</button>
+            </div><div class="ll"></div>
+            <input style="margin-top: 5%" id="srmm" type="password" placeholder=" 请输入密码">
+            <input style="margin-top: 5%" id="qrmm" type="password" placeholder=" 请确认您的密码">
+            <div class="mm"></div>
+            <button type="button" onclick="zc()"><a style="color: white">注册</a></button>
             <div class="dxuan">
-                <a href="rule.ejs" target="_blank"><input type="checkbox">已同意浅草规则</a>
+                <a href="rule" target="_parent"><input class="checkbox1" type="checkbox">已同意浅草规则</a>
             </div>
         </form>
     </div>
@@ -30,5 +32,73 @@
 
 <script src="../js/jquery-3.3.1.js"></script>
 <script src="../js/bootstrap.js"></script>
+<script>
+    function yzm() {
+        $.ajax({
+            url:"/duanxin.do",
+            type:"post",
+            data:{
+                phone:$("#phone").val()
+            },
+            success:function (data) {
+                $(".ll").html(data)
+            }
+        })
+    }
+
+    function zc() {
+        if($(".checkbox1")[0].checked == true)(
+            $.ajax({
+                url:"/zc.do",
+                type:"post",
+                data:{
+                    phone:$("#phone").val(),
+                    code:$("#code").val()
+                },
+                success:function (data) {
+                    $(".ll").html(data)
+                    $.ajax({
+                        url:"/jrsjk.do",
+                        type:"post",
+                        data:{
+                            phone:$("#phone").val(),
+                            mm:$("#qrmm").val(),
+                        }
+                    })
+                }
+            })
+        )
+
+    }
+    $("#phone").blur(function () {
+        if($("#phone").val()==""){
+            $(".yzm").eq(0).html("")
+        }else {
+            if($("#phone").val().match(/^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/)){
+                $.ajax({
+                    url:"/phone.do",
+                    type:"get",
+                    data:{
+                        phone:$("#phone").val()
+                    },
+                    success:function (data) {
+                        $(".yzm").eq(0).html(data)
+                    }
+                })
+            }else {
+                $(".yzm").eq(0).html("号码不正确")
+            }
+        }
+    })
+    $("#qrmm").blur(function () {
+        console.log(2)
+        if($("#qrmm").val()!==$("#srmm").val()){
+            $(".mm").html("密码不一致")
+            console.log(1)
+        }else {
+            $(".mm").html("")
+        }
+    })
+</script>
 </body>
 </html>
