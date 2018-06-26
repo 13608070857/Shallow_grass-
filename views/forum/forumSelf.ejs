@@ -49,10 +49,10 @@
     <p class="juzhong font-size12"><a href="#">编辑</a></p>
     <p class="juzhong font-size12 colorb4">签名|暂无</p>
     <div class="row selfOptionBox">
-        <div class="col-xs-2 col-xs-offset-2 selfCurrent">作品</div>
-        <div class="col-xs-2">相册</div>
-        <div class="col-xs-2">论坛</div>
-        <div class="col-xs-2">影赛</div>
+        <div class="col-xs-2 col-xs-offset-2 selfCurrent" onclick="dia(this)">作品</div>
+        <div class="col-xs-2" onclick="dia(this)">相册</div>
+        <div class="col-xs-2" onclick="dia(this)">论坛</div>
+        <div class="col-xs-2" onclick="dia(this)">影赛</div>
     </div>
     <div class="optionContent">
         <div class="optionContentImg">
@@ -62,6 +62,15 @@
     </div>
 </section>
 <%-include('../index/footer.ejs')%>
-
+<script>
+    var option = document.getElementsByClassName("selfOptionBox");
+    var optionArr = option[0].getElementsByTagName("div");
+    function dia(a) {
+        for (var i =0;i<optionArr.length;i++){
+            optionArr[i].classList.remove("selfCurrent")
+        }
+        a.classList.add("selfCurrent");
+    }
+</script>
 </body>
 </html>
