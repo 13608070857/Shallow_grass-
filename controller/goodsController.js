@@ -97,6 +97,9 @@ const controller={
             })
     },
     //移除购物车商品
+    delshopCart2(req,resp){
+        
+    },
     delshopCart(req,resp){
         // goodsmodel.delcartgoods()
         //     .then(function (data) {
