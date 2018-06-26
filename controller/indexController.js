@@ -10,6 +10,7 @@ AV.init({
 const dbpool = require("../config/dbpoolConfig");
 const indexDao = require("../dao/indexDao");
 const indexController ={
+    // 获取验证码
     duanxin(req,resp){
         console.log(req.body.phone);
         AV.Cloud.requestSmsCode({
@@ -23,6 +24,7 @@ const indexController ={
             resp.send("发送失败")
         })
     },
+    // 注册 1.验证码是否正确
     zc(req,resp){
         AV.Cloud.verifySmsCode(req.body.code,req.body.phone).then(function () {
             resp.send("验证成功")
@@ -30,6 +32,7 @@ const indexController ={
             resp.send("验证失败")
         })
     },
+    // 手机号有没有被注册过
     phone(req,resp){
         let phone=req.query.phone;
         indexDao.phone(phone)
@@ -43,6 +46,7 @@ const indexController ={
 
             })
     },
+    // 注册2.保存到数据库
     jrsjk(req,resp){
         var A="浅草用户";
         B+=1
@@ -54,6 +58,7 @@ const indexController ={
                 resp.render("index/login",{username:"测试"});
             })
     },
+    // 首页
     index(req,resp){
         // resp.render("index/index",{user:req.session.user});
         indexDao.product()
@@ -84,8 +89,8 @@ const indexController ={
     login2(req,resp){
         req.session.destroy();
         resp.render("index/index");
-        console.log("1")
     },
+    // 登陆
     logindo(req,resp){
         let username=req.body.username;
         let pwd=req.body.pwd;

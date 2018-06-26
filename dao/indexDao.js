@@ -13,6 +13,21 @@ const indexModel={
                 })
         })
     },
+    // 手机号有没有被注册过
+    phone(phone){
+        console.log(phone)
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM users where tel=?",
+                [phone],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+    // 注册2.保存到数据库
     jrsjk(phone,mm,C){
         return new Promise((resolve,reject)=>{
             dbpool.connect("INSERT  INTO `users`(`u_id`,`for_user_gradeId`,`name`,`tel`,`sex`,`password`,`email`,`userImg`,`userStatus`,`createTime`,`User_gradeid`,`User_ex`,`User_show`,`rolaName`,`o_ID`) VALUES \n" +
@@ -38,20 +53,8 @@ const indexModel={
                     }
                 })
         })
-    },
-     phone(phone){
-        console.log(phone)
-         return new Promise((resolve,reject)=>{
-             dbpool.connect("SELECT * FROM users where tel=?",
-                 [phone],(err,data)=>{
-                     if (!err){
-                         resolve(data);
-                     } else {
-                         reject(data);
-                     }
-                 })
-         })
     }
+
 }
 
 module.exports=indexModel;
