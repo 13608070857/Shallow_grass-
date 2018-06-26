@@ -69,12 +69,22 @@ const selfController = {
 
     //售后
     afterSale(req,resp) {
-        resp.render("selfPublic/afterSale",{username:"测试"});
+        var username = req.session.user;
+        selfModel.getsaleAfterInfo(username)
+            .then(function(data) {
+                console.log(data);
+                resp.render("selfPublic/afterSale",{saleafterData:data});
+            });
     },
 
     //帮助中心
     help(req,resp) {
         resp.render("selfPublic/help",{username:"测试"});
+    },
+
+    //文件保存
+    saveInfo(req,resp) {
+        console.log(req.body.imgUrl);
     }
 };
 

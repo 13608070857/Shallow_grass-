@@ -19,6 +19,11 @@ $("#addShop").click(function (event) {
         "width":"340px"
     });
 });
+$("#addShop").on("mousedown",function () {
+    console.log("开始刷新！");
+    $("#myShopDiv").load(location.href + " #myShopDiv");
+
+});
 $("body").click(function () {
     $(".myShopDiv").css({
         "overflow":"hidden",
@@ -66,4 +71,20 @@ $("#badCom").click(function () {
     $(".goodCom").css("display","none");
     $(".medCom").css("display","none");
     $(".badCom").css("display","block");
+});
+$("#nullshop").click(function () {
+    alert("你还未登录哦！")
+});
+$.ajax({
+    type:"get",
+    url:"/goods_details.do",
+    data:{
+        goodsnum:$("#numValue").val(),
+        goodsprice:$("#goodsPrice").html(),
+        totalprice:Number($("#numValue").val()*$("#goodsPrice").html())
+    },
+    dataType:"json",
+    success:function (data) {
+
+    }
 });

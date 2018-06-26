@@ -25,11 +25,44 @@
 .row {
 	margin: 0;
 }
+a {
+	cursor: pointer;
+}
 ul {
 	padding: 0;
 }
 li {
 	list-style: none;
+}
+.fmPaging a {
+	color: #333;
+}
+.fmPaging .currentA {
+	color: #7b7446;
+}
+.fmPaging a:hover {
+	color: #7b7446;
+	text-decoration: none;
+}
+.fmPaging a,.fmPaging span {
+	padding-left: 10px;
+}
+.fmPaging input {
+	width: 30px;
+	margin-left: 10px;
+	border: 1px solid #ccc;
+}
+.fmPaging input:focus {
+	outline-color: #7b7446;
+	text-align: center;
+}
+a.btn {
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	padding: 3px 10px;
+}
+a.btn:hover {
+	border-color: #7b7446;
 }
 .noPadding {
 	padding: 0;
@@ -225,6 +258,14 @@ h4 {
 }
 .tw {
 	margin-top: 10px;
+}
+.overTitle {
+	width: 150px;
+	display:inline-block;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	vertical-align: middle;
 }
 .imgLink {
 	display: inline-block;

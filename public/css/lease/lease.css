@@ -9,10 +9,9 @@ a:hover{
     text-decoration:none;
 }
 .banner{
-    margin-top: 100px;
+    margin-top: -50px;
     float: right;
     width: 80%;
-    height: 448px;
     position: relative;
 }
 .banner li{
@@ -285,6 +284,14 @@ a:hover{
     .details {
         left: 64%;
     }
+    .exhibitionBoxImg{
+        width: 200px;
+        height: 200px;
+    }
+    .exhibitionBox img{
+        width: 200px;
+        height: 200px;
+    }
 }
 @media screen and (max-width: 1120px) {
     .details {
@@ -295,10 +302,26 @@ a:hover{
     .details {
         left: 55%;
     }
+    .exhibitionBoxImg{
+        width: 180px;
+        height: 180px;
+    }
+    .exhibitionBox img{
+        width: 180px;
+        height: 180px;
+    }
 }
 @media screen and (max-width: 920px) {
     .details {
-        left: 50%;
+        left: 42%;
+    }
+    .exhibitionBoxImg{
+        width: 150px;
+        height: 150px;
+    }
+    .exhibitionBox img{
+        width: 150px;
+        height: 150px;
     }
 }
 

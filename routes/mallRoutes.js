@@ -14,6 +14,7 @@ const router=express.Router();//获取路由对象
 router.get("/goods",goodscontroller.goodsList);
 //商品详情
 router.get("/goods_details",goodscontroller.goodsDetails);
+router.get("/goods_details.do",goodscontroller.goodsDetails2);
 //租赁
 router.get("/lease",leaseController.leaseList);
 //租赁详情
@@ -24,6 +25,11 @@ router.get("/order",goodscontroller.Order);
 router.get("/pay",goodscontroller.Pay);
 //购物车
 router.get("/shop_cart",goodscontroller.shopCart);
+//加入购物车
+router.get("/addcart",goodscontroller.addshopCart);
+//移除购物车商品
+router.get("/delcartgoods",goodscontroller.delshopCart);
+router.get("/delcartgoods.do",goodscontroller.delshopCart2);
 
 //个人中心
 router.get("/self",selfController.self);
@@ -36,6 +42,7 @@ router.get("/orderG",selfController.orderG);
 router.get("/coupons",selfController.coupons);
 router.get("/afterSale",selfController.afterSale);
 router.get("/help",selfController.help);
+router.get("/saveInfo",selfController.saveInfo);
 
 //index
 router.get("/index",indexController.index);

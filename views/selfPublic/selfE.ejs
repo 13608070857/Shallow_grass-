@@ -79,6 +79,7 @@
                             <li id="header">
                                 <div class="userHead">
                                     <img src="<%=selfEData[0].userImg%>" alt=""/>
+                                    <input type="file" id="headerUp" title="请选择头像图片"/>
                                 </div>
                             </li>
                             <li><input type="text" id="tel" value="<%=selfEData[0].name%>"/></li>
@@ -115,6 +116,29 @@
 <script src="js/buy/distpicker.data.js"></script>
 <script src="js/buy/distpicker.js"></script>
 <script src="js/buy/main.js"></script>
+<script>
+    var imgUrl;
+    $("#headerUp").change(function() {
+        var imgFile = $("#headerUp")[0].files[0];
+        var reader = new FileReader();
+        reader.readAsDataURL(imgFile);
+        reader.onload = function() {
+            imgUrl = this.result
+        }
+    });
+    $(".save").click(function() {
+        $.ajax({
+            type:"POST",
+            url:"/saveInfo",
+            data: {
+                imgUrl:imgUrl,
+            },
+            success:function(data) {
+                console.log(data);
+            }
+        })
+    })
+</script>
 
 </body>
 </html>
