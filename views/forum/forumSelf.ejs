@@ -49,28 +49,47 @@
     <p class="juzhong font-size12"><a href="#">编辑</a></p>
     <p class="juzhong font-size12 colorb4">签名|暂无</p>
     <div class="row selfOptionBox">
-        <div class="col-xs-2 col-xs-offset-2 selfCurrent" onclick="dia(this)">作品</div>
-        <div class="col-xs-2" onclick="dia(this)">相册</div>
-        <div class="col-xs-2" onclick="dia(this)">论坛</div>
-        <div class="col-xs-2" onclick="dia(this)">影赛</div>
+        <div class="col-xs-2 col-xs-offset-2 selfCurrent">帖子</div>
+        <div class="col-xs-2">互动</div>
+        <div class="col-xs-2">提醒</div>
+        <div class="col-xs-2">照片</div>
     </div>
-    <div class="optionContent">
-        <div class="optionContentImg">
-            建立自己的作品<br>
-            先从 <a href="#">发帖</a> 开始哦~
+    <div class="optionDiv">
+        <div class="optionContent disPlay">
+            <div class="optionContentImg">
+                建立自己的作品<br>
+                先从 <a href="#">发帖</a> 开始哦~
+            </div>
+        </div>
+        <div class="optionContent">
+            <div class="optionContentImg">
+                去评论更多帖子<br>
+                点击 <a href="#">浏览</a> 去看看帖子~
+            </div>
+        </div>
+        <div class="optionContent">
+            <div class="optionContentImg">
+                上传照片<br>
+                点击 <a href="#">上传</a> 开始哦~
+            </div>
+        </div>
+        <div class="optionContent">
+            <div class="optionContentImg">
+
+            </div>
         </div>
     </div>
+
 </section>
 <%-include('../index/footer.ejs')%>
 <script>
-    var option = document.getElementsByClassName("selfOptionBox");
-    var optionArr = option[0].getElementsByTagName("div");
-    function dia(a) {
-        for (var i =0;i<optionArr.length;i++){
-            optionArr[i].classList.remove("selfCurrent")
-        }
-        a.classList.add("selfCurrent");
-    }
+    $(".selfOptionBox div").click(function (){
+        $(this).addClass("selfCurrent").siblings().removeClass("selfCurrent");
+        var i=$(this).index();
+        console.log(i)
+        $(".optionContent").eq(i).addClass("disPlay").siblings().removeClass("disPlay");
+    })
+
 </script>
 </body>
 </html>

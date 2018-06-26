@@ -89,7 +89,13 @@ iframe {
     font-weight: bold;
     cursor: pointer;
 }
+.optionDiv{
+    position: relative;
+}
 .optionContent{
+    display: none;
+    position: absolute;
+    top: 0;
     height: 530px;
     width: 100%;
     background: #f5f5f5;
@@ -119,4 +125,7 @@ iframe {
     height: 5px;
     background: red;
     border-radius: 25px;
+}
+.disPlay{
+    display: block;
 }
