@@ -18,11 +18,19 @@ $("#addShop").click(function (event) {
         "overflow":"visible",
         "width":"340px"
     });
-});
-$("#addShop").on("mousedown",function () {
-    console.log("开始刷新！");
-    $("#myShopDiv").load(location.href + " #myShopDiv");
+    $.ajax({
+        type:"get",
+        url:"/goods_details.do",
+        data:{
+            goodsnum:$("#numValue").val(),
+            goodsprice:$("#goodsPrice").html(),
+            totalprice:Number($("#numValue").val()*$("#goodsPrice").html())
+        },
+        dataType:"json",
+        success:function (data) {
 
+        }
+    });
 });
 $("body").click(function () {
     $(".myShopDiv").css({
@@ -74,17 +82,4 @@ $("#badCom").click(function () {
 });
 $("#nullshop").click(function () {
     alert("你还未登录哦！")
-});
-$.ajax({
-    type:"get",
-    url:"/goods_details.do",
-    data:{
-        goodsnum:$("#numValue").val(),
-        goodsprice:$("#goodsPrice").html(),
-        totalprice:Number($("#numValue").val()*$("#goodsPrice").html())
-    },
-    dataType:"json",
-    success:function (data) {
-
-    }
 });

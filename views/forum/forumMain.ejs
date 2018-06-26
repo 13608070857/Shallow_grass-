@@ -24,7 +24,7 @@
                 </li>
                 <li>&gt;</li>
                 <li>
-                    <a href="#"><%forumRepData[0]%></a>
+                    <a href="#"><%=forumRepData[0].categoryName%></a>
                 </li>
                 <li>&gt;</li>
                 <li>正文</li>
@@ -40,7 +40,7 @@
             </div>
         </div>
     </div>
-    <div class="fmTitle">多肉的基础养殖方法</div>
+    <div class="fmTitle"><%=forumRepData[0].postTitle%></div>
     <div class="fmPage row">
         <div class="col-lg-6 fmView">
             <span><i class="iconfont">&#xe66c;</i>222</span>
@@ -84,13 +84,13 @@
                         <span>1</span>楼
                     </div>
                     <div class="col-lg-6 text-right">
-                        <time>2018-06-01 22:11:02</time>
+                        <time><%=forumRepData[0].postTime%></time>
                     </div>
                 </div>
                 <div class="textContain">
-                    <div class="lcText">如果是比较弱小的幼苗，那么它所需要的水分会多一些，可以频繁少量浇水，保持土壤有一点湿度。并且尽量把它们放在更加温暖的地方，一个较为稳定的环境里生长。而成年大颗的多肉植物抵抗力会强很多，浇水一定要少，特别强壮的甚至一个月一滴水不浇也没问题。浇水时将土浇透，土壤的湿度可以向土中插入牙签检测或者通过盆的重量感受。</div>
+                    <div class="lcText"><%=forumRepData[0].postContent%></div>
                     <div class="other">
-                        <img src="img/forum/1.jpg" alt=""/>
+                        <img src="<%=forumRepData[0].postImg%>" alt=""/>
                     </div>
                     <div class="cz text-right">
                         <span class="jb"><i class="iconfont">&#xe601;</i>举报</span>

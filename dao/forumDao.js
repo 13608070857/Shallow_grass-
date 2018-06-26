@@ -39,5 +39,6 @@ const forumModel = {
                 })
         })
     },
+
 };
 module.exports = forumModel;

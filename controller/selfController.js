@@ -1,5 +1,7 @@
 const mysql = require("mysql");
 const selfModel = require("../dao/selfDao");
+const fs = require("fs");
+var count = 0;
 const selfController = {
     //个人中心
     self(req,resp){
@@ -84,7 +86,22 @@ const selfController = {
 
     //文件保存
     saveInfo(req,resp) {
-        console.log(req.body.imgUrl);
+        var username = req.session.user;
+        count++;
+        var imgUrl = req.body.imgUrl;
+        var base64Data = imgUrl.replace("data:image/png;base64,","").replace(/s/g,"+");
+        var dataBuffer = new Buffer(base64Data,"base64");
+        var path = "img/qiancao" + count + ".jpg";
+        fs.writeFile("public/"+path,dataBuffer,function(err) {
+            if(err) {
+                console.log(err);
+            }else {
+                selfModel.updateHeader(path,username)
+                    .then(function(data) {
+                        console.log("sssss");
+                    })
+            }
+        })
     }
 };
 
