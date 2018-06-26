@@ -86,16 +86,20 @@ const selfController = {
 
     //文件保存
     saveInfo(req,resp) {
+        var username = req.session.user;
         count++;
         var imgUrl = req.body.imgUrl;
         var base64Data = imgUrl.replace("data:image/png;base64,","").replace(/s/g,"+");
         var dataBuffer = new Buffer(base64Data,"base64");
-        console.log(dataBuffer);
-        fs.writeFile("public/img/qiancao"+count+".jpg",dataBuffer,function(err) {
+        var path = "img/qiancao" + count + ".jpg";
+        fs.writeFile("public/"+path,dataBuffer,function(err) {
             if(err) {
                 console.log(err);
             }else {
-                console.log("您成功了");
+                selfModel.updateHeader(path,username)
+                    .then(function(data) {
+                        console.log("sssss");
+                    })
             }
         })
     }
