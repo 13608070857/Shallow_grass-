@@ -42,7 +42,7 @@ router.get("/orderG",selfController.orderG);
 router.get("/coupons",selfController.coupons);
 router.get("/afterSale",selfController.afterSale);
 router.get("/help",selfController.help);
-router.get("/saveInfo",selfController.saveInfo);
+router.post("/saveInfo",selfController.saveInfo);
 
 //index
 router.get("/index",indexController.index);
