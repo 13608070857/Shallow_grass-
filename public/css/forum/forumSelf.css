@@ -273,3 +273,6 @@ iframe {
 .NodeDetail:hover .deleteKey{
     color: #717171;
 }
+.zhi{
+    display: none;
+}

@@ -91,6 +91,7 @@
                                 </div>
                             <!--中-->
                             <div class="NodeDetail-content">
+                                <p class="zhi"><%=selfNum[i].postId%></p>
                                 <h3><%=selfNum[i].postTitle%></h3>
                                 <p><%=selfNum[i].postContent%></p>
                             </div>
@@ -155,13 +156,17 @@
 <script src="../js/jquery-3.3.1.js"></script>
 <script src="../js/bootstrap.js"></script>
 <script>
+    var zhi;
     $(".selfOptionBox div").click(function (){
         $(this).addClass("selfCurrent").siblings().removeClass("selfCurrent");
         var i=$(this).index();
-        console.log(i)
         $(".optionContent").eq(i).addClass("disPlay").siblings().removeClass("disPlay");
     })
-
+    $(".deleteKey").click(function () {
+        zhi=$(this).parent().find("p").html();
+    })
+    $("#btn_que").click(function () {
+    })
 
 </script>
 </body>
