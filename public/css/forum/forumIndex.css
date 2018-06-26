@@ -25,6 +25,9 @@
 .row {
 	margin: 0;
 }
+a {
+	cursor: pointer;
+}
 ul {
 	padding: 0;
 }

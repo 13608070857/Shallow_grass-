@@ -19,9 +19,9 @@
 	<div class="container" style="margin-top: 220px;">
 		<section class="banner row">
 			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 bannerImg noPadding">
-				<a href="/forumMain" class="row bannerLink">
+				<a class="row bannerLink" href="/forumMain?id=<%=forumRemInfoData[0].postId%>">
 					<img src="<%=forumRemInfoData[0].postImg%>" alt="">
-					<a href="/forumMain" class="bannerDes">"<%=forumRemInfoData[0].postDes%></a>
+					<a class="bannerDes" href="/forumMain?id=<%=forumRemInfoData[0].postId%>"><%=forumRemInfoData[0].postDes%></a>
 				</a>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
@@ -41,16 +41,16 @@
 						<div class="psC">
 							<div class="psText">
 								<h4>
-									<a class="moveLeft postTitle" href="/forumMain"><%=forumIndexData[i].postTitle%></a>
+									<a class="moveLeft postTitle" href="/forumMain?id=<%=forumIndexData[i].postId%>"><%=forumIndexData[i].postTitle%></a>
 								</h4>
 								<div class="row">
 									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 noPadding">
-										<a href="/forumMain" class="postLink">
+										<a class="postLink" href="/forumMain?id=<%=forumIndexData[i].postId%>">
 											<img class="postImg" src="<%=forumIndexData[i].postImg%>" alt="">
 										</a>
 									</div>
 									<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 noPadding postText">
-										<a href="/forumMain" class="postContent"><%=forumIndexData[i].postContent%></a>
+										<a href="/forumMain?id=<%=forumIndexData[i].postId%>" class="postContent"><%=forumIndexData[i].postContent%></a>
 									</div>
 								</div>
 							</div>
@@ -87,39 +87,39 @@
 					<ul>
 						<li>
 							<span class="mc">0<span class="fontW first">1</span></span>
-							<a href="/forumMain" class="moveLeft"><%=forumRemInfoData[0].postTitle%></a>
+							<a href="/forumMain?id=<%=forumRemInfoData[0].postId%>" class="moveLeft"><%=forumRemInfoData[0].postTitle%></a>
 						</li>
 						<li>
 							<span class="mc">0<span class="fontW">2</span></span>
-							<a href="/forumMain" class="moveLeft"><%=forumRemInfoData[1].postTitle%></a>
+							<a href="/forumMain?id=<%=forumRemInfoData[1].postId%>" class="moveLeft"><%=forumRemInfoData[1].postTitle%></a>
 						</li>
 						<li>
 							<span class="mc">0<span class="fontW">3</span></span>
-							<a href="/forumMain" class="moveLeft"><%=forumRemInfoData[2].postTitle%></a>
+							<a href="/forumMain?id=<%=forumRemInfoData[2].postId%>" class="moveLeft"><%=forumRemInfoData[2].postTitle%></a>
 						</li>
 						<li>
 							<span class="mc">04</span>
-							<a href="/forumMain" class="moveLeft"><%=forumRemInfoData[3].postTitle%></a>
+							<a href="/forumMain?id=<%=forumRemInfoData[3].postId%>" class="moveLeft"><%=forumRemInfoData[3].postTitle%></a>
 						</li>
 						<li>
 							<span class="mc">05</span>
-							<a href="/forumMain" class="moveLeft"><%=forumRemInfoData[4].postTitle%></a>
+							<a href="/forumMain?id=<%=forumRemInfoData[4].postId%>" class="moveLeft"><%=forumRemInfoData[4].postTitle%></a>
 						</li>
 						<li>
 							<span class="mc">06</span>
-							<a href="/forumMain" class="moveLeft"><%=forumRemInfoData[5].postTitle%></a>
+							<a href="/forumMain?id=<%=forumRemInfoData[5].postId%>" class="moveLeft"><%=forumRemInfoData[5].postTitle%></a>
 						</li>
 						<li>
 							<span class="mc">07</span>
-							<a href="/forumMain" class="moveLeft"><%=forumRemInfoData[6].postTitle%></a>
+							<a href="/forumMain?id=<%=forumRemInfoData[6].postId%>" class="moveLeft"><%=forumRemInfoData[6].postTitle%></a>
 						</li>
 						<li>
 							<span class="mc">08</span>
-							<a href="/forumMain" class="moveLeft"><%=forumRemInfoData[7].postTitle%></a>
+							<a href="/forumMain?id=<%=forumRemInfoData[7].postId%>" class="moveLeft"><%=forumRemInfoData[7].postTitle%></a>
 						</li>
 						<li>
 							<span class="mc">09</span>
-							<a href="/forumMain" class="moveLeft"><%=forumRemInfoData[8].postTitle%></a>
+							<a href="/forumMain?id=<%=forumRemInfoData[8].postId%>" class="moveLeft"><%=forumRemInfoData[8].postTitle%></a>
 						</li>
 					</ul>
 				</div>
@@ -128,10 +128,10 @@
 					<ul>
 						<%for(var i=0;i<3;i++) {%>
 						<li class="tw">
-							<a href="/forumMain" class="imgLink">
-								<img src="<%=forumRemInfoData[i].postImg%>" alt="">
+							<a class="imgLink">
+								<img href="/forumMain?id=<%=forumRemInfoData[i].postId%>" src="<%=forumRemInfoData[i].postImg%>" alt="">
 							</a>
-							<a class="overTitle" href="/forumMain"><%=forumRemInfoData[i].postTitle%></a>
+							<a class="overTitle" href="/forumMain?id=<%=forumRemInfoData[i].postId%>"><%=forumRemInfoData[i].postTitle%></a>
 						</li>
 						<%}%>
 					</ul>
@@ -143,10 +143,10 @@
 						<li>
 							<span class="mc">
 								【
-								<a href="/forumMain"><%=forumRemInfoData[i].categoryName%></a>
+								<a href="/forumMain?id=<%=forumRemInfoData[i].postId%>"><%=forumRemInfoData[i].categoryName%></a>
 								】
 							</span>
-							<a class="overTitle" href="/forumMain"><%=forumRemInfoData[i].postTitle%></a>
+							<a class="overTitle" href="/forumMain?id=<%=forumRemInfoData[i].postId%>"><%=forumRemInfoData[i].postTitle%></a>
 						</li>
 						<%}%>
 					</ul>

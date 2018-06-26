@@ -25,8 +25,8 @@ app.use(session({
     saveUninitialized:true //未初始化的cookie要不要保存
 }));
 //post数据读取
-app.use(bodyParser.urlencoded({extended:false}));//默认false
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({limit:"50mb",extended:true,parameterLimit:5000}));//默认false
+app.use(bodyParser.json({limit:"50mb"}));
 app.use(route); //路由
 //静态资源
 app.use(express.static(__dirname+"/public"));  //静态资源路径

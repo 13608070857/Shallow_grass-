@@ -84,7 +84,7 @@ const selfController = {
 
     //文件保存
     saveInfo(req,resp) {
-        console.log(req.query);
+        console.log(req.body.imgUrl);
     }
 };
 

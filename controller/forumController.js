@@ -38,7 +38,13 @@ const forumController = {
             });
     },
     forumMain(req,resp) {
-        resp.render("forum/forumMain",{username:"测试"});
+        var myId = req.url.split("=")[1];
+        forumModel.getForumRepInfo(myId)
+            .then(function(data) {
+                resp.render("forum/forumMain",{
+                    forumRepData:data
+                });
+            })
     },
     forumSelf(req,resp) {
         resp.render("forum/forumSelf",{username:"测试"});
