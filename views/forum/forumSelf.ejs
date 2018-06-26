@@ -26,17 +26,17 @@
                 </div>
                 <div class="col-xs-5">
                     <p>发帖量</p>
-                    <span>2</span>
+                    <span><%=selfNum.length%></span>
                 </div>
             </div>
             <div class="col-xs-6  selfNav">
                 <div class="col-xs-5 col-md-offset-2">
                     <p>关注</p>
-                    <span>13</span>
+                    <span>0</span>
                 </div>
                 <div class="col-xs-5">
                     <p>粉丝</p>
-                    <span>2</span>
+                    <span>0</span>
                 </div>
             </div>
         </div>
@@ -56,10 +56,80 @@
     </div>
     <div class="optionDiv">
         <div class="optionContent disPlay">
-            <div class="optionContentImg">
-                建立自己的作品<br>
-                先从 <a href="#">发帖</a> 开始哦~
+            <%if (selfNum.length==0) {%>
+                <div class="optionContentImg">
+                    建立自己的作品<br>
+                    先从 <a href="#">发帖</a> 开始哦~
+                </div>
+            <%}else {%>
+                <%for (var i=0;i<selfNum.length;i++){%>
+            <!--事件时间轴-->
+            <div class="flowChart">
+                <!--左侧轴-->
+                <div class="flowChart-left">
+                    <!--虚线-->
+                    <div class="dashed"></div>
+                </div>
+                <!--右侧内容-->
+                <div class="flowChart-right">
+                    <!--一个节点-->
+                    <div class="oneNode">
+                        <!--左侧小球-->
+                        <div class="check check-danger">
+                            <%=selfNum[i].postTime.getMonth()+1%>月<%=selfNum[i].postTime.getDate()%>日
+                        </div>
+                        <div class="tag-boder">
+                            <div class="tag">
+                            </div>
+                        </div>
+                        <!--右侧内容-->
+                        <div class="NodeDetail">
+                            <!--上-->
+                                <!--内容-->
+                                <div class="deleteKey">
+                                    <span data-toggle='modal' data-target='#myModal'>删除</span>
+                                </div>
+                            <!--中-->
+                            <div class="NodeDetail-content">
+                                <h3><%=selfNum[i].postTitle%></h3>
+                                <p><%=selfNum[i].postContent%></p>
+                            </div>
+                            <!--下-->
+                            <div class="NodeDetail-footer">
+                                <%=selfNum[i].postTime.getFullYear()%>-<%=selfNum[i].postTime.getMonth()+1%>-<%=selfNum[i].postTime.getDate()%>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!-- 删除按钮的模态框 -->
+            <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                删除此条公告
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            确定要删除吗？
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success my_btn" data-dismiss="modal">
+                                取消
+                            </button>
+                            <button type="button" class="btn btn-success my_btn2 deleteNotice" id="btn_que" data-dismiss="modal">
+                                确定
+                            </button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+                <%}%>
+            <%}%>
         </div>
         <div class="optionContent">
             <div class="optionContentImg">
@@ -82,6 +152,8 @@
 
 </section>
 <%-include('../index/footer.ejs')%>
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../js/bootstrap.js"></script>
 <script>
     $(".selfOptionBox div").click(function (){
         $(this).addClass("selfCurrent").siblings().removeClass("selfCurrent");
@@ -89,6 +161,7 @@
         console.log(i)
         $(".optionContent").eq(i).addClass("disPlay").siblings().removeClass("disPlay");
     })
+
 
 </script>
 </body>

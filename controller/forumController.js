@@ -50,7 +50,12 @@ const forumController = {
         let id=req.query.u_id;
         forumModel.selfGrade([id])
             .then(function (data) {
-                resp.render("forum/forumSelf",{selfGrade:data})
+                let selfGradeData=data;
+                forumModel.selfNum([id])
+                    .then(function (data) {
+                        let selNumData=data;
+                        resp.render("forum/forumSelf",{selfGrade:selfGradeData,selfNum:selNumData})
+                    })
             })
     }
 };
