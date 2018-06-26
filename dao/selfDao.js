@@ -3,7 +3,7 @@ const selfModel = {
     //获取所有用户信息
     getUserInfo(params){
         return new Promise((resolve,reject)=>{
-            dbpool.connect("SELECT * FROM users where name = ?",
+            dbpool.connect("SELECT * FROM users where tel = ?",
                 [params],(err,data)=>{
                     if (!err){
                         resolve(data);
