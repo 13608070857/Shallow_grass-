@@ -25,6 +25,19 @@ const forumModel = {
                     }
                 })
         })
-    }
-}
+    },
+    //获取个人等级
+    selfGrade(params){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM users a,forum_grade b WHERE a.User_gradeid=b.User_gradeid AND u_id=?",
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+};
 module.exports = forumModel;
