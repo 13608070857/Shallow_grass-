@@ -52,34 +52,43 @@
         <span></span>
     </div>
     <div class="New">
-        <div class="N">
-            <a href="../goods/goods_details.html">
-                <img src="../img/index/N1.jpg" alt="">
-            </a>
-            <h5>植物花卉001</h5>
-            <p>$5900</p>
-        </div>
-        <div class="N">
-            <a href="../goods/goods_details.html">
-                <img src="../img/index/N2.jpg" alt="">
-            </a>
-            <h5>植物花卉001</h5>
-            <p>$5900</p>
-        </div>
-        <div class="N">
-            <a href="../goods/goods_details.html">
-                <img src="../img/index/N3.jpg" alt="">
-            </a>
-            <h5>植物花卉001</h5>
-            <p>$5900</p>
-        </div>
-        <div class="N">
-            <a href="../goods/goods_details.html">
-                <img src="../img/index/N4.jpg" alt="">
-            </a>
-            <h5>植物花卉001</h5>
-            <p>$5900</p>
-        </div>
+        <%for (var i=0;i<4;i++) {%>
+            <div class="N">
+                <a href="/goods_details?id=<%=product[i].goods_ID%>&cateid=<%=product[i].cate_ID%>">
+                    <img src="<%=product[i].goodsImg%>" alt="">
+                </a>
+                <h5><%=product[i].goodsName%></h5>
+                <p>$<%=product[i].goodsPrice%></p>
+            </div>
+        <%}%>
+        <!--<div class="N">-->
+            <!--<a href="../goods/goods_details.html">-->
+                <!--<img src="../img/index/N1.jpg" alt="">-->
+            <!--</a>-->
+            <!--<h5>植物花卉001</h5>-->
+            <!--<p>$5900</p>-->
+        <!--</div>-->
+        <!--<div class="N">-->
+            <!--<a href="../goods/goods_details.html">-->
+                <!--<img src="../img/index/N2.jpg" alt="">-->
+            <!--</a>-->
+            <!--<h5>植物花卉001</h5>-->
+            <!--<p>$5900</p>-->
+        <!--</div>-->
+        <!--<div class="N">-->
+            <!--<a href="../goods/goods_details.html">-->
+                <!--<img src="../img/index/N3.jpg" alt="">-->
+            <!--</a>-->
+            <!--<h5>植物花卉001</h5>-->
+            <!--<p>$5900</p>-->
+        <!--</div>-->
+        <!--<div class="N">-->
+            <!--<a href="../goods/goods_details.html">-->
+                <!--<img src="../img/index/N4.jpg" alt="">-->
+            <!--</a>-->
+            <!--<h5>植物花卉001</h5>-->
+            <!--<p>$5900</p>-->
+        <!--</div>-->
     </div>
 </div>
 <!--限时促销-->
@@ -121,46 +130,70 @@
         <span style="margin-left: -230px;width: 230px"></span>
     </div>
     <div class="home">
-        <a href="../goods/goods_details.html">
+        <%for (var i=0;i<4;i++) {%>
+        <% if(i%2 !==0)
+        { %>
+        <a href="/goods_details?id=<%=homes[i].goods_ID%>&cateid=<%=homes[i].cate_ID%>">
             <div class="H">
                 <div class="H1">
-                    <img src="../img/index/H1.jpg" alt="">
+                    <img src="<%=homes[i].goodsImg%>" alt="">
                     <span></span>
-                    <p>植物花卉008</p>
-                    <h3>￥5900</h3>
+                    <p><%=homes[i].goodsName%></p>
+                    <h3>$<%=homes[i].goodsPrice%></h3>
                 </div>
             </div>
-        </a>
-        <a href="../goods/goods_details.html">
+        </a> <% } else
+            { %> <a href="/goods_details?id=<%=homes[i].goods_ID%>&cateid=<%=homes[i].cate_ID%>">
             <div class="H">
                 <div class="H1">
-                    <p>植物花卉008</p>
+                    <p><%=homes[i].goodsName%></p>
                     <span></span>
-                    <h3>￥5900</h3>
-                    <img src="../img/index/H2.jpg" alt="">
+                    <h3>$<%=homes[i].goodsPrice%></h3>
+                    <img src="<%=homes[i].goodsImg%>" alt="">
                 </div>
             </div>
-        </a>
-        <a href="../goods/goods_details.html">
-            <div class="H">
-                <div class="H1">
-                    <img src="../img/index/H3.jpg" alt="">
-                    <span></span>
-                    <p>植物花卉008</p>
-                    <h3>￥5900</h3>
-                </div>
-            </div>
-        </a>
-        <a href="../goods/goods_details.html">
-            <div class="H">
-                <div class="H1">
-                    <p>植物花卉008</p>
-                    <span></span>
-                    <h3>￥5900</h3>
-                    <img src="../img/index/H4.jpg" alt="">
-                </div>
-            </div>
-        </a>
+        </a> <% } %>
+        <%}%>
+        <!--<a href="../goods/goods_details.html">-->
+            <!--<div class="H">-->
+                <!--<div class="H1">-->
+                    <!--<img src="../img/index/H1.jpg" alt="">-->
+                    <!--<span></span>-->
+                    <!--<p>植物花卉008</p>-->
+                    <!--<h3>￥5900</h3>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</a>-->
+        <!--<a href="../goods/goods_details.html">-->
+            <!--<div class="H">-->
+                <!--<div class="H1">-->
+                    <!--<p>植物花卉008</p>-->
+                    <!--<span></span>-->
+                    <!--<h3>￥5900</h3>-->
+                    <!--<img src="../img/index/H2.jpg" alt="">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</a>-->
+        <!--<a href="../goods/goods_details.html">-->
+            <!--<div class="H">-->
+                <!--<div class="H1">-->
+                    <!--<img src="../img/index/H3.jpg" alt="">-->
+                    <!--<span></span>-->
+                    <!--<p>植物花卉008</p>-->
+                    <!--<h3>￥5900</h3>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</a>-->
+        <!--<a href="../goods/goods_details.html">-->
+            <!--<div class="H">-->
+                <!--<div class="H1">-->
+                    <!--<p>植物花卉008</p>-->
+                    <!--<span></span>-->
+                    <!--<h3>￥5900</h3>-->
+                    <!--<img src="../img/index/H4.jpg" alt="">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</a>-->
     </div>
 </div>
 <div class="content" style="border-top:70px solid white;overflow: hidden">

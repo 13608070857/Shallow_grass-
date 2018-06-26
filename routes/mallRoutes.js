@@ -46,6 +46,10 @@ router.get("/rule",indexController.rule);
 router.post("/login.do",indexController.logindo);
 router.get("/yonghu.do",indexController.yonghu);
 router.get("/login2.do",indexController.login2);
+router.get("/phone.do",indexController.phone);
+router.post("/duanxin.do",indexController.duanxin);
+router.post("/zc.do",indexController.zc);
+router.post("/jrsjk.do",indexController.jrsjk);
 
 
 //论坛
