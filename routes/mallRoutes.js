@@ -44,6 +44,7 @@ router.get("/coupons",selfController.coupons);
 router.get("/afterSale",selfController.afterSale);
 router.get("/help",selfController.help);
 router.post("/saveInfo",selfController.saveInfo);
+router.get("/saveInfo.do",selfController.saveOther);
 
 //index
 router.get("/index",indexController.index);

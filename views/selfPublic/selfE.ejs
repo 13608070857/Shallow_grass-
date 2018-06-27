@@ -95,7 +95,7 @@
                             <li><input type="text" class="inputSet tel" value="<%=selfEData[0].tel%>"/></li>
                             <li><input type="text" class="inputSet email" value="<%=selfEData[0].email%>"/></li>
                             <li>
-                                <textarea name="" id="user_show" class="show"><%=selfEData[0].User_show%></textarea>
+                                <textarea style="resize: none;" name="" id="user_show" class="show"><%=selfEData[0].User_show%></textarea>
                             </li>
                         </ul>
                     </div>
@@ -146,6 +146,9 @@
         var u_name = $(".name").val();
         var u_sex;
         for(var i=0;i<$("input[type='radio']").length;i++) {
+            $("input[type='radio']").(()=>{
+                console.log(this);
+            });
             if($("input[type='radio']")[i].hasAttribute("checked")) {
                 u_sex = $("input[type='radio']")[i].value;
             }
@@ -154,20 +157,19 @@
         var u_email = $(".email").val();
         var u_show = $(".show").val();
 
-        $.ajax({
-            type:"POST",
-            url:"/saveInfo.do",
-            data: {
-                u_name:u_name,
-                u_sex:u_sex,
-                u_tel:u_tel,
-                u_email:u_email,
-                u_show:u_show
-            },
-            success:function(data) {
-                console.log(data);
-            }
-        })
+//        $.ajax({
+//            url:"/saveInfo.do",
+//            data: {
+//                u_name:u_name,
+//                u_sex:u_sex,
+//                u_tel:u_tel,
+//                u_email:u_email,
+//                u_show:u_show
+//            },
+//            success:function(data) {
+//                console.log(data);
+//            }
+//        })
 
     })
 </script>

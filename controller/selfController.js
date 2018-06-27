@@ -103,6 +103,20 @@ const selfController = {
                     })
             }
         })
+    },
+
+    //其他信息保存
+    saveOther(req,resp) {
+        var username = req.session.user;
+        var u_name = req.query.u_name;
+        var u_sex = req.query.u_sex;
+        var u_tel = req.query.u_tel;
+        var u_email = req.query.u_email;
+        var u_show = req.query.u_show;
+        selfModel.updateUserInfo(u_name,u_sex,u_tel,u_email,u_show,username)
+            .then(function(data) {
+                console.log(1);
+            })
     }
 };
 
