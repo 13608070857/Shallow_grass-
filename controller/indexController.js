@@ -24,9 +24,49 @@ const indexController ={
             resp.send("发送失败")
         })
     },
+    // 修改密码验证手机号
+    xgsjh(req,resp){
+        let phone=req.query.phone;
+        indexDao.xgsjh(phone)
+            .then(function (data) {
+                // let Num=data.length;
+                // console.log(Num)
+                // if(Num==0){
+                //     resp.send("没有此账号")
+                // }else{
+                //     resp.send("有账号")
+                // }
+                resp.send(data)
+            })
+    },
+    // 修改（获取验证码）
+    xgmmdx(req,resp){
+        console.log("..............")
+        console.log(req.body.phone);
+        AV.Cloud.requestSmsCode({
+            mobilePhoneNumber:req.body.phone,
+            name:"铭铭科技",
+            op:"修改密码",
+            ttl:10
+        }).then(function () {
+            resp.send("发送成功")
+        },function (err) {
+            resp.send("发送失败")
+        })
+    },
     // 注册 1.验证码是否正确
     zc(req,resp){
         AV.Cloud.verifySmsCode(req.body.code,req.body.phone).then(function () {
+            resp.send("验证成功")
+        },function (err) {
+            resp.send("验证失败")
+        })
+    },
+    // 修改密码 1.验证码是否正确
+    xgmmyzm(req,resp){
+        console.log(req.query.code)
+        console.log(req.query.phone)
+        AV.Cloud.verifySmsCode(req.query.code,req.query.phone).then(function () {
             resp.send("验证成功")
         },function (err) {
             resp.send("验证失败")
@@ -54,6 +94,15 @@ const indexController ={
         let phone=req.body.phone;
         let mm=req.body.mm;
         indexDao.jrsjk(phone,mm,C)
+            .then(function (data) {
+                resp.render("index/login",{username:"测试"});
+            })
+    },
+    // 修改密码.保存到数据库
+    xgmmjrsjk(req,resp){
+        let phone=req.query.phone;
+        let mm=req.query.mm;
+        indexDao.xgmmjrsjk(phone,mm)
             .then(function (data) {
                 resp.render("index/login",{username:"测试"});
             })
@@ -88,7 +137,8 @@ const indexController ={
     },
     login2(req,resp){
         req.session.destroy();
-        resp.render("index/index");
+        // resp.render("index/index");
+        resp.redirect("/index");
     },
     // 登陆
     logindo(req,resp){

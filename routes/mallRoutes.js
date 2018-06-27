@@ -58,6 +58,10 @@ router.get("/phone.do",indexController.phone);
 router.post("/duanxin.do",indexController.duanxin);
 router.post("/zc.do",indexController.zc);
 router.post("/jrsjk.do",indexController.jrsjk);
+router.get("/xgsjh.do",indexController.xgsjh);
+router.post("/xgmmdx.do",indexController.xgmmdx);
+router.get("/xgmmyzm.do",indexController.xgmmyzm);
+router.get("/xgmmjrsjk.do",indexController.xgmmjrsjk);
 
 
 //论坛
