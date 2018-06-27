@@ -65,7 +65,7 @@
                     <button type="button" class="btn my_btn pull-left" id="addShop">加入购物车</button>
                     <div class="pull-left myinput">
                         <span class="pull-left" id="numRedu"></span>
-                        <input type="number" value="1" class="pull-left" id="numValue">
+                        <input type="text" value="1" class="pull-left" id="numValue">
                         <span class="pull-left" id="numadd"></span>
                     </div>
                 </div>
@@ -118,9 +118,9 @@
     <div class="myshopCart">购物车</div>
     <div class="myScorll" id="myScorll">
         <ul>
-            <%for (var i=0;i<lease_details.length;i++) {%>
+            <%for (var i=0;i<1;i++) {%>
             <li>
-                <img src="<%=lease_details[i].goodsImg%>" class="img-responsive pull-left">
+                <img src="<%=lease_details[i].detailsImg%>" class="img-responsive pull-left">
                 <span><%=lease_details[i].goods_type%>-</span>
                 <span><%=lease_details[i].goodsName%></span>
                 <span>x</span>
