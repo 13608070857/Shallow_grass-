@@ -24,7 +24,7 @@
 .orderPay>input[type="text"]{
     margin-top: 40px;
 }
-.orderPay>button{
+.orderPay>a>button{
     margin-bottom: 40px;
 }
 .clearBorder{

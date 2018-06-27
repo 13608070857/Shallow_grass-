@@ -14,4 +14,19 @@ $(".delSpan").click(function () {
         }
     });
 });
+$(".yhj_btn").click(function () {
+    var coupon=$("#coupon").val();
+    $.ajax({
+        type:"get",
+        url:"/coupon.do",
+        data:{
+            coupon:coupon
+        },
+        dataType:"json",
+        success:function (data) {
+
+        }
+    });
+    console.log(coupon);
+});
 console.log(delArry[0]);

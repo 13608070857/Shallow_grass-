@@ -14,6 +14,8 @@ $("#numadd").click(function () {
 $(".myShopDiv").css("height",document.documentElement.clientHeight+"px");
 var deccartArry=[];
 var deccartObj={};
+var subtotalArry=[];
+var subtotal=0;
 $("#addShop").click(function (event) {
     event.stopPropagation();
     $(".myShopDiv").css({
@@ -48,6 +50,12 @@ $("#addShop").click(function (event) {
         "                <span>¥<span class='goodsprice'>"+deccartArry[0].goodsPrice+"</span></span>\n" +
         "                </span>\n" +
         "            </li>");
+    subtotalArry.splice(0,subtotalArry.length);
+    subtotalArry.push(Number($(".goodsnum").html()*$(".goodsprice").html()));
+    for (var i=0;i<subtotalArry.length;i++){
+        subtotal+=subtotalArry[i];
+    }
+    $("#subtotal").html(subtotal.toFixed(2));
 });
 $("body").click(function () {
     $(".myShopDiv").css({

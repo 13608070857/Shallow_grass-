@@ -8,6 +8,8 @@ var orderArry=[];
 var orderObj={};
 var glistArry=[];
 var glistObj={};
+var couponArry=[];
+var couponObj={};
 const controller={
     //商品
     goodsList(req,resp){
@@ -198,6 +200,18 @@ const controller={
             console.log(data);
             resp.redirect("/collect")
             })
+    },
+    //优惠劵
+    goodscoupon2(req,resp){
+        let coupon=req.query.coupon;
+        couponObj.coupon=coupon;
+        couponArry.push(couponObj);
+    },
+    goodscoupon(req,resp){
+        goodsmodel.getcoll(couponArry[0].coupon)
+            .then(function (data) {
+                resp.redirect("/shop_cart");
+            });
     }
 };
 module.exports=controller;

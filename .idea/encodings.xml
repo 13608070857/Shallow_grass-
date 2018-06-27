@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/controller/forumController.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dao/forumDao.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dao/goodsDao.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/public/js/goods/order.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/public/js/index/Retrievpassword.js" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />

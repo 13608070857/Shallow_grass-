@@ -1,6 +1,6 @@
 const dbpool=require("../config/dbpoolConfig");
 const goodsModel={
-    //»ñÈ¡ËùÓĞÉÌÆ·
+    //è·å–æ‰€æœ‰å•†å“
     getAllgoods(){
         return new Promise((resolve,reject)=>{
             dbpool.connect("SELECT * FROM goods where inventory>='0'",
@@ -26,7 +26,7 @@ const goodsModel={
                 })
         })
     },
-    //ÉÌÆ·ÏêÇé
+    //å•†å“è¯¦æƒ…
     getGoodsDetail(params){
         return new Promise((resolve,reject)=>{
             dbpool.connect("SELECT * FROM goods g,goods_details gd,goods_category gc WHERE g.goods_ID=gd.goods_ID AND gc.cate_ID=g.cate_ID and g.goods_ID=? and g.inventory>='0'",
@@ -39,7 +39,7 @@ const goodsModel={
                 })
         })
     },
-    //ÈÈÂôÉÌÆ·
+    //çƒ­å–å•†å“
     getHotgoods(){
         return new Promise((resolve,reject)=>{
             dbpool.connect("SELECT * FROM goods WHERE is_hot='1' and inventory>='0' limit 7",
@@ -52,7 +52,7 @@ const goodsModel={
                 })
         })
     },
-    //Ïà¹ØÉÌÆ·
+    //ç›¸å…³å•†å“
     getRelevant(params){
         return new Promise((resolve,reject)=>{
             dbpool.connect("SELECT * FROM goods WHERE cate_ID=? and inventory>='0'",
@@ -65,7 +65,7 @@ const goodsModel={
                 })
         })
     },
-    //ÉÌÆ·ÆÀ·Ö
+    //å•†å“è¯„åˆ†
     getScore(params){
         return new Promise((resolve,reject)=>{
             dbpool.connect("SELECT g.goods_ID,gs.credibility,gs.service,gs.goodsdesc,gs.logistics FROM goods g,goods_score gs WHERE g.goods_ID=gs.goods_ID and g.goods_ID=? AND g.inventory>='0'",
@@ -78,7 +78,7 @@ const goodsModel={
                 })
         })
     },
-    //ÉÌÆ·ÆÀÂÛ
+    //å•†å“è¯„è®º
     getComments(params){
         return new Promise((resolve,reject)=>{
             dbpool.connect("SELECT * FROM goods g,user_comments uc,users u WHERE g.goods_ID=uc.goods_ID AND uc.u_id=u.u_id AND g.goods_ID=? AND g.inventory>='0' AND g.goods_ID IN (uc.goods_ID)",
@@ -91,7 +91,7 @@ const goodsModel={
                 })
         })
     },
-    //ºÃÆÀ
+    //å¥½è¯„
     getgood(params){
         return new Promise((resolve,reject)=>{
             dbpool.connect("SELECT * FROM goods g,user_comments uc,users u WHERE g.goods_ID=uc.goods_ID AND uc.u_id=u.u_id AND g.goods_ID=? AND g.inventory>='0' AND g.goods_ID IN (uc.goods_ID) AND uc.comType='1'",
@@ -104,7 +104,7 @@ const goodsModel={
                 })
         })
     },
-    //ÖĞÆÀ
+    //ä¸­è¯„
     getmed(params){
         return new Promise((resolve,reject)=>{
             dbpool.connect("SELECT * FROM goods g,user_comments uc,users u WHERE g.goods_ID=uc.goods_ID AND uc.u_id=u.u_id AND g.goods_ID=? AND g.inventory>='0' AND g.goods_ID IN (uc.goods_ID) AND uc.comType='2'",
@@ -117,7 +117,7 @@ const goodsModel={
                 })
         })
     },
-    //²îÆÀ
+    //å·®è¯„
     getbad(params){
         return new Promise((resolve,reject)=>{
             dbpool.connect("SELECT * FROM goods g,user_comments uc,users u WHERE g.goods_ID=uc.goods_ID AND uc.u_id=u.u_id AND g.goods_ID=? AND g.inventory>='0' AND g.goods_ID IN (uc.goods_ID) AND uc.comType='3'",
@@ -130,7 +130,7 @@ const goodsModel={
                 })
         })
     },
-    //¹ºÎï³µ
+    //è´­ç‰©è½¦
     getcart(params){
         return new Promise((resolve,reject)=>{
             dbpool.connect("SELECT * FROM shop_cart sc,users u,goods g WHERE sc.u_id=u.u_id AND sc.goods_ID=g.goods_ID and u.tel=? and sc.is_shop='0'",
@@ -143,7 +143,7 @@ const goodsModel={
                 })
         })
     },
-    //¹ºÎï³µĞ¡¼Æ
+    //è´­ç‰©è½¦å°è®¡
     totalcart(params){
         return new Promise((resolve,reject)=>{
             dbpool.connect("SELECT SUM(sc.total_of) as totalcart  FROM shop_cart sc WHERE sc.u_id=(SELECT u.u_id FROM users u WHERE u.tel=? and sc.is_shop='0')",
@@ -156,10 +156,23 @@ const goodsModel={
                 })
         })
     },
-    //ÒÆ³ı¹ºÎï³µÉÌÆ·
+    //ç§»é™¤è´­ç‰©è½¦å•†å“
     delcartgoods(params){
         return new Promise((resolve,reject)=>{
             dbpool.connect("delete from shop_cart where shop_ID=?",
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+    //ä½¿ç”¨ä¼˜æƒ åŠµ
+    getcoll(params){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("update shop_cart set total_of=abs(total_of-(SELECT c.yhprice FROM coupons c WHERE c.code LIKE ?)) WHERE is_shop='0'",
                 [params],(err,data)=>{
                     if (!err){
                         resolve(data);
