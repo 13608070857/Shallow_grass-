@@ -59,6 +59,7 @@ a:hover{
     position: absolute;
     top: 20px;
     right: 20px;
+    font-size: 20px;
 }
 .goodsTextDiv{
     transition: all 0.3s linear;
