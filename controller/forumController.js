@@ -57,6 +57,15 @@ const forumController = {
                         resp.render("forum/forumSelf",{selfGrade:selfGradeData,selfNum:selNumData})
                     })
             })
+    },
+    forumDelete(req,resp){
+        let zhi=req.query.zhi;
+        forumModel.selfDelete([zhi])
+            .then(function(data) {
+                resp.render("forum/forumSelf",{
+                    selfDelete:data
+                });
+            })
     }
 };
 
