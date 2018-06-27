@@ -55,6 +55,11 @@ a:hover{
     /*height: 250px;*/
     transition: all 0.3s linear;
 }
+.collSpan{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
 .goodsTextDiv{
     transition: all 0.3s linear;
 }

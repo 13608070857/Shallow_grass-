@@ -12,6 +12,8 @@ $("#numadd").click(function () {
 });
 //加入购物车
 $(".myShopDiv").css("height",document.documentElement.clientHeight+"px");
+var deccartArry=[];
+var deccartObj={};
 $("#addShop").click(function (event) {
     event.stopPropagation();
     $(".myShopDiv").css({
@@ -31,6 +33,21 @@ $("#addShop").click(function (event) {
 
         }
     });
+    deccartObj.decimg=$("#decimg").attr("src");
+    deccartObj.decname=$("#decname").html();
+    deccartObj.numValue=$("#numValue").val();
+    deccartObj.goodsPrice=$("#goodsPrice").html();
+    deccartArry.push(deccartObj);
+    console.log(deccartArry)
+    $("#detailShopcart").append("<li>\n" +
+        "                <img src='"+deccartArry[0].decimg+"' class=\"img-responsive pull-left goodsimg\">\n" +
+        "                <span class=\"mygoodsName introLine1 pull-left goodsname\">"+deccartArry[0].decname+"</span>\n" +
+        "                <span class=\"mygoodsNum pull-left\">\n" +
+        "                <span class='goodsnum'>"+deccartArry[0].numValue+"</span>\n" +
+        "                <span>x</span>\n" +
+        "                <span>¥<span class='goodsprice'>"+deccartArry[0].goodsPrice+"</span></span>\n" +
+        "                </span>\n" +
+        "            </li>");
 });
 $("body").click(function () {
     $(".myShopDiv").css({
