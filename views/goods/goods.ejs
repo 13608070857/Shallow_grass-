@@ -36,13 +36,13 @@
                 <a href="/goods_details?id=<%=mygoods[i].goods_ID%>&cateid=<%=mygoods[i].cate_ID%>">
                     <div class="goodsImg">
                         <img src="<%=mygoods[i].goodsImg%>" class="img-responsive">
-                        <span class="collSpan iconfont">&#xe694;</span>
                     </div>
                     <div class="goodsTextDiv">
                         <h3 class="goodsNmae"><%=mygoods[i].goodsName%></h3>
                         <div class="goodsPrice"><span>¥<span><%=mygoods[i].goodsPrice%></span></span></div>
                     </div>
                 </a>
+                <span class="collSpan iconfont">&#xe694;</span>
             </div>
             <%}%>
         </div>
