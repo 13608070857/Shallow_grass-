@@ -21,80 +21,82 @@
         <div class="row myorderadd">
             <div class="col-xs-7 orderDiv">
                 <h2>账单地址</h2>
-                <div class="col-xs-12">
-                    <div class="form-group pull-left">
-                        <label for="surname">
-                            <h5>姓 *</h5>
-                        </label>
-                        <input type="text" id="surname" class="form-control clearBorder inputW">
-                        <div id="surnamemsg"></div>
+                <!--<form action="/pay.do" method="get" id="myForm">-->
+                    <div class="col-xs-12">
+                        <div class="form-group pull-left">
+                            <label for="surname">
+                                <h5>姓 *</h5>
+                            </label>
+                            <input type="text" id="surname" class="form-control clearBorder inputW">
+                            <div id="surnamemsg"></div>
+                        </div>
+                        <div class="form-group pull-right">
+                            <label for="name">
+                                <h5>名 *</h5>
+                            </label>
+                            <input type="text" id="name" class="form-control clearBorder inputW">
+                            <div id="namemsg"></div>
+                        </div>
                     </div>
-                    <div class="form-group pull-right">
-                        <label for="name">
-                            <h5>名 *</h5>
-                        </label>
-                        <input type="text" id="name" class="form-control clearBorder inputW">
-                        <div id="namemsg"></div>
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label for="zip_code">
+                                <h5>邮政编码 *</h5>
+                            </label>
+                            <input type="text" class="form-control clearBorder" id="zip_code" placeholder="邮政编码">
+                            <div id="zip_codemsg"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xs-12">
-                    <div class="form-group">
-                        <label for="zip_code">
-                            <h5>邮政编码 *</h5>
-                        </label>
-                        <input type="text" class="form-control clearBorder" id="zip_code" placeholder="邮政编码">
-                        <div id="zip_codemsg"></div>
+                    <div class="col-xs-12">
+                        <div class="form-group pull-left">
+                            <label for="province">
+                                <h5>省 *</h5>
+                            </label>
+                            <select class="form-control clearBorder inputW" id="province">
+                                <option>----省----</option>
+                                <option>China/中国</option>
+                                <option>Yunnan/云南</option>
+                                <option>BeiJing/北京</option>
+                            </select>
+                        </div>
+                        <div class="form-group pull-right">
+                            <label for="city">
+                                <h5>镇/市 *</h5>
+                            </label>
+                            <select class="form-control clearBorder inputW" id="city">
+                                <option>----镇/市----</option>
+                                <option>China/中国</option>
+                                <option>Yunnan/云南</option>
+                                <option>BeiJing/北京</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xs-12">
-                    <div class="form-group pull-left">
-                        <label for="province">
-                            <h5>省 *</h5>
-                        </label>
-                        <select class="form-control clearBorder inputW" id="province">
-                            <option>----省----</option>
-                            <option>China/中国</option>
-                            <option>Yunnan/云南</option>
-                            <option>BeiJing/北京</option>
-                        </select>
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label for="address">
+                                <h5>地址 *</h5>
+                            </label>
+                            <input type="text" class="form-control clearBorder" id="address" placeholder="请输入详细地址">
+                            <div id="addressmsg"></div>
+                        </div>
                     </div>
-                    <div class="form-group pull-right">
-                        <label for="city">
-                            <h5>镇/市 *</h5>
-                        </label>
-                        <select class="form-control clearBorder inputW" id="city">
-                            <option>----镇/市----</option>
-                            <option>China/中国</option>
-                            <option>Yunnan/云南</option>
-                            <option>BeiJing/北京</option>
-                        </select>
+                    <div class="col-xs-12">
+                        <div class="form-group pull-left">
+                            <label for="eamil">
+                                <h5>Email 地址 *</h5>
+                            </label>
+                            <input type="text" id="eamil" class="form-control clearBorder inputW">
+                            <div id="eamilmsg"></div>
+                        </div>
+                        <div class="form-group pull-right">
+                            <label for="phone">
+                                <h5>电话 *</h5>
+                            </label>
+                            <input type="text" id="phone" class="form-control clearBorder inputW">
+                            <div id="phonemsg"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xs-12">
-                    <div class="form-group">
-                        <label for="address">
-                            <h5>地址 *</h5>
-                        </label>
-                        <input type="text" class="form-control clearBorder" id="address" placeholder="请输入详细地址">
-                        <div id="addressmsg"></div>
-                    </div>
-                </div>
-                <div class="col-xs-12">
-                    <div class="form-group pull-left">
-                        <label for="eamil">
-                            <h5>Email 地址 *</h5>
-                        </label>
-                        <input type="text" id="eamil" class="form-control clearBorder inputW">
-                        <div id="eamilmsg"></div>
-                    </div>
-                    <div class="form-group pull-right">
-                        <label for="phone">
-                            <h5>电话 *</h5>
-                        </label>
-                        <input type="text" id="phone" class="form-control clearBorder inputW">
-                        <div id="phonemsg"></div>
-                    </div>
-                </div>
+                <!--</form>-->
             </div>
             <div class="col-xs-5">
                 <div class="borderR">
@@ -127,13 +129,13 @@
                     <div class="borderLast goodsOrder">
                         <span class="pull-left"><h5>订单总计</h5></span>
                         <span class="pull-right">
-                            <h4><span>¥<span><%=totalorder[0].totalcart%></span></span></h4>
+                            <h4><span>¥<span id="totalSpan"><%=totalorder[0].totalcart%></span></span></h4>
                         </span>
                     </div>
                     <div class="moneyRadio2 bordersm">
                         <div class="zfbDiv">
                             <div class="pull-left">
-                                <input type="radio" name="radio" checked="checked"> 支付宝
+                                <input type="radio" name="radio" checked="checked" class="zfbPay" onclick="mypay(this)"> 支付宝
                             </div>
                             <img src="img/goods/alipay.png" class="pull-left">
                         </div>
@@ -142,7 +144,7 @@
                     <div class="moneyRadio2 bordersm">
                         <div class="zfbDiv">
                             <div class="pull-left">
-                                <input type="radio" name="radio"> 微信
+                                <input type="radio" name="radio" class="wxPay" onclick="mypay(this)"> 微信
                             </div>
                             <img src="img/goods/weixin.png" class="pull-left" width="24px">
                         </div>
@@ -150,14 +152,13 @@
                     </div>
                     <div class="moneyRadio">
                         <div>
-                            <input type="radio" name="radio"> 货到付款
+                            <input type="radio" name="radio" class="unPay" onclick="mypay(this)"> 货到付款
                         </div>
                         <p>直接付款到我们的银行账户。请使用订单号作为付款名目。我们会在资金到账后配送订单。</p>
                     </div>
-                    <a href="/pay">
+                    <a href="/pay?totalof=<%=totalorder[0].totalcart%>">
                         <button type="button" class="btn order_btn" id="payorder" disabled="disabled">下单</button>
                     </a>
-                    <!--<button type="button" class="btn order_btn" id="payorder2">下单</button>-->
                 </div>
             </div>
         </div>

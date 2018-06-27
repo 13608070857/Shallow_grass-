@@ -1,3 +1,19 @@
+var paytype=1;
+var payform=1;
+function mypay(obj){
+    if (obj.getAttribute("class")=="zfbPay") {
+        paytype=1;
+        payform=1;
+    }
+    if (obj.getAttribute("class")=="wxPay") {
+        paytype=1;
+        payform=2
+    }
+    if (obj.getAttribute("class")=="unPay") {
+        paytype=0;
+        payform=3
+    }
+}
 $("input").blur(function () {
     var phonetest2=/0?(13|14|15|18)[0-9]{9}/;
     var eamiltest2=/\w+((-w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+/;
@@ -93,6 +109,7 @@ $("#phone").blur(function () {
     }
 });
 $("#payorder").click(function () {
+    console.log("下单开始！")
     var mydate = new Date();
     var year=mydate.getFullYear();
     var month=mydate.getMonth();
@@ -101,6 +118,7 @@ $("#payorder").click(function () {
     var m=mydate.getMinutes();
     var s=mydate.getSeconds();
     var creattime=year+"-"+month+"-"+day+" "+h+":"+m+":"+s;
+    var orderno="0159"+year+month+day+h+m+s;
     $.ajax({
         type:"get",
         url:"/pay.do",
@@ -111,7 +129,11 @@ $("#payorder").click(function () {
             eamil:$("#eamil").val(),
             phone:$("#phone").val(),
             isdefault:1,
-            creattime:creattime
+            creattime:creattime,
+            orderno:orderno,
+            totalprice:$("#totalSpan").html(),
+            paytype:paytype,
+            payform:payform,
         },
         dataType:"json",
         success:function (data) {
