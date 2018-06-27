@@ -68,6 +68,8 @@ router.get("/xgmmjrsjk.do",indexController.xgmmjrsjk);
 router.get("/forumIndex",forumController.forumIndex);
 router.get("/forumMain",forumController.forumMain);
 router.get("/forumSelf",forumController.forumSelf);
+//论坛删除个人帖子
+router.get("/delet.do",forumController.forumDelete);
 
 
 module.exports=router;//公开router

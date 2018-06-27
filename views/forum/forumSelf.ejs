@@ -166,9 +166,11 @@
     $(".deleteKey").click(function () {
         sanchu=$(this).parent().parent().parent().parent();
         zhi=$(this).parent().find("p").html();
+
     })
     $("#btn_que").click(function () {
         sanchu.remove();
+        console.log(zhi)
         $.ajax({
             type:"get",
             url:"/delet.do",
