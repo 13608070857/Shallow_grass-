@@ -30,6 +30,15 @@
         if(A==1){
             $("input").css({"display":"block"});
             A=2
+            $(document).keydown(function(event){
+                if($("input").val()!==""){
+                　　if(event.keyCode == 13){
+                      var input=$("input").val()
+                   location.href="goods?input="+input
+                    　　}
+                }
+            });
+
         }else if(A==2){
             $("input").css({"display":"none"});
             A=1
@@ -53,7 +62,7 @@
                     "<a href='/collect'>我的收藏</a> " +
                     "<a href='/view'>我的足迹</a> " +
                     "<a href='/coupons'>优惠卷</a> " +
-                    "<a onclick='jiangchao()'>退出登录</a> " +
+                    "<a style='cursor:pointer' onclick='jiangchao()'>退出登录</a> " +
                     "</div> " +
                     "</a>"
                     $('.header1').find('p').eq(1).after(html)
