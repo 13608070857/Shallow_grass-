@@ -79,7 +79,6 @@
                             <li id="header">
                                 <div class="userHead">
                                     <img src="<%=selfEData[0].userImg%>" alt=""/>
-                                    <input type="file" id="headerUp" title="请选择头像图片"/>
                                 </div>
                             </li>
                             <li><input type="text" id="tel" value="<%=selfEData[0].name%>"/></li>
@@ -114,11 +113,21 @@
             <div class="pull-right">x</div>
         </div>
         <div class="headerContent">
-            <button class="btn">上传照片</button>
-            <div class="headerImg">
-                <div class="headerCut"></div>
+            <div class="upFile">
+                <button class="btn">上传照片</button>
+                <input type="file" id="headerUp" title="请选择头像图片"/>
             </div>
-            <button class="btn">确定</button>
+            <div class="headerImg">
+                <img class="hImg" src="<%=selfEData[0].userImg%>" alt=""/>
+                <div class="headerFill">
+                    <div class="headerCut"></div>
+                </div>
+
+            </div>
+            <div class="text-right">
+                <button class="btn">确定</button>
+            </div>
+
         </div>
 
     </div>
@@ -138,9 +147,20 @@
         var reader = new FileReader();
         reader.readAsDataURL(imgFile);
         reader.onload = function() {
-            imgUrl = this.result
+            $(".headerImg img").before("<img src='"+this.result+"' id='hiddenImg'/>");
+            $("#hiddenImg")[0].onload = function() {
+                $(this).css("display","none");
+                imgUrl = $(this)[0].src;
+                $(".hImg")[0].src = imgUrl;
+            }
         }
     });
+    $(".headerCut").on("mousedown",function(e) {
+        var clickE = e;
+        $(this).on("mousemove",function(e) {
+            var currentE = e;
+        })
+    })
     $(".save").click(function() {
         $.ajax({
             type:"POST",

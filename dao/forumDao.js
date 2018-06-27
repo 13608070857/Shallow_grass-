@@ -39,6 +39,18 @@ const forumModel = {
                 })
         })
     },
-
+    //获取发帖数量
+    selfNum(params){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM post WHERE u_id=?",
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
 };
 module.exports = forumModel;

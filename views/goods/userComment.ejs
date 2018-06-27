@@ -21,7 +21,7 @@
                 <div class="comText pull-left">
                     <span><%=goodsComments[i].name%>：</span>
                     <div><%=goodsComments[i].com_Content%></div>
-                    <p><%=goodsComments[i].comTime%></p>
+                    <p><%=goodsComments[i].comTime.getFullYear()+"-"+(goodsComments[i].comTime.getMonth()+1)+"-"+goodsComments[i].comTime.getDate()+" "+goodsComments[i].comTime.getHours()+":"+goodsComments[i].comTime.getMinutes()+":"+goodsComments[i].comTime.getSeconds()%></p>
                 </div>
             </li>
             <%}%>
