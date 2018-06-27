@@ -41,9 +41,18 @@ const forumController = {
         var myId = req.url.split("=")[1];
         forumModel.getForumRepInfo(myId)
             .then(function(data) {
-                resp.render("forum/forumMain",{
-                    forumRepData:data
-                });
+                var forumRepData=data
+                    forumModel.xxm(myId)
+                        .then(function (data) {
+                            let xxm=data
+                            console.log(xxm)
+                            resp.render("forum/forumMain",{
+                                forumRepData:forumRepData,
+                                xxm:xxm
+                        })
+
+                    })
+
             })
     },
     forumSelf(req,resp) {

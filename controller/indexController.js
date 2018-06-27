@@ -109,14 +109,19 @@ const indexController ={
     },
     // 首页
     index(req,resp){
-        // resp.render("index/index",{user:req.session.user});
         indexDao.product()
             .then(function (data) {
                 let product=data
                     indexDao.homes()
                         .then(function (data) {
                             let homes=data
-                resp.render("index/index",{user:req.session.user,product:product,homes:homes});
+                                indexDao.lt()
+                                    .then(function (data) {
+                                        console.log(data)
+                                        let lt=data
+                                        resp.render("index/index",{user:req.session.user,product:product,homes:homes,lt:lt});
+                                    })
+
                 });
             });
     },

@@ -13,6 +13,18 @@ const indexModel={
                 })
         })
     },
+    lt(){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM post",
+                [],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
     // 手机号有没有被注册过
     phone(phone){
         console.log(phone)

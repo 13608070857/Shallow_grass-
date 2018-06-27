@@ -70,9 +70,11 @@
     <div class="fmContain">
         <div class="fmCList row">
             <div class="col-lg-2 userBaseInfo text-center">
-                <a href="/forumSelf" class="userImg"></a>
-                <a href="#" class="center-block">浅草ss</a>
-                <button class="btn hyBtn">中级会员</button>
+                <a style="overflow: hidden" href="/forumSelf" class="userImg">
+                    <img class="img-responsive" style="height: 80px;width: 80px" src="<%=forumRepData[0].userImg%>" alt="">
+                </a>
+                <a href="#" class="center-block"><%=forumRepData[0].name%></a>
+                <button class="btn hyBtn"><%=forumRepData[0].user_gradeCat%></button>
                 <div class="other">
                     <button class="btn bqBtn concern"><i class="iconfont">&#xe67f;</i>关注</button>
                     <button class="btn tzBtn">聊天</button>
@@ -109,9 +111,11 @@
         </div>
         <div class="fmCList row">
             <div class="col-lg-2 userBaseInfo text-center">
-                <a href="#" class="userImg"></a>
-                <a href="#" class="center-block">浅草ss</a>
-                <button class="btn hyBtn">中级会员</button>
+                <a href="#" class="userImg" style="overflow: hidden" >
+                    <img class="img-responsive" style="height: 80px;width: 80px" src="<%=xxm[0].userImg%>" alt="">
+                </a>
+                <a href="#" class="center-block"><%=xxm[0].name%></a>
+                <button class="btn hyBtn"><%=xxm[0].user_gradeCat%></button>
                 <div class="other">
                     <button class="btn bqBtn concern"><i class="iconfont">&#xe67f;</i>关注</button>
                     <button class="btn tzBtn">聊天</button>
