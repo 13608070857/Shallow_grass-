@@ -12,6 +12,7 @@ const leaseController = require("../controller/leaseController");
 const router=express.Router();//获取路由对象
 //商品
 router.get("/goods",goodscontroller.goodsList);
+router.get("/goods.do",goodscontroller.goodsList2);
 //商品详情
 router.get("/goods_details",goodscontroller.goodsDetails);
 router.get("/goods_details.do",goodscontroller.goodsDetails2);
@@ -31,6 +32,8 @@ router.get("/addcart",goodscontroller.addshopCart);
 //移除购物车商品
 router.get("/delcartgoods",goodscontroller.delshopCart);
 router.get("/delcartgoods.do",goodscontroller.delshopCart2);
+//收藏
+router.get("/collection",goodscontroller.goodscollection);
 
 //个人中心
 router.get("/self",selfController.self);
@@ -44,6 +47,7 @@ router.get("/coupons",selfController.coupons);
 router.get("/afterSale",selfController.afterSale);
 router.get("/help",selfController.help);
 router.post("/saveInfo",selfController.saveInfo);
+router.get("/saveInfo.do",selfController.saveOther);
 
 //index
 router.get("/index",indexController.index);

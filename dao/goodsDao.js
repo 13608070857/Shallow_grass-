@@ -133,7 +133,7 @@ const goodsModel={
     //购物车
     getcart(params){
         return new Promise((resolve,reject)=>{
-            dbpool.connect("SELECT * FROM shop_cart sc,users u,goods g WHERE sc.u_id=u.u_id AND sc.goods_ID=g.goods_ID and u.tel=?",
+            dbpool.connect("SELECT * FROM shop_cart sc,users u,goods g WHERE sc.u_id=u.u_id AND sc.goods_ID=g.goods_ID and u.tel=? and sc.is_shop='0'",
                 [params],(err,data)=>{
                     if (!err){
                         resolve(data);
@@ -146,7 +146,7 @@ const goodsModel={
     //购物车小计
     totalcart(params){
         return new Promise((resolve,reject)=>{
-            dbpool.connect("SELECT SUM(sc.total_of) as totalcart  FROM shop_cart sc WHERE sc.u_id=(SELECT u.u_id FROM users u WHERE u.tel=?)",
+            dbpool.connect("SELECT SUM(sc.total_of) as totalcart  FROM shop_cart sc WHERE sc.u_id=(SELECT u.u_id FROM users u WHERE u.tel=? and sc.is_shop='0')",
                 [params],(err,data)=>{
                     if (!err){
                         resolve(data);
@@ -159,7 +159,7 @@ const goodsModel={
     //移除购物车商品
     delcartgoods(params){
         return new Promise((resolve,reject)=>{
-            dbpool.connect("delete from shop_cart where ID=?",
+            dbpool.connect("delete from shop_cart where shop_ID=?",
                 [params],(err,data)=>{
                     if (!err){
                         resolve(data);

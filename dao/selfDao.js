@@ -83,6 +83,20 @@ const selfModel = {
                     }
                 })
         })
-    }
+    },
+
+    //修改个人信息
+    updateUserInfo(param1,param2,param3,param4,param5,param6) {
+        return new Promise((resolve,reject)=>{
+            dbpool.connect('UPDATE users SET name=?,sex=?,tel=?,email=?,User_show=? WHERE tel=?',
+                [param1,param2,param3,param4,param5,param6],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
 }
 module.exports = selfModel;

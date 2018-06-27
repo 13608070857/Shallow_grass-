@@ -54,10 +54,11 @@
                         </thead>
                         <tbody>
                         <%for (var i=0;i<shopCart.length;i++) {%>
+
                         <tr>
                             <td>
                                 <a href="/delcartgoods">
-                                    <span title="移除本项" class="delSpan" id="<%=shopCart[i].ID%>">✘</span>
+                                    <span title="移除本项" class="delSpan" id="<%=shopCart[i].shop_ID%>">✘</span>
                                 </a>
                                 <img src="<%=shopCart[i].goodsImg%>" class="shopImg" width="100px" height="100px">
                                 <span><%=shopCart[i].goodsName%></span>
@@ -68,13 +69,14 @@
                             <td>
                                 <%=shopCart[i].goodsNum%>
                                 <!--<div class="myinput2">-->
-                                    <!--<span class="pull-left numRedu"></span>-->
-                                    <!--<input type="number" value="1" class="pull-left numValue" disabled>-->
-                                    <!--<span class="pull-left numadd"></span>-->
+                                <!--<span class="pull-left numRedu"></span>-->
+                                <!--<input type="number" value="1" class="pull-left numValue" disabled>-->
+                                <!--<span class="pull-left numadd"></span>-->
                                 <!--</div>-->
                             </td>
                             <td><span>¥<span><%=shopCart[i].total_of%></span></span></td>
                         </tr>
+
                         <%}%>
                         </tbody>
                     </table>

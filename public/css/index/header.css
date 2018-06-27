@@ -71,6 +71,7 @@
     text-indent: 1em;
     color: rgb(134,117,117);
     display: none;
+    font-size: 12px;
 }
 header{
     width: 100%;

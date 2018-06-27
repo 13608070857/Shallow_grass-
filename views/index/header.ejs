@@ -28,19 +28,19 @@
     var A=1;
     $(".header1 a").eq($(".header1 a").length-1).click(function () {
         if(A==1){
-            $("input").css({"display":"block"});
+            $("input").eq(0).css({"display":"block"});
             A=2
             $(document).keydown(function(event){
-                if($("input").val()!==""){
+                if($("input").eq(0).val()!==""){
                 　　if(event.keyCode == 13){
-                      var input=$("input").val()
+                      var input=$("input").eq(0).val()
                    location.href="goods?input="+input
                     　　}
                 }
             });
 
         }else if(A==2){
-            $("input").css({"display":"none"});
+            $("input").eq(0).css({"display":"none"});
             A=1
         }
     })

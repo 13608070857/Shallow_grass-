@@ -89,19 +89,34 @@ const selfController = {
         var username = req.session.user;
         count++;
         var imgUrl = req.body.imgUrl;
+        console.log(imgUrl);
         var base64Data = imgUrl.replace("data:image/png;base64,","").replace(/s/g,"+");
         var dataBuffer = new Buffer(base64Data,"base64");
-        var path = "img/qiancao" + count + ".jpg";
+        var path = "img/qiancao" + count + ".png";
         fs.writeFile("public/"+path,dataBuffer,function(err) {
             if(err) {
                 console.log(err);
             }else {
                 selfModel.updateHeader(path,username)
                     .then(function(data) {
-                        console.log("sssss");
+                        console.log();
                     })
             }
         })
+    },
+
+    //其他信息保存
+    saveOther(req,resp) {
+        var username = req.session.user;
+        var u_name = req.query.u_name;
+        var u_sex = req.query.u_sex;
+        var u_tel = req.query.u_tel;
+        var u_email = req.query.u_email;
+        var u_show = req.query.u_show;
+        selfModel.updateUserInfo(u_name,u_sex,u_tel,u_email,u_show,username)
+            .then(function(data) {
+                console.log(1);
+            })
     }
 };
 
