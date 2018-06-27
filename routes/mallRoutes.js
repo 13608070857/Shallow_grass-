@@ -58,12 +58,18 @@ router.get("/phone.do",indexController.phone);
 router.post("/duanxin.do",indexController.duanxin);
 router.post("/zc.do",indexController.zc);
 router.post("/jrsjk.do",indexController.jrsjk);
+router.get("/xgsjh.do",indexController.xgsjh);
+router.post("/xgmmdx.do",indexController.xgmmdx);
+router.get("/xgmmyzm.do",indexController.xgmmyzm);
+router.get("/xgmmjrsjk.do",indexController.xgmmjrsjk);
 
 
 //论坛
 router.get("/forumIndex",forumController.forumIndex);
 router.get("/forumMain",forumController.forumMain);
 router.get("/forumSelf",forumController.forumSelf);
+//论坛删除个人帖子
+router.get("/delet.do",forumController.forumDelete);
 
 
 module.exports=router;//公开router

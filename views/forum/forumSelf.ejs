@@ -16,7 +16,7 @@
 <body>
 <%-include('../index/header.ejs')%>
 <!--<div class="navHidden"></div>-->
-<section class="content" style="margin-top: 220px;">
+<section class="content" style="margin-top: 160px;">
     <div class="row selfBg">
         <div class="selfBgBlack">
             <div class="col-xs-6 selfNav">
@@ -46,13 +46,12 @@
     </div>
     <div class="touxiangDw"></div>
     <p class="juzhong font-weight"><%=selfGrade[0].name%></p>
-    <p class="juzhong font-size12"><a href="#">编辑</a></p>
     <p class="juzhong font-size12 colorb4"><%=selfGrade[0].User_show%></p>
     <div class="row selfOptionBox">
         <div class="col-xs-2 col-xs-offset-2 selfCurrent">帖子</div>
         <div class="col-xs-2">互动</div>
-        <div class="col-xs-2">提醒</div>
         <div class="col-xs-2">照片</div>
+        <div class="col-xs-2">提醒</div>
     </div>
     <div class="optionDiv">
         <div class="optionContent disPlay">
@@ -112,7 +111,7 @@
                                 &times;
                             </button>
                             <h4 class="modal-title" id="myModalLabel">
-                                删除此条公告
+                                删除此条贴子吗
                             </h4>
                         </div>
                         <div class="modal-body">
@@ -156,6 +155,7 @@
 <script src="../js/jquery-3.3.1.js"></script>
 <script src="../js/bootstrap.js"></script>
 <script>
+    var sanchu;
     var zhi;
     $(".selfOptionBox div").click(function (){
         $(this).addClass("selfCurrent").siblings().removeClass("selfCurrent");
@@ -163,9 +163,20 @@
         $(".optionContent").eq(i).addClass("disPlay").siblings().removeClass("disPlay");
     })
     $(".deleteKey").click(function () {
+        sanchu=$(this).parent().parent().parent().parent();
         zhi=$(this).parent().find("p").html();
+
     })
     $("#btn_que").click(function () {
+        sanchu.remove();
+        console.log(zhi)
+        $.ajax({
+            type:"get",
+            url:"/delet.do",
+            data:{
+                zhi:zhi
+            }
+        })
     })
 
 </script>

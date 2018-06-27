@@ -13,6 +13,19 @@ const goodsModel={
                 })
         })
     },
+    ss(input,mysql,mysql1){
+        return new Promise((resolve,reject)=>{
+            console.log(input)
+            dbpool.connect(mysql+input+mysql1,
+                [input],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
     //ÉÌÆ·ÏêÇé
     getGoodsDetail(params){
         return new Promise((resolve,reject)=>{

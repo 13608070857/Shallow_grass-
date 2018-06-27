@@ -27,6 +27,20 @@ const indexModel={
                 })
         })
     },
+    // 修改密码验证手机号
+    xgsjh(phone){
+        console.log(phone)
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM users where tel=?",
+                [phone],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
     // 注册2.保存到数据库
     jrsjk(phone,mm,C){
         return new Promise((resolve,reject)=>{
@@ -34,6 +48,19 @@ const indexModel={
                 "\n" +
                 "(null,null,?,?,null,?,null,null,null,null,null,null,null,null,null)",
                 [C,phone,mm],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+    // 修改密码.保存到数据库
+    xgmmjrsjk(phone,mm){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("UPDATE users SET PASSWORD=? WHERE tel=?;",
+                [mm,phone],(err,data)=>{
                     if (!err){
                         resolve(data);
                     } else {

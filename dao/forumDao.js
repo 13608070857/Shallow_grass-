@@ -52,5 +52,18 @@ const forumModel = {
                 })
         })
     },
+    //删除个人帖子
+    selfDelete(params){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("DELETE FROM post WHERE postId=?",
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
 };
 module.exports = forumModel;
