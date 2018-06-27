@@ -156,6 +156,7 @@
 <script src="../js/jquery-3.3.1.js"></script>
 <script src="../js/bootstrap.js"></script>
 <script>
+    var sanchu;
     var zhi;
     $(".selfOptionBox div").click(function (){
         $(this).addClass("selfCurrent").siblings().removeClass("selfCurrent");
@@ -163,17 +164,16 @@
         $(".optionContent").eq(i).addClass("disPlay").siblings().removeClass("disPlay");
     })
     $(".deleteKey").click(function () {
+        sanchu=$(this).parent().parent().parent().parent();
         zhi=$(this).parent().find("p").html();
     })
     $("#btn_que").click(function () {
+        sanchu.remove();
         $.ajax({
-            url:"xrz",
             type:"get",
+            url:"/delet.do",
             data:{
                 zhi:zhi
-            },
-            success:function () {
-
             }
         })
     })
