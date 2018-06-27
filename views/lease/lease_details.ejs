@@ -111,107 +111,30 @@
                 </div>
             <%}%>
         <%}%>
-        <!--<div class="productOne">-->
-            <!--<div class="productText">-->
-                <!--<p class="productTitle">它让你感受到南西群岛的海岸</p>-->
-                <!--<p>南塞岛沿海隆起珊瑚礁栖息常绿灌木。</p>-->
-                <!--<p>这个iso薄荷来自冲绳。</p>-->
-                <!--<p>这让我感受到日本南部国家海岸的风光。</p>-->
-            <!--</div>-->
-            <!--<div class="productImg">-->
-                <!--<img src="../img/lease/T1-1.jpg">-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="productOne">-->
-            <!--<div class="productText2">-->
-                <!--<p class="productTitle2">Niregayaki石头和亮点</p>-->
-                <!--<p>生动的杂色榆木强烈地站在石头上。</p>-->
-                <!--<p>这是一棵有趣的树，因为它是未来的树。</p>-->
-                <!--<p>通过简单地剪裁，植物等的运动也完美地完成。</p>-->
-            <!--</div>-->
-            <!--<div class="productImg2">-->
-                <!--<img src="../img/lease/T1-2.jpg">-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="productOne">-->
-            <!--<div class="productText">-->
-                <!--<p class="productTitle">特色股东和螺旋芽</p>-->
-                <!--<p>漂亮的花蕾如同崎岖的股票和春天的对比，是一棵美妙的树。</p>-->
-                <!--<p>因为它是一个湿地带工厂，所以最好提高湿度并将其提升半阴，避免阳光直射。</p>-->
-            <!--</div>-->
-            <!--<div class="productImg">-->
-                <!--<img src="../img/lease/T1-3.jpg">-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="productOne">-->
-            <!--<div class="productText2">-->
-                <!--<p class="productTitle2">Niregayaki石头和亮点</p>-->
-                <!--<p>南塞岛沿海隆起珊瑚礁栖息常绿灌木。</p>-->
-                <!--<p>漂亮的花蕾如同崎岖的股票和春天的对比，是一棵美妙的树。</p>-->
-                <!--<p>因为它是一个湿地带工厂，所以最好提高湿度并将其提升半阴，避免阳光直射。</p>-->
-            <!--</div>-->
-            <!--<div class="productImg2">-->
-                <!--<img src="../img/lease/T1-4.jpg">-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="productOne">-->
-            <!--<div class="productText">-->
-                <!--<p class="productTitle">特色股东和螺旋芽</p>-->
-                <!--<p>南塞岛沿海隆起珊瑚礁栖息常绿灌木。</p>-->
-                <!--<p>这个iso薄荷来自冲绳。</p>-->
-                <!--<p>这让我感受到日本南部国家海岸的风光。</p>-->
-            <!--</div>-->
-            <!--<div class="productImg">-->
-                <!--<img src="../img/lease/T2-1.jpg">-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="productOne">-->
-            <!--<div class="productText2">-->
-                <!--<p class="productTitle2">Niregayaki石头和亮点</p>-->
-                <!--<p>南塞岛沿海隆起珊瑚礁栖息常绿灌木。</p>-->
-                <!--<p>漂亮的花蕾如同崎岖的股票和春天的对比，是一棵美妙的树。</p>-->
-                <!--<p>因为它是一个湿地带工厂，所以最好提高湿度并将其提升半阴，避免阳光直射。</p>-->
-            <!--</div>-->
-            <!--<div class="productImg2">-->
-                <!--<img src="../img/lease/T2-2.jpg">-->
-            <!--</div>-->
-        <!--</div>-->
     </div>
 </section>
 <%include ../index/footer.ejs%>
-<div class="myShopDiv">
+<div class="myShopDiv" id="myShopDiv">
     <div class="myshopCart">购物车</div>
-    <div class="myScorll">
+    <div class="myScorll" id="myScorll">
         <ul>
+            <%for (var i=0;i<lease_details.length;i++) {%>
             <li>
-                <img src="../img/goods/jUwLmpwZw_01.jpg" class="img-responsive pull-left">
-                <span class="mygoodsName introLine1 pull-left">植物花卉001</span>
-                <span class="mygoodsNum pull-left">
-                <span>1</span>
+                <img src="<%=lease_details[i].goodsImg%>" class="img-responsive pull-left">
+                <span><%=lease_details[i].goods_type%>-</span>
+                <span><%=lease_details[i].goodsName%></span>
                 <span>x</span>
-                <span>¥<span>5900</span></span>
+                <span><%=lease_details[i].goods_num%></span>
             </span>
                 <span title="删除" class="pull-right mydelSpan">×</span>
             </li>
-            <li>
-                <img src="../img/goods/jUwLmpwZw_02.jpg" class="img-responsive pull-left">
-                <span class="mygoodsName introLine1 pull-left">植物花卉001</span>
-                <span class="mygoodsNum pull-left">
-                <span>1</span>
-                <span>x</span>
-                <span>¥<span>5900</span></span>
-            </span>
-                <span title="删除" class="pull-right mydelSpan">×</span>
-            </li>
+            <%}%>
         </ul>
     </div>
     <div class="text-center xjMoney">
-        <span>小计¥<span>94400</span></span>
+        <span>小计¥<span></span></span>
     </div>
-    <a href="shop_cart.html">
-        <button type="button" class="btn btn-block btn_mycart">查看购物车</button>
-    </a>
-    <a href="order.html">
+    <a href="/order">
         <button type="button" class="btn btn-block btn_mysum">结算</button>
     </a>
 </div>

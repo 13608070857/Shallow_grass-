@@ -78,60 +78,35 @@
                         <ul>
                             <li id="header">
                                 <div class="userHead">
-                                    <img src="<%=selfEData[0].userImg%>" alt=""/>
+                                    <img class="hImg" src="<%=selfEData[0].userImg%>" alt=""/>
+                                    <input type="file" id="headerUp" title="请选择头像图片"/>
                                 </div>
                             </li>
-                            <li><input type="text" id="tel" value="<%=selfEData[0].name%>"/></li>
+                            <li><input type="text" class="inputSet name" value="<%=selfEData[0].name%>"/></li>
                             <li>
                                 <%if(selfEData[0].sex == "男") {%>
-                                <input type="radio" checked name="sex"/>男
-                                <input type="radio" name="sex"/>女
+                                <input type="radio" checked name="sex" value="男"/>男
+                                <input type="radio" name="sex" value="女"/>女
                                 <%}else {%>
-                                <input type="radio" name="sex"/>男
-                                <input type="radio" checked name="sex"/>女
+                                <input type="radio" name="sex" value="男"/>男
+                                <input type="radio" checked name="sex" value="女"/>女
                                 <%}%>
                             </li>
-                            <li><input type="text" id="tel" value="<%=selfEData[0].tel%>"/></li>
-                            <li><input type="text" id="tel" value="<%=selfEData[0].email%>"/></li>
+                            <li><input type="text" class="inputSet tel" value="<%=selfEData[0].tel%>"/></li>
+                            <li><input type="text" class="inputSet email" value="<%=selfEData[0].email%>"/></li>
                             <li>
-                                <textarea name="" id="user_show"><%=selfEData[0].User_show%></textarea>
+                                <textarea name="" id="user_show" class="show"><%=selfEData[0].User_show%></textarea>
                             </li>
                         </ul>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 esOther">
-                        <button class="btn save">保存</button>
+                        <button type="button" class="btn save">保存</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </section>
-<div class="headerPop">
-    <div class="updataHeader">
-        <div class="headerTitle clearfix">
-            <div class="pull-left">更换图片</div>
-            <div class="pull-right">x</div>
-        </div>
-        <div class="headerContent">
-            <div class="upFile">
-                <button class="btn">上传照片</button>
-                <input type="file" id="headerUp" title="请选择头像图片"/>
-            </div>
-            <div class="headerImg">
-                <img class="hImg" src="<%=selfEData[0].userImg%>" alt=""/>
-                <div class="headerFill">
-                    <div class="headerCut"></div>
-                </div>
-
-            </div>
-            <div class="text-right">
-                <button class="btn">确定</button>
-            </div>
-
-        </div>
-
-    </div>
-</div>
 <%-include('../index/footer.ejs')%>
 
 <script src="js/jquery-3.3.1.js"></script>
@@ -141,37 +116,59 @@
 <script src="js/buy/distpicker.js"></script>
 <script src="js/buy/main.js"></script>
 <script>
+    var s = "";
     var imgUrl;
     $("#headerUp").change(function() {
         var imgFile = $("#headerUp")[0].files[0];
         var reader = new FileReader();
         reader.readAsDataURL(imgFile);
         reader.onload = function() {
-            $(".headerImg img").before("<img src='"+this.result+"' id='hiddenImg'/>");
+            $(".hImg").before("<img src='"+this.result+"' id='hiddenImg'/>");
             $("#hiddenImg")[0].onload = function() {
                 $(this).css("display","none");
                 imgUrl = $(this)[0].src;
                 $(".hImg")[0].src = imgUrl;
+                $.ajax({
+                    type:"POST",
+                    url:"/saveInfo",
+                    data: {
+                        imgUrl:imgUrl,
+                    },
+                    success:function(data) {
+                        console.log(data);
+                    }
+                })
             }
+
         }
     });
-    $(".headerCut").on("mousedown",function(e) {
-        var clickE = e;
-        $(this).on("mousemove",function(e) {
-            var currentE = e;
-        })
-    })
     $(".save").click(function() {
+        var u_name = $(".name").val();
+        var u_sex;
+        for(var i=0;i<$("input[type='radio']").length;i++) {
+            if($("input[type='radio']")[i].hasAttribute("checked")) {
+                u_sex = $("input[type='radio']")[i].value;
+            }
+        }
+        var u_tel = $(".tel").val();
+        var u_email = $(".email").val();
+        var u_show = $(".show").val();
+
         $.ajax({
             type:"POST",
-            url:"/saveInfo",
+            url:"/saveInfo.do",
             data: {
-                imgUrl:imgUrl,
+                u_name:u_name,
+                u_sex:u_sex,
+                u_tel:u_tel,
+                u_email:u_email,
+                u_show:u_show
             },
             success:function(data) {
                 console.log(data);
             }
         })
+
     })
 </script>
 
