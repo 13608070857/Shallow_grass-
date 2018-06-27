@@ -12,6 +12,7 @@ const leaseController = require("../controller/leaseController");
 const router=express.Router();//获取路由对象
 //商品
 router.get("/goods",goodscontroller.goodsList);
+router.get("/goods.do",goodscontroller.goodsList2);
 //商品详情
 router.get("/goods_details",goodscontroller.goodsDetails);
 router.get("/goods_details.do",goodscontroller.goodsDetails2);

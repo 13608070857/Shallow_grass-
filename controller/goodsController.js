@@ -6,26 +6,37 @@ var goodsObj={};
 var shopdelId=[];
 var orderArry=[];
 var orderObj={};
+var glistArry=[];
+var glistObj={};
 const controller={
     //商品
     goodsList(req,resp){
-    if(req.query.input!=undefined){
-        let input=req.query.input;
-        let mysql="SELECT * FROM goods WHERE goodsName LIKE '%";
-        let mysql1="%'";
-        goodsmodel.ss(input,mysql,mysql1)
-            .then(function (data) {
-                console.log(data.length)
-                resp.render("goods/goods",{mygoods:data});
-            });
-    }else {
-        goodsmodel.getAllgoods()
-            .then(function (data) {
-                console.log("空")
-                resp.render("goods/goods",{mygoods:data});
-            });
-    }
-
+        if(req.query.input!=undefined){
+            let input=req.query.input;
+            let mysql="SELECT * FROM goods WHERE goodsName LIKE '%";
+            let mysql1="%'";
+            goodsmodel.ss(input,mysql,mysql1)
+                .then(function (data) {
+                    console.log(data.length)
+                    resp.render("goods/goods",{mygoods:data});
+                });
+        }else {
+            goodsmodel.getAllgoods()
+                .then(function (data) {
+                    console.log("空")
+                    resp.render("goods/goods",{mygoods:data});
+                });
+        }
+    },
+    goodsList2(req,resp){
+        let goodsimgList=req.query.goodsimgList;
+        let goodsnameList=req.query.goodsnameList;
+        let goodspriceList=req.query.goodspriceList;
+        glistObj.goodsimgList=goodsimgList;
+        glistObj.goodsnameList=goodsnameList;
+        glistObj.goodspriceList=goodspriceList;
+        glistArry.push(glistObj);
+        console.log(glistArry);
     },
     //商品详情
     goodsDetails2(req,resp){
@@ -182,7 +193,11 @@ const controller={
     },
     //收藏
     goodscollection(req,resp){
-        
+        dbpool.connect("INSERT INTO collection VALUE(NULL,?,?,?)",
+            [glistArry[0].goodsimgList,glistArry[0].goodsnameList,glistArry[0].goodspriceList],(err,data)=>{
+            console.log(data);
+            resp.redirect("/collect")
+            })
     }
 };
 module.exports=controller;
