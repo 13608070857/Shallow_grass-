@@ -89,16 +89,17 @@ const selfController = {
         var username = req.session.user;
         count++;
         var imgUrl = req.body.imgUrl;
+        console.log(imgUrl);
         var base64Data = imgUrl.replace("data:image/png;base64,","").replace(/s/g,"+");
         var dataBuffer = new Buffer(base64Data,"base64");
-        var path = "img/qiancao" + count + ".jpg";
+        var path = "img/qiancao" + count + ".png";
         fs.writeFile("public/"+path,dataBuffer,function(err) {
             if(err) {
                 console.log(err);
             }else {
                 selfModel.updateHeader(path,username)
                     .then(function(data) {
-                        console.log("sssss");
+                        console.log();
                     })
             }
         })
