@@ -134,8 +134,8 @@ const controller={
                             dbpool.connect("SELECT * FROM shop_cart sc,users u,goods g WHERE sc.u_id=u.u_id AND sc.goods_ID=g.goods_ID and u.tel=?",
                                 [usertel],(err,data)=>{
                                     let paygoods=data;
-                                    dbpool.connect("",
-                                        [],(err,data)=>{
+                                    dbpool.connect("UPDATE shop_cart SET is_shop=1 WHERE u_id=(SELECT u.u_id FROM users u WHERE u.tel=?) AND is_shop='0'",
+                                        [usertel],(err,data)=>{
                                             resp.render("goods/pay",{paysuccess:"支付成功",paygoods:paygoods,paytotalof:totalof});
                                         })
                                 })
