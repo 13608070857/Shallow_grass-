@@ -116,15 +116,17 @@ const controller={
             [orderArry[0].ausername,orderArry[0].address,orderArry[0].zipcode,orderArry[0].eamil,orderArry[0].phone,orderArry[0].isdefault,orderArry[0].creattime],(err,data)=>{
             dbpool.connect("INSERT INTO goodsorder VALUE(NULL,(SELECT u.u_id FROM users u WHERE u.tel=?),(SELECT MAX(a.addressId) AS maxaId FROM address a,users u WHERE a.u_id=u.u_id AND u.tel=?),?,'0',?,?,?,?,'0','0',NULL,NULL,NULL,?,'1','0')",
                     [usertel,usertel,orderArry[0].orderno,orderArry[0].totalprice,orderArry[0].totalprice,orderArry[0].paytype,orderArry[0].payform,orderArry[0].creattime],(err,data)=>{
-                dbpool.connect("SELECT * FROM shop_cart sc,users u,goods g WHERE sc.u_id=u.u_id AND sc.goods_ID=g.goods_ID and u.tel=?",
-                    [usertel],(err,data)=>{
-                        let paygoods=data;
-                        resp.render("goods/pay",{paysuccess:"支付成功",paygoods:paygoods,paytotalof:totalof});
-                    })
-                    // dbpool.connect("INSERT INTO order_goods VALUE(NULL,(SELECT g.goods_ID FROM goods g,goodsorder go,order_goods og,users u WHERE g.goods_ID=og.goods_ID AND go.u_id=u.u_id AND og.o_ID=go.o_ID AND u.tel=?),(SELECT go.o_ID FROM goods g,goodsorder go,order_goods og,users u WHERE g.goods_ID=og.goods_ID AND go.u_id=u.u_id AND og.o_ID=go.o_ID AND u.tel=?))",
-                    //     [usertel,usertel],(err,data)=>{
-                    //
-                    //     })
+                    dbpool.connect("INSERT INTO order_goods(goods_ID,u_id)SELECT DISTINCT sc.goods_ID,u.u_id FROM goods g,users u,shop_cart sc WHERE g.goods_ID=sc.goods_ID AND sc.u_id=u.u_id AND u.tel=?",
+                        [usertel],(err,data)=>{
+                            dbpool.connect("SELECT * FROM shop_cart sc,users u,goods g WHERE sc.u_id=u.u_id AND sc.goods_ID=g.goods_ID and u.tel=?",
+                                [usertel],(err,data)=>{
+                                    let paygoods=data;
+                                    dbpool.connect("",
+                                        [],(err,data)=>{
+                                            resp.render("goods/pay",{paysuccess:"支付成功",paygoods:paygoods,paytotalof:totalof});
+                                        })
+                                })
+                        })
                     })
             })
     },
@@ -145,7 +147,7 @@ const controller={
     //加入购物车
     addshopCart(req,resp){
         let uname=req.session.user;
-        let sql="INSERT INTO shop_cart VALUE(NULL,(SELECT u.u_id FROM users u WHERE u.tel='"+uname+"'),?,?,?,?)";
+        let sql="INSERT INTO shop_cart VALUE(NULL,(SELECT u.u_id FROM users u WHERE u.tel='"+uname+"'),?,?,?,?,'0')";
         dbpool.connect(sql,
             [goodsArry[0].goodsid,goodsArry[0].goodsnum,goodsArry[0].goodsprice,goodsArry[0].totalprice],(err,data)=>{
 
