@@ -31,6 +31,8 @@ router.get("/addcart",goodscontroller.addshopCart);
 //移除购物车商品
 router.get("/delcartgoods",goodscontroller.delshopCart);
 router.get("/delcartgoods.do",goodscontroller.delshopCart2);
+//收藏
+router.get("/collection",goodscontroller.goodscollection);
 
 //个人中心
 router.get("/self",selfController.self);

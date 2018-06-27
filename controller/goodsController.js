@@ -179,6 +179,10 @@ const controller={
                 console.log(data);
                 resp.redirect("/shop_cart");
             });
+    },
+    //收藏
+    goodscollection(req,resp){
+        
     }
 };
 module.exports=controller;
