@@ -51,6 +51,8 @@ router.get("/afterSale",selfController.afterSale);
 router.get("/help",selfController.help);
 router.post("/saveInfo",selfController.saveInfo);
 router.get("/saveInfo.do",selfController.saveOther);
+router.get("/savePsw",selfController.savePsw);
+router.get("/delAddress",selfController.delAddress);
 
 //index
 router.get("/index",indexController.index);

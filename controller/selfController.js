@@ -84,7 +84,7 @@ const selfController = {
         resp.render("selfPublic/help",{username:"测试"});
     },
 
-    //文件保存
+    //头像保存
     saveInfo(req,resp) {
         var username = req.session.user;
         count++;
@@ -116,6 +116,25 @@ const selfController = {
         selfModel.updateUserInfo(u_name,u_sex,u_tel,u_email,u_show,username)
             .then(function(data) {
                 console.log(1);
+            })
+    },
+
+    //保存密码
+    savePsw(req,resp) {
+        var username = req.session.user;
+        var u_psw = req.query.u_psw;
+        selfModel.updataPsw(u_psw,username)
+            .then(function(data) {
+                console.log(1);
+            })
+    },
+
+    //删除地址
+    delAddress(req,resp) {
+        var addressId = Number(req.query.addressId);
+        selfModel.delAddress(addressId)
+            .then(function(data) {
+                console.log(data);
             })
     }
 };

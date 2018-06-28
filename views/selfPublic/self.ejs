@@ -127,18 +127,21 @@
                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">旧密码</div>
                             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                                 <input class="pswInput" id="oldPsw" type="text"/>
+                                <span class='intrInfo oldPsw'></span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">新密码</div>
                             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                                <input class="pswInput" type="text"/>
+                                <input class="pswInput" id="newPsw" type="text"/>
+                                <span class='intrInfo newPsw'></span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">确认密码</div>
                             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                                <input class="pswInput" type="text"/>
+                                <input class="pswInput" id="resPsw" type="text"/>
+                                <span class='intrInfo resPsw'></span>
                             </div>
                         </div>
                         <div class="row">
@@ -174,6 +177,57 @@
         $(".selfContain").css("display","block");
         $(".hyCenter").css("display","block");
     });
+
+    $(".pswInput").blur(function() {
+        if($(this).val().length == 0) {
+            $(this).next().html("*不能为空");
+            $(".save").attr("disabled","disabled");
+        }else {
+            var psw = '<%=selfData[0].password%>';
+
+            if($(this)[0].id == "oldPsw") {
+                if($(this).val() == psw) {
+                    $(this).next().remove();
+                    $(".save").removeAttr("disabled");
+                }else {
+                    $(this).next().html("*旧密码错误");
+                    $(".save").attr("disabled","disabled");
+                }
+            }
+            if($(this)[0].id == "newPsw") {
+                if($(this).val() == psw) {
+                    $(this).next().html("*密码不能与旧密码相同");
+                    $(".save").attr("disabled","disabled");
+                }else {
+                    $(this).next().remove();
+                    $(".save").removeAttr("disabled");
+                }
+            }
+            if($(this)[0].id == "resPsw") {
+                if($(this).val() == $("#newPsw").val()) {
+                    $(this).next().remove();
+                    $(".save").removeAttr("disabled");
+                }else {
+                    $(this).next().html("*密码不一致");
+                    $(".save").attr("disabled","disabled");
+                }
+            }
+        }
+
+    });
+
+    $(".save").click(function() {
+        var u_psw = $("#newPsw").val();
+        $.ajax({
+            url:"/savePsw",
+            data:{
+                u_psw:u_psw
+            },
+            success:function(data) {
+                location.href = "/login";
+            }
+        })
+    })
 </script>
 </body>
 </html>

@@ -98,5 +98,33 @@ const selfModel = {
                 })
         })
     },
+
+    //修改密码
+    updataPsw(param1,param2) {
+        return new Promise((resolve,reject)=>{
+            dbpool.connect('UPDATE users SET password=? WHERE tel=?',
+                [param1,param2],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+
+    //删除地址
+    delAddress(params) {
+        return new Promise((resolve,reject)=>{
+            dbpool.connect('delete from address where addressId=?',
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
 }
 module.exports = selfModel;
