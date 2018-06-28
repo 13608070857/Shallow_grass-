@@ -1,6 +1,6 @@
 const mysql = require("mysql");
 const AV=require("leancloud-storage")
-var B=1
+
 const App_ID="nD0BnwabqwF1T74dbmpUP4Ar-gzGzoHsz";
 const App_Key="tlCbLyDK2tuVHDfhx6qe07mP";
 AV.init({
@@ -88,9 +88,14 @@ const indexController ={
     },
     // 注册2.保存到数据库
     jrsjk(req,resp){
+        var B=""
+        for(var i=0;i<7;i++){
+            B+=Math.floor(Math.random()*10);
+        }
         var A="浅草用户";
-        B+=1
         var C=A+B;
+        console.log(B)
+        console.log(C)
         let phone=req.body.phone;
         let mm=req.body.mm;
         indexDao.jrsjk(phone,mm,C)
