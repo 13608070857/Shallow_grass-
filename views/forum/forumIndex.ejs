@@ -200,6 +200,18 @@
 				}
 			});
 		}
+		$(function () {
+		    for(var i=0;i<5;i++){
+                var c =$(".postTime").eq(i).html()
+                console.log(c)
+                var d=new Date(c)
+				console.log(d)
+                var datetime=d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+                console.log(datetime)
+                $(".postTime").eq(i).html("发布日期:"+datetime)
+			}
+
+        })
 	</script>
 </body>
 </html>

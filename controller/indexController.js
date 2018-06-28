@@ -117,7 +117,6 @@ const indexController ={
                             let homes=data
                                 indexDao.lt()
                                     .then(function (data) {
-                                        console.log(data)
                                         let lt=data
                                         resp.render("index/index",{user:req.session.user,product:product,homes:homes,lt:lt});
                                     })

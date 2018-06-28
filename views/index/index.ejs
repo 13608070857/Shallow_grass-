@@ -202,7 +202,7 @@
             <div class="Nt">
                 <img src="<%=lt[0].postImg%>" alt="">
                 <h4><%=lt[0].postTitle%></h4>
-                <i>发布日期：<%=lt[0].postTime%></i>
+                <i></i>
                 <p><%=lt[0].postContent%></p>
             </div>
         </a>
@@ -211,7 +211,7 @@
             <div class="Nt" style="margin-top: 30px">
                 <img src="<%=lt[1].postImg%>" alt="">
                 <h4><%=lt[1].postTitle%></h4>
-                <i>发布日期：<%=lt[1].postTime%></i>
+                <i></i>
                 <p><%=lt[1].postContent%></p>
             </div>
         </a>
@@ -275,5 +275,18 @@
         }
     }
     countDown(200000)
+    $(function () {
+        var c ='<%=lt[0].postTime%>';
+        var d=new Date(c)
+        var datetime=d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+        console.log(datetime)
+        $(".Notice i").eq(0).html("发布日期:"+datetime)
+
+        var c ='<%=lt[1].postTime%>';
+        var d=new Date(c)
+        var datetime=d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+        console.log(datetime)
+        $(".Notice i").eq(1).html("发布日期:"+datetime)
+    })
 </script>
 </html>
