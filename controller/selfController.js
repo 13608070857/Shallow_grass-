@@ -33,7 +33,11 @@ const selfController = {
 
     //收藏
     collect(req,resp) {
-        resp.render("selfPublic/collect",{username:"测试"});
+        var username = req.session.user;
+        selfModel.getCollect(username)
+            .then(function(data) {
+                resp.render("selfPublic/collect",{collectData:data});
+            });
     },
 
     //订单信息
