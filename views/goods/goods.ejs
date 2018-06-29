@@ -33,7 +33,7 @@
         <div class="col-lg-12 goodsList">
             <%for (var i=0;i<mygoods.length;i++) {%>
             <div class="col-md-3 col-sm-6 text-center goodsDiv">
-                <a href="/goods_details?id=<%=mygoods[i].goods_ID%>&cateid=<%=mygoods[i].cate_ID%>" id="goodsimgdec">
+                <a href="/goods_details?id=<%=mygoods[i].goods_ID%>&cateid=<%=mygoods[i].cate_ID%>" id="<%=mygoods[i].goods_ID%>">
                     <div class="goodsImg">
                         <img src="<%=mygoods[i].goodsImg%>" class="img-responsive">
                     </div>
@@ -42,9 +42,9 @@
                         <div class="goodsPrice"><span>¥<span><%=mygoods[i].goodsPrice%></span></span></div>
                     </div>
                 </a>
-                <%if(myuserlist==undefined){%>
+                <%if(myuserlist==null){%>
                 <a href="/login" class="collhref">
-                    <span class="collSpan iconfont" title="收藏">&#xe694;</span>
+                    <span class="collSpan iconfont" title="收藏" onclick="mycolltest()">&#xe694;</span>
                 </a>
                 <%} else {%>
                 <a href="/collection" class="collhref">

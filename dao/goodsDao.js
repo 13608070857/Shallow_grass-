@@ -172,8 +172,33 @@ const goodsModel={
     //使用优惠劵
     getcoll(...args){
         return new Promise((resolve,reject)=>{
-            dbpool.connect("UPDATE shop_cart SET total_of=ABS(total_of-(SELECT c.yhprice AS yhprice FROM coupons c WHERE c.code LIKE ? and c.is_use='1')) WHERE u_id=(SELECT u.u_id FROM users u WHERE u.tel=?)",
+            dbpool.connect("UPDATE shop_cart SET total_of=ABS(total_of-IFNULL((SELECT c.yhprice AS yhprice FROM coupons c,coupons_user cu WHERE c.code LIKE ? AND cu.is_use='0' AND c.uc_id=cu.uc_id),0)) WHERE u_id=(SELECT u.u_id FROM users u WHERE u.tel=?)",
                 [...args],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+    getcart2(params){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("UPDATE coupons_user SET is_use=1 WHERE u_id=(SELECT u.u_id FROM users u WHERE u.tel=?)",
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+    //查询用户是否有地址
+    getisaddress(params){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM address WHERE u_id=(SELECT u.u_id FROM users u WHERE u.tel=?)",
+                [params],(err,data)=>{
                     if (!err){
                         resolve(data);
                     } else {

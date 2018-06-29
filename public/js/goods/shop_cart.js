@@ -27,6 +27,7 @@ $(".yhj_btn").click(function () {
 
         }
     });
-    console.log(coupon);
+    if ($("#coupon").val()==""){
+        alert("请输入优惠码进行兑换哦！");
+    }
 });
-console.log(delArry[0]);
