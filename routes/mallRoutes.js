@@ -54,6 +54,7 @@ router.get("/delAddress",selfController.delAddress);
 router.get("/editAddress",selfController.editAddress);
 router.get("/newAddress",selfController.newAddress);
 router.get("/collectDel",selfController.collectDel);
+router.get("/delOrder",selfController.delOrder);
 
 //index
 router.get("/index",indexController.index);

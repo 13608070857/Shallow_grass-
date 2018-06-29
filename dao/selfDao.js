@@ -70,6 +70,20 @@ const selfModel = {
         })
     },
 
+    //删除订单
+    delOrder(sql,...args) {
+        return new Promise((resolve,reject)=>{
+            dbpool.connect(sql,
+                [...args],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+
     //获取优惠信息
     getCouponsInfo(params) {
         return new Promise((resolve,reject)=>{

@@ -60,6 +60,24 @@ const selfController = {
             });
     },
 
+    //删除订单
+    delOrder(req,resp){
+        var quehao = "";
+        var orderNo = req.query.orderNo;
+        for(var i=0;i<orderNo.length;i++) {
+            if(i<orderNo.length-1) {
+                quehao += "?,";
+            }else {
+                quehao += "?";
+            }
+        }
+        var  mySql = "DELETE FROM goodsorder WHERE orderNo IN ("+ quehao +")";
+        selfModel.delOrder(mySql,...orderNo)
+            .then(function(data) {
+                console.log(data);
+            });
+    },
+
     //优惠券
     coupons(req,resp) {
         var username = req.session.user;
