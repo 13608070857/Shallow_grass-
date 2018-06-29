@@ -19,6 +19,7 @@
 	<div class="container" style="margin-top: 220px;">
 		<section class="banner row">
 			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 bannerImg noPadding">
+				<%console.log(forumIndexData.length)%>
 				<a class="row bannerLink" href="/forumMain?id=<%=forumRemInfoData[0].postId%>">
 					<img src="<%=forumRemInfoData[0].postImg%>" alt="">
 					<a class="bannerDes" href="/forumMain?id=<%=forumRemInfoData[0].postId%>"><%=forumRemInfoData[0].postDes%></a>
@@ -168,7 +169,7 @@
 					scrollTop:0
 				},1000);
 			});
-			fyAjax(currentPage);
+			// fyAjax(currentPage);
 		});
 		//下一页
 		function nextPage() {
@@ -203,11 +204,8 @@
 		$(function () {
 		    for(var i=0;i<5;i++){
                 var c =$(".postTime").eq(i).html()
-                console.log(c)
                 var d=new Date(c)
-				console.log(d)
                 var datetime=d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
-                console.log(datetime)
                 $(".postTime").eq(i).html("发布日期:"+datetime)
 			}
 

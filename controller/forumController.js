@@ -1,19 +1,21 @@
 const mysql = require("mysql");
 const dbpool = require("../config/dbpoolConfig");
 const forumModel = require("../dao/forumDao");
+var currentPage
 const forumController = {
     //论坛首页
     forumIndex(req,resp){
-        var fy = 5;
-        var fyNum,initPage;
-        var initEnter = 0;
-        var currentPage = req.query.currentPage;
-        var initNum = (Number(currentPage)-1)*fy;
-        if(!isNaN(initNum)) {
-            initPage = initNum;
-            initEnter++;
+        if(req.query.currentPage==undefined){
+            currentPage=1
+        }else {
+            currentPage = req.query.currentPage;
         }
-        var fyData = [];
+        var fy = 5;
+        var fyNum;
+        console.log(currentPage)
+        var A=(currentPage-1)*5;
+        console.log(A)
+        var B=fy
         forumModel.getForumInfo()
             .then(function(data) {
                 var remData = [];
@@ -23,18 +25,19 @@ const forumController = {
                         remData.push(data[i]);
                     }
                 }
-                for(var i=initPage;i<fy*currentPage;i++) {
-                    fyData.push(data[i]);
-                }
-                resp.render("forum/forumIndex",{
-                    forumIndexData:data,
-                    forumRemInfoData:remData,
-                    fyNum:fyNum,
-                    currentPage:currentPage,
-                    fy:fy,
-                    fyData:fyData,
-                    initEnter:initEnter
-                });
+                forumModel.xxm1(A,B)
+                    .then(function (data) {
+                        console.log(data)
+                        forumIndexData=data;
+                        resp.render("forum/forumIndex",{
+                            forumIndexData:forumIndexData,
+                            forumRemInfoData:remData,
+                            fyNum:fyNum,
+                            currentPage:currentPage,
+                            fy:fy,
+                        });
+                    })
+
             });
     },
     forumMain(req,resp) {

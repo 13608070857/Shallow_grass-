@@ -64,6 +64,18 @@ const forumModel = {
                 })
         })
     },
+    xxm1(A,B){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("select * from post limit ?,?",
+                [A,B],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
     //删除个人帖子
     selfDelete(params){
         return new Promise((resolve,reject)=>{
