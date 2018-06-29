@@ -42,15 +42,17 @@ router.get("/coupon.do",goodscontroller.goodscoupon2);
 router.get("/self",selfController.self);
 router.get("/selfE",selfController.selfE);
 router.get("/address",selfController.address);
-router.get("/security",selfController.security);
 router.get("/collect",selfController.collect);
-router.get("/view",selfController.view);
 router.get("/orderG",selfController.orderG);
 router.get("/coupons",selfController.coupons);
 router.get("/afterSale",selfController.afterSale);
 router.get("/help",selfController.help);
 router.post("/saveInfo",selfController.saveInfo);
 router.get("/saveInfo.do",selfController.saveOther);
+router.get("/savePsw",selfController.savePsw);
+router.get("/delAddress",selfController.delAddress);
+router.get("/editAddress",selfController.editAddress);
+router.get("/newAddress",selfController.newAddress);
 
 //index
 router.get("/index",indexController.index);

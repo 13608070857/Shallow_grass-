@@ -98,5 +98,61 @@ const selfModel = {
                 })
         })
     },
+
+    //修改密码
+    updataPsw(param1,param2) {
+        return new Promise((resolve,reject)=>{
+            dbpool.connect('UPDATE users SET password=? WHERE tel=?',
+                [param1,param2],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+
+    //删除地址
+    delAddress(params) {
+        return new Promise((resolve,reject)=>{
+            dbpool.connect('delete from address where addressId=?',
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+
+    //修改地址
+    editAddress(...args) {
+        return new Promise((resolve,reject)=>{
+            dbpool.connect('UPDATE address SET consignee=?,phone=?,ship_address=?,zip_code=?,isDefault=? WHERE addressId=?',
+                [...args],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+
+    //新增地址
+    newAddress(...args) {
+        return new Promise((resolve,reject)=>{
+            dbpool.connect('INSERT INTO address (consignee,phone,ship_address,zip_code,isDefault,createTime,u_id) VALUES(?,?,?,?,?,?,(SELECT u_id FROM users WHERE tel=?))',
+                [...args],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
 }
 module.exports = selfModel;

@@ -33,14 +33,8 @@
                     <li class="current" id="address">
                         <a href="/address">地址管理</a>
                     </li>
-                    <li id="security">
-                        <a href="/security">安全中心</a>
-                    </li>
                     <li id="collect">
                         <a href="/collect">我的收藏</a>
-                    </li>
-                    <li id="view">
-                        <a href="/view">我的足迹</a>
                     </li>
                     <li>
                         <h4>交易管理</h4>
@@ -67,7 +61,7 @@
                     <div class="addressT">
                         <div class="col-lg-10  col-md-10 col-sm-10 col-xs-10">已保存收货地址(地址最多10条，还能保存9条)</div>
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-right">
-                            <a role="button" class="btn" data-toggle="modal" data-target="#myModal2">+新建地址</a>
+                            <a role="button" class="btn newAddress updata">+新建地址</a>
                         </div>
                     </div>
                     <div class="addressCont">
@@ -80,12 +74,16 @@
                         <div class="addressC">
                             <%for(var i=0;i<addressData.length;i++) {%>
                             <div class="addressCList row">
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><%=addressData[i].consignee%></div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center"><%=addressData[i].ship_address%></div>
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><%=addressData[i].phone%></div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+                                    <span hidden class="zipCode"><%=addressData[i].zip_code%></span>
+                                    <span class="addressId"><%=addressData[i].addressId%></span>
+                                    <span class="consigneeHQ"><%=addressData[i].consignee%></span>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center ship_addressHQ"><%=addressData[i].ship_address%></div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center phoneHQ"><%=addressData[i].phone%></div>
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                                    <a href="#">编辑</a>
-                                    <a href="#">删除</a>
+                                    <a class="editAddress updata">编辑</a>
+                                    <a class="delAddress updata">删除</a>
                                     <a href="#" role="button" class="btn">默认地址</a>
                                 </div>
                             </div>
@@ -93,82 +91,81 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">新增收货信息</h4>
-                            </div>
-                            <form class="form-inline">
-                                <div class="modal-body">
-                                    <table class="table table_add">
-                                        <tr>
-                                            <td><label class="addText">所在地区</label></td>
-                                            <td>
-                                                <div data-toggle="distpicker">
-                                                    <div class="form-group">
-                                                        <label class="sr-only" for="province12">Province</label>
-                                                        <select class="form-control" id="province12"></select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="sr-only" for="city12">City</label>
-                                                        <select class="form-control" id="city12"></select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="sr-only" for="district12">District</label>
-                                                        <select class="form-control" id="district12"></select>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><label class="addText">详细地址</label></td>
-                                            <td>
-                                                <div class="form-group">
-                                                    <label class="sr-only" for="deta_address2">详细地址</label>
-                                                    <textarea class="form-control" placeholder="建议你如实填写详细收货地址，例如街道名称，门牌号码，楼层和房间号等信息" id="deta_address2" rows="3" cols="64"></textarea>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><label class="addText">收货人姓名</label></td>
-                                            <td>
-                                                <div class="form-group">
-                                                    <label class="sr-only" for="consignee_name2">收货人姓名</label>
-                                                    <input type="text" class="form-control" id="consignee_name2" placeholder="长度不超过25个字符">
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><label class="addText">手机号</label></td>
-                                            <td>
-                                                <div class="form-group">
-                                                    <label class="sr-only" for="phone2">手机号</label>
-                                                    <input type="text" class="form-control" id="phone2" placeholder="请填写您的手机号" maxlength="11">
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">
-                                                <input type="checkbox">设为默认地址
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                    <button type="button" class="btn btn_del">添加</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 </section>
+<div class="addressPop">
+    <div class="addressPC row">
+        <div class="closeBtn">×</div>
+        <div class="addressPTitle"></div>
+
+        <div class="delPC popContent" style="display: none">
+            <div class="delPCont">是否要删除这条地址？</div>
+            <div class="btnDiv">
+                <a class="btn yesBtn">确定</a>
+                <a class="btn noBtn">取消</a>
+            </div>
+        </div>
+        <div class="popContent apPC">
+            <div class="row">
+                <div class="col-lg-2 text-center">所在地区:</div>
+                <div class="col-lg-10 text-center">
+                    <div class="col-lg-4">
+                        <select name="" id="">
+                            <option value="">请选择省</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-4">
+                        <select name="" id="">
+                            <option value="">请选择市</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-4">
+                        <select name="" id="">
+                            <option value="">请选择区</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 text-center">详细地址:</div>
+                <div class="col-lg-10">
+                    <textarea name="" class="detailAddress"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 text-center">收货人:</div>
+                <div class="col-lg-10">
+                    <input type="text" class="consignee"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 text-center">邮编号码:</div>
+                <div class="col-lg-4 desInfo">
+                    <input type="text" class="zip_code"/>
+                </div>
+                <div class="col-lg-2 text-right">手机号码:</div>
+                <div class="col-lg-4 text-right desInfo">
+                    <input type="text" class="tel"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-10">
+                    <div class="col-lg-4">
+                        <input type="checkbox" class="isDefault"/>设为默认地址
+                    </div>
+                    <div class="col-lg-8 btnDiv text-right">
+                        <a class="btn yesBtn">确定</a>
+                        <a class="btn noBtn">取消</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
 <%-include('../index/footer.ejs')%>
 
 <script src="js/jquery-3.3.1.js"></script>
@@ -177,6 +174,123 @@
 <script src="js/buy/distpicker.data.js"></script>
 <script src="js/buy/distpicker.js"></script>
 <script src="js/buy/main.js"></script>
+
+<script>
+    $(".updata").click(function() {
+        $(".addressPop").css("display","block");
+        $(".popContent").css("display","none");
+        if($(this)[0].className.indexOf("del")>=0) {
+            $(".delPC").css("display","block");
+            $(".addressPTitle").html("删除地址");
+            var hqList = $(this).parent().parent()[0];
+            $(".yesBtn").addClass("delBtn");
+            $(".delBtn").click(function() {
+                var addressId = $(hqList).children().children(".addressId").html();
+                hqList.remove();
+                $(".addressPop").css("display","none");
+                console.log(addressId);
+                $.ajax({
+                    url:"/delAddress",
+                    data:{
+                        addressId:addressId
+                    },
+                    success:function(data) {
+
+                    }
+                })
+            })
+        }else {
+            $(".apPC").css("display","block");
+            if($(this)[0].className.indexOf("edit")>=0) {
+                $(".addressPTitle").html("编辑地址");
+                $(".yesBtn").addClass("editBtn");
+                var hqList = $(this).parent().parent()[0];
+                var addressId = $(hqList).children().children(".addressId").html();
+                var zipCode = $(hqList).children().children(".zipCode").html();
+                var consigneeHQ = $(hqList).children().children(".consigneeHQ").html();
+                var ship_addressHQ = $(hqList).children(".ship_addressHQ").html();
+                var phoneHQ = $(hqList).children(".phoneHQ").html();
+                $(".consignee")[0].value = consigneeHQ;
+                $(".tel")[0].value = phoneHQ;
+                $(".detailAddress")[0].value = ship_addressHQ;
+                $(".zip_code")[0].value = zipCode;
+                $(".editBtn").click(function() {
+                    var isDefault;
+                    if($(".isDefault").attr("checked")) {
+                        isDefault = 1;
+                    }else {
+                        isDefault = 0;
+                    }
+                    $(".addressPop").css("display","none");
+                    $.ajax({
+                        url:"/editAddress",
+                        data:{
+                            addressId:addressId,
+                            consignee:$(".consignee").val(),
+                            tel:$(".tel").val(),
+                            detailAddress:$(".detailAddress").val(),
+                            zip_code:$(".zip_code").val(),
+                            isDefault:isDefault
+                        },
+                        success:function(data) {
+                            location.reload();
+                        }
+                    })
+                });
+            }else {
+                $(".yesBtn").addClass("newBtn");
+                $(".addressPTitle").html("新建地址");
+                $(".consignee")[0].value = "";
+                $(".tel")[0].value = "";
+                $(".detailAddress")[0].value = "";
+                $(".zip_code")[0].value = "";
+                $(".newBtn").click(function() {
+                    var isDefault;
+                    if($(".zip_code").val()=="") {
+                        $(".zip_code")[0].value = "000000";
+                    }
+                    if($(".isDefault").attr("checked")) {
+                        isDefault = 1;
+                    }else {
+                        isDefault = 0;
+                    }
+                    var date = new Date();
+                    var createTime = date.getFullYear() + "-" + (date.getMonth()<10?("0" + date.getMonth()):date.getMonth())
+                            + "-" + (date.getDate()<10?("0" + date.getDate()):date.getDate()) + " " + (date.getHours()<10?("0" + date.getHours()):date.getHours()) + ":"
+                            + (date.getMinutes()<10?("0" + date.getMinutes()):date.getMinutes()) + ":" + (date.getSeconds()<10?("0" + date.getSeconds()):date.getSeconds());
+                    $(".addressPop").css("display","none");
+                    $.ajax({
+                        url:"/newAddress",
+                        data:{
+                            consignee:$(".consignee").val(),
+                            tel:$(".tel").val(),
+                            detailAddress:$(".detailAddress").val(),
+                            zip_code:$(".zip_code").val(),
+                            isDefault:isDefault,
+                            createTime:createTime
+                        },
+                        success:function(data) {
+                            location.reload();
+                        }
+                    })
+                });
+            }
+        }
+    });
+    $(".isDefault").change(function() {
+        if($(this).is(":checked")) {
+            $(this).attr("checked","checked");
+        }else {
+            $(this).removeAttr("checked");
+        }
+    })
+    $(".closeBtn").click(function() {
+        $(".addressPop").css("display","none");
+    });
+    $(".noBtn").click(function() {
+        $(".addressPop").css("display","none");
+    });
+</script>
 
 </body>
 </html>
