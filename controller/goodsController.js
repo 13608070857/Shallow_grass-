@@ -23,10 +23,12 @@ const controller={
                     resp.render("goods/goods",{mygoods:data});
                 });
         }else {
+            let myuserlist=req.session.user;
             goodsmodel.getAllgoods()
                 .then(function (data) {
                     console.log("空")
-                    resp.render("goods/goods",{mygoods:data});
+                    let mygoods=data;
+                    resp.render("goods/goods",{mygoods:mygoods,myuserlist:myuserlist});
                 });
         }
     },
@@ -147,7 +149,7 @@ const controller={
                             dbpool.connect("SELECT * FROM shop_cart sc,users u,goods g WHERE sc.u_id=u.u_id AND sc.goods_ID=g.goods_ID and u.tel=?",
                                 [usertel],(err,data)=>{
                                     let paygoods=data;
-                                    dbpool.connect("UPDATE shop_cart SET is_shop=1 WHERE u_id=(SELECT u.u_id FROM users u WHERE u.tel=?) AND is_shop='0'",
+                                    dbpool.connect("DELETE FROM shop_cart WHERE u_id=(SELECT u.u_id FROM users u WHERE u.tel=?)",
                                         [usertel],(err,data)=>{
                                             resp.render("goods/pay",{paysuccess:"支付成功",paygoods:paygoods,paytotalof:totalof});
                                         })
@@ -173,7 +175,7 @@ const controller={
     //加入购物车
     addshopCart(req,resp){
         let uname=req.session.user;
-        let sql="INSERT INTO shop_cart VALUE(NULL,(SELECT u.u_id FROM users u WHERE u.tel='"+uname+"'),?,?,?,?,'0')";
+        let sql="INSERT INTO shop_cart VALUE(NULL,(SELECT u.u_id FROM users u WHERE u.tel='"+uname+"'),?,?,?,?) ON DUPLICATE KEY UPDATE goodsNum = goodsNum + 1";
         dbpool.connect(sql,
             [goodsArry[0].goodsid,goodsArry[0].goodsnum,goodsArry[0].goodsprice,goodsArry[0].totalprice],(err,data)=>{
 
@@ -195,8 +197,9 @@ const controller={
     },
     //收藏
     goodscollection(req,resp){
-        dbpool.connect("INSERT INTO collection VALUE(NULL,?,?,?)",
-            [glistArry[0].goodsimgList,glistArry[0].goodsnameList,glistArry[0].goodspriceList],(err,data)=>{
+        let usertel=req.session.user;
+        dbpool.connect("INSERT INTO collection VALUE(NULL,?,?,?,(SELECT u.u_id FROM users u WHERE u.tel=?))",
+            [glistArry[0].goodsimgList,glistArry[0].goodsnameList,glistArry[0].goodspriceList,usertel],(err,data)=>{
             console.log(data);
             resp.redirect("/collect")
             })
@@ -206,9 +209,12 @@ const controller={
         let coupon=req.query.coupon;
         couponObj.coupon=coupon;
         couponArry.push(couponObj);
+        console.log(couponArry[0].coupon)
     },
     goodscoupon(req,resp){
-        goodsmodel.getcoll(couponArry[0].coupon)
+        let usertel=req.session.user;
+        console.log(usertel)
+        goodsmodel.getcoll(couponArry[0].coupon,usertel)
             .then(function (data) {
                 resp.redirect("/shop_cart");
             });

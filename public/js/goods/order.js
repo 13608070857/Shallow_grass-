@@ -112,7 +112,7 @@ $("#payorder").click(function () {
     console.log("下单开始！")
     var mydate = new Date();
     var year=mydate.getFullYear();
-    var month=mydate.getMonth();
+    var month=mydate.getMonth()+1;
     var day=mydate.getDate();
     var h=mydate.getHours();
     var m=mydate.getMinutes();

@@ -42,9 +42,15 @@
                         <div class="goodsPrice"><span>¥<span><%=mygoods[i].goodsPrice%></span></span></div>
                     </div>
                 </a>
+                <%if(myuserlist==undefined){%>
+                <a href="/login" class="collhref">
+                    <span class="collSpan iconfont" title="收藏">&#xe694;</span>
+                </a>
+                <%} else {%>
                 <a href="/collection" class="collhref">
                     <span class="collSpan iconfont" title="收藏">&#xe694;</span>
                 </a>
+                <%}%>
             </div>
             <%}%>
         </div>
