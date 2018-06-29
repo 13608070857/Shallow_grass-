@@ -33,14 +33,8 @@
                     <li class="current" id="address">
                         <a href="/address">地址管理</a>
                     </li>
-                    <li id="security">
-                        <a href="/security">安全中心</a>
-                    </li>
                     <li id="collect">
                         <a href="/collect">我的收藏</a>
-                    </li>
-                    <li id="view">
-                        <a href="/view">我的足迹</a>
                     </li>
                     <li>
                         <h4>交易管理</h4>
@@ -81,6 +75,7 @@
                             <%for(var i=0;i<addressData.length;i++) {%>
                             <div class="addressCList row">
                                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+                                    <span hidden class="zipCode"><%=addressData[i].zip_code%></span>
                                     <span class="addressId"><%=addressData[i].addressId%></span>
                                     <span class="consigneeHQ"><%=addressData[i].consignee%></span>
                                 </div>
@@ -141,8 +136,14 @@
             </div>
             <div class="row">
                 <div class="col-lg-2 text-center">收货人:</div>
-                <div class="col-lg-4 desInfo">
+                <div class="col-lg-10">
                     <input type="text" class="consignee"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 text-center">邮编号码:</div>
+                <div class="col-lg-4 desInfo">
+                    <input type="text" class="zip_code"/>
                 </div>
                 <div class="col-lg-2 text-right">手机号码:</div>
                 <div class="col-lg-4 text-right desInfo">
@@ -153,7 +154,7 @@
                 <div class="col-lg-2"></div>
                 <div class="col-lg-10">
                     <div class="col-lg-4">
-                        <input type="checkbox"/>设为默认地址
+                        <input type="checkbox" class="isDefault"/>设为默认地址
                     </div>
                     <div class="col-lg-8 btnDiv text-right">
                         <a class="btn yesBtn">确定</a>
@@ -205,19 +206,84 @@
                 $(".yesBtn").addClass("editBtn");
                 var hqList = $(this).parent().parent()[0];
                 var addressId = $(hqList).children().children(".addressId").html();
+                var zipCode = $(hqList).children().children(".zipCode").html();
                 var consigneeHQ = $(hqList).children().children(".consigneeHQ").html();
                 var ship_addressHQ = $(hqList).children(".ship_addressHQ").html();
                 var phoneHQ = $(hqList).children(".phoneHQ").html();
                 $(".consignee")[0].value = consigneeHQ;
                 $(".tel")[0].value = phoneHQ;
                 $(".detailAddress")[0].value = ship_addressHQ;
-
+                $(".zip_code")[0].value = zipCode;
+                $(".editBtn").click(function() {
+                    var isDefault;
+                    if($(".isDefault").attr("checked")) {
+                        isDefault = 1;
+                    }else {
+                        isDefault = 0;
+                    }
+                    $(".addressPop").css("display","none");
+                    $.ajax({
+                        url:"/editAddress",
+                        data:{
+                            addressId:addressId,
+                            consignee:$(".consignee").val(),
+                            tel:$(".tel").val(),
+                            detailAddress:$(".detailAddress").val(),
+                            zip_code:$(".zip_code").val(),
+                            isDefault:isDefault
+                        },
+                        success:function(data) {
+                            location.reload();
+                        }
+                    })
+                });
             }else {
                 $(".yesBtn").addClass("newBtn");
                 $(".addressPTitle").html("新建地址");
+                $(".consignee")[0].value = "";
+                $(".tel")[0].value = "";
+                $(".detailAddress")[0].value = "";
+                $(".zip_code")[0].value = "";
+                $(".newBtn").click(function() {
+                    var isDefault;
+                    if($(".zip_code").val()=="") {
+                        $(".zip_code")[0].value = "000000";
+                    }
+                    if($(".isDefault").attr("checked")) {
+                        isDefault = 1;
+                    }else {
+                        isDefault = 0;
+                    }
+                    var date = new Date();
+                    var createTime = date.getFullYear() + "-" + (date.getMonth()<10?("0" + date.getMonth()):date.getMonth())
+                            + "-" + (date.getDate()<10?("0" + date.getDate()):date.getDate()) + " " + (date.getHours()<10?("0" + date.getHours()):date.getHours()) + ":"
+                            + (date.getMinutes()<10?("0" + date.getMinutes()):date.getMinutes()) + ":" + (date.getSeconds()<10?("0" + date.getSeconds()):date.getSeconds());
+                    $(".addressPop").css("display","none");
+                    $.ajax({
+                        url:"/newAddress",
+                        data:{
+                            consignee:$(".consignee").val(),
+                            tel:$(".tel").val(),
+                            detailAddress:$(".detailAddress").val(),
+                            zip_code:$(".zip_code").val(),
+                            isDefault:isDefault,
+                            createTime:createTime
+                        },
+                        success:function(data) {
+                            location.reload();
+                        }
+                    })
+                });
             }
         }
     });
+    $(".isDefault").change(function() {
+        if($(this).is(":checked")) {
+            $(this).attr("checked","checked");
+        }else {
+            $(this).removeAttr("checked");
+        }
+    })
     $(".closeBtn").click(function() {
         $(".addressPop").css("display","none");
     });
