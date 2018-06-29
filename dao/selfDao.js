@@ -28,6 +28,34 @@ const selfModel = {
         })
     },
 
+    //获取收藏信息
+    getCollect(params) {
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM collection c,users u WHERE c.u_id=u.u_id  AND u.tel=?",
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+
+    //删除收藏
+    delCollect(params) {
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("delete FROM collection WHERE coll_id=?",
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+
     //获取订单信息
     getOrder(params) {
         return new Promise((resolve,reject)=>{

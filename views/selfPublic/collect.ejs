@@ -60,144 +60,26 @@
                 <div class="interE">
                     <div class="interTitle">商品收藏</div>
                     <div class="interList row">
+                        <%for(var i=0;i<collectData.length;i++) {%>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <span hidden class="coll_id"><%=collectData[i].coll_id%></span>
                             <div class="interProduct">
                                 <div class="imgD">
                                     <a class="imgDi" href="#">
-                                        <img src="img/forum/1.jpg" alt="" title="红宝石"/>
+                                        <img src="<%=collectData[i].coll_img%>" alt="" title="<%=collectData[i].coll_name%>"/>
                                     </a>
                                     <div class="del"><i class="iconfont">&#xe61d;</i></div>
                                 </div>
                                 <div class="interPT text-center">
-                                    <a href="#">红宝石多肉</a>
+                                    <a href="#"><%=collectData[i].coll_name%></a>
                                 </div>
-                                <p class="price text-center">￥100</p>
+                                <p class="price text-center">￥<%=collectData[i].coll_price%></p>
                                 <div class="text-center">
                                     <a href="#" role="button" class="btn interBtn">找相似</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                            <div class="interProduct">
-                                <div class="imgD">
-                                    <a class="imgDi" href="#">
-                                        <img src="img/forum/1.jpg" alt="" title="红宝石"/>
-                                    </a>
-                                    <div class="del"><i class="iconfont">&#xe61d;</i></div>
-                                </div>
-                                <div class="interPT text-center">
-                                    <a href="#">红宝石多肉</a>
-                                </div>
-                                <p class="price text-center">￥100</p>
-                                <div class="text-center">
-                                    <a href="#" role="button" class="btn interBtn">找相似</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                            <div class="interProduct">
-                                <div class="imgD">
-                                    <a class="imgDi" href="#">
-                                        <img src="img/forum/1.jpg" alt="" title="红宝石"/>
-                                    </a>
-                                    <div class="del"><i class="iconfont">&#xe61d;</i></div>
-                                </div>
-                                <div class="interPT text-center">
-                                    <a href="#">红宝石多肉</a>
-                                </div>
-                                <p class="price text-center">￥100</p>
-                                <div class="text-center">
-                                    <a href="#" role="button" class="btn interBtn">找相似</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                            <div class="interProduct">
-                                <div class="imgD">
-                                    <a class="imgDi" href="#">
-                                        <img src="img/forum/1.jpg" alt="" title="红宝石"/>
-                                    </a>
-                                    <div class="del"><i class="iconfont">&#xe61d;</i></div>
-                                </div>
-                                <div class="interPT text-center">
-                                    <a href="#">红宝石多肉</a>
-                                </div>
-                                <p class="price text-center">￥100</p>
-                                <div class="text-center">
-                                    <a href="#" role="button" class="btn interBtn">找相似</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="interList row">
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                            <div class="interProduct">
-                                <div class="imgD">
-                                    <a class="imgDi" href="#">
-                                        <img src="img/forum/1.jpg" alt="" title="红宝石"/>
-                                    </a>
-                                    <div class="del"><i class="iconfont">&#xe61d;</i></div>
-                                </div>
-                                <div class="interPT text-center">
-                                    <a href="#">红宝石多肉</a>
-                                </div>
-                                <p class="price text-center">￥100</p>
-                                <div class="text-center">
-                                    <a href="#" role="button" class="btn interBtn">找相似</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                            <div class="interProduct">
-                                <div class="imgD">
-                                    <a class="imgDi" href="#">
-                                        <img src="img/forum/1.jpg" alt="" title="红宝石"/>
-                                    </a>
-                                    <div class="del"><i class="iconfont">&#xe61d;</i></div>
-                                </div>
-                                <div class="interPT text-center">
-                                    <a href="#">红宝石多肉</a>
-                                </div>
-                                <p class="price text-center">￥100</p>
-                                <div class="text-center">
-                                    <a href="#" role="button" class="btn interBtn">找相似</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                            <div class="interProduct">
-                                <div class="imgD">
-                                    <a class="imgDi" href="#">
-                                        <img src="img/forum/1.jpg" alt="" title="红宝石"/>
-                                    </a>
-                                    <div class="del"><i class="iconfont">&#xe61d;</i></div>
-                                </div>
-                                <div class="interPT text-center">
-                                    <a href="#">红宝石多肉</a>
-                                </div>
-                                <p class="price text-center">￥100</p>
-                                <div class="text-center">
-                                    <a href="#" role="button" class="btn interBtn">找相似</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                            <div class="interProduct">
-                                <div class="imgD">
-                                    <a class="imgDi" href="#">
-                                        <img src="img/forum/1.jpg" alt="" title="红宝石"/>
-                                    </a>
-                                    <div class="del"><i class="iconfont">&#xe61d;</i></div>
-                                </div>
-                                <div class="interPT text-center">
-                                    <a href="#">红宝石多肉</a>
-                                </div>
-                                <p class="price text-center">￥100</p>
-                                <div class="text-center">
-                                    <a href="#" role="button" class="btn interBtn">找相似</a>
-                                </div>
-                            </div>
-                        </div>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -213,6 +95,32 @@
 <script src="js/buy/distpicker.data.js"></script>
 <script src="js/buy/distpicker.js"></script>
 <script src="js/buy/main.js"></script>
+
+<script>
+    $(".del").click(function() {
+        var productList = $(this).parent().parent().parent();
+        var coll_id = $(productList).children(".coll_id").html();
+        productList.remove();
+        for(var i=0;i<$(".interList").length;i++) {
+            if($($(".interList")[i]).children().length == 0) {
+                if($($(".interList")[i]).parent().hasClass("viewList")) {
+                    $($(".interList")[i]).parent().remove();
+                }else {
+                    $($(".interList")[i]).remove();
+                }
+            }
+        }
+        $.ajax({
+            url:"/collectDel",
+            data: {
+                coll_id:coll_id
+            },
+            success:function(data) {
+
+            }
+        })
+    });
+</script>
 
 </body>
 </html>

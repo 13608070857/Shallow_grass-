@@ -36,7 +36,18 @@ const selfController = {
         var username = req.session.user;
         selfModel.getCollect(username)
             .then(function(data) {
+                //console.log(data);
                 resp.render("selfPublic/collect",{collectData:data});
+            });
+    },
+
+    //收藏删除
+    collectDel(req,resp) {
+        var coll_id = req.query.coll_id;
+        console.log(coll_id)
+        selfModel.delCollect(coll_id)
+            .then(function(data) {
+                console.log(data);
             });
     },
 

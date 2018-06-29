@@ -53,6 +53,7 @@ router.get("/savePsw",selfController.savePsw);
 router.get("/delAddress",selfController.delAddress);
 router.get("/editAddress",selfController.editAddress);
 router.get("/newAddress",selfController.newAddress);
+router.get("/collectDel",selfController.collectDel);
 
 //index
 router.get("/index",indexController.index);

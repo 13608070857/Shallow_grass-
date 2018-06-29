@@ -17,17 +17,3 @@ $(".cusB").click(function() {
     }
     $(this).css("height",currentHeight+"px");
 });
-
-$(".del").click(function() {
-    var productList = $(this).parent().parent().parent();
-    productList.remove();
-    for(var i=0;i<$(".interList").length;i++) {
-        if($($(".interList")[i]).children().length == 0) {
-            if($($(".interList")[i]).parent().hasClass("viewList")) {
-                $($(".interList")[i]).parent().remove();
-            }else {
-                $($(".interList")[i]).remove();
-            }
-        }
-    }
-});

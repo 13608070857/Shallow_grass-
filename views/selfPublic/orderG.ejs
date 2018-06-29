@@ -73,29 +73,29 @@
                         <div class="orderX">
                             <div class="row orderXT">
                                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">订单号：<%=orderData[0].orderNo%></div>
-                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">下单时间：<%=orderData[0].createTime%></div>
+                                <div class="time col-lg-9 col-md-9 col-sm-9 col-xs-9">下单时间：<%=orderData[0].createTime%></div>
                             </div>
                             <div class="orderXC row">
                                 <div class="row">
                                     <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 orderXCont">
                                         <div>
-                                            收件人：<span><%=orderData[0].consignee%></span>
+                                            收件人：<span class="consigneeInfo"><%=orderData[0].consignee%></span>
                                         </div>
                                         <div>
-                                            联系方式：<span><%=orderData[0].phone%></span>
+                                            联系方式：<span class="phoneInfo"><%=orderData[0].phone%></span>
                                         </div>
                                         <div>
-                                            收货地址：<span><%=orderData[0].ship_address%></span>
+                                            收货地址：<span class="ship_addressInfo"><%=orderData[0].ship_address%></span>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 orderXCont">
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">商品合计：</div>
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 sText">¥<%=orderData[0].total%></div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 sText totalInfo">¥<%=orderData[0].total%></div>
                                         </div>
                                         <div>
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">运费：</div>
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 sText">¥<%=orderData[0].yhPrice%></div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 sText yhPriceInfo">¥<%=orderData[0].yhPrice%></div>
                                         </div>
                                         <div class="cul">
                                         </div>
@@ -112,7 +112,7 @@
                             <div class="row blTitle">
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                     <input type="checkbox"/>
-                                    下单时间：<span><%=orderData[i].createTime%></span>
+                                    下单时间：<span class="time"><%=orderData[i].createTime%></span>
                                 </div>
                                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                     订单号：<span><%=orderData[i].orderNo%></span>
@@ -171,7 +171,13 @@
 <script>
     $(".viewDes").click(function() {
         $(".orderX").css("display","block");
-    })
+    });
+    var date = new Date($(".time").html());
+    var time = date.getFullYear() + "-" + (date.getMonth()<10?("0" + date.getMonth()):date.getMonth())
+            + "-" + (date.getDate()<10?("0" + date.getDate()):date.getDate()) + " " + (date.getHours()<10?("0" + date.getHours()):date.getHours()) + ":"
+            + (date.getMinutes()<10?("0" + date.getMinutes()):date.getMinutes()) + ":" + (date.getSeconds()<10?("0" + date.getSeconds()):date.getSeconds());
+    $(".time").html(time);
+
 </script>
 
 </body>
