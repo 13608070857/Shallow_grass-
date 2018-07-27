@@ -8,6 +8,7 @@ const forumController = require("../controller/forumController");
 
 
 const leaseController = require("../controller/leaseController");
+const microController = require("../controller/microController");
 
 const router=express.Router();//获取路由对象
 //商品
@@ -81,6 +82,10 @@ router.get("/forumMain",forumController.forumMain);
 router.get("/forumSelf",forumController.forumSelf);
 //论坛删除个人帖子
 router.get("/delet.do",forumController.forumDelete);
+
+// 线上线下基地
+router.get("/Micro_landscape",microController.landscape);
+router.get("/underlineBase",microController.landscape2);
 
 
 module.exports=router;//公开router
