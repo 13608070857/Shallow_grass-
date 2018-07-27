@@ -141,9 +141,9 @@ const controller={
     Pay(req,resp){
         let usertel=req.session.user;
         let totalof=req.query.totalof;
-        dbpool.connect("INSERT INTO goodsorder VALUE(NULL,(SELECT u.u_id FROM users u WHERE u.tel=?),?,?,'0',?,?,?,?,'0','0',NULL,NULL,NULL,?,'1','0')",
+        dbpool.connect("INSERT INTO goodsorder VALUE(NULL,(SELECT u.u_id FROM users u WHERE u.tel=?),?,?,'0',?,?,?,?,'0','0','0','0',NULL,NULL,NULL,?,'1','0')",
             [usertel,orderArry[0].defaultaddress,orderArry[0].orderno,orderArry[0].totalprice,orderArry[0].totalprice,orderArry[0].paytype,orderArry[0].payform,orderArry[0].creattime],(err,data)=>{
-                dbpool.connect("INSERT INTO order_goods(goods_ID,u_id)SELECT DISTINCT sc.goods_ID,u.u_id FROM goods g,users u,shop_cart sc WHERE g.goods_ID=sc.goods_ID AND sc.u_id=u.u_id AND u.tel=?",
+                dbpool.connect("INSERT INTO order_goods(goods_ID,u_id,o_ID) SELECT DISTINCT sc.goods_ID,u.u_id,(SELECT o_ID FROM goodsorder ORDER BY createTime DESC LIMIT 1) FROM goods g,users u,shop_cart sc WHERE g.goods_ID=sc.goods_ID AND sc.u_id=u.u_id AND u.tel=?",
                     [usertel],(err,data)=>{
                         dbpool.connect("SELECT * FROM shop_cart sc,users u,goods g WHERE sc.u_id=u.u_id AND sc.goods_ID=g.goods_ID and u.tel=?",
                             [usertel],(err,data)=>{
