@@ -13,17 +13,23 @@ var couponObj={};
 const controller={
     //商品
     goodsList(req,resp){
+        let input=req.query.input;
+        let myuserlist=req.session.user;
         if(req.query.input!=undefined){
-            let input=req.query.input;
+            console.log("这是数据1")
+            console.log(req.query.input)
+            console.log(req.session.user)
             let mysql="SELECT * FROM goods WHERE goodsName LIKE '%";
             let mysql1="%'";
             goodsmodel.ss(input,mysql,mysql1)
                 .then(function (data) {
                     console.log(data.length)
-                    resp.render("goods/goods",{mygoods:data});
+                    resp.render("goods/goods",{mygoods:data,myuserlist:myuserlist});
                 });
         }else {
-            let myuserlist=req.session.user;
+            console.log("这是数据2")
+            console.log(req.query.input)
+            console.log(req.session.user)
             goodsmodel.getAllgoods()
                 .then(function (data) {
                     console.log("空");
