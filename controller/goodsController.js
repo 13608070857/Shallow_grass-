@@ -16,9 +16,6 @@ const controller={
         let input=req.query.input;
         let myuserlist=req.session.user;
         if(req.query.input!=undefined){
-            console.log("这是数据1")
-            console.log(req.query.input)
-            console.log(req.session.user)
             let mysql="SELECT * FROM goods WHERE goodsName LIKE '%";
             let mysql1="%'";
             goodsmodel.ss(input,mysql,mysql1)
@@ -27,14 +24,12 @@ const controller={
                     resp.render("goods/goods",{mygoods:data,myuserlist:myuserlist});
                 });
         }else {
-            console.log("这是数据2")
-            console.log(req.query.input)
-            console.log(req.session.user)
             goodsmodel.getAllgoods()
                 .then(function (data) {
                     console.log("空");
                     let mygoods=data;
-                    resp.render("goods/goods",{mygoods:mygoods,myuserlist:myuserlist});
+                    let totalpage=Math.ceil(mygoods.length/12);
+                    resp.render("goods/goods",{mygoods:mygoods,myuserlist:myuserlist,totalpage:totalpage});
                 });
         }
     },
