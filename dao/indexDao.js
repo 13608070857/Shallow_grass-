@@ -56,9 +56,8 @@ const indexModel={
     // 注册2.保存到数据库
     jrsjk(phone,mm,C){
         return new Promise((resolve,reject)=>{
-            dbpool.connect("INSERT  INTO `users`(`u_id`,`for_user_gradeId`,`name`,`tel`,`sex`,`password`,`email`,`userImg`,`userStatus`,`createTime`,`User_gradeid`,`User_ex`,`User_show`,`rolaName`,`o_ID`) VALUES \n" +
-                "\n" +
-                "(null,null,?,?,null,?,null,null,null,null,null,null,null,null,null)",
+            dbpool.connect("INSERT  INTO `users`(`u_id`,`for_user_gradeId`,`name`,`tel`,`sex`,`password`,`email`,`userImg`,`userStatus`,`createTime`,`User_gradeid`,`User_ex`,`User_show`,`Grade_ID`,`o_ID`,`is_del`) \n" +
+                "VALUES(NULL,NULL,?,?,NULL,?,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0)",
                 [C,phone,mm],(err,data)=>{
                     if (!err){
                         resolve(data);
