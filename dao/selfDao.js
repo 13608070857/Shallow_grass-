@@ -28,11 +28,53 @@ const selfModel = {
         })
     },
 
+    //获取收藏信息
+    getCollect(params) {
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM collection c,users u WHERE c.u_id=u.u_id  AND u.tel=?",
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+
+    //删除收藏
+    delCollect(params) {
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("delete FROM collection WHERE coll_id=?",
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+
     //获取订单信息
     getOrder(params) {
         return new Promise((resolve,reject)=>{
-            dbpool.connect("SELECT * FROM users u,goodsorder o,goods g,address a WHERE u.o_ID = o.o_ID AND o.goods_ID = g.goods_ID AND o.addressId = a.addressId AND u.tel=?",
+            dbpool.connect("SELECT * FROM users u,goodsorder o,order_goods og,goods g,address a WHERE u.u_id=o.u_id AND u.u_id=og.u_id AND og.goods_ID=g.goods_ID AND u.u_id=a.u_id AND u.tel=?",
                 [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+
+    //删除订单
+    delOrder(sql,...args) {
+        return new Promise((resolve,reject)=>{
+            dbpool.connect(sql,
+                [...args],(err,data)=>{
                     if (!err){
                         resolve(data);
                     } else {
@@ -45,7 +87,7 @@ const selfModel = {
     //获取优惠信息
     getCouponsInfo(params) {
         return new Promise((resolve,reject)=>{
-            dbpool.connect("SELECT * FROM users u,coupons c WHERE u.u_id=c.u_id AND u.tel=?",
+            dbpool.connect("SELECT * FROM users u,coupons c,coupons_user cu WHERE u.u_id=cu.u_id AND c.uc_id=cu.uc_id AND u.tel=? AND cu.is_use=0",
                 [params],(err,data)=>{
                     if (!err){
                         resolve(data);
@@ -59,7 +101,7 @@ const selfModel = {
     //获取售后信息
     getsaleAfterInfo(params) {
         return new Promise((resolve,reject)=>{
-            dbpool.connect("SELECT * FROM users u,goodsorder o,goods g,address a,saleafter sf WHERE u.o_ID = o.o_ID AND o.goods_ID = g.goods_ID AND o.addressId = a.addressId AND sf.o_ID=o.o_ID AND u.tel=?",
+            dbpool.connect("SELECT * FROM users u,goodsorder o,order_goods og,goods g,address a,saleafter sf WHERE u.u_id=o.u_id AND u.u_id=og.u_id AND og.goods_ID = g.goods_ID AND u.u_id=a.u_id AND sf.o_ID=o.o_ID AND u.tel=?",
                 [params],(err,data)=>{
                     if (!err){
                         resolve(data);

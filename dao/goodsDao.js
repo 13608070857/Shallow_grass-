@@ -133,7 +133,7 @@ const goodsModel={
     //购物车
     getcart(params){
         return new Promise((resolve,reject)=>{
-            dbpool.connect("SELECT * FROM shop_cart sc,users u,goods g WHERE sc.u_id=u.u_id AND sc.goods_ID=g.goods_ID and u.tel=? and sc.is_shop='0'",
+            dbpool.connect("SELECT * FROM shop_cart sc,users u,goods g WHERE sc.u_id=u.u_id AND sc.goods_ID=g.goods_ID and u.tel=?",
                 [params],(err,data)=>{
                     if (!err){
                         resolve(data);
@@ -146,7 +146,7 @@ const goodsModel={
     //购物车小计
     totalcart(params){
         return new Promise((resolve,reject)=>{
-            dbpool.connect("SELECT SUM(sc.total_of) as totalcart  FROM shop_cart sc WHERE sc.u_id=(SELECT u.u_id FROM users u WHERE u.tel=? and sc.is_shop='0')",
+            dbpool.connect("SELECT SUM(sc.total_of) as totalcart  FROM shop_cart sc WHERE sc.u_id=(SELECT u.u_id FROM users u WHERE u.tel=?)",
                 [params],(err,data)=>{
                     if (!err){
                         resolve(data);
@@ -170,9 +170,34 @@ const goodsModel={
         })
     },
     //使用优惠劵
-    getcoll(params){
+    getcoll(...args){
         return new Promise((resolve,reject)=>{
-            dbpool.connect("update shop_cart set total_of=abs(total_of-(SELECT c.yhprice FROM coupons c WHERE c.code LIKE ?)) WHERE is_shop='0'",
+            dbpool.connect("UPDATE shop_cart SET total_of=ABS(total_of-IFNULL((SELECT c.yhprice AS yhprice FROM coupons c,coupons_user cu WHERE c.code LIKE ? AND cu.is_use='0' AND c.uc_id=cu.uc_id),0)) WHERE u_id=(SELECT u.u_id FROM users u WHERE u.tel=?)",
+                [...args],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+    getcart2(params){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("UPDATE coupons_user SET is_use=1 WHERE u_id=(SELECT u.u_id FROM users u WHERE u.tel=?)",
+                [params],(err,data)=>{
+                    if (!err){
+                        resolve(data);
+                    } else {
+                        reject(data);
+                    }
+                })
+        })
+    },
+    //查询用户是否有地址
+    getisaddress(params){
+        return new Promise((resolve,reject)=>{
+            dbpool.connect("SELECT * FROM address WHERE u_id=(SELECT u.u_id FROM users u WHERE u.tel=?)",
                 [params],(err,data)=>{
                     if (!err){
                         resolve(data);

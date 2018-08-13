@@ -298,8 +298,8 @@ a:hover,a:active {
     padding: 10px 5px;
     color: #7B7446;
 }
-.interList {
-    padding: 20px 0;
+.interList>div {
+    padding-top: 20px;
 }
 .interProduct {
     border: 1px solid #efefef;

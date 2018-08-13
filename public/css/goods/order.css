@@ -116,6 +116,74 @@ h4{
     background-color: #000000;
     color: #FFFFFF;
 }
+.addList{
+    overflow: hidden;
+    margin-top: 30px;
+}
+.addList>ul{
+    list-style: none;
+    height: 120px;
+    padding-left: 0;
+}
+.addList>ul>li{
+    float: left;
+    width: 240px;
+    height: 120px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 15px;
+}
+.addactive{
+    background: url("../../img/goods/borderX.png");
+    background-repeat: no-repeat;
+}
+.addunactive{
+    background: url("../../img/goods/borderW.png");
+    background-repeat: no-repeat;
+}
+.addTitle{
+    line-height: 35px;
+    border-bottom: 1px solid #F0F0F0;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #5D5D5D;
+}
+.addDetall{
+    width: 220px;
+    margin-top: 5px;
+    margin-left: 10px;
+    padding-right: 5px;
+    color: #5D5D5D;
+}
+.defaultAdd{
+    transform: translateY(-95px) translateX(180px);
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(161, 160, 161, 0.62);
+    color: #FFFFFF;
+    padding: 2px;
+    border-radius: 4px;
+}
+.addAlter{
+    margin-left: 10px;
+    display: none;
+}
+.addList>ul>li:hover .addAlter{
+    display: block;
+}
+.addList>ul>li:hover{
+    background: url("../../img/goods/borderX.png");
+    background-repeat: no-repeat;
+}
+.addLine{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.addidSpan{
+    display: none;
+}
 /*订单*/
 .test{
     border: 1px solid red;

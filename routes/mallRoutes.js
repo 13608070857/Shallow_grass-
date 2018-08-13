@@ -8,6 +8,7 @@ const forumController = require("../controller/forumController");
 
 
 const leaseController = require("../controller/leaseController");
+const microController = require("../controller/microController");
 
 
 const router=express.Router();//获取路由对象
@@ -54,11 +55,16 @@ router.get("/savePsw",selfController.savePsw);
 router.get("/delAddress",selfController.delAddress);
 router.get("/editAddress",selfController.editAddress);
 router.get("/newAddress",selfController.newAddress);
+<<<<<<< HEAD
 router.post("/ajax.do",function (req,resp) {
     console.log("1")
     resp.send("111")
 });
 
+=======
+router.get("/collectDel",selfController.collectDel);
+router.get("/delOrder",selfController.delOrder);
+>>>>>>> 780376a460c94aedbfe9f04bc61ff52937d9b7a3
 
 //index
 router.get("/index",indexController.index);
@@ -87,6 +93,10 @@ router.get("/forumMain",forumController.forumMain);
 router.get("/forumSelf",forumController.forumSelf);
 //论坛删除个人帖子
 router.get("/delet.do",forumController.forumDelete);
+
+// 线上线下基地
+router.get("/Micro_landscape",microController.landscape);
+router.get("/underlineBase",microController.landscape2);
 
 
 module.exports=router;//公开router

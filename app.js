@@ -44,8 +44,14 @@ app.use(function (req,resp) {
 app.set("views",path.join(__dirname,"views"));
 app.set("view engine","ejs");
 //设置端口号
+<<<<<<< HEAD
 app.set("port",9999);
 //监听端口号
 app.listen(9999,()=>{
+=======
+app.set("port",7777);
+//监听端口号
+app.listen(7777,()=>{
+>>>>>>> 780376a460c94aedbfe9f04bc61ff52937d9b7a3
     console.log("服务器启动");
 });

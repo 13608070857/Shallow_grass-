@@ -54,7 +54,6 @@
                         </thead>
                         <tbody>
                         <%for (var i=0;i<shopCart.length;i++) {%>
-
                         <tr>
                             <td>
                                 <a href="/delcartgoods">
@@ -74,9 +73,8 @@
                                 <!--<span class="pull-left numadd"></span>-->
                                 <!--</div>-->
                             </td>
-                            <td><span>¥<span><%=shopCart[i].total_of%></span></span></td>
+                            <td><span>¥<span><%=Number(shopCart[i].goodsNum*shopCart[i].goodsPrice)%></span></span></td>
                         </tr>
-
                         <%}%>
                         </tbody>
                     </table>
@@ -93,7 +91,7 @@
                     </div>
                     <div class="shopX shopX3">
                         <span class="pull-left YhSpan2">订单总计</span>
-                        <span class="pull-right">¥<span><%=totalcart[0].totalcart%></span></span>
+                        <span class="pull-right otatolSpan">¥<span><%=totalcart[0].totalcart%></span></span>
                     </div>
                     <a href="/order">
                         <button type="button" class="btn btn-block mon_btn">前往收银台</button>

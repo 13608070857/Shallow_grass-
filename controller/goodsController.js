@@ -13,20 +13,23 @@ var couponObj={};
 const controller={
     //商品
     goodsList(req,resp){
+        let input=req.query.input;
+        let myuserlist=req.session.user;
         if(req.query.input!=undefined){
-            let input=req.query.input;
             let mysql="SELECT * FROM goods WHERE goodsName LIKE '%";
             let mysql1="%'";
             goodsmodel.ss(input,mysql,mysql1)
                 .then(function (data) {
                     console.log(data.length)
-                    resp.render("goods/goods",{mygoods:data});
+                    resp.render("goods/goods",{mygoods:data,myuserlist:myuserlist});
                 });
         }else {
             goodsmodel.getAllgoods()
                 .then(function (data) {
-                    console.log("空")
-                    resp.render("goods/goods",{mygoods:data});
+                    console.log("空");
+                    let mygoods=data;
+                    let totalpage=Math.ceil(mygoods.length/12);
+                    resp.render("goods/goods",{mygoods:mygoods,myuserlist:myuserlist,totalpage:totalpage});
                 });
         }
     },
@@ -34,9 +37,11 @@ const controller={
         let goodsimgList=req.query.goodsimgList;
         let goodsnameList=req.query.goodsnameList;
         let goodspriceList=req.query.goodspriceList;
+        let goodsIDList=req.query.goodsID;
         glistObj.goodsimgList=goodsimgList;
         glistObj.goodsnameList=goodsnameList;
         glistObj.goodspriceList=goodspriceList;
+        glistObj.goodsIDList=goodsIDList;
         glistArry.push(glistObj);
         console.log(glistArry);
     },
@@ -103,56 +108,53 @@ const controller={
                 goodsmodel.totalcart([useridd])
                     .then(function (data) {
                         let totalorder=data;
-                        resp.render("goods/order",{shoporder:shoporder,totalorder:totalorder});
+                        goodsmodel.getisaddress([useridd])
+                            .then(function (data) {
+                                let isaddress=data;
+                                console.log(isaddress);
+                                if (isaddress==""){
+                                    resp.redirect("/address");
+                                } else {
+                                    resp.render("goods/order",{shoporder:shoporder,totalorder:totalorder,isaddress:isaddress});
+                                }
+                            });
+
                     });
             });
     },
     //支付
     Pay2(req,resp){
-        let ausername=req.query.ausername;
-        let address=req.query.address;
-        let zipcode=req.query.zipcode;
-        let eamil=req.query.eamil;
-        let phone=req.query.phone;
-        let isdefault=req.query.isdefault;
-        let creattime=req.query.creattime;
         let orderno=req.query.orderno;
         let totalprice=req.query.totalprice;
         let paytype=req.query.paytype;
         let payform=req.query.payform;
-        orderObj.ausername=ausername;
-        orderObj.address=address;
-        orderObj.zipcode=zipcode;
-        orderObj.eamil=eamil;
-        orderObj.phone=phone;
-        orderObj.isdefault=isdefault;
-        orderObj.creattime=creattime;
+        let defaultaddress=req.query.defaultaddress;
+        let creattime=req.query.creattime;
         orderObj.orderno=orderno;
         orderObj.totalprice=totalprice;
         orderObj.paytype=paytype;
         orderObj.payform=payform;
+        orderObj.defaultaddress=defaultaddress;
+        orderObj.creattime=creattime;
         orderArry.push(orderObj);
         console.log(orderArry[0])
     },
     Pay(req,resp){
         let usertel=req.session.user;
         let totalof=req.query.totalof;
-        let sql="INSERT INTO address VALUE(NULL,(SELECT u.u_id FROM users u WHERE u.tel='"+usertel+"'),?,?,?,?,?,?,?)";
-        dbpool.connect(sql,
-            [orderArry[0].ausername,orderArry[0].address,orderArry[0].zipcode,orderArry[0].eamil,orderArry[0].phone,orderArry[0].isdefault,orderArry[0].creattime],(err,data)=>{
-            dbpool.connect("INSERT INTO goodsorder VALUE(NULL,(SELECT u.u_id FROM users u WHERE u.tel=?),(SELECT MAX(a.addressId) AS maxaId FROM address a,users u WHERE a.u_id=u.u_id AND u.tel=?),?,'0',?,?,?,?,'0','0',NULL,NULL,NULL,?,'1','0')",
-                    [usertel,usertel,orderArry[0].orderno,orderArry[0].totalprice,orderArry[0].totalprice,orderArry[0].paytype,orderArry[0].payform,orderArry[0].creattime],(err,data)=>{
-                    dbpool.connect("INSERT INTO order_goods(goods_ID,u_id)SELECT DISTINCT sc.goods_ID,u.u_id FROM goods g,users u,shop_cart sc WHERE g.goods_ID=sc.goods_ID AND sc.u_id=u.u_id AND u.tel=?",
-                        [usertel],(err,data)=>{
-                            dbpool.connect("SELECT * FROM shop_cart sc,users u,goods g WHERE sc.u_id=u.u_id AND sc.goods_ID=g.goods_ID and u.tel=?",
-                                [usertel],(err,data)=>{
-                                    let paygoods=data;
-                                    dbpool.connect("UPDATE shop_cart SET is_shop=1 WHERE u_id=(SELECT u.u_id FROM users u WHERE u.tel=?) AND is_shop='0'",
-                                        [usertel],(err,data)=>{
-                                            resp.render("goods/pay",{paysuccess:"支付成功",paygoods:paygoods,paytotalof:totalof});
-                                        })
-                                })
-                        })
+        dbpool.connect("INSERT INTO goodsorder VALUE(NULL,(SELECT u.u_id FROM users u WHERE u.tel=?),?,?,'0',?,?,?,?,'0','0','0','0',NULL,NULL,NULL,?,'1','0')",
+            [usertel,orderArry[0].defaultaddress,orderArry[0].orderno,orderArry[0].totalprice,orderArry[0].totalprice,orderArry[0].paytype,orderArry[0].payform,orderArry[0].creattime],(err,data)=>{
+                dbpool.connect("INSERT INTO order_goods(goods_ID,u_id,o_ID) SELECT DISTINCT sc.goods_ID,u.u_id,(SELECT o_ID FROM goodsorder ORDER BY createTime DESC LIMIT 1) FROM goods g,users u,shop_cart sc WHERE g.goods_ID=sc.goods_ID AND sc.u_id=u.u_id AND u.tel=?",
+                    [usertel],(err,data)=>{
+                        dbpool.connect("SELECT * FROM shop_cart sc,users u,goods g WHERE sc.u_id=u.u_id AND sc.goods_ID=g.goods_ID and u.tel=?",
+                            [usertel],(err,data)=>{
+                                let paygoods=data;
+                                dbpool.connect("DELETE FROM shop_cart WHERE u_id=(SELECT u.u_id FROM users u WHERE u.tel=?)",
+                                    [usertel],(err,data)=>{
+                                        resp.render("goods/pay",{paysuccess:"支付成功",paygoods:paygoods,paytotalof:totalof});
+                                        console.log(paygoods);
+                                    })
+                            })
                     })
             })
     },
@@ -173,7 +175,7 @@ const controller={
     //加入购物车
     addshopCart(req,resp){
         let uname=req.session.user;
-        let sql="INSERT INTO shop_cart VALUE(NULL,(SELECT u.u_id FROM users u WHERE u.tel='"+uname+"'),?,?,?,?,'0')";
+        let sql="INSERT INTO shop_cart VALUE(NULL,(SELECT u.u_id FROM users u WHERE u.tel='"+uname+"'),?,?,?,?) ON DUPLICATE KEY UPDATE goodsNum = goodsNum + 1";
         dbpool.connect(sql,
             [goodsArry[0].goodsid,goodsArry[0].goodsnum,goodsArry[0].goodsprice,goodsArry[0].totalprice],(err,data)=>{
 
@@ -195,8 +197,9 @@ const controller={
     },
     //收藏
     goodscollection(req,resp){
-        dbpool.connect("INSERT INTO collection VALUE(NULL,?,?,?)",
-            [glistArry[0].goodsimgList,glistArry[0].goodsnameList,glistArry[0].goodspriceList],(err,data)=>{
+        let usertel=req.session.user;
+        dbpool.connect("INSERT INTO collection VALUE(NULL,?,?,?,(SELECT u.u_id FROM users u WHERE u.tel=?),?)",
+            [glistArry[0].goodsimgList,glistArry[0].goodsnameList,glistArry[0].goodspriceList,usertel,glistArry[0].goodsIDList],(err,data)=>{
             console.log(data);
             resp.redirect("/collect")
             })
@@ -206,12 +209,22 @@ const controller={
         let coupon=req.query.coupon;
         couponObj.coupon=coupon;
         couponArry.push(couponObj);
+        console.log(couponArry[0].coupon)
     },
     goodscoupon(req,resp){
-        goodsmodel.getcoll(couponArry[0].coupon)
-            .then(function (data) {
-                resp.redirect("/shop_cart");
-            });
+        let usertel=req.session.user;
+        if (couponArry[0].coupon!=""){
+            goodsmodel.getcoll(couponArry[0].coupon,usertel)
+                .then(function (data) {
+                    let colldata=data;
+                    goodsmodel.getcart2([usertel])
+                        .then(function (data) {
+                            resp.redirect("/shop_cart");
+                        });
+                });
+        } else {
+            resp.redirect("/shop_cart");
+        }
     }
 };
 module.exports=controller;

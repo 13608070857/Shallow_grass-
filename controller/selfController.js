@@ -36,7 +36,18 @@ const selfController = {
         var username = req.session.user;
         selfModel.getCollect(username)
             .then(function(data) {
+                //console.log(data);
                 resp.render("selfPublic/collect",{collectData:data});
+            });
+    },
+
+    //收藏删除
+    collectDel(req,resp) {
+        var coll_id = req.query.coll_id;
+        console.log(coll_id)
+        selfModel.delCollect(coll_id)
+            .then(function(data) {
+                console.log(data);
             });
     },
 
@@ -46,6 +57,24 @@ const selfController = {
         selfModel.getOrder(username)
             .then(function(data) {
                 resp.render("selfPublic/orderG",{orderData:data});
+            });
+    },
+
+    //删除订单
+    delOrder(req,resp){
+        var quehao = "";
+        var orderNo = req.query.orderNo;
+        for(var i=0;i<orderNo.length;i++) {
+            if(i<orderNo.length-1) {
+                quehao += "?,";
+            }else {
+                quehao += "?";
+            }
+        }
+        var  mySql = "DELETE FROM goodsorder WHERE orderNo IN ("+ quehao +")";
+        selfModel.delOrder(mySql,...orderNo)
+            .then(function(data) {
+                console.log(data);
             });
     },
 

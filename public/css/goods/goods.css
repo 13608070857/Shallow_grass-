@@ -54,8 +54,8 @@ a:hover{
     overflow: hidden;
 }
 .goodsImg>img{
-    /*width: 250px;*/
-    /*height: 250px;*/
+    width: 250px;
+    height: 250px;
     transition: all 0.3s linear;
 }
 .collSpan{
@@ -72,6 +72,29 @@ a:hover{
 }
 .goodsTextDiv{
     transition: all 0.3s linear;
+}
+.mypage{
+    display: table;
+    margin-bottom: 50px;
+}
+.pagedao{
+    display: table-cell;
+    vertical-align: center;
+}
+.pagedao>ul{
+    list-style: none;
+}
+.pagedao>ul>li{
+    float: right;
+    height: 26px;
+    line-height: 26px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.pagedao>ul>li>input{
+    width: 30px;
+    height: 26px;
+    text-align: center;
 }
 @font-face {font-family: "iconfont";
     src: url('../../fonts/goods/iconfont.eot'); /* IE9*/
