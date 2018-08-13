@@ -100,7 +100,8 @@ const indexController ={
         let mm=req.body.mm;
         indexDao.jrsjk(phone,mm,C)
             .then(function (data) {
-                resp.render("index/login",{username:"测试"});
+                console.log('153');
+                resp.render("index/login");
             })
     },
     // 修改密码.保存到数据库
@@ -109,7 +110,7 @@ const indexController ={
         let mm=req.query.mm;
         indexDao.xgmmjrsjk(phone,mm)
             .then(function (data) {
-                resp.render("index/login",{username:"测试"});
+                resp.render("index/login");
             })
     },
     // 首页
@@ -117,12 +118,15 @@ const indexController ={
         indexDao.product()
             .then(function (data) {
                 let product=data
+                console.log(product)
                     indexDao.homes()
                         .then(function (data) {
                             let homes=data
                                 indexDao.lt()
                                     .then(function (data) {
-                                        let lt=data
+                                        let lt=data;
+                                        console.log(123123123);
+                                        console.log(req.session.user)
                                         resp.render("index/index",{user:req.session.user,product:product,homes:homes,lt:lt});
                                     })
 
@@ -163,7 +167,6 @@ const indexController ={
                     if(data.length>0) {
                         req.session.user=username;
                         resp.redirect("/index");
-                        console.log(req.session.user)
                     }else {
                         resp.send("登陆错误");
                     }

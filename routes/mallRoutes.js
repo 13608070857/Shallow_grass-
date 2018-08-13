@@ -9,6 +9,7 @@ const forumController = require("../controller/forumController");
 
 const leaseController = require("../controller/leaseController");
 
+
 const router=express.Router();//获取路由对象
 //商品
 router.get("/goods",goodscontroller.goodsList);
@@ -53,6 +54,11 @@ router.get("/savePsw",selfController.savePsw);
 router.get("/delAddress",selfController.delAddress);
 router.get("/editAddress",selfController.editAddress);
 router.get("/newAddress",selfController.newAddress);
+router.post("/ajax.do",function (req,resp) {
+    console.log("1")
+    resp.send("111")
+});
+
 
 //index
 router.get("/index",indexController.index);
@@ -71,6 +77,8 @@ router.get("/xgsjh.do",indexController.xgsjh);
 router.post("/xgmmdx.do",indexController.xgmmdx);
 router.get("/xgmmyzm.do",indexController.xgmmyzm);
 router.get("/xgmmjrsjk.do",indexController.xgmmjrsjk);
+
+
 
 
 //论坛

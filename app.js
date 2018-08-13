@@ -27,8 +27,13 @@ app.use(session({
 //post数据读取
 app.use(bodyParser.urlencoded({limit:"50mb",extended:true,parameterLimit:5000}));//默认false
 app.use(bodyParser.json({limit:"50mb"}));
+
+
+
+
 app.use(route); //路由
 //静态资源
+
 app.use(express.static(__dirname+"/public"));  //静态资源路径
 //404
 app.use(function (req,resp) {
@@ -39,8 +44,8 @@ app.use(function (req,resp) {
 app.set("views",path.join(__dirname,"views"));
 app.set("view engine","ejs");
 //设置端口号
-app.set("port",8888);
+app.set("port",9999);
 //监听端口号
-app.listen(8888,()=>{
+app.listen(9999,()=>{
     console.log("服务器启动");
 });
